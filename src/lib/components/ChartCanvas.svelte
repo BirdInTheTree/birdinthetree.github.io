@@ -23,10 +23,21 @@
     };
   }
 
-  /** Apply theme colors to chart options (mutates a copy). */
+  /** Deep-clone an object, preserving functions (structuredClone drops them). */
+  function deepClone(obj) {
+    if (obj === null || typeof obj !== 'object') return obj;
+    if (Array.isArray(obj)) return obj.map(deepClone);
+    const copy = {};
+    for (const key of Object.keys(obj)) {
+      copy[key] = typeof obj[key] === 'function' ? obj[key] : deepClone(obj[key]);
+    }
+    return copy;
+  }
+
+  /** Apply theme colors to chart options (returns a deep copy). */
   function themedOptions(opts) {
     const { fg, grid } = getThemeColors();
-    const merged = structuredClone(opts);
+    const merged = deepClone(opts);
 
     // Apply to all scale axes
     if (merged.scales) {
@@ -54,7 +65,7 @@
     if (chart) chart.destroy();
     chart = new Chart(canvas, {
       type,
-      data: structuredClone(data),
+      data: deepClone(data),
       options: themedOptions(options)
     });
   }

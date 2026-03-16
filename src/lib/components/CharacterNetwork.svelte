@@ -2,85 +2,99 @@
   import { onMount, onDestroy } from 'svelte';
   import { browser } from '$app/environment';
   import { theme } from '$lib/stores/app.js';
+  import { sortPlotlines, buildColorMap, buildCastMap } from '$lib/charts/helpers.js';
+  import { RANK_ORDER } from '$lib/charts/constants.js';
 
   export let data = null;
 
   let container;
-  let simulation = null;
   let mounted = false;
-
-  function stopSimulation() {
-    if (simulation) {
-      simulation.stop();
-      simulation = null;
-    }
-  }
 
   function render() {
     if (!browser || !container || !data) return;
-    stopSimulation();
 
     import('d3').then((d3) => {
       drawNetwork(d3, data);
     });
   }
 
+  /**
+   * Bipartite character-storyline network matching the Python implementation.
+   * Characters on the left, storylines on the right.
+   * Edge weight = number of events where character appears in that storyline.
+   */
   function drawNetwork(d3, seriesData) {
     container.innerHTML = '';
 
-    const cast = {};
-    for (const c of seriesData.cast || []) {
-      cast[c.id] = c.name;
-    }
+    const cast = buildCastMap(seriesData);
+    const plotlines = sortPlotlines(seriesData.plotlines || []);
+    const plMap = {};
+    for (const p of plotlines) plMap[p.id] = p;
+    const colors = buildColorMap(plotlines);
 
-    // Count character co-occurrences within the same event
+    // Count character appearances per storyline
+    const charStoryCounts = {};
     const charTotal = {};
-    const cooccurrence = {};
 
     for (const ep of seriesData.episodes || []) {
       for (const ev of ep.events || []) {
-        const chars = ev.characters || [];
-        for (const ch of chars) {
+        const sl = ev.storyline;
+        if (!sl) continue;
+        for (const ch of ev.characters || []) {
+          if (!charStoryCounts[ch]) charStoryCounts[ch] = {};
+          charStoryCounts[ch][sl] = (charStoryCounts[ch][sl] || 0) + 1;
           charTotal[ch] = (charTotal[ch] || 0) + 1;
         }
-        // Pairwise co-occurrence
-        for (let i = 0; i < chars.length; i++) {
-          for (let j = i + 1; j < chars.length; j++) {
-            const key = [chars[i], chars[j]].sort().join('|');
-            cooccurrence[key] = (cooccurrence[key] || 0) + 1;
-          }
+      }
+    }
+
+    // Only characters with 2+ total appearances
+    const activeChars = Object.keys(charTotal).filter((ch) => charTotal[ch] >= 2);
+    const activeStorylines = plotlines.map((p) => p.id);
+
+    if (activeChars.length === 0) return;
+
+    // Build edges
+    const edges = [];
+    for (const ch of activeChars) {
+      for (const sl of activeStorylines) {
+        const w = (charStoryCounts[ch] || {})[sl] || 0;
+        if (w > 0) {
+          edges.push({ char: ch, story: sl, weight: w });
         }
       }
     }
-
-    // Only include characters with 2+ appearances
-    const activeChars = Object.keys(charTotal).filter((ch) => charTotal[ch] >= 2);
-    const activeSet = new Set(activeChars);
-
-    const nodes = activeChars.map((ch) => ({
-      id: ch,
-      label: cast[ch] || ch,
-      total: charTotal[ch]
-    }));
-
-    const links = [];
-    for (const [key, weight] of Object.entries(cooccurrence)) {
-      const [a, b] = key.split('|');
-      if (activeSet.has(a) && activeSet.has(b)) {
-        links.push({ source: a, target: b, weight });
-      }
-    }
-
-    if (nodes.length === 0) return;
 
     const isDark = document.documentElement.classList.contains('dark');
     const fg = isDark ? '#a9b1d6' : '#1a1a1a';
     const bg = isDark ? '#1a1b26' : '#ffffff';
-    const nodeColor = isDark ? '#7aa2f7' : '#3498DB';
-    const linkColor = isDark ? '#565f89' : '#bbb';
+    const charColor = '#3498DB';
+    const rankColors = { A: '#E74C3C', B: '#F39C12', C: '#95A5A6', runner: '#BDC3C7' };
 
-    const width = 600;
-    const height = Math.max(400, nodes.length * 30);
+    // Layout: characters on left (x=0), storylines on right (x=3)
+    const charSpacing = 1;
+    const storySpacing = activeChars.length / Math.max(activeStorylines.length, 1);
+    const margin = { top: 40, right: 180, bottom: 20, left: 180 };
+    const plotWidth = 400;
+    const plotHeight = Math.max(300, activeChars.length * 35);
+    const width = margin.left + plotWidth + margin.right;
+    const height = margin.top + plotHeight + margin.bottom;
+
+    const charPositions = {};
+    activeChars.forEach((ch, i) => {
+      charPositions[ch] = {
+        x: margin.left,
+        y: margin.top + i * (plotHeight / Math.max(activeChars.length - 1, 1))
+      };
+    });
+
+    const storyPositions = {};
+    activeStorylines.forEach((sl, i) => {
+      storyPositions[sl] = {
+        x: margin.left + plotWidth,
+        y: margin.top + i * storySpacing * (plotHeight / Math.max(activeChars.length - 1, 1))
+      };
+    });
 
     const svg = d3.select(container)
       .append('svg')
@@ -89,85 +103,114 @@
       .attr('viewBox', `0 0 ${width} ${height}`)
       .style('background', bg);
 
-    const maxWeight = Math.max(1, ...links.map((l) => l.weight));
-
-    const linkElements = svg.append('g')
-      .selectAll('line')
-      .data(links)
-      .enter()
-      .append('line')
-      .attr('stroke', linkColor)
-      .attr('stroke-width', (d) => Math.max(1, (d.weight / maxWeight) * 6))
-      .attr('stroke-opacity', (d) => Math.min(0.8, 0.2 + d.weight * 0.1));
-
-    // Tooltip on links
-    linkElements.append('title')
-      .text((d) => {
-        const src = cast[d.source.id || d.source] || d.source.id || d.source;
-        const tgt = cast[d.target.id || d.target] || d.target.id || d.target;
-        return `${src} — ${tgt}: ${d.weight} shared events`;
-      });
-
-    const maxTotal = Math.max(1, ...nodes.map((n) => n.total));
-    const radiusScale = d3.scaleSqrt().domain([1, maxTotal]).range([6, 22]);
-
-    const nodeElements = svg.append('g')
-      .selectAll('circle')
-      .data(nodes)
-      .enter()
-      .append('circle')
-      .attr('r', (d) => radiusScale(d.total))
-      .attr('fill', nodeColor)
-      .attr('stroke', bg)
-      .attr('stroke-width', 1.5)
-      .call(d3.drag()
-        .on('start', (event, d) => {
-          if (!event.active) simulation.alphaTarget(0.3).restart();
-          d.fx = d.x;
-          d.fy = d.y;
-        })
-        .on('drag', (event, d) => {
-          d.fx = event.x;
-          d.fy = event.y;
-        })
-        .on('end', (event, d) => {
-          if (!event.active) simulation.alphaTarget(0);
-          d.fx = null;
-          d.fy = null;
-        }));
-
-    nodeElements.append('title')
-      .text((d) => `${d.label}: ${d.total} appearances`);
-
-    const labelElements = svg.append('g')
-      .selectAll('text')
-      .data(nodes)
-      .enter()
-      .append('text')
-      .text((d) => d.label)
-      .attr('fill', fg)
-      .attr('font-size', '11px')
+    // Title
+    svg.append('text')
+      .attr('x', width / 2)
+      .attr('y', 20)
       .attr('text-anchor', 'middle')
-      .attr('dy', (d) => radiusScale(d.total) + 14);
+      .attr('fill', fg)
+      .attr('font-size', '14px')
+      .attr('font-weight', 'bold')
+      .text('Character\u2013Storyline Network \u2014 who drives what');
 
-    simulation = d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(links).id((d) => d.id).distance(80))
-      .force('charge', d3.forceManyBody().strength(-200))
-      .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collision', d3.forceCollide().radius((d) => radiusScale(d.total) + 5))
-      .on('tick', () => {
-        linkElements
-          .attr('x1', (d) => d.source.x)
-          .attr('y1', (d) => d.source.y)
-          .attr('x2', (d) => d.target.x)
-          .attr('y2', (d) => d.target.y);
-        nodeElements
-          .attr('cx', (d) => d.x)
-          .attr('cy', (d) => d.y);
-        labelElements
-          .attr('x', (d) => d.x)
-          .attr('y', (d) => d.y);
-      });
+    // Draw edges
+    for (const edge of edges) {
+      const cp = charPositions[edge.char];
+      const sp = storyPositions[edge.story];
+      if (!cp || !sp) continue;
+
+      const alpha = Math.min(0.8, 0.2 + edge.weight * 0.1);
+      const lineWidth = Math.max(0.5, edge.weight * 0.6);
+
+      svg.append('line')
+        .attr('x1', cp.x)
+        .attr('y1', cp.y)
+        .attr('x2', sp.x)
+        .attr('y2', sp.y)
+        .attr('stroke', colors[edge.story] || '#999')
+        .attr('stroke-opacity', alpha)
+        .attr('stroke-width', lineWidth);
+    }
+
+    // Draw character nodes (circles on left)
+    for (const ch of activeChars) {
+      const pos = charPositions[ch];
+      const total = charTotal[ch];
+      const r = Math.max(6, Math.sqrt(total * 40 / Math.PI));
+
+      svg.append('circle')
+        .attr('cx', pos.x)
+        .attr('cy', pos.y)
+        .attr('r', r)
+        .attr('fill', charColor)
+        .attr('stroke', 'white')
+        .attr('stroke-width', 1.5)
+        .append('title')
+        .text(`${cast[ch] || ch}: ${total} appearances`);
+
+      svg.append('text')
+        .attr('x', pos.x - r - 6)
+        .attr('y', pos.y)
+        .attr('text-anchor', 'end')
+        .attr('dominant-baseline', 'central')
+        .attr('fill', fg)
+        .attr('font-size', '11px')
+        .attr('font-weight', 'bold')
+        .text(cast[ch] || ch);
+    }
+
+    // Draw storyline nodes (squares on right)
+    for (const sl of activeStorylines) {
+      const pos = storyPositions[sl];
+      if (!pos) continue;
+      const rank = plMap[sl]?.rank || 'C';
+      const color = rankColors[rank] || '#95A5A6';
+      const size = 18;
+
+      svg.append('rect')
+        .attr('x', pos.x - size / 2)
+        .attr('y', pos.y - size / 2)
+        .attr('width', size)
+        .attr('height', size)
+        .attr('fill', color)
+        .attr('stroke', 'white')
+        .attr('stroke-width', 1.5)
+        .append('title')
+        .text(`${plMap[sl]?.name || sl} [${rank}]`);
+
+      svg.append('text')
+        .attr('x', pos.x + size / 2 + 6)
+        .attr('y', pos.y)
+        .attr('text-anchor', 'start')
+        .attr('dominant-baseline', 'central')
+        .attr('fill', fg)
+        .attr('font-size', '11px')
+        .attr('font-weight', 'bold')
+        .text(`${plMap[sl]?.name || sl} [${rank}]`);
+    }
+
+    // Legend for rank colors
+    const usedRanks = [...new Set(plotlines.map((p) => p.rank).filter(Boolean))];
+    const legendY = height - margin.bottom - usedRanks.length * 20;
+    const legendX = width - margin.right + 20;
+
+    usedRanks.forEach((rank, i) => {
+      const y = legendY + i * 20;
+      svg.append('rect')
+        .attr('x', legendX)
+        .attr('y', y - 6)
+        .attr('width', 12)
+        .attr('height', 12)
+        .attr('fill', rankColors[rank] || '#95A5A6');
+
+      svg.append('text')
+        .attr('x', legendX + 18)
+        .attr('y', y)
+        .attr('dominant-baseline', 'central')
+        .attr('fill', fg)
+        .attr('font-size', '10px')
+        .text(`Rank ${rank}`);
+    });
   }
 
   onMount(() => {
@@ -175,10 +218,7 @@
     render();
   });
 
-  onDestroy(() => {
-    stopSimulation();
-    unsubTheme();
-  });
+  onDestroy(() => unsubTheme());
 
   $: if (mounted && browser && container && data) render();
 
