@@ -20,7 +20,10 @@ export function characterFrequencies(data) {
  */
 export function resolveCharacterName(charId, cast) {
   if (charId.startsWith('guest:')) {
-    return charId.slice(6);
+    return charId
+      .slice(6)
+      .replace(/_/g, ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase());
   }
   const member = cast.find((c) => c.id === charId);
   return member ? member.name : charId;

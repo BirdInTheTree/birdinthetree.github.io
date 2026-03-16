@@ -94,7 +94,7 @@
               </div>
             </td>
             {#each $sortedEpisodes as ep}
-              {@const events = getEvents(pl.id, ep.episode)}
+              {@const events = eventGrid.get(`${pl.id}|${ep.episode}`) || []}
               <td class="event-cell" class:empty-cell={events.length === 0}>
                 {#each events as event}
                   <EventCard {event} on:select={() => dispatch('selectEvent', { event, episode: ep.episode })} />

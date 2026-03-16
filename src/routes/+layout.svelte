@@ -13,6 +13,6 @@
   <DarkToggle />
 </nav>
 
-<main class="site-content">
+<main class="site-content" class:site-content-wide={$page.url.pathname.startsWith('/plotter-app')}>
   <slot />
 </main>
