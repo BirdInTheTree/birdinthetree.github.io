@@ -1,0 +1,5012 @@
+{
+  "context": {
+    "franchise_type": "procedural",
+    "story_engine": "Every week a diagnostician solves a medical mystery, testing the limits of ethics and truth",
+    "genre": "drama",
+    "format": "ongoing"
+  },
+  "cast": [
+    {
+      "id": "house",
+      "name": "Gregory House",
+      "aliases": [
+        "House",
+        "Dr. House",
+        "Greg"
+      ]
+    },
+    {
+      "id": "wilson",
+      "name": "James Wilson",
+      "aliases": [
+        "Wilson",
+        "Dr. Wilson",
+        "Jimmy"
+      ]
+    },
+    {
+      "id": "cuddy",
+      "name": "Lisa Cuddy",
+      "aliases": [
+        "Cuddy",
+        "Dr. Cuddy"
+      ]
+    },
+    {
+      "id": "cameron",
+      "name": "Allison Cameron",
+      "aliases": [
+        "Cameron",
+        "Dr. Cameron"
+      ]
+    },
+    {
+      "id": "chase",
+      "name": "Robert Chase",
+      "aliases": [
+        "Chase",
+        "Dr. Chase"
+      ]
+    },
+    {
+      "id": "foreman",
+      "name": "Eric Foreman",
+      "aliases": [
+        "Foreman",
+        "Dr. Foreman"
+      ]
+    },
+    {
+      "id": "stacy",
+      "name": "Stacy Warner",
+      "aliases": [
+        "Stacy"
+      ]
+    },
+    {
+      "id": "vogler",
+      "name": "Edward Vogler",
+      "aliases": [
+        "Vogler"
+      ]
+    }
+  ],
+  "plotlines": [
+    {
+      "id": "diagnosis",
+      "name": "House: Case of the Week",
+      "driver": "house",
+      "goal": "solve medical mysteries that other doctors cannot",
+      "obstacle": "incomplete information, patient lies, time pressure, rare conditions",
+      "stakes": "patient death, medical failure",
+      "type": "episodic",
+      "rank": "A",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E16",
+        "S01E17",
+        "S01E18",
+        "S01E19",
+        "S01E20",
+        "S01E21",
+        "S01E22"
+      ]
+    },
+    {
+      "id": "authority",
+      "name": "House: Authority",
+      "driver": "house",
+      "goal": "maintain diagnostic independence and avoid administrative duties",
+      "obstacle": "Cuddy's institutional demands, Vogler's corporate control",
+      "stakes": "loss of diagnostic freedom, forced conformity",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E08",
+        "S01E09",
+        "S01E12",
+        "S01E13",
+        "S01E15",
+        "S01E17",
+        "S01E19",
+        "S01E20",
+        "S01E21"
+      ]
+    },
+    {
+      "id": "addiction",
+      "name": "House: Addiction",
+      "driver": "house",
+      "goal": "manage chronic pain while maintaining professional function",
+      "obstacle": "Vicodin dependency, colleagues' concern, withdrawal symptoms",
+      "stakes": "professional competence, personal integrity",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E03",
+        "S01E05",
+        "S01E11",
+        "S01E17",
+        "S01E21"
+      ]
+    },
+    {
+      "id": "love",
+      "name": "House: Love",
+      "driver": "house",
+      "goal": "navigate unresolved feelings for Stacy",
+      "obstacle": "her marriage to Mark, past betrayal, emotional walls",
+      "stakes": "emotional isolation, lost chance at happiness",
+      "type": "serialized",
+      "rank": "A",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E12",
+        "S01E21",
+        "S01E22"
+      ]
+    },
+    {
+      "id": "friendship",
+      "name": "Wilson: Friendship",
+      "driver": "wilson",
+      "goal": "support House while maintaining his own principles",
+      "obstacle": "House's self-destructive behavior, institutional pressure",
+      "stakes": "loss of friendship, professional standing",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E07",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E14",
+        "S01E18",
+        "S01E20"
+      ]
+    },
+    {
+      "id": "attraction",
+      "name": "Cameron: Attraction",
+      "driver": "cameron",
+      "goal": "pursue romantic relationship with House",
+      "obstacle": "House's emotional unavailability, professional boundaries",
+      "stakes": "unrequited love, professional compromise",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E07",
+        "S01E12",
+        "S01E17",
+        "S01E19",
+        "S01E20",
+        "S01E22"
+      ]
+    },
+    {
+      "id": "loyalty",
+      "name": "Chase: Loyalty",
+      "driver": "chase",
+      "goal": "secure his position on House's team",
+      "obstacle": "Vogler's manipulation, team dynamics, father issues",
+      "stakes": "career advancement, professional integrity",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E13",
+        "S01E14",
+        "S01E16",
+        "S01E17"
+      ]
+    },
+    {
+      "id": "identity",
+      "name": "Foreman: Identity",
+      "driver": "foreman",
+      "goal": "establish himself as a competent diagnostician",
+      "obstacle": "House's dominance, personal biases, career choices",
+      "stakes": "professional growth, self-respect",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E09",
+        "S01E10",
+        "S01E12",
+        "S01E19"
+      ]
+    },
+    {
+      "id": "control",
+      "name": "Vogler: Control",
+      "driver": "vogler",
+      "goal": "reshape the hospital according to corporate efficiency",
+      "obstacle": "House's resistance, board politics, institutional culture",
+      "stakes": "hundred million dollar investment, corporate reputation",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E16",
+        "S01E17",
+        "S01E18"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "episode": "S01E01",
+      "events": [
+        {
+          "event": "Rebecca Adler collapses in her classroom with sudden aphasia and seizure",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:rebecca_adler"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson brings Adler's case to House, claiming she is his cousin",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "House assigns the case to his three-person team",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Adler has allergic reaction to gadolinium during MRI, Cameron performs emergency tracheotomy",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:rebecca_adler",
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House diagnoses cerebral vasculitis and starts steroids",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Adler seizes again and goes into cardiac arrest, disproving vasculitis theory",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:rebecca_adler"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House orders Foreman and Cameron to break into Adler's apartment",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "foreman",
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman objects on ethical grounds, House insists everybody lies",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman",
+            "house"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Team finds opened ham package, House suspects neurocysticercosis",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "foreman",
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "X-ray of Adler's thigh reveals calcified cysts, confirming tapeworm larvae",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Adler refuses treatment because she distrusts House",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:rebecca_adler",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson persuades Adler by admitting he lied about being her cousin",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "wilson",
+            "guest:rebecca_adler"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "Cuddy pressures House to work clinic shifts per his contract",
+          "storyline": "authority",
+          "function": "setup",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House evades clinic duty with creative excuses",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy revokes House's diagnostics privileges until he takes clinic patients",
+          "storyline": "authority",
+          "function": "turning_point",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House grudgingly treats orange man with carrot and niacin excess",
+          "storyline": "authority",
+          "function": "resolution",
+          "characters": [
+            "house",
+            "guest:orange_man"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House's chronic leg pain and Vicodin reliance are introduced",
+          "storyline": "addiction",
+          "function": "seed",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House tells Cameron he hired her because she is extremely attractive",
+          "storyline": "attraction",
+          "function": "seed",
+          "characters": [
+            "house",
+            "cameron"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the necessity of deception in healing",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "authority",
+            "friendship"
+          ],
+          "description": "all storylines involve characters lying or manipulating others for what they believe is a greater good",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "friendship"
+          ],
+          "description": "Wilson's lie about being Adler's cousin serves both the medical case and establishes his willingness to bend ethics for House",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E02",
+      "events": [
+        {
+          "event": "Dan is admitted with double vision and night terrors after lacrosse head injury",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices involuntary myoclonic jerk in Dan's foot, unrelated to head trauma",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron fabricates a referral letter to ensure House sees the patient",
+          "storyline": "attraction",
+          "function": "escalation",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Team finds large blockage in brain ventricle and relieves pressure",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dan is found sleepwalking on hospital roof, hallucinating lacrosse field",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron proposes neurosyphilis diagnosis",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dan suffers auditory hallucination during lumbar puncture, eliminating neurosyphilis",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House makes bet that Dan's parents are not both biologically his",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "wilson",
+            "cuddy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House secretly runs DNA test using parents' coffee cups",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "DNA test reveals neither parent is genetically related to Dan",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House deduces measles exposure without maternal antibodies led to brain infection",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Retinal biopsy confirms measles virus in brain tissue",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dan receives intraventricular interferon and recovers",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dan reveals he already knew he was adopted from his cleft chin",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:dan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson tells House he enjoys being right more than helping patients",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy pushes House on clinic duty, House resists",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the necessity of uncomfortable truths",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "friendship",
+            "authority"
+          ],
+          "description": "all storylines explore how truth-telling, even when painful, serves a greater purpose",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "attraction"
+          ],
+          "description": "Cameron's romantic feelings drive her to bend rules to get House involved in the case",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E03",
+      "events": [
+        {
+          "event": "Brandon Merrell collapses after sex with multiple symptoms",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:brandon"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase, Cameron, and Foreman invoke Occam's Razor for single cause",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "chase",
+            "cameron",
+            "foreman"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "House proposes two co-existing conditions against team's reasoning",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Antibiotics shut down Brandon's kidneys, disproving hypotheses",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "chase",
+            "cameron",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brandon's condition follows unpredictable pattern of improvement and deterioration",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:brandon"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices hair loss and realizes colchicine poisoning pattern",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase investigates pharmacy, pharmacist denies error",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": [
+            "loyalty"
+          ]
+        },
+        {
+          "event": "New prescription bottle reveals different pills",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "guest:brandon"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House confronts Brandon's mother who admits giving leftover pills",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house",
+            "guest:brandon_mother"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Pharmacy error confirmed, Brandon recovers",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy demands House perform clinic duty",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House argues diagnostic puzzles are better use of time than clinic",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman challenges House's reasoning openly",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "foreman",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Cameron mediates between House and team",
+          "storyline": "attraction",
+          "function": "setup",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase defers to House's authority",
+          "storyline": "loyalty",
+          "function": "setup",
+          "characters": [
+            "chase",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson serves as sounding board for House's case frustration",
+          "storyline": "friendship",
+          "function": "setup",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House's Vicodin use noticed but unremarked by colleagues",
+          "storyline": "addiction",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the complexity of truth versus the appeal of simplicity",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "authority",
+            "identity"
+          ],
+          "description": "all storylines explore the tension between simple solutions and complex realities — medical diagnosis, administrative demands, and professional hierarchy",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "identity"
+          ],
+          "description": "Foreman's challenge to House's methodology directly impacts the case resolution",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E04",
+      "events": [
+        {
+          "event": "Newborn Maxine Hartig develops vomiting, lethargy, fever, then seizes in maternity ward",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House discovers a second newborn with fever and suspects an epidemic",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy dismisses House's epidemic theory, saying two sick babies aren't proof",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Third and fourth infants develop identical symptoms, Cuddy orders maternity ward closed",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cuddy"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Foreman identifies both echovirus 11 and CMV but cannot determine which causes illness",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "House starts empirical treatment with vancomycin and aztreonam, orders MRIs",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House proposes testing mothers' antibodies to identify which virus they lack immunity to",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Antibody results point to echovirus 11 as the culprit",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Two infants develop simultaneous kidney failure",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House makes agonizing decision to take each baby off different antibiotic, knowing one will likely die",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Baby Boy Chen-Lupino dies but other baby's response identifies effective treatment",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Remaining infected newborns recover with experimental antiviral",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House traces epidemic source to elderly hospital volunteer carrying virus asymptomatically",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy grudgingly recognizes House's brutal triage decisions saved the majority despite the cost",
+          "storyline": "authority",
+          "function": "turning_point",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman tells Hartig parents full severity of situation",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron gives softer account to other family, avoiding harsh realities",
+          "storyline": "attraction",
+          "function": "escalation",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson criticizes Cameron for not preparing family for worst outcome",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "wilson",
+            "cameron"
+          ],
+          "also_affects": [
+            "attraction"
+          ]
+        },
+        {
+          "event": "Chase executes orders efficiently but avoids ethical debate",
+          "storyline": "loyalty",
+          "function": "escalation",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House acknowledges cost of calculated gamble privately but defends it publicly",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        }
+      ],
+      "theme": "the cost of saving lives",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "authority",
+            "attraction",
+            "friendship"
+          ],
+          "description": "all storylines explore different aspects of moral responsibility — House's brutal calculus, Cuddy's administrative burden, Cameron's protective instincts, Wilson's ethical standards",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "authority"
+          ],
+          "description": "Cuddy's initial dismissal of House's epidemic theory merges with the medical crisis, forcing her to acknowledge his methods",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E05",
+      "events": [
+        {
+          "event": "Sister Augustine arrives with hand rash, House diagnoses contact dermatitis from dish soap",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Augustine suffers severe asthma attack, House administers epinephrine causing cardiac arrest",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy accuses House of giving ten times the appropriate dose, threatens malpractice case",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Team tests for Churg-Strauss vasculitis with negative results",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Augustine has seizure and tests positive for herpetic encephalitis",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman goes to Cuddy unconvinced by House's theories",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Cuddy removes House as attending physician and takes the case herself",
+          "storyline": "authority",
+          "function": "climax",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "House visits monastery and shares tea with Mother Superior, learns Augustine's street history",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House demonstrates figwort tea interaction with epinephrine, clearing malpractice accusation",
+          "storyline": "authority",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Augustine moved to clean room, experiences crisis of faith",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:augustine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase counsels Augustine about faith, revealing his seminary background",
+          "storyline": "loyalty",
+          "function": "seed",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson's offhand remark about 'God inside her' leads House to consider internal allergen",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "House orders full-body scan revealing decades-old copper IUD",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House realizes copper IUD plus copper pots created cumulative allergic overload",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "IUD surgically removed, Augustine recovers in time for Christmas",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson spends Christmas with House instead of wife, mentions she's 'used to being alone'",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "wilson"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "House's Vicodin use is visible but uncommented upon by team",
+          "storyline": "addiction",
+          "function": "seed",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "hidden truths and their consequences",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "authority",
+            "marriage"
+          ],
+          "description": "all storylines involve concealed information that creates problems when revealed - Augustine's past, House's dosage mistake, Wilson's marital troubles",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "authority"
+          ],
+          "description": "the malpractice threat directly impacts House's ability to solve the case, forcing him to work outside official channels",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "diagnosis"
+          ],
+          "description": "Christmas setting provides ironic counterpoint to themes of faith, redemption, and hidden sins",
+          "subtype": "seasonal_frame"
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E06",
+      "events": [
+        {
+          "event": "Lucy Palmeiro collapses at unemployment office with severe leg pain",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:lucy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Lucas secretly gives Lucy vodka to calm her down before respiratory arrest",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:lucas"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "ER diagnoses pulmonary embolism from deep vein thrombosis, attributes clotting to alcoholism",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:er_doctors"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House overhears the case and takes it, skeptical of schizophrenia diagnosis",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Blood tests reveal prolonged prothrombin time suggesting vitamin K deficiency",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase performs ultrasound and finds 5.8-centimeter cancerous liver tumor",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Surgical team refuses to operate on tumor that large",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:surgeons"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House and Wilson devise ethanol embolization scheme to shrink tumor",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "wilson"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "House and Wilson present shrunken tumor as newly scanned to deceive surgeon",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "wilson"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Cuddy discovers the deception but allows surgery to proceed",
+          "storyline": "authority",
+          "function": "turning_point",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "House discovers Lucas is only fifteen, not eighteen as claimed",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House realizes Lucy called social services herself, showing rational behavior",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron suggests Wilson's disease as diagnosis",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": [
+            "attraction"
+          ]
+        },
+        {
+          "event": "Team examines Lucy's eyes and finds Kayser-Fleischer rings confirming Wilson's disease",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Treatment resolves both physical symptoms and apparent schizophrenia",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Lucy is discharged home with her son",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:lucy",
+            "guest:lucas"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the danger of misdiagnosis and the courage to question authority",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "authority"
+          ],
+          "description": "both storylines explore challenging established medical authority — questioning the schizophrenia diagnosis parallels defying surgical protocols",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "authority",
+            "friendship"
+          ],
+          "description": "Wilson's participation in the embolization scheme merges his loyalty to House with the medical case and defiance of hospital rules",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "CHECK_LINE",
+          "target": "addiction",
+          "reason": "no events in this episode advance House's pain management storyline",
+          "episodes": [
+            "S01E06"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "love",
+          "reason": "no events in this episode involve Stacy or House's romantic feelings",
+          "episodes": [
+            "S01E06"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "marriage",
+          "reason": "no events in this episode involve Wilson's marriage",
+          "episodes": [
+            "S01E06"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "loyalty",
+          "reason": "no events in this episode specifically advance Chase's goal of securing his position",
+          "episodes": [
+            "S01E06"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "control",
+          "reason": "no events in this episode involve Vogler or corporate efficiency",
+          "episodes": [
+            "S01E06"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E07",
+      "events": [
+        {
+          "event": "Elise Snow exhibits alarming symptoms: sleeping 18 hours daily, fever, and striking her husband without provocation",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:elise",
+            "guest:ed"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron brings the case to House after six doctors fail to diagnose Elise",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House initially dismisses the case as clinical depression",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron points out elevated sed rate indicating inflammation, ruling out depression",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "House suspects brain tumor and orders scans, but imaging reveals nothing",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team treats for possible breast cancer but Elise develops seizures and hallucinations",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman suggests tularemia because Elise could have been exposed at work",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "House narrows differential to tularemia versus African trypanosomiasis",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House pressures Ed about whether Elise has ever been unfaithful",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "guest:ed"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Elise slips into a coma before the infidelity question can be resolved",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:elise"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House starts treatment with melarsoprol for sleeping sickness despite the risks",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Elise emerges from coma, confirming sleeping sickness diagnosis and her infidelity",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:elise",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron informs Adam that Elise's diagnosis confirms the affair",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "cameron",
+            "guest:adam"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices Wilson wearing a new green tie and nice shoes",
+          "storyline": "friendship",
+          "function": "setup",
+          "characters": [
+            "house",
+            "wilson"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "House deduces Wilson is attracted to someone at the hospital",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "wilson"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "Wilson initially denies attraction, then claims to have taken a nurse to lunch",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "wilson"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "House needles Wilson throughout the episode about his evasiveness",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "wilson"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "Cameron reveals she was married for six months to a man who died of thyroid cancer",
+          "storyline": "attraction",
+          "function": "escalation",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House files away Cameron's revelation about marrying a terminally ill man",
+          "storyline": "attraction",
+          "function": "seed",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the lies we tell ourselves and others about fidelity",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "marriage",
+            "attraction"
+          ],
+          "description": "all three storylines explore infidelity and deception — Elise's affair, Wilson's attraction, and Cameron's revelation about her marriage",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "diagnosis",
+            "marriage"
+          ],
+          "description": "House pressures the patient's husband about marital honesty while simultaneously exposing Wilson's own marital deception",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E08",
+      "events": [
+        {
+          "event": "Matt Davis collapses during AP calculus exam with nausea, abdominal pain, and severe bradycardia",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:matt"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman convinces House to take the case by claiming he has ruled out obvious diagnoses",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "foreman",
+            "house"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "House suspects drug use and sends Cameron and Foreman to search Matt's home",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron discovers jar of tomato sauce with popped lid suggesting contamination",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House diagnoses organophosphate poisoning and orders pralidoxime treatment",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Margo refuses treatment, demanding second opinion and losing faith in House",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "guest:margo",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Cuddy tells House he cannot get court order simply because mother disagrees",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House has Cuddy present condescending consent form to manipulate Margo into accepting treatment",
+          "storyline": "authority",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "cuddy"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Chi Ling admitted with identical symptoms, living ten miles away with no connection to Matt",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "guest:chi"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team discovers both families purchased TKO laundry detergent",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "foreman",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chi's mother reveals son wore brand-new never-washed clothes, ruling out detergent",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:chi_mother"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House and Chase test discarded clothing fabric, finding phosdrin contamination",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Poisoning traced to truck selling stolen clothes contaminated with agricultural pesticides",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Both boys recover after targeted treatment",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:matt",
+            "guest:chi"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Elderly woman Georgia brought to clinic by son worried about her good mood",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:georgia",
+            "guest:georgia_son"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the limits of parental authority versus medical expertise",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "authority"
+          ],
+          "description": "both storylines explore the tension between medical knowledge and patient autonomy, with House's diagnostic certainty challenged by parental rights",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "authority"
+          ],
+          "description": "the medical mystery cannot be solved until House navigates the authority conflict with Margo",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "clinic",
+          "reason": "recurring clinic subplot with Georgia provides comic relief but doesn't fit existing storylines",
+          "episodes": [
+            "S01E08"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E09",
+      "events": [
+        {
+          "event": "John Henry Giles collapses during recording session, stops breathing",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:giles"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Hamilton attributes episode to pneumonia complicating ALS",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:hamilton"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House doubts the ALS diagnosis entirely",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hamilton keeps House off the case",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "guest:hamilton",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Hamilton offers Foreman partnership in LA at three times salary",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "guest:hamilton",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman delivers ALS prognosis to Giles",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman",
+            "guest:giles"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Giles signs Do Not Resuscitate order",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:giles"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House instructs Foreman to start IVIG treatment",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "foreman"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "IVIG triggers respiratory failure, team can't act due to DNR",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "foreman",
+            "cameron",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House arrives and intubates Giles, violating DNR order",
+          "storyline": "authority",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "House is served restraining order and battery charges",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House's lawyer argues DNR invalid due to low thyroid affecting judgment",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "House notices judge's clubbed fingers, advises medical consultation",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Wilson tells House he has 'Rubik's Complex' - needs to solve puzzle not save patient",
+          "storyline": "friendship",
+          "function": "turning_point",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Cameron suggests Giles may have had stroke during intubation",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "MRI reveals blood clot in brain",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman performs embolectomy, Giles regains arm movement",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "House realizes arteriovenous malformation caused paralysis",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Surgery removes AVM, Giles walks out with cane",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:giles"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Giles gives House his trumpet",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:giles",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman declines Hamilton's job offer and stays with House",
+          "storyline": "identity",
+          "function": "resolution",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of being right",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "authority",
+            "identity",
+            "friendship"
+          ],
+          "description": "all storylines explore what price characters pay for their convictions - House risks legal consequences for medical truth, Foreman chooses growth over money, Wilson challenges his enabling friendship",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "authority"
+          ],
+          "description": "House's violation of the DNR order serves both his diagnostic obsession and his refusal to accept administrative constraints",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E10",
+      "events": [
+        {
+          "event": "Victoria Matsen arrives as Jane Doe with suspected overdose, toxicology clean",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman dismisses Victoria as faking seizures for free meals",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Wilson vehemently disagrees and asks House to take the case as personal favor",
+          "storyline": "friendship",
+          "function": "setup",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Foreman finds dangerously low glucose during seizure, undermining his theory",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Team discovers mass on Victoria's ovary",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House orders tuberculosis treatment on chance mass is tuberculoma",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Biopsy confirms tuberculosis and treatment begins",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House bribes police officer and learns Victoria was tasered twice",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House tests thigh numbness, finds no pain response but toe reaction",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Symptoms point to rabies from bat exposure, swab confirms diagnosis",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman receives rabies vaccine after patient bit him",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House traces Victoria's identity through surgical pin serial number",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Victoria's backstory revealed: car accident killed husband Paul and son James",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "identity",
+            "friendship"
+          ]
+        },
+        {
+          "event": "Wilson reveals he has homeless brother he hasn't seen in nine years",
+          "storyline": "friendship",
+          "function": "climax",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman sits at Victoria's bedside pretending to be Paul, tells her he forgives her",
+          "storyline": "identity",
+          "function": "climax",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Victoria dies",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:victoria"
+          ],
+          "also_affects": [
+            "identity",
+            "friendship"
+          ]
+        }
+      ],
+      "theme": "the weight of judgment and forgiveness",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "identity",
+            "friendship"
+          ],
+          "description": "all three storylines explore judgment and redemption — House solving the unsolvable case, Foreman overcoming his prejudice, Wilson confronting his guilt about his brother",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "identity",
+            "friendship"
+          ],
+          "description": "both Foreman and Wilson are transformed by their connection to Victoria's homelessness",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E11",
+      "events": [
+        {
+          "event": "Keith Foster crashes his father's Porsche while coughing blood",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:keith"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron notes Keith's bleeding began before the crash",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy challenges House to go one week without Vicodin",
+          "storyline": "addiction",
+          "function": "setup",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House negotiates stakes: no clinic duty if he succeeds",
+          "storyline": "addiction",
+          "function": "setup",
+          "characters": [
+            "house",
+            "cuddy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson reveals the bet was his idea to test House's dependency",
+          "storyline": "friendship",
+          "function": "setup",
+          "characters": [
+            "wilson"
+          ],
+          "also_affects": [
+            "addiction"
+          ]
+        },
+        {
+          "event": "Cameron hypothesizes lupus for Keith's condition",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase suspects drug use as cause of Keith's symptoms",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House considers lymphoma as potential diagnosis",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Keith develops hemolytic anemia and continues bleeding",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:keith"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House suffers tremors, insomnia, and impaired focus from withdrawal",
+          "storyline": "addiction",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "House's team begins openly doubting his judgment",
+          "storyline": "addiction",
+          "function": "escalation",
+          "characters": [
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Keith hallucinates his dead pet cat and suffers rectal bleeding",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "guest:keith"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House smashes his hand with a metal pestle to distract from leg pain",
+          "storyline": "addiction",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson treats House's broken finger and lies about the cause",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": [
+            "addiction"
+          ]
+        },
+        {
+          "event": "House orders Foreman and Chase to dig up Keith's dead cat",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "foreman",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cat necropsy reveals evidence of termite infestation",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "foreman",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House realizes Keith has acute naphthalene toxicity from termites",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House bursts into OR to halt planned transplant and explains diagnosis",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Keith's father punches House but accepts the explanation",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:keith_father",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Keith recovers from naphthalene toxicity",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:keith"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House tells Wilson he acknowledges addiction but won't quit Vicodin",
+          "storyline": "addiction",
+          "function": "climax",
+          "characters": [
+            "house",
+            "wilson"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        }
+      ],
+      "theme": "the cost of truth and self-knowledge",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "addiction"
+          ],
+          "description": "both storylines explore the painful process of uncovering hidden truths — Keith's toxicity and House's dependency",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "addiction",
+            "friendship"
+          ],
+          "description": "the audience knows Wilson orchestrated the bet while House initially believes it was Cuddy's idea",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "addiction",
+            "diagnosis"
+          ],
+          "description": "House's withdrawal symptoms directly impair his diagnostic abilities, forcing him to find creative solutions",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E12",
+      "events": [
+        {
+          "event": "Hank Wiggen's arm snaps completely while filming anti-drug commercial",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:hank",
+            "guest:lola"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson diagnoses severe osteopenia, tells House bones too degraded for surgery",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team suspects steroids, Chase obtains urine sample that tests negative",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hank develops kidney failure, condition worsens",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:hank"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices Hank gained twenty-five pounds in Japanese league",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team determines Hank needs kidney transplant, Lola offers to donate",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:lola",
+            "guest:hank"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Labs reveal Lola is pregnant, donation would require abortion",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:lola"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hank refuses to let Lola abort, attempts suicide to prevent transplant",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:hank"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices Lola hasn't reacted to strong smells, discovers her anosmia",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "guest:lola"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House connects anosmia with Hank's symptoms, recognizes cadmium poisoning pattern",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hank admits to secretly smoking marijuana throughout recovery",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "guest:hank",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase determines marijuana grown in cadmium-contaminated soil from Japan dealer",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chelation treatment begins, transplant and abortion unnecessary",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House falsifies records to list Addison's disease, protecting Hank from drug violation",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman goes on date with pharmaceutical representative",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House takes Cameron to monster truck rally with extra tickets",
+          "storyline": "attraction",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson has dinner with constitutional lawyer Stacy",
+          "storyline": "love",
+          "function": "seed",
+          "characters": [
+            "wilson",
+            "guest:stacy"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        }
+      ],
+      "theme": "the cost of secrets and recovery",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "authority",
+            "attraction"
+          ],
+          "description": "all storylines involve characters hiding truth — Hank's continued drug use, House's record falsification, and the ambiguous nature of House and Cameron's outing",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "authority"
+          ],
+          "description": "House's decision to falsify medical records directly connects solving the case with his pattern of bending rules",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E13",
+      "events": [
+        {
+          "event": "Gabriel Reilich collapses at home after developing cough, fever, and green sputum",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:gabriel"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy pressures House to take the case because Gabriel's father is a major donor",
+          "storyline": "authority",
+          "function": "setup",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Gabriel tells the team he believes he's cursed after a Ouija board spelled his name",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Gabriel admits to entering the abandoned building with friends",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team treats for pneumonia but Gabriel's condition worsens with unexplained rash",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House invites Rowan Chase to consult on the case",
+          "storyline": "loyalty",
+          "function": "setup",
+          "characters": [
+            "house",
+            "chase"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Chase becomes furious that House contacted his estranged father",
+          "storyline": "loyalty",
+          "function": "escalation",
+          "characters": [
+            "chase",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team discovers anthrax spores in animal hair insulation from abandoned house",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House investigates Jeffrey's background and discovers he lied about being a fighter pilot",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House learns Jeffrey actually spent two years at an ashram in India",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House discovers Rowan is visiting Wilson for an oncology consultation, not a conference",
+          "storyline": "loyalty",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "wilson"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "House learns Rowan has stage-four lung cancer with three months to live",
+          "storyline": "loyalty",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "House concludes Jeffrey transmitted leprosy to Gabriel, compromising his immune system",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Gabriel receives targeted treatment for both anthrax and leprosy and improves",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rowan refuses to tell Chase about his cancer diagnosis",
+          "storyline": "loyalty",
+          "function": "escalation",
+          "characters": [
+            "guest:rowan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House reluctantly agrees to keep Rowan's cancer secret from Chase",
+          "storyline": "loyalty",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "Chase attempts to reconcile with Rowan over coffee",
+          "storyline": "loyalty",
+          "function": "turning_point",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rowan departs for Australia without revealing his diagnosis to Chase",
+          "storyline": "loyalty",
+          "function": "resolution",
+          "characters": [
+            "guest:rowan",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Edward Vogler appears in background of hospital operations",
+          "storyline": "control",
+          "function": "seed",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the medical consequences of family secrets and deception",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "loyalty"
+          ],
+          "description": "both storylines explore how family deception causes harm — Jeffrey's lies about his past endanger Gabriel's health, while Rowan's secrecy about his cancer prevents reconciliation with Chase",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "loyalty",
+            "friendship"
+          ],
+          "description": "House and Wilson know Rowan is dying, but Chase doesn't, creating tension in House's decision to keep the secret",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E14",
+      "events": [
+        {
+          "event": "Carly Forlano collapses with leg paralysis during a business meeting",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:carly"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House orders an angiogram to investigate the paralysis",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase allows radiology resident to scan the wrong leg",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": [
+            "loyalty"
+          ]
+        },
+        {
+          "event": "House catches the error by noticing backward-oriented toes in the image",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Corrected angiogram comes back clean, deepening the puzzle",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team runs muscle biopsy and other tests, all negative",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carly goes into respiratory arrest from pulmonary edema",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "guest:carly"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Echocardiogram confirms severe congestive heart failure",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices psychological signs and fine cuts on Carly's body",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House confronts Carly with bulimia diagnosis and ipecac poisoning",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house",
+            "guest:carly"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House presents only heart failure to transplant committee, withholding bulimia",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Wilson sits on committee and is suspicious but cannot prove House is lying",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "wilson",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carly receives heart transplant and survives",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:carly"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Vogler donates one hundred million dollars and becomes chairman",
+          "storyline": "control",
+          "function": "setup",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Vogler identifies House's department as expensive vanity project",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Vogler sees House's defiance as liability and begins maneuvering for leverage",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Chase's X-ray error makes him vulnerable to Vogler's manipulation",
+          "storyline": "loyalty",
+          "function": "turning_point",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": [
+            "control"
+          ]
+        },
+        {
+          "event": "Vogler recognizes opportunity to use Chase as insider against House",
+          "storyline": "control",
+          "function": "seed",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "loyalty"
+          ]
+        }
+      ],
+      "theme": "the cost of truth",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "control",
+            "loyalty"
+          ],
+          "description": "all storylines explore deception and withholding truth — House hides bulimia from committee, Vogler conceals his agenda, Chase will hide his allegiance",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "control",
+            "loyalty"
+          ],
+          "description": "Chase's vulnerability from the medical error becomes Vogler's leverage point",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "friendship",
+            "diagnosis"
+          ],
+          "description": "Wilson suspects House is lying but doesn't know the specific truth about bulimia",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E15",
+      "events": [
+        {
+          "event": "Joey Arnello collapses into a coma before testifying in federal court",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:joey"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Judge orders Princeton-Plainsboro to determine if Joey is faking",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House examines Joey and confirms real coma with Glasgow Coma Scale",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Bill Arnello hovers and works to delay Joey's recovery",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:bill"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team discovers Joey has hepatitis C and rapidly worsening liver",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase finds abnormally high estrogen levels",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Joey briefly recovers but collapses again after eating steak",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "guest:joey"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices pattern and proposes ornithine transcarbamylase deficiency",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Investigation reveals Joey taking Chai Hu and herbal estrogen supplements",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House confronts Bill about Joey being gay and the poisonous supplements",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house",
+            "guest:bill"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Bill slaps Chase when Chase mentions hepatitis C transmission vector",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "guest:bill",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Bill accepts the truth and harmful supplements are discontinued",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:bill"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Joey recovers and Bill calls federal agents to make a deal",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:joey",
+            "guest:bill"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Vogler pressures Cuddy to fire House",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler",
+            "cuddy"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Vogler forces compromise requiring House to fire one fellow",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "House suspects someone on his team is reporting to Vogler",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "control"
+          ]
+        },
+        {
+          "event": "House sets traps with different information for each fellow",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy tries to protect House's department and the donation",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Federal agents question Vogler about prematurely certifying Joey",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of truth",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "control",
+            "authority"
+          ],
+          "description": "all storylines explore the price of revealing uncomfortable truths — Joey's sexuality, Vogler's corruption, the spy's identity",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "control",
+            "authority"
+          ],
+          "description": "Vogler's pressure on House creates the spy investigation and firing ultimatum",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E16",
+      "events": [
+        {
+          "event": "Ten-year-old Jessica suffers a heart attack on the playground and is admitted",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase repeatedly attributes Jessica's symptoms to obesity",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Jessica admits to stealing diet pills from a pharmacy",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jessica develops warfarin-induced skin necrosis across her chest",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mother consents to double mastectomy as last resort but begs for another explanation",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House re-examines growth charts and realizes Jessica's stunted height",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House diagnoses Cushing's syndrome caused by pituitary tumor",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman and Chase spot the pituitary tumor on MRI together",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "foreman",
+            "chase"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Surgical team removes tumor, sparing Jessica the mastectomy",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy informs House he must fire one of his three fellows",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "House decides to fire Chase and goes to Cuddy",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "loyalty"
+          ]
+        },
+        {
+          "event": "Vogler refuses to allow House to fire Chase",
+          "storyline": "control",
+          "function": "turning_point",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "loyalty"
+          ]
+        },
+        {
+          "event": "Vogler tells House to pick someone else to fire",
+          "storyline": "control",
+          "function": "climax",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Cameron updates her resume in preparation for being fired",
+          "storyline": "loyalty",
+          "function": "escalation",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": [
+            "attraction"
+          ]
+        },
+        {
+          "event": "All three fellows evaluate each other as competitors rather than collaborators",
+          "storyline": "loyalty",
+          "function": "escalation",
+          "characters": [
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        }
+      ],
+      "theme": "betrayal and survival",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "control",
+            "loyalty"
+          ],
+          "description": "all storylines explore hidden truths — Jessica's hidden condition, Chase's hidden betrayal, and the team's hidden vulnerabilities",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "control",
+            "loyalty"
+          ],
+          "description": "the audience learns Chase is Vogler's informant while the other fellows remain unaware",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "control",
+            "loyalty"
+          ],
+          "description": "Vogler's refusal to let House fire Chase reveals Chase's betrayal and fractures team dynamics",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E17",
+      "events": [
+        {
+          "event": "Senator Wright collapses at campaign fundraiser, vomiting and falling down stairs",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:wright"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Vogler pushes House to take Wright's case due to political backing",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler",
+            "house"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Vogler offers deal: treat senator and promote Viopril speech for dropping firing demand",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler",
+            "house"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "House reluctantly agrees to Vogler's deal",
+          "storyline": "authority",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "control"
+          ]
+        },
+        {
+          "event": "House notices Wright's absent patellar reflex indicating neurological problem",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman finds scar on Wright's tongue, House deduces childhood epilepsy",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman",
+            "house"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "MRI reveals brain lesion, biopsy confirms toxoplasmosis",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wright tests positive for HIV, team suspects AIDS",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House orders second HIV test which comes back negative",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House connects childhood epilepsy treatment and EBV to diagnose CVID",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Immunoglobulin treatment produces improvement, confirming CVID diagnosis",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House sabotages Vogler's speech, exposing Viopril as generic drug scam",
+          "storyline": "authority",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "control"
+          ]
+        },
+        {
+          "event": "House jokes about his Vicodin consumption during speech",
+          "storyline": "addiction",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Vogler becomes furious, deal is dead, demands House fire Cameron or Foreman",
+          "storyline": "control",
+          "function": "climax",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Cameron goes to House's apartment and resigns to spare him the choice",
+          "storyline": "attraction",
+          "function": "climax",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron tells House her unreciprocated feelings make it impossible to stay",
+          "storyline": "attraction",
+          "function": "resolution",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase admits to House he has been feeding information to Vogler",
+          "storyline": "loyalty",
+          "function": "climax",
+          "characters": [
+            "chase",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House tells Chase he already knew about the betrayal",
+          "storyline": "loyalty",
+          "function": "resolution",
+          "characters": [
+            "house",
+            "chase"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the price of integrity",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "authority",
+            "control",
+            "attraction",
+            "loyalty"
+          ],
+          "description": "all storylines explore the cost of standing up for principles versus compromising for security",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "control",
+            "authority"
+          ],
+          "description": "Vogler's corporate control directly conflicts with House's diagnostic independence, culminating in the speech sabotage",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "loyalty",
+            "authority"
+          ],
+          "description": "House knows Chase is the informant but doesn't reveal this knowledge until the end",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E18",
+      "events": [
+        {
+          "event": "Naomi Randolph passes out while driving, nearly causing a crash",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:naomi",
+            "guest:sean"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House and team discover impaired kidney and liver function plus lung mass",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House diagnoses small-cell lung cancer with paraneoplastic syndrome",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team recommends immediate Cesarean section for chemotherapy",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Naomi begs to wait one more week, citing her history of child loss",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:naomi"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sean authorizes early delivery despite Naomi's pleas",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "guest:sean"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House attempts to get Naomi into clinical trial to delay Cesarean",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "control"
+          ]
+        },
+        {
+          "event": "Vogler blocks House's access to trial resources as punishment",
+          "storyline": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Cesarean is performed successfully, both mother and baby survive",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Vogler convenes board meeting to revoke House's tenure",
+          "storyline": "control",
+          "function": "climax",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Vogler itemizes House's transgressions and threatens donation withdrawal",
+          "storyline": "control",
+          "function": "climax",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Wilson defends House passionately, casting lone dissenting vote",
+          "storyline": "friendship",
+          "function": "climax",
+          "characters": [
+            "wilson"
+          ],
+          "also_affects": [
+            "control"
+          ]
+        },
+        {
+          "event": "Vogler retaliates by removing Wilson from the board",
+          "storyline": "control",
+          "function": "climax",
+          "characters": [
+            "vogler"
+          ],
+          "also_affects": [
+            "friendship"
+          ]
+        },
+        {
+          "event": "Wilson is forced to resign from hospital entirely",
+          "storyline": "friendship",
+          "function": "climax",
+          "characters": [
+            "wilson"
+          ],
+          "also_affects": [
+            "control"
+          ]
+        },
+        {
+          "event": "House is uncharacteristically shaken by Wilson's sacrifice",
+          "storyline": "friendship",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy reverses support for Vogler in final board session",
+          "storyline": "control",
+          "function": "turning_point",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Cuddy persuades board that Vogler's agenda is incompatible with hospital mission",
+          "storyline": "control",
+          "function": "turning_point",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Board votes Vogler out, Wilson is reinstated",
+          "storyline": "control",
+          "function": "resolution",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": [
+            "friendship",
+            "authority"
+          ]
+        }
+      ],
+      "theme": "the cost of principles",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "control",
+            "friendship"
+          ],
+          "description": "all three storylines explore sacrifice for principles — Naomi's husband choosing her life over baby's odds, Wilson sacrificing his career for House, Cuddy sacrificing the donation for hospital independence",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "control",
+            "diagnosis"
+          ],
+          "description": "Vogler's power play directly interferes with House's medical case when he blocks access to clinical trial",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "control",
+            "friendship",
+            "authority"
+          ],
+          "description": "all storylines merge in the board room climax where Wilson's loyalty, Vogler's corporate agenda, and House's independence collide",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E19",
+      "events": [
+        {
+          "event": "Mary Carroll experiences blurred vision during diving but completes her dive",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "guest:mary"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Meningitis outbreak floods Princeton-Plainsboro with hundreds of patients",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices Mary's neck pain pattern is inconsistent with meningitis",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Lumbar puncture comes back negative for infection",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "foreman",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman discovers Mary is bleeding from her mouth",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase and Foreman insert endoscope but find no gastrointestinal lesions",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mary suffers absence seizure with EEG spikes",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "guest:mary"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Transcranial ultrasound reveals brain bleeding, emergency surgery relieves pressure",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "foreman",
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House discovers Mary is pregnant through abdominal ultrasound",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House determines pregnancy triggered thrombotic thrombocytopenic purpura",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mary consents to abortion under New Jersey law without parental notification",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house",
+            "guest:mary"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House visits Cameron's apartment to offer her job back",
+          "storyline": "attraction",
+          "function": "setup",
+          "characters": [
+            "house",
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron asks why House wants her back, slams door at generic answer",
+          "storyline": "attraction",
+          "function": "escalation",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron agrees to return on condition House takes her on a date",
+          "storyline": "attraction",
+          "function": "turning_point",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House resists but eventually accepts Cameron's dating condition",
+          "storyline": "attraction",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy manages hospital-wide meningitis emergency with competence",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House, Foreman, and Chase work without Cameron during crisis",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "foreman",
+            "chase"
+          ],
+          "also_affects": [
+            "loyalty"
+          ]
+        }
+      ],
+      "theme": "acknowledging personhood beyond function",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "attraction"
+          ],
+          "description": "both storylines explore seeing people as whole beings rather than just their function — Mary as a person capable of making her own medical decisions, Cameron as a person deserving acknowledgment beyond her diagnostic skills",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "attraction",
+            "identity",
+            "loyalty"
+          ],
+          "description": "Cameron's absence forces the team to function differently, affecting Foreman and Chase's roles and dynamics",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E20",
+      "events": [
+        {
+          "event": "House snaps at Harvey Park in the clinic, mistaking apple juice for urine",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Harvey suffers a stroke in front of House when he returns to apologize",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House agrees to take Harvey's case to avoid a lawsuit",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "authority"
+          ]
+        },
+        {
+          "event": "Team explores standard stroke explanations but finds no aneurysm during surgery",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Foreman discovers Annette choking Harvey in his hospital bed and pulls her off",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Harvey insists Annette was not hurting him despite the choking",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:harvey"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase identifies Annette as a dominatrix and Harvey as an asphyxiaphiliac",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chase mentions he has encountered asphyxiaphilia before with a former girlfriend",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "chase"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team cannot perform MRI due to Harvey's steel jaw plate from reconstructive surgery",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House notices the smell from Harvey's mouth and diagnoses fulminating osteomyelitis",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House confirms diagnosis by inserting needle into Harvey's jaw and drawing out pus",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Harvey undergoes surgery to remove infected bone and recovers",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "guest:harvey"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House warns Harvey and Annette that asphyxiation must stop or it will kill him",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House and Cameron go on their date at an upscale restaurant",
+          "storyline": "attraction",
+          "function": "setup",
+          "characters": [
+            "house",
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron tells House to skip small talk and say what he honestly thinks of her",
+          "storyline": "attraction",
+          "function": "escalation",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House delivers devastating assessment that Cameron lives under delusion she can fix imperfect things",
+          "storyline": "attraction",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House tells Cameron she married a dying man and now wants him as her next charity case",
+          "storyline": "attraction",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron is wounded but does not break, returns to team the next day",
+          "storyline": "attraction",
+          "function": "resolution",
+          "characters": [
+            "cameron"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wilson observes the House-Cameron date and offers wry commentary to House",
+          "storyline": "friendship",
+          "function": "escalation",
+          "characters": [
+            "wilson"
+          ],
+          "also_affects": [
+            "attraction"
+          ]
+        },
+        {
+          "event": "Hospital adjusts to loss of hundred million dollars after Vogler's departure",
+          "storyline": "authority",
+          "function": "setup",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy manages budget fallout from Vogler situation",
+          "storyline": "authority",
+          "function": "escalation",
+          "characters": [
+            "cuddy"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of honesty",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "attraction"
+          ],
+          "description": "both storylines involve House confronting uncomfortable truths — Harvey's sexual practices and Cameron's psychological motivations",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "attraction",
+            "friendship"
+          ],
+          "description": "Wilson sees House's emotional isolation more clearly than House himself does",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "budget_crisis",
+          "reason": "Events about hospital financial fallout from Vogler's departure don't fit existing storylines",
+          "episodes": [
+            "S01E20"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E21",
+      "events": [
+        {
+          "event": "Cuddy pressures House into substituting for a sick professor and lecturing medical students",
+          "storyline": "authority",
+          "function": "setup",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House encounters Stacy Warner, his ex-girlfriend whom he has not seen in five years",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "house",
+            "stacy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Stacy asks House to examine her husband Mark, who has been experiencing intermittent symptoms",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "stacy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House reviews Mark's file and says he does not appear to be ill",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "The encounter with Stacy visibly rattles House",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House presents the first case: a farmer with leg pain who lied about a dog bite",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House reveals the farmer's leg was amputated due to delayed treatment from the lie",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House presents the second case: a volleyball player who collapses during practice",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House reveals the volleyball player had bone cancer but was caught early enough for successful surgery",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House initially presents the third patient as Carmen Electra, drawing laughs from students",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House's team members realize the third patient is House himself from five years earlier",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": [
+            "love",
+            "addiction"
+          ]
+        },
+        {
+          "event": "House reveals he experienced sudden, excruciating pain from a blood clot causing muscle death",
+          "storyline": "addiction",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "House explains doctors initially dismissed his complaints as drug-seeking behavior",
+          "storyline": "addiction",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron identifies the mechanism: dying muscle releases myoglobin that shuts down kidneys",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "House reveals he refused amputation and chose risky bypass surgery",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "addiction"
+          ]
+        },
+        {
+          "event": "House reveals Stacy authorized a middle-ground procedure while he was in a coma, overriding his wishes",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "house",
+            "stacy"
+          ],
+          "also_affects": [
+            "addiction"
+          ]
+        },
+        {
+          "event": "House explains he could not forgive Stacy for the decision, ending their relationship",
+          "storyline": "love",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The lecture reveals Cuddy was the attending physician during House's infarction",
+          "storyline": "authority",
+          "function": "climax",
+          "characters": [
+            "cuddy",
+            "house"
+          ],
+          "also_affects": [
+            "addiction"
+          ]
+        }
+      ],
+      "theme": "the cost of truth and the burden of choice",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "love",
+            "addiction",
+            "authority"
+          ],
+          "description": "all storylines explore how past decisions and their consequences shape present relationships and professional identity",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "love",
+            "addiction",
+            "authority"
+          ],
+          "description": "House's medical crisis five years ago is the origin point for his current pain, his breakup with Stacy, and his complex relationship with Cuddy",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "diagnosis"
+          ],
+          "description": "the lecture format serves as a structural device to reveal backstory through case presentations",
+          "subtype": "wraparound"
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E22",
+      "events": [
+        {
+          "event": "Stacy asks House to help her husband Mark, who refuses to see House",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "stacy",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "Stacy arranges dinner where House shows up unannounced",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "stacy",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "House drugs Mark's food to get him to the hospital, violating consent",
+          "storyline": "diagnosis",
+          "function": "setup",
+          "characters": [
+            "house"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Initial tests come back negative but Mark's symptoms worsen",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House orders exploratory surgery and spots abdominal tremors on tape",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team suspects Alzheimer's but rules it out",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark describes false honeymoon memory to Paris during brain scan",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Stacy reveals they never went to Paris, confirming Mark's delusions",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "stacy",
+            "house"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "House notes Mark's photosensitivity and diagnoses acute intermittent porphyria",
+          "storyline": "diagnosis",
+          "function": "turning_point",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House proposes dangerous barbiturate test to confirm diagnosis",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark refuses the test, exercising his right as competent patient",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "guest:mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Stacy persuades House to administer test against Mark's wishes",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "stacy",
+            "house"
+          ],
+          "also_affects": [
+            "diagnosis"
+          ]
+        },
+        {
+          "event": "House's team tries to stop him but he proceeds with the test",
+          "storyline": "diagnosis",
+          "function": "escalation",
+          "characters": [
+            "house",
+            "cameron",
+            "chase",
+            "foreman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House stabs Mark in bladder with syringe to collect urine during attack",
+          "storyline": "diagnosis",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Urine tests positive for porphyria, House prescribes treatment and Mark recovers",
+          "storyline": "diagnosis",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cameron tells House she realizes he cannot love her because he loves Stacy",
+          "storyline": "attraction",
+          "function": "resolution",
+          "characters": [
+            "cameron",
+            "house"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Stacy confesses she is not over House but cannot be with him",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "stacy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Stacy kisses House and walks away after saying she felt lonely with him",
+          "storyline": "love",
+          "function": "resolution",
+          "characters": [
+            "stacy",
+            "house"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cuddy offers Stacy position as general counsel to oversee Mark's recovery",
+          "storyline": "love",
+          "function": "seed",
+          "characters": [
+            "cuddy",
+            "stacy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "House consents to Stacy working at the hospital",
+          "storyline": "love",
+          "function": "cliffhanger",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of love and sacrifice",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "diagnosis",
+            "love",
+            "attraction"
+          ],
+          "description": "all storylines explore sacrifice and consent — House violates Mark's consent to save him, just as Stacy violated House's consent years ago; Cameron sacrifices her romantic hopes",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "love",
+            "attraction"
+          ],
+          "description": "the audience knows House loves Stacy while Cameron pursues him, creating painful dramatic tension",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "diagnosis",
+            "love"
+          ],
+          "description": "the medical case becomes the vehicle for resolving House and Stacy's relationship — saving her husband forces them to confront their past",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    }
+  ]
+}

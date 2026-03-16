@@ -1,0 +1,4209 @@
+{
+  "context": {
+    "franchise_type": "ensemble",
+    "story_engine": "A family across three generations experiences love, loss, and identity, each member confronting their own version of what it means to belong",
+    "genre": "drama",
+    "format": "ongoing"
+  },
+  "cast": [
+    {
+      "id": "jack",
+      "name": "Jack Pearson",
+      "aliases": [
+        "Jack",
+        "Mr. Pearson"
+      ]
+    },
+    {
+      "id": "rebecca",
+      "name": "Rebecca Pearson",
+      "aliases": [
+        "Rebecca",
+        "Mrs. Pearson"
+      ]
+    },
+    {
+      "id": "kevin",
+      "name": "Kevin Pearson",
+      "aliases": [
+        "Kevin"
+      ]
+    },
+    {
+      "id": "kate",
+      "name": "Kate Pearson",
+      "aliases": [
+        "Kate"
+      ]
+    },
+    {
+      "id": "randall",
+      "name": "Randall Pearson",
+      "aliases": [
+        "Randall",
+        "Kyle"
+      ]
+    },
+    {
+      "id": "william",
+      "name": "William Hill",
+      "aliases": [
+        "William",
+        "Shakespeare"
+      ]
+    },
+    {
+      "id": "beth",
+      "name": "Beth Pearson",
+      "aliases": [
+        "Beth"
+      ]
+    },
+    {
+      "id": "toby",
+      "name": "Toby Damon",
+      "aliases": [
+        "Toby"
+      ]
+    },
+    {
+      "id": "miguel",
+      "name": "Miguel Rivas",
+      "aliases": [
+        "Miguel"
+      ]
+    },
+    {
+      "id": "sophie",
+      "name": "Sophie",
+      "aliases": [
+        "Sophie"
+      ]
+    },
+    {
+      "id": "olivia",
+      "name": "Olivia Maine",
+      "aliases": [
+        "Olivia"
+      ]
+    },
+    {
+      "id": "dr_k",
+      "name": "Dr. Nathan Katowski",
+      "aliases": [
+        "Dr. K",
+        "Dr. Katowski"
+      ]
+    }
+  ],
+  "plotlines": [
+    {
+      "id": "belonging",
+      "name": "Randall: Belonging",
+      "driver": "randall",
+      "goal": "find his biological father and understand his identity",
+      "obstacle": "decades of separation, William's terminal illness, family secrets",
+      "stakes": "losing the chance to know his biological father forever",
+      "type": "serialized",
+      "rank": "A",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E15",
+        "S01E16",
+        "S01E17",
+        "S01E18"
+      ]
+    },
+    {
+      "id": "marriage",
+      "name": "Jack: Marriage",
+      "driver": "jack",
+      "goal": "save his marriage to Rebecca",
+      "obstacle": "alcoholism, jealousy, controlling behavior, growing apart",
+      "stakes": "losing his family and the love of his life",
+      "type": "serialized",
+      "rank": "A",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E17",
+        "S01E18"
+      ]
+    },
+    {
+      "id": "identity",
+      "name": "Kate: Identity",
+      "driver": "kate",
+      "goal": "overcome her weight struggles and find her own voice",
+      "obstacle": "emotional eating, self-doubt, dependence on Kevin",
+      "stakes": "remaining trapped in cycles of shame and self-destruction",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E17",
+        "S01E18"
+      ]
+    },
+    {
+      "id": "purpose",
+      "name": "Kevin: Purpose",
+      "driver": "kevin",
+      "goal": "find meaningful work as a serious actor",
+      "obstacle": "sitcom reputation, self-doubt, romantic distractions",
+      "stakes": "remaining trapped in shallow, unfulfilling work",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E06",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E15",
+        "S01E17",
+        "S01E18"
+      ]
+    },
+    {
+      "id": "love",
+      "name": "Kate: Love",
+      "driver": "kate",
+      "goal": "build a healthy romantic relationship with Toby",
+      "obstacle": "self-worth issues, fear of vulnerability, weight insecurity",
+      "stakes": "remaining isolated and unable to accept love",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E08",
+        "S01E10",
+        "S01E11",
+        "S01E13",
+        "S01E14",
+        "S01E15"
+      ]
+    },
+    {
+      "id": "redemption",
+      "name": "Kevin: Redemption",
+      "driver": "kevin",
+      "goal": "win back his ex-wife Sophie",
+      "obstacle": "history of betrayal, trust issues, geographic distance",
+      "stakes": "losing his chance at true love forever",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E11",
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E17"
+      ]
+    },
+    {
+      "id": "acceptance",
+      "name": "William: Acceptance",
+      "driver": "william",
+      "goal": "make peace with his past and build a relationship with Randall",
+      "obstacle": "terminal cancer, decades of guilt, limited time",
+      "stakes": "dying without redemption or connection to his son",
+      "type": "serialized",
+      "rank": "A",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E07",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E16",
+        "S01E17"
+      ]
+    },
+    {
+      "id": "protection",
+      "name": "Beth: Protection",
+      "driver": "beth",
+      "goal": "protect her family from the chaos of William's arrival",
+      "obstacle": "Randall's emotional needs, William's unpredictable presence",
+      "stakes": "family stability and her marriage",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E02",
+        "S01E05",
+        "S01E07",
+        "S01E08",
+        "S01E14"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "episode": "S01E01",
+      "events": [
+        {
+          "event": "Jack rushes pregnant Rebecca to the hospital after her water breaks early",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. K warns Jack about complications with triplets but Jack insists all three will be fine",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "dr_k"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca loses consciousness during delivery and the third baby is stillborn",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "rebecca",
+            "jack",
+            "dr_k"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. K tells Jack to take the good with the bad and make lemonade from life",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "dr_k"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "A firefighter discovers an abandoned newborn at the fire station",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "guest:firefighter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack suggests adopting the abandoned baby as their third child",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Kevin has a meltdown on set and quits The Manny on live television",
+          "storyline": "purpose",
+          "function": "setup",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin delivers an impassioned monologue about wanting meaningful work",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate attends an overeaters support group meeting",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate meets Toby at the support group and resists his persistent flirting",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Randall tracks down his biological father William in Philadelphia",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall",
+            "william"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William reveals he has terminal stomach cancer and is remorseful about abandoning Randall",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "randall",
+            "william"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Randall impulsively invites William home to meet Beth and his daughters",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall",
+            "william"
+          ],
+          "also_affects": [
+            "protection",
+            "acceptance"
+          ]
+        },
+        {
+          "event": "The twist reveals Jack and Rebecca are the parents of adult Kevin, Kate, and Randall",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "rebecca",
+            "kevin",
+            "kate",
+            "randall"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the interconnectedness of family and the courage to embrace unexpected connections",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "marriage",
+            "identity",
+            "purpose",
+            "love"
+          ],
+          "description": "all storylines explore finding one's place and purpose through connection with others",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "belonging",
+            "marriage",
+            "identity",
+            "purpose",
+            "love"
+          ],
+          "description": "the time structure reveals that past and present are connected through family",
+          "subtype": "twist-reveal"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "marriage"
+          ],
+          "description": "the abandoned baby storyline connects Randall's origin to Jack and Rebecca's loss",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "family_origin",
+          "reason": "The time-reveal twist doesn't advance any character's goal but reframes the entire narrative structure",
+          "episodes": [
+            "S01E01"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E02",
+      "events": [
+        {
+          "event": "Kevin's agency informs him he's contractually bound to the network for two more years",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin calls Randall late at night seeking advice about his career",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "randall"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Randall reminds Kevin of their childhood cheer 'The Big Three' and encourages him not to quit",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "randall",
+            "kevin"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Kevin decides to book a red-eye flight to New York to pursue Broadway",
+          "storyline": "purpose",
+          "function": "resolution",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate resists Toby's romantic advances but agrees to let him accompany her to Kevin's party",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Toby pulls Kate onto the dance floor at the networking party",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Kate becomes self-conscious when she perceives guests laughing and leaves upset",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Toby's earnest affection begins to crack Kate's emotional defenses",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William tries to be respectful of boundaries while adjusting to life in Randall's home",
+          "storyline": "acceptance",
+          "function": "setup",
+          "characters": [
+            "william",
+            "randall"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Beth sneaks out to confront William privately about whether he used Randall's money for drugs",
+          "storyline": "protection",
+          "function": "escalation",
+          "characters": [
+            "beth",
+            "william"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Jack spends evenings at a bar with Miguel, venting about feeling disconnected from Rebecca",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "miguel"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Young Kate becomes conscious of her weight and starts dieting",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Young Randall faces bullying at school for being a Black child adopted by a white family",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca confronts Jack about his drinking and he promises to stop",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "rebecca",
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack gives Rebecca a crescent moon necklace as a gesture of recommitment",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca promises never to take off the necklace",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca arrives at Randall's house accompanied by Miguel as her husband, not Jack",
+          "storyline": "belonging",
+          "function": "seed",
+          "characters": [
+            "rebecca",
+            "miguel",
+            "randall"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the courage to take leaps of faith",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "purpose",
+            "love",
+            "marriage"
+          ],
+          "description": "all three storylines involve characters taking emotional risks - Kevin pursuing his dreams, Kate opening her heart, Jack recommitting to his marriage",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage",
+            "protection"
+          ],
+          "description": "the audience sees Jack's drinking problems and Miguel's presence in both timelines, while characters in the past don't know the future outcome",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "purpose",
+            "belonging"
+          ],
+          "description": "Kevin and Randall's late-night call brings their individual struggles together through their shared childhood bond",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "revelation",
+          "reason": "The Miguel-Rebecca reveal doesn't fit existing storylines - it's a major plot revelation that reframes the entire show",
+          "episodes": [
+            "S01E02"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E03",
+      "events": [
+        {
+          "event": "Jack and Rebecca bring their three newborns home from the hospital, naming them Kevin, Kate, and Kyle",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Rebecca bonds easily with Kevin and Kate but struggles to connect with Kyle, feeling he's a stranger",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Rebecca confesses to Jack her difficulty bonding with Kyle because the other two grew inside her",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "rebecca",
+            "jack"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Rebecca recalls seeing a young Black man outside the hospital and becomes determined to find him",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca tracks down William Hill with help from a bus driver who knows him as 'Shakespeare'",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William tells Rebecca the story of meeting Randall's mother and how drugs destroyed their relationship",
+          "storyline": "acceptance",
+          "function": "setup",
+          "characters": [
+            "william",
+            "rebecca"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "William explains how Randall's mother died after birth and he left the baby at a fire station due to addiction",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "william"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "William suggests changing the baby's name to Randall after poet Dudley Randall and gives Rebecca a book of poems",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "william",
+            "rebecca"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Rebecca and Jack agree that Randall is the right name for their son",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "rebecca",
+            "jack"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Rebecca tells William she can only raise Randall if he stays away, and William agrees to the secret",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "rebecca",
+            "william"
+          ],
+          "also_affects": [
+            "acceptance",
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Kevin prepares to move to New York and assumes Kate will come as his assistant",
+          "storyline": "purpose",
+          "function": "setup",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Kevin notices Kate drops everything, including romantic moments with Toby, whenever he calls",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "kate"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Kevin realizes Kate has been sacrificing her own life to manage his",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": [
+            "purpose"
+          ]
+        },
+        {
+          "event": "Kevin fires Kate as his assistant, telling her she needs to live for herself",
+          "storyline": "identity",
+          "function": "climax",
+          "characters": [
+            "kevin",
+            "kate"
+          ],
+          "also_affects": [
+            "purpose"
+          ]
+        },
+        {
+          "event": "Kevin boards the red-eye to New York alone",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate spends the day with Toby, freed from Kevin's orbit",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Toby orchestrates an elaborate star treatment date with red carpet and limousine",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate performs 'Time After Time' at the nursing home, revealing her vocal talent",
+          "storyline": "identity",
+          "function": "resolution",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Randall continues hosting William, navigating their complex new relationship",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "randall",
+            "william"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        }
+      ],
+      "theme": "the courage to let go in order to truly connect",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "identity",
+            "acceptance"
+          ],
+          "description": "all three storylines explore letting go of control to find authentic connection — Rebecca letting go of her need to understand Kyle to accept Randall, Kate letting go of Kevin's dependence to find herself, William letting go of his past shame to connect with his son",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "belonging",
+            "acceptance",
+            "forgiveness"
+          ],
+          "description": "the audience knows the secret agreement between Rebecca and William that will haunt the family for 36 years, while present-day Randall remains unaware",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "identity",
+            "love"
+          ],
+          "description": "Kate's journey to find her own voice converges with her romantic relationship as Toby's elaborate date helps her discover her talent",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E04",
+      "events": [
+        {
+          "event": "Jack suggests the family spend the day at the public pool during a heat wave",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Young Kate is bullied by girls who pass her a cruel note mocking her weight",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack comforts Kate by giving her his green frog T-shirt, telling her it has magical powers",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "kate"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Jack tells Kate she is a princess no matter what anyone says",
+          "storyline": "identity",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Young Randall wanders away and is found playing with Black children on the other side of the pool",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca panics when she cannot find Randall",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Rebecca has an awkward exchange with the Black mother, who then offers practical advice about caring for Randall's skin",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Young Kevin nearly drowns in the pool while his parents are distracted",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin throws a tantrum, screaming that his parents never pay attention to him because he doesn't have obvious problems",
+          "storyline": "purpose",
+          "function": "climax",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate and Toby run into Toby's thin, polished ex-wife Josie at lunch",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Kate becomes consumed with insecurity about why Toby would choose her over his ex-wife",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Kevin arrives in New York to audition for his first Broadway play",
+          "storyline": "purpose",
+          "function": "setup",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin meets a serious young actress who challenges his commitment to real acting",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "guest:serious_actress"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "A neighbor calls the police on William, mistaking him for a loiterer",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "william"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Randall deals with the racial incident in his predominantly white neighborhood",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": [
+            "protection"
+          ]
+        },
+        {
+          "event": "William handles the police confrontation with quiet dignity",
+          "storyline": "acceptance",
+          "function": "turning_point",
+          "characters": [
+            "william"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        }
+      ],
+      "theme": "the burden of being different",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "identity",
+            "purpose",
+            "love"
+          ],
+          "description": "all storylines explore how being different creates isolation — Randall's race, Kate's weight, Kevin's invisibility, and Kate's insecurity about Toby's ex",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "acceptance",
+            "protection"
+          ],
+          "description": "the police incident brings together Randall's struggle with race, William's dignity, and Beth's fears about William's presence",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "belonging",
+            "identity",
+            "purpose"
+          ],
+          "description": "the pool flashback reframes the present-day struggles by showing their childhood origins",
+          "subtype": "wraparound"
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E05",
+      "events": [
+        {
+          "event": "Rebecca announces at Miguel's Super Bowl party that she never wants children",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "rebecca",
+            "jack",
+            "miguel"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack is stunned by Rebecca's announcement, having always imagined watching football with his kids",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca's disagreement erupts into a loud argument that disrupts the party",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack punches a bystander who tells them to quiet down",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack tells Rebecca that if the choice is between her and having kids, she wins every time",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca is moved by Jack's willingness to sacrifice his dream and they reconcile",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "rebecca",
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca have sex in Froggy's bar bathroom, conceiving the triplets",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate pulls Jack's urn from a shelf when Toby asks to meet her father",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate reveals she watches every Super Bowl with Jack's ashes beside her",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin accidentally reveals to Tess and Annie that William is sick and dying",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "guest:tess",
+            "guest:annie"
+          ],
+          "also_affects": [
+            "protection"
+          ]
+        },
+        {
+          "event": "Kevin shows the girls his abstract painting to explain how people remain connected after death",
+          "storyline": "acceptance",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "guest:tess",
+            "guest:annie"
+          ],
+          "also_affects": [
+            "purpose"
+          ]
+        },
+        {
+          "event": "Beth suspects she might be pregnant, throwing both her and Randall into anxiety",
+          "storyline": "protection",
+          "function": "setup",
+          "characters": [
+            "beth",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall and Beth have a tense conversation about what another child would mean for their family",
+          "storyline": "protection",
+          "function": "escalation",
+          "characters": [
+            "randall",
+            "beth"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall and Beth check the pregnancy test together and discover it is negative",
+          "storyline": "protection",
+          "function": "resolution",
+          "characters": [
+            "randall",
+            "beth"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William continues adjusting to life in Randall's household while navigating cancer treatment",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "william"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        }
+      ],
+      "theme": "the weight of family legacy",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "identity",
+            "protection",
+            "acceptance"
+          ],
+          "description": "all storylines explore how family bonds are formed, maintained, and honored across generations",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage",
+            "identity"
+          ],
+          "description": "the audience knows Jack dies young while watching him plan for a future with his children",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "acceptance",
+            "protection"
+          ],
+          "description": "Kevin's blunder about William's illness forces both storylines to intersect around the children's awareness of death",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E06",
+      "events": [
+        {
+          "event": "Randall prepares to speak at career day at Tess's school but finds himself in an identity crisis",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Learning about William's musical and poetic talents makes Randall question his destined path",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Randall wonders if he was pigeonholed into corporate work by family expectations",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall attempts to perform a song at career day, channeling William's artistic spirit",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "The performance is awkward but reveals Randall's longing to connect with his unknown artistic side",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate interviews for a job and gets hired",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate discovers her boss Marin hired her partly because of her size for company optics",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "guest:marin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate confronts Marin directly about the ulterior motive",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kate",
+            "guest:marin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate negotiates better terms and accepts the position with a promotion",
+          "storyline": "identity",
+          "function": "climax",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin rehearses for his new play in New York with Olivia Maine",
+          "storyline": "purpose",
+          "function": "setup",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Olivia takes Kevin to a stranger's memorial service for an acting exercise",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Olivia forces Kevin to roleplay as someone who knew the deceased",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin speaks to the widow about his own father's death, accessing buried grief",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "guest:widow"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The experience deepens Kevin's commitment to his craft but draws him into Olivia's manipulative orbit",
+          "storyline": "purpose",
+          "function": "climax",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca learn that young Randall has tested as intellectually gifted",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack resists the private school idea, not wanting Randall stifled in a desk job like himself",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Neighbor Yvette challenges Jack directly about robbing Randall of opportunity due to his own insecurities",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "guest:yvette"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack takes Randall to his office for a day to observe him",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack realizes Randall has been deliberately performing poorly in math to avoid standing out",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack changes his mind and agrees to enroll Randall in the private school",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "authentic self-expression versus conformity",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "identity",
+            "purpose",
+            "marriage"
+          ],
+          "description": "all storylines explore the tension between being true to oneself and meeting others' expectations",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "marriage"
+          ],
+          "description": "present-day Randall's identity crisis directly connects to past Jack's decision about his education",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "belonging",
+            "marriage"
+          ],
+          "description": "the audience sees how Jack's past decision to nurture Randall's gifts led to the corporate path Randall now questions",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E07",
+      "events": [
+        {
+          "event": "Teenage Randall earns a spot on his private school's football team, becoming Kevin's direct competitor",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall",
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin and Randall get into a physical fight during their schools' football game",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin tells Randall to 'get a life' and moves his bedroom to the basement",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall attempts reconciliation but Kevin refuses to engage",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall",
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca rehearses with an old friend, trying to revive her singing career",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack is distracted and unsupportive of Rebecca's musical ambitions",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack almost leaves without kissing Rebecca goodbye for the first time in eighteen years",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Flashback to Jack and Rebecca meeting at a laundromat, Jack promising the best washing machine",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Present-day Kevin and Randall eat alone at restaurant after Rebecca cancels family dinner",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "kevin",
+            "randall"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Kevin and Randall argue about their teenage rivalry and mistreatment",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The brothers' fight turns physical and spills onto the sidewalk with crowd watching",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "kevin",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Seth Meyers approaches Kevin asking if he needs help, making brothers realize how absurd they look",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "randall",
+            "guest:seth_meyers"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin invites Randall to hang out downstairs, offering peace instead of rejection",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "kevin",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Beth reveals her father died of cancer and marijuana eased his pain",
+          "storyline": "protection",
+          "function": "setup",
+          "characters": [
+            "beth",
+            "william"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Beth bakes pot brownies for William to help with his post-chemo nausea",
+          "storyline": "protection",
+          "function": "turning_point",
+          "characters": [
+            "beth",
+            "william"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Beth and William bond deeply over marijuana and honest conversation",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "beth",
+            "william"
+          ],
+          "also_affects": [
+            "protection"
+          ]
+        },
+        {
+          "event": "William accidentally reveals he gave Rebecca a book of poems when Randall was a baby",
+          "storyline": "acceptance",
+          "function": "seed",
+          "characters": [
+            "william",
+            "beth"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Kate attends weight-loss support group weigh-in",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate discovers she has lost only one and a quarter pounds despite weeks of effort",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate's minimal weight loss crushes her motivation and forces her to confront the long journey ahead",
+          "storyline": "identity",
+          "function": "climax",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the weight of the past",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "marriage",
+            "identity",
+            "acceptance"
+          ],
+          "description": "all storylines explore how past wounds and patterns continue to shape present relationships and self-perception",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "protection",
+            "acceptance"
+          ],
+          "description": "Beth's protective instincts lead her to care for William, which deepens his acceptance into the family",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "acceptance",
+            "forgiveness"
+          ],
+          "description": "William's slip about the poetry book plants a seed that will later reveal Rebecca's secret to Randall",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E08",
+      "events": [
+        {
+          "event": "The Pearson family sets out on a road trip to Rebecca's parents' house for Thanksgiving",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca",
+            "kevin",
+            "kate",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Young Kate accidentally spills Rebecca's homemade cranberry sauce",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "kate",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "A tire blows out on the highway, derailing the trip",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack transforms the disaster into an adventure at the roadside motel",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack borrows Pilgrim Rick's hat and rallies the family for an improvised Thanksgiving",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack",
+            "rebecca",
+            "kevin",
+            "kate",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The family creates the Pilgrim Rick hat tradition for future Thanksgivings",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Adult Pearsons gather at Randall's house for Thanksgiving",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "randall",
+            "beth",
+            "kevin",
+            "kate",
+            "rebecca",
+            "william"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin brings Olivia Maine as his date to family dinner",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate announces she is breaking up with Toby",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Kate announces she plans to have gastric bypass surgery",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate tells Toby she needs to figure out who she is before being in a relationship",
+          "storyline": "identity",
+          "function": "climax",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Randall discovers Rebecca and William have known each other since his birth",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "randall",
+            "rebecca",
+            "william"
+          ],
+          "also_affects": [
+            "forgiveness",
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Randall learns Rebecca instructed William to stay away, robbing him of a lifetime relationship",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall",
+            "rebecca",
+            "william"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Beth squirms as the truth about William and Rebecca emerges",
+          "storyline": "protection",
+          "function": "escalation",
+          "characters": [
+            "beth"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin softens toward Miguel and lets him wear the Pilgrim Rick hat",
+          "storyline": "purpose",
+          "function": "resolution",
+          "characters": [
+            "kevin",
+            "miguel"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the weight of family secrets and the power of acceptance",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "identity",
+            "forgiveness"
+          ],
+          "description": "all three storylines explore the cost of hidden truths and the courage required for authentic relationships",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "belonging",
+            "acceptance",
+            "protection"
+          ],
+          "description": "the audience knows William and Rebecca's secret before Randall discovers it, creating tension around Beth's growing closeness to William",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "forgiveness"
+          ],
+          "description": "Randall's discovery of the William-Rebecca secret creates the central crisis that will define both storylines going forward",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "kevin_family_acceptance",
+          "reason": "Kevin's gesture toward Miguel represents a separate arc about accepting his father's replacement",
+          "episodes": [
+            "S01E08"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E09",
+      "events": [
+        {
+          "event": "Kate impulsively suggests a last trip to the family cabin before Rebecca sells it",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin agrees to the cabin trip and brings Olivia along",
+          "storyline": "purpose",
+          "function": "setup",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Olivia invites Sloane and her ex-boyfriend Asher without permission",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "olivia",
+            "guest:sloane",
+            "guest:asher"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall accidentally drinks Asher's mushroom-laced smoothie",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall",
+            "guest:asher"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall hallucinates a conversation with young Jack cleaning the cabin gutter",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "randall",
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall pours out his anger to hallucination-Jack about the deception",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall",
+            "jack"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Hallucination-Jack tells Randall they gave him everything they could",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall",
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall tells hallucination-Jack he was never given a choice, only expected to be grateful",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall",
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Olivia tells Kate she's terrified that losing weight won't change anything in her life",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kate",
+            "olivia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin confronts Olivia for her cruelty toward Kate",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Kevin accuses Olivia of bringing Asher to sabotage their relationship",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Olivia and Asher leave the cabin",
+          "storyline": "purpose",
+          "function": "resolution",
+          "characters": [
+            "olivia",
+            "guest:asher"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin sleeps with Sloane, ending his involvement with Olivia",
+          "storyline": "purpose",
+          "function": "resolution",
+          "characters": [
+            "kevin",
+            "guest:sloane"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Young Randall tells Jack and Rebecca he's been searching for his biological parents",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "randall",
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca consult a counselor about Randall's search",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Counselor advises that Randall needs Black role models in his life",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "guest:counselor"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack signs Randall up for martial arts class with Black instructor and students",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "randall"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the limits of love and good intentions",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "identity",
+            "purpose"
+          ],
+          "description": "all three storylines explore characters confronting painful truths about themselves and their relationships",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "identity",
+            "purpose"
+          ],
+          "description": "Kevin's defense of Kate against Olivia brings their storylines together at the cabin",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "belonging"
+          ],
+          "description": "the hallucination sequence allows Randall to express grief he cannot yet voice to his living family",
+          "subtype": "psychological_device"
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E10",
+      "events": [
+        {
+          "event": "Young Kate develops acute appendicitis on Christmas Eve",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca promises Kate that nothing bad happens on Christmas Eve",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "rebecca",
+            "kate"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "The Pearsons discover Dr. K is also a patient facing surgery",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca",
+            "randall",
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Young Randall buys Dr. K a snow globe with his Christmas money",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin loses Olivia after their cabin confrontation, play is cancelled",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sloane invites Kevin to pose as her boyfriend at Hanukkah dinner",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "guest:sloane"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin experiences warm, honest family dinner with Sloane's family",
+          "storyline": "purpose",
+          "function": "resolution",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate tells Rebecca about her planned weight-loss surgery",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "rebecca"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Rebecca discovers Kate has been taking Prozac and hiding binge-eating episodes",
+          "storyline": "identity",
+          "function": "climax",
+          "characters": [
+            "kate",
+            "rebecca"
+          ],
+          "also_affects": [
+            "forgiveness"
+          ]
+        },
+        {
+          "event": "Andy reveals to Randall that he is contemplating suicide",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall",
+            "guest:andy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall talks Andy through the night and convinces him not to take his life",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William encounters Jesse at a Narcotics Anonymous meeting",
+          "storyline": "acceptance",
+          "function": "turning_point",
+          "characters": [
+            "william",
+            "guest:jesse"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William reveals he is gay and Jesse was his former partner",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "william"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jesse asks William to spend his remaining days together",
+          "storyline": "acceptance",
+          "function": "climax",
+          "characters": [
+            "william",
+            "guest:jesse"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William begins to reconnect with Jesse",
+          "storyline": "acceptance",
+          "function": "resolution",
+          "characters": [
+            "william"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate and Dr. K both face surgery with uncertain outcomes",
+          "storyline": "identity",
+          "function": "cliffhanger",
+          "characters": [
+            "kate",
+            "dr_k"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Toby collapses during the Pearsons' Christmas gathering",
+          "storyline": "love",
+          "function": "cliffhanger",
+          "characters": [
+            "toby"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the courage to face truth",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "identity",
+            "acceptance"
+          ],
+          "description": "all three storylines involve characters confronting hidden truths about themselves or others",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "belonging",
+            "identity",
+            "acceptance"
+          ],
+          "description": "Christmas Eve as a crucible for revelation and crisis",
+          "subtype": "time_pressure"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "identity",
+            "forgiveness"
+          ],
+          "description": "Kate's revelation about her surgery forces Rebecca to confront how much she doesn't know about her daughter",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E11",
+      "events": [
+        {
+          "event": "Toby wakes up in the hospital after his collapse, doctors discover a hole in his heart requiring surgery",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Toby initially resists the surgery but then decides to proceed",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "toby"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Toby declares his love for Kate on his way to the operating room",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate sits at Toby's bedside and tells him she loves him and wants to spend her life with him",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Toby reveals he heard everything and proposes marriage",
+          "storyline": "love",
+          "function": "resolution",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin rewrites the indie play to star Sloane in place of Olivia",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "guest:sloane"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Olivia reappears wanting back into the play and Kevin's life",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "olivia"
+          ],
+          "also_affects": [
+            "purpose"
+          ]
+        },
+        {
+          "event": "Kevin finds himself caught between Olivia's passion and Sloane's sincerity",
+          "storyline": "redemption",
+          "function": "turning_point",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": [
+            "purpose"
+          ]
+        },
+        {
+          "event": "Kevin chooses Sloane, telling Olivia that doing the right thing means not doing what you most want",
+          "storyline": "redemption",
+          "function": "climax",
+          "characters": [
+            "kevin",
+            "olivia",
+            "guest:sloane"
+          ],
+          "also_affects": [
+            "purpose"
+          ]
+        },
+        {
+          "event": "Sloane overhears Kevin's declaration, deepening their connection",
+          "storyline": "purpose",
+          "function": "resolution",
+          "characters": [
+            "kevin",
+            "guest:sloane"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William spends more time with Jesse, his former partner",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "william",
+            "guest:jesse"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall struggles to accept that William has a romantic life outside their bond",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Jack and Rebecca learn they are expecting triplets",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca realize their apartment is too small for three babies",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack visits his abusive father to ask for money",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "guest:jack_father"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack's father agrees to give him the funds after a humiliating interaction",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "guest:jack_father"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack sells his beloved car to afford a station wagon",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack uses his father's money and car sale to purchase a house he helped build",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack brings Rebecca to the house, hiding the truth about where the money came from",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca stand in their empty new home declaring 'We have a home'",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the sacrifices we make for love",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "love",
+            "marriage",
+            "redemption"
+          ],
+          "description": "all three storylines explore different forms of sacrifice for love — Toby risking surgery, Jack humiliating himself for his family, Kevin choosing duty over desire",
+          "subtype": null
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "acceptance"
+          ],
+          "description": "both storylines deal with sharing loved ones and accepting that relationships exist beyond our control",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "purpose",
+            "redemption"
+          ],
+          "description": "Kevin's professional and romantic storylines merge when he must choose between Olivia and Sloane",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E12",
+      "events": [
+        {
+          "event": "Jack wakes on his thirty-sixth birthday but Rebecca forgets and snaps at him",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca realizes her mistake and feels terrible about forgetting Jack's birthday",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca tapes flip-flops to her feet and waddles to a liquor store to buy Jack birthday supplies",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca's water breaks weeks ahead of schedule",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca rush to the hospital where the pilot events begin",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. K's son and daughter-in-law worry about his mental state after his wife's death",
+          "storyline": "acceptance",
+          "function": "setup",
+          "characters": [
+            "dr_k",
+            "guest:son",
+            "guest:daughter_in_law"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. K runs into old friend Anne at grocery store who asks him to dinner but he declines",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "dr_k",
+            "guest:anne"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. K delivers the Pearson triplets despite his personal grief",
+          "storyline": "acceptance",
+          "function": "turning_point",
+          "characters": [
+            "dr_k",
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Dr. K gives Jack advice about taking the bad with the good",
+          "storyline": "acceptance",
+          "function": "climax",
+          "characters": [
+            "dr_k",
+            "jack"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Joe confesses to a priest about buying cigarettes but not lighting one",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "guest:joe",
+            "guest:priest"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Joe finds baby Randall on the fire station doorstep and interprets it as a sign from God",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "guest:joe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Joe takes Randall home hoping adoption will repair his failing marriage",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "guest:joe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Joe's wife refuses to adopt Randall, recognizing a baby cannot fix their broken marriage",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "guest:joe",
+            "guest:joe_wife"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Joe brings Randall to the hospital where his path crosses with the Pearsons",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "guest:joe"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        }
+      ],
+      "theme": "the convergence of fate and choice in creating family",
+      "interactions": [
+        {
+          "type": "convergence",
+          "lines": [
+            "marriage",
+            "belonging",
+            "acceptance"
+          ],
+          "description": "all three storylines converge at the hospital where Randall joins the Pearson family",
+          "subtype": null
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "belonging",
+            "acceptance"
+          ],
+          "description": "all three perspectives explore how people respond to crisis and loss - Jack and Rebecca's marriage stress, Dr. K's grief, Joe's failing marriage",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "marriage",
+            "belonging",
+            "acceptance"
+          ],
+          "description": "prequel structure reveals the backstory of the pilot episode's opening moments",
+          "subtype": "wraparound"
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E13",
+      "events": [
+        {
+          "event": "The triplets insist on three separate tenth birthday parties for the first time",
+          "storyline": "identity",
+          "function": "setup",
+          "characters": [
+            "kevin",
+            "kate",
+            "randall"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Jack and Rebecca agree to manage three simultaneous parties",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Most of Randall's classmates don't show up to his party",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate's friends abandon her Madonna party for Kevin's Princess Bride celebration",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack tries to comfort Kate but his reassurance doesn't work for the first time",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "kate"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Jack suggests to Rebecca they have another child to unite the family",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca flatly refuses Jack's suggestion about another child",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "rebecca",
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin keeps Toby company during his heart surgery recovery",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "kevin",
+            "toby"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin obsesses over his romantic dilemma between Sloane and Olivia",
+          "storyline": "redemption",
+          "function": "setup",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Toby gives Kevin the exercise to picture the love of his life",
+          "storyline": "redemption",
+          "function": "turning_point",
+          "characters": [
+            "toby",
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin realizes the woman he's thinking of is neither Sloane nor Olivia",
+          "storyline": "redemption",
+          "function": "turning_point",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin knocks on Sophie's door and she answers in maroon scrubs",
+          "storyline": "redemption",
+          "function": "climax",
+          "characters": [
+            "kevin",
+            "sophie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall competes with Sanjay for a major account at work",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "randall",
+            "guest:sanjay"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William shows up unannounced at Randall's office insisting on spending the day together",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "william",
+            "randall"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "William drags Randall out to a long lunch",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "william",
+            "randall"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Randall teaches William how to drive",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "randall",
+            "william"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall loses the account to Sanjay but gains irreplaceable time with William",
+          "storyline": "acceptance",
+          "function": "climax",
+          "characters": [
+            "randall",
+            "william"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Kate arrives at weight-loss boot camp having decided against gastric bypass",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate discovers the program emphasizes psychological work and group therapy",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate is initially skeptical and resistant to the therapy approach",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Flashback reveals Kate attended Jack's funeral as a teenager",
+          "storyline": "marriage",
+          "function": "seed",
+          "characters": [
+            "kate",
+            "jack"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "growing apart and growing up",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "identity",
+            "marriage",
+            "acceptance",
+            "redemption"
+          ],
+          "description": "all storylines explore the pain of separation and the difficulty of connection as people change and grow",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "redemption",
+            "love"
+          ],
+          "description": "Kevin's romantic journey connects to Kate's relationship through Toby's guidance",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "redemption"
+          ],
+          "description": "the reveal of Sophie reframes Kevin's entire romantic arc",
+          "subtype": "twist-reveal"
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "legacy",
+          "reason": "Jack's funeral flashback doesn't fit existing storylines but represents ongoing impact of his death",
+          "episodes": [
+            "S01E13"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E14",
+      "events": [
+        {
+          "event": "Jack and Rebecca's wedding ceremony with Miguel as best man",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca",
+            "miguel"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Miguel and Shelly announce their divorce to Jack and Rebecca",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca",
+            "miguel"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack plans a romantic evening at their first apartment",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca reread their wedding vows and reconnect",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin tells Sophie to meet him at their restaurant if she wants to try again",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "sophie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sophie shows up at the restaurant, signaling willingness to reconcile",
+          "storyline": "redemption",
+          "function": "climax",
+          "characters": [
+            "sophie",
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Toby arrives at fat camp feeling shut out of Kate's transformation",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Kate and Toby argue about her unavailability during camp",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Toby joins Kate at camp to show commitment to her journey",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Toby gives Kate his grandmother's engagement ring as a promise",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate fully immerses herself in fat camp's physical and psychological demands",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Beth confronts Randall about neglecting family for work and William",
+          "storyline": "protection",
+          "function": "escalation",
+          "characters": [
+            "beth",
+            "randall"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Beth demands Randall cancel work dinner with Sanjay to prioritize family",
+          "storyline": "protection",
+          "function": "climax",
+          "characters": [
+            "beth",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall chooses family over professional ambitions for the night",
+          "storyline": "protection",
+          "function": "resolution",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        }
+      ],
+      "theme": "the fragility and resilience of commitment",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "redemption",
+            "love",
+            "protection"
+          ],
+          "description": "all storylines explore different aspects of romantic commitment — past love, lost love, new love, and protecting existing love",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage"
+          ],
+          "description": "the audience knows Jack and Rebecca's marriage will ultimately fail, making their vow renewal bittersweet",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "love",
+            "identity"
+          ],
+          "description": "Kate's weight loss journey and relationship with Toby intersect as he joins her transformation process",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E15",
+      "events": [
+        {
+          "event": "Kevin experiences pre-show anxiety and impostor syndrome before his Broadway opening night",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sophie confirms she and Kevin are cautiously dating again",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "sophie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Miguel tells Kevin a story about Jack and says 'You are Jack Pearson's son'",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "kevin",
+            "miguel"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall has a full anxiety attack at his office and collapses on the floor",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Beth calls Kevin to tell him Randall is in crisis",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "beth",
+            "kevin"
+          ],
+          "also_affects": [
+            "protection"
+          ]
+        },
+        {
+          "event": "Kevin abandons his Broadway opening night to rush to Randall's office",
+          "storyline": "purpose",
+          "function": "climax",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Kevin finds Randall curled up on the floor and stays with him",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "kevin",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate and Toby shop for clothes for Kevin's opening night",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Toby suggests they use the time to learn each other's deeper truths",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "toby",
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate asks Toby about his history with depression",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Toby asks Kate about her father's death and she deflects",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Jack and Rebecca plan a romantic Valentine's Day evening",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca tells Jack about the tour invitation with her band",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "rebecca",
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack expresses discomfort about Rebecca touring with Ben, her ex-boyfriend",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca erupt into their ugliest fight about trust and dreams",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack leaves the house alone and goes to O'Shannon's bar",
+          "storyline": "marriage",
+          "function": "cliffhanger",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack orders a drink at the bar, signaling a relapse into alcohol abuse",
+          "storyline": "marriage",
+          "function": "cliffhanger",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of love and sacrifice",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "purpose",
+            "belonging",
+            "marriage"
+          ],
+          "description": "all three storylines explore sacrifice for love — Kevin sacrifices his career for Randall, Jack's jealousy threatens his marriage, Randall's breakdown stems from carrying too much emotional weight",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "purpose",
+            "belonging"
+          ],
+          "description": "Kevin's career storyline merges with Randall's crisis when Kevin abandons opening night to help his brother",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage",
+            "identity"
+          ],
+          "description": "the audience knows Jack's drinking will lead to tragedy, while Kate's deflection about his death hints at her hidden guilt",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E16",
+      "events": [
+        {
+          "event": "Randall plans a meticulously mapped road trip to Memphis with William",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "randall",
+            "william"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "William throws the maps out the window and insists they go old school",
+          "storyline": "acceptance",
+          "function": "setup",
+          "characters": [
+            "william"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "William tells Randall about his mother abandoning him in Memphis",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "william",
+            "randall"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "William explains how his drug addiction made him walk away from his band and Memphis",
+          "storyline": "acceptance",
+          "function": "escalation",
+          "characters": [
+            "william"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "William takes Randall to visit the butcher and barbecue joint from his childhood",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "william",
+            "randall"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "William and Randall visit William's childhood home and dig up hidden treasures",
+          "storyline": "acceptance",
+          "function": "turning_point",
+          "characters": [
+            "william",
+            "randall"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "William makes amends to his cousin Ricky for abandoning the band decades earlier",
+          "storyline": "acceptance",
+          "function": "climax",
+          "characters": [
+            "william",
+            "guest:ricky"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Randall discovers extended family he never knew existed through Ricky",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "randall",
+            "guest:ricky"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William and Ricky perform music together one last time",
+          "storyline": "acceptance",
+          "function": "resolution",
+          "characters": [
+            "william",
+            "guest:ricky"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "William asks Randall to take him to Jack's tree and thanks Jack for raising his son",
+          "storyline": "acceptance",
+          "function": "climax",
+          "characters": [
+            "william",
+            "randall"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "William's health deteriorates and he is admitted to the hospital",
+          "storyline": "acceptance",
+          "function": "turning_point",
+          "characters": [
+            "william"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Randall uses Jack's calming gesture on William as he dies peacefully",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall",
+            "william"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        },
+        {
+          "event": "Randall drives home alone, following William's advice to roll down windows and turn up music",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": [
+            "acceptance"
+          ]
+        }
+      ],
+      "theme": "the healing power of returning home",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "acceptance"
+          ],
+          "description": "both storylines explore how confronting the past allows for peace and connection — Randall finds his roots while William makes peace with his abandonment",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "acceptance"
+          ],
+          "description": "the storylines merge completely as William's journey toward acceptance becomes Randall's path to understanding his identity and heritage",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "CHECK_LINE",
+          "target": "marriage",
+          "reason": "no events in this episode advance Jack's goal to save his marriage",
+          "episodes": [
+            "S01E16"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "identity",
+          "reason": "no events in this episode advance Kate's weight struggles or finding her voice",
+          "episodes": [
+            "S01E16"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "purpose",
+          "reason": "no events in this episode advance Kevin's goal to find meaningful acting work",
+          "episodes": [
+            "S01E16"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "forgiveness",
+          "reason": "no events in this episode advance Rebecca's goal to repair her relationship with Randall",
+          "episodes": [
+            "S01E16"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "love",
+          "reason": "no events in this episode advance Kate's relationship with Toby",
+          "episodes": [
+            "S01E16"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "redemption",
+          "reason": "no events in this episode advance Kevin's goal to win back Sophie",
+          "episodes": [
+            "S01E16"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "protection",
+          "reason": "no events in this episode advance Beth's goal to protect her family from William's chaos",
+          "episodes": [
+            "S01E16"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E17",
+      "events": [
+        {
+          "event": "Tess and Annie plan William's memorial service with candy, balloons, and tropical drinks as he requested",
+          "storyline": "acceptance",
+          "function": "resolution",
+          "characters": [
+            "guest:tess",
+            "guest:annie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate breaks down sobbing during William's memorial, unable to process the grief",
+          "storyline": "identity",
+          "function": "escalation",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate confesses to Randall that William's death has stirred up suppressed feelings about Jack",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kate",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca tearfully apologizes to Randall for keeping William secret, admitting it was selfish and wrong",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "rebecca",
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall quits his job as weather commodities trader, confronting his boss Tyler",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "randall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin scrambles to get New York Times critic to attend his rescheduled play performance",
+          "storyline": "purpose",
+          "function": "escalation",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Theater critic refuses to attend Kevin's play",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sophie consoles Kevin, he tells her family and her in audience meant more than any review",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "kevin",
+            "sophie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ron Howard calls Kevin about a potential film role after seeing the play",
+          "storyline": "purpose",
+          "function": "turning_point",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Teenage Kate senses tension between Jack and Rebecca, demands to know what's wrong",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "kate",
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack attends work party at bar where female colleague puts hand on his leg",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack drinks too much at the work party",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate calls drunk Jack and tells him to drive to Cleveland to see Rebecca",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "kate",
+            "jack"
+          ],
+          "also_affects": [
+            "identity"
+          ]
+        },
+        {
+          "event": "Jack decides to drive to Cleveland despite being intoxicated",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate confesses to Toby that she believes Jack's death was her fault for telling him to drive",
+          "storyline": "identity",
+          "function": "climax",
+          "characters": [
+            "kate",
+            "toby"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        }
+      ],
+      "theme": "the weight of responsibility and the courage to live authentically",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "identity",
+            "belonging",
+            "forgiveness",
+            "marriage"
+          ],
+          "description": "all storylines explore taking responsibility for past actions and choosing authentic paths forward",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "identity",
+            "marriage"
+          ],
+          "description": "Kate's guilt over Jack's death connects her present-day struggle with the past marital crisis",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "identity",
+            "love"
+          ],
+          "description": "the audience knows Kate's devastating secret before Toby learns it",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E18",
+      "events": [
+        {
+          "event": "Young Jack works as a mechanic and dreams of opening his own auto body shop",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mrs. Peabody offers to set Jack up on a blind date",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "jack",
+            "guest:mrs_peabody"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Young Rebecca is rejected by a record label",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca agrees to a blind date arranged by a friend",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca ditches her boring date Ethan to perform at an open-mic night",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "rebecca",
+            "guest:ethan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack goes to a mob-run poker game with Darryl to raise money for his business",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack",
+            "guest:darryl"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack wins big on his first hand but mobsters beat him up and take his winnings",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack wanders into the bar where Rebecca is singing and is captivated by her voice",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca meet at the bar and have an immediate connection",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca discovers that pianist Ben tried to kiss her backstage",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "rebecca",
+            "guest:ben"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack arrives at the venue, finds Ben, and punches him",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack and Rebecca drive home in furious silence and then explode in argument",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jack",
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca says she feels suffocated and has no life outside the family",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack calls Rebecca's singing career a fantasy",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rebecca compares Jack to his abusive father",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "rebecca"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack leaves the house and goes to a bar where he has his first drink in years",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jack"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack packs a bag and moves out to stay with Miguel",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "jack",
+            "miguel"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Randall and Beth begin exploring the possibility of adopting a child",
+          "storyline": "belonging",
+          "function": "seed",
+          "characters": [
+            "randall",
+            "beth"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate decides to pursue singing seriously, stepping out of her father's shadow",
+          "storyline": "identity",
+          "function": "turning_point",
+          "characters": [
+            "kate"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kevin receives a phone call about acting opportunities suggesting career shift",
+          "storyline": "purpose",
+          "function": "seed",
+          "characters": [
+            "kevin"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cyclical nature of love and loss across generations",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "identity",
+            "purpose",
+            "belonging"
+          ],
+          "description": "all storylines explore how relationships and dreams evolve across time, with the past informing the present",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "marriage"
+          ],
+          "description": "parallel timelines showing how Jack and Rebecca's love began and how it fractures",
+          "subtype": "time_jump"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "identity",
+            "marriage"
+          ],
+          "description": "Kate's decision to pursue singing mirrors her mother's artistic dreams that caused the marital crisis",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    }
+  ]
+}

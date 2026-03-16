@@ -1,0 +1,1789 @@
+{
+  "context": {
+    "franchise_type": "serial",
+    "story_engine": "Two detectives investigate an occult murder case across two timelines, testing how far they'll go to uncover the truth and confront their own darkness",
+    "genre": "thriller",
+    "format": "limited"
+  },
+  "cast": [
+    {
+      "id": "rust",
+      "name": "Rustin Cohle",
+      "aliases": [
+        "Rust",
+        "Crash"
+      ]
+    },
+    {
+      "id": "marty",
+      "name": "Martin Hart",
+      "aliases": [
+        "Marty"
+      ]
+    },
+    {
+      "id": "maggie",
+      "name": "Maggie Hart",
+      "aliases": [
+        "Maggie"
+      ]
+    },
+    {
+      "id": "errol",
+      "name": "Errol Childress",
+      "aliases": [
+        "Errol",
+        "the scarred man"
+      ]
+    },
+    {
+      "id": "tuttle",
+      "name": "Billy Lee Tuttle",
+      "aliases": [
+        "Reverend Tuttle"
+      ]
+    },
+    {
+      "id": "papania",
+      "name": "Thomas Papania",
+      "aliases": [
+        "Papania"
+      ]
+    },
+    {
+      "id": "gilbough",
+      "name": "Maynard Gilbough",
+      "aliases": [
+        "Gilbough"
+      ]
+    }
+  ],
+  "plotlines": [
+    {
+      "id": "investigation",
+      "name": "Rust: Investigation",
+      "driver": "rust",
+      "goal": "uncover the truth behind the occult murders and expose the conspiracy",
+      "obstacle": "powerful people covering up evidence, institutional corruption, time pressure",
+      "stakes": "more victims will die, justice denied, personal redemption lost",
+      "type": "serialized",
+      "rank": "A",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08"
+      ]
+    },
+    {
+      "id": "partnership",
+      "name": "Marty: Partnership",
+      "driver": "marty",
+      "goal": "solve the case while maintaining his conventional worldview",
+      "obstacle": "Rust's methods, personal moral compromises, family pressures",
+      "stakes": "career failure, loss of identity as good cop",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06"
+      ]
+    },
+    {
+      "id": "family",
+      "name": "Marty: Family",
+      "driver": "marty",
+      "goal": "maintain his marriage and family stability",
+      "obstacle": "his own infidelity, work obsession, inability to change",
+      "stakes": "divorce, losing his daughters, moral bankruptcy",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08"
+      ]
+    },
+    {
+      "id": "conspiracy",
+      "name": "Errol: Conspiracy",
+      "driver": "errol",
+      "goal": "continue the ritualistic murders and protect the cult",
+      "obstacle": "police investigation closing in, exposure of the network",
+      "stakes": "capture, end of the Yellow King tradition",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E03",
+        "S01E05",
+        "S01E07",
+        "S01E08"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "episode": "S01E01",
+      "events": [
+        {
+          "event": "Rust and Marty discover Dora Lange's ritualistic murder scene with occult symbols",
+          "storyline": "investigation",
+          "function": "setup",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        },
+        {
+          "event": "Detectives examine the elaborate staging: prayer position, antlers, blue spiral, twig lattices",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Investigation reveals Dora told Charlie Lange she would 'become a nun' and 'met a king'",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marie Fontenot case surfaces - girl disappeared five years ago with similar devil nets found",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Child's report of 'green-eared spaghetti monster' chasing him through woods emerges",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust expresses his nihilistic philosophy about human consciousness being a tragic misstep",
+          "storyline": "investigation",
+          "function": "setup",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        },
+        {
+          "event": "Marty invites Rust to dinner, unaware it's his dead daughter's birthday",
+          "storyline": "partnership",
+          "function": "setup",
+          "characters": [
+            "marty",
+            "rust"
+          ],
+          "also_affects": [
+            "family",
+            "investigation"
+          ]
+        },
+        {
+          "event": "Reverend Tuttle's political connections raise suspicion as task force forms around anti-Christian elements",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "tuttle"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Black minister reports police ignored vandalism and animal mutilation at his church",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "guest:black_minister"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "2012 interview reveals Hart and Cohle haven't spoken in ten years after 2002 falling-out",
+          "storyline": "partnership",
+          "function": "seed",
+          "characters": [
+            "marty",
+            "rust",
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Papania and Gilbough show photo of new victim posed similarly to Lange, questioning if real killer was caught",
+          "storyline": "investigation",
+          "function": "seed",
+          "characters": [
+            "papania",
+            "gilbough",
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Present-day Rust appears weathered and alcoholic while Marty runs successful security firm",
+          "storyline": "investigation",
+          "function": "seed",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        }
+      ],
+      "theme": "the weight of truth and time",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "investigation",
+            "redemption",
+            "partnership"
+          ],
+          "description": "all storylines explore how confronting dark truths changes people over time",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "investigation",
+            "conspiracy"
+          ],
+          "description": "the audience sees connections between Tuttle and the occult elements that the detectives don't yet recognize",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "investigation",
+            "partnership",
+            "redemption"
+          ],
+          "description": "dual timeline structure reframes the 1995 investigation through the lens of its consequences",
+          "subtype": "time_jump"
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E02",
+      "events": [
+        {
+          "event": "Cohle and Hart inform Dora's mother of her death, learning Dora claimed to attend church",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "They interview Carla who reveals Dora used drugs and mentioned a shelter near Spanish Lake",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Major Quesada threatens to replace them with an occult-crimes task force",
+          "storyline": "partnership",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Rust insults the task force members and is reprimanded",
+          "storyline": "partnership",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty pleads for more time and secures a two-week deadline",
+          "storyline": "partnership",
+          "function": "turning_point",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "They discover The Ranch brothel and obtain Dora's diary with references to King in Yellow and Carcosa",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "They find the Friends of Christ Revival flyer in the diary",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle deduces Hart is cheating with Lisa Tragnetti, creating friction between partners",
+          "storyline": "partnership",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "family"
+          ]
+        },
+        {
+          "event": "They discover the abandoned church with the antler-crowned female mural matching Dora's pose",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty's in-laws visit while Maggie expresses frustration about his absences",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "marty",
+            "maggie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty's daughters play with dolls in a disturbing scene suggesting trauma awareness",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Cohle reveals his daughter Sofia's death and marriage collapse to the 2012 investigators",
+          "storyline": "investigation",
+          "function": "setup",
+          "characters": [
+            "rust",
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle explains his four years undercover and hospitalization after shooting cartel members",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle describes his ongoing chemical flashbacks from undercover work",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the corruption of innocence",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "investigation",
+            "family",
+            "redemption"
+          ],
+          "description": "all storylines explore how darkness corrupts innocence - the occult murders, Marty's daughters' disturbing play, and Rust's lost daughter",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "investigation",
+            "family"
+          ],
+          "description": "the case begins affecting Marty's family as his daughters show signs of trauma awareness",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "partnership",
+            "family"
+          ],
+          "description": "Rust knows about Marty's affair while Maggie remains unaware",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E03",
+      "events": [
+        {
+          "event": "Hart and Cohle locate preacher Joel Theriot and learn Dora Lange was seen with a tall scarred man",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Detectives face pressure to turn the case over to the task force",
+          "storyline": "partnership",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Cohle searches old case files and discovers Rianne Olivier's suspicious death",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Olivier's grandfather reveals she attended Light of the Way school owned by Reverend Tuttle",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "They learn Rianne ran off with Reggie Ledoux, a drug cook and sex offender connected to Charlie Lange",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hart begins reconnecting with Maggie despite her growing fascination with Cohle",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "marty",
+            "maggie"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        },
+        {
+          "event": "Hart assaults Lisa's new boyfriend out of jealousy",
+          "storyline": "family",
+          "function": "turning_point",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Reggie Ledoux walks through the bayou in gas mask and underwear carrying a machete",
+          "storyline": "conspiracy",
+          "function": "cliffhanger",
+          "characters": [
+            "guest:reggie_ledoux"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        }
+      ],
+      "theme": "the gap between moral facade and true nature",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "investigation",
+            "family",
+            "conspiracy"
+          ],
+          "description": "all storylines explore hidden corruption beneath respectable surfaces - the cult behind the church, Hart's violence behind his family man image, the conspiracy behind official institutions",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "investigation",
+            "conspiracy"
+          ],
+          "description": "the audience sees Ledoux's true nature while the detectives are still piecing together his connection to the murders",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "investigation",
+            "conspiracy"
+          ],
+          "description": "the investigation leads directly to the conspiracy's operative, Ledoux, setting up their confrontation",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E04",
+      "events": [
+        {
+          "event": "Rust and Marty interrogate Charlie Lange about Reggie Ledoux",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Charlie reveals Reggie discussed rich men's devil-worship involving sacrificing women and children",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Charlie mentions 'Carcosa' and 'the Yellow King' and describes the spiral brand",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Charlie admits showing Reggie explicit Polaroids of Dora",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty tracks Tyrone Weems to a warehouse rave and violently confronts him",
+          "storyline": "partnership",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Tyrone reveals Reggie cooks exclusively for the Iron Crusaders biker gang",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle devises an off-the-books plan using his biker gang contacts",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Cohle steals cocaine from the police evidence room to use as bait",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Cohle reconnects with Ginger, posing as a former cartel security man",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ginger agrees to connect Cohle with Ledoux's supplier in exchange for helping rob a stash house",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle enters the stash house with bikers disguised as cops and steals drugs",
+          "storyline": "investigation",
+          "function": "climax",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "A shootout erupts and the neighborhood descends into chaos",
+          "storyline": "investigation",
+          "function": "climax",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle kidnaps Ginger and fights through houses to escape",
+          "storyline": "investigation",
+          "function": "climax",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Cohle leaps into Hart's getaway car at the last moment",
+          "storyline": "investigation",
+          "function": "resolution",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        },
+        {
+          "event": "Marty's affair with Lisa is exposed to Maggie",
+          "storyline": "family",
+          "function": "climax",
+          "characters": [
+            "marty",
+            "maggie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty's marriage unravels as he displays aggressive behavior toward both women",
+          "storyline": "family",
+          "function": "climax",
+          "characters": [
+            "marty",
+            "maggie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty refuses accountability and blames his father's death and alcohol",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Papania and Gilbough question why Cohle took two weeks' leave at a critical moment",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "papania",
+            "gilbough",
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Both Cohle and Hart claim Cohle visited his sick father, but detectives note no hospital records",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty",
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        }
+      ],
+      "theme": "the price of truth",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "investigation",
+            "redemption",
+            "family"
+          ],
+          "description": "all storylines explore what characters sacrifice to achieve their goals - Rust risks his life and sanity for truth, Marty destroys his family through lies and violence",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "investigation",
+            "conspiracy"
+          ],
+          "description": "the audience knows the conspiracy exists through Charlie's revelations, but the detectives don't yet understand its full scope",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "investigation",
+            "partnership"
+          ],
+          "description": "Rust's dangerous undercover operation forces Marty to become his getaway driver, deepening their interdependence",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E05",
+      "events": [
+        {
+          "event": "Cohle and Ginger meet with DeWall Ledoux to discuss a drug deal",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "DeWall senses something dark in Cohle and refuses the deal",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Hart follows DeWall to the remote compound in the bayou",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle and Hart storm the compound, avoiding explosive booby traps",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hart apprehends Reggie Ledoux and handcuffs him",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hart discovers two kidnapped children in horrific conditions",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "family"
+          ]
+        },
+        {
+          "event": "Hart executes Ledoux with a point-blank shot to the head",
+          "storyline": "partnership",
+          "function": "climax",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Ledoux's last words reference black stars and Carcosa",
+          "storyline": "investigation",
+          "function": "seed",
+          "characters": [
+            "guest:ledoux"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "DeWall flees and is killed by his own land mine",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "guest:dewall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle fires assault rifle to create false shootout narrative",
+          "storyline": "partnership",
+          "function": "resolution",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Both detectives are commended as heroes for rescuing the child",
+          "storyline": "investigation",
+          "function": "resolution",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hart has reconciled with Maggie and been promoted seven years later",
+          "storyline": "family",
+          "function": "setup",
+          "characters": [
+            "marty",
+            "maggie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle has a girlfriend Laurie and is a renowned interrogator",
+          "storyline": "investigation",
+          "function": "setup",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Audrey acts out with dark clothing, smoking, and sexual activity",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "guest:audrey"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty slaps Audrey when she curses at him",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Guy Francis confesses but claims Ledoux was not the real killer",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Francis mentions the Yellow King connected to powerful people",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "guest:francis"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Francis is found dead of apparent suicide after suspicious phone call",
+          "storyline": "conspiracy",
+          "function": "escalation",
+          "characters": [
+            "guest:francis"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Cohle identifies officer Childress connected to Marie Fontenot case",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Cohle discovers Yellow King symbols at abandoned Light of the Way school",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Papania and Gilbough suspect Cohle has been behind the killings",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "They reveal Cohle was photographed at Lake Charles crime scene",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "They mention Cohle as person of interest in Tuttle's death",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Cohle refuses access to his storage unit without a warrant",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the corruption of justice and the price of truth",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "investigation",
+            "partnership",
+            "family"
+          ],
+          "description": "all storylines explore how violence and moral compromise corrupt relationships and institutions",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "investigation",
+            "conspiracy"
+          ],
+          "description": "the audience knows the conspiracy is real while the 2012 investigators suspect Cohle",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "investigation",
+            "conspiracy"
+          ],
+          "description": "the Childress connection and Yellow King symbols link the past investigation to the ongoing conspiracy",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "investigation"
+          ],
+          "description": "dual timeline structure reveals how the 1995 'resolution' was actually incomplete",
+          "subtype": "time_jump"
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E06",
+      "events": [
+        {
+          "event": "Cohle investigates missing persons cases and discovers connections to Tuttle's Wellspring Foundation",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle tracks down former preacher Theriot, who reveals Tuttle had photographs of nude children",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Theriot explains he was intimidated into silence after reporting to Deacon Farrar in 1995",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cohle visits Kelly Reider at the institution and she describes a giant with scars",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Kelly screams when Cohle asks about the scarred man's face",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Cohle coldly tells an infanticide suspect to kill herself during interrogation",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty refuses to engage with Cohle's harsh interrogation tactics",
+          "storyline": "partnership",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty confronts and beats two young men found with his underage daughter Audrey",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty starts an affair with Beth, a former Ranch worker",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Maggie discovers evidence of Marty's infidelity on his phone and in the laundry",
+          "storyline": "family",
+          "function": "turning_point",
+          "characters": [
+            "maggie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Maggie attempts to sleep with a stranger at a bar but fails",
+          "storyline": "family",
+          "function": "escalation",
+          "characters": [
+            "maggie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Maggie goes to Rust's apartment and seduces him while he is vulnerable",
+          "storyline": "family",
+          "function": "climax",
+          "characters": [
+            "maggie",
+            "rust"
+          ],
+          "also_affects": [
+            "partnership",
+            "investigation"
+          ]
+        },
+        {
+          "event": "Maggie tells Marty about her encounter with Rust",
+          "storyline": "family",
+          "function": "climax",
+          "characters": [
+            "maggie",
+            "marty"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        },
+        {
+          "event": "Marty attacks Rust in the police station parking lot, beating him badly",
+          "storyline": "partnership",
+          "function": "climax",
+          "characters": [
+            "marty",
+            "rust"
+          ],
+          "also_affects": [
+            "family"
+          ]
+        },
+        {
+          "event": "Rust abruptly quits the police force",
+          "storyline": "partnership",
+          "function": "resolution",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "In 2012, Marty leaves the station after refusing to believe claims about Rust's involvement",
+          "storyline": "partnership",
+          "function": "turning_point",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Maggie is interviewed in 2012 and defends Rust's character",
+          "storyline": "family",
+          "function": "resolution",
+          "characters": [
+            "maggie"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        },
+        {
+          "event": "Rust's truck pulls up behind Marty's car in 2012 and they exchange terse greetings",
+          "storyline": "partnership",
+          "function": "seed",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust suggests getting a drink with Marty",
+          "storyline": "partnership",
+          "function": "seed",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the destructive power of obsession and betrayal",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "investigation",
+            "family",
+            "partnership"
+          ],
+          "description": "all storylines explore how obsessive pursuit of truth destroys relationships and moral boundaries",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "family",
+            "partnership"
+          ],
+          "description": "Maggie's seduction of Rust directly destroys the partnership between Rust and Marty",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "investigation",
+            "conspiracy"
+          ],
+          "description": "the audience knows Kelly's description of the scarred giant connects to Errol, but Rust doesn't yet make this connection",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E07",
+      "events": [
+        {
+          "event": "Rust reveals he's been 'functional but hammered' for ten years and returned because 'a man remembers his debts'",
+          "storyline": "investigation",
+          "function": "setup",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Rust shows Marty his elaborate conspiracy board with photographs, documents, and lattice structures",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust theorizes the Dora Lange case connects to the Tuttle family and Shepherd's Flock preschool network",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust reveals he conducted illegal break-ins at Reverend Tuttle's properties in 2010",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust shows Marty the VHS tape of young Marie Fontenot being led to an altar in a ritualistic ceremony",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Marty visits Maggie and thanks her, hinting he may not return from the dangerous investigation",
+          "storyline": "family",
+          "function": "resolution",
+          "characters": [
+            "marty",
+            "maggie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust and Marty discover Marie Fontenot's missing persons file was mysteriously removed",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "They learn Deputy Steve Geraci mishandled Marie's 1995 report and Sheriff Childress may have suppressed the case",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Miss Delores reveals the scarred man is likely a Tuttle family member named Childress or LeBeau",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust",
+            "marty",
+            "guest:delores"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Delores cryptically references 'Carcosa' and 'the Yellow King' when shown lattice drawings",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "guest:delores"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Papania and Gilbough unknowingly encounter Errol mowing grass in a spiral pattern near the abandoned church",
+          "storyline": "conspiracy",
+          "function": "escalation",
+          "characters": [
+            "papania",
+            "gilbough",
+            "errol"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Errol tells the detectives his family 'has been here a long, long time' while they fail to recognize him",
+          "storyline": "conspiracy",
+          "function": "escalation",
+          "characters": [
+            "errol",
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust confesses he intends to resolve the case before ending his life, describing existence as meaningless",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Rust and Marty confront corrupt Deputy Geraci at gunpoint on a boat",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty",
+            "guest:geraci"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the weight of unfinished business and moral debts",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "investigation",
+            "redemption",
+            "conspiracy"
+          ],
+          "description": "all storylines deal with cycles that must be completed — Rust's debt to the truth, Errol's generational ritual, the conspiracy's perpetual cover-up",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "conspiracy",
+            "investigation"
+          ],
+          "description": "the audience sees Errol hiding in plain sight while the investigating detectives remain oblivious",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "investigation",
+            "redemption"
+          ],
+          "description": "Rust's personal quest for meaning merges completely with solving the case — they become the same goal",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E08",
+      "events": [
+        {
+          "event": "Errol tortures his bound father while speaking in a British accent at his bayou compound",
+          "storyline": "conspiracy",
+          "function": "setup",
+          "characters": [
+            "errol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust and Marty force Sheriff Geraci to watch the Marie Fontenot VHS tape",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust arranges for a sniper associate to monitor Geraci as insurance",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust and Marty identify the green-eared spaghetti monster as a house painter with facial scars",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "They trace work orders to Childress and Son Maintenance, finding Errol's address",
+          "storyline": "investigation",
+          "function": "turning_point",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty discovers Billy Childress restrained with sewn lips in the compound house",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Marty finds mummified remains, child clothing, and stick sculptures in Carcosa",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Errol flees into the labyrinthine Carcosa structure",
+          "storyline": "conspiracy",
+          "function": "escalation",
+          "characters": [
+            "errol"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Rust pursues Errol into Carcosa and experiences a hallucinatory vortex vision",
+          "storyline": "investigation",
+          "function": "escalation",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Errol ambushes and stabs Rust with a knife",
+          "storyline": "conspiracy",
+          "function": "climax",
+          "characters": [
+            "errol",
+            "rust"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Errol attacks Marty with a hatchet",
+          "storyline": "conspiracy",
+          "function": "climax",
+          "characters": [
+            "errol",
+            "marty"
+          ],
+          "also_affects": [
+            "investigation"
+          ]
+        },
+        {
+          "event": "Rust shoots Errol fatally despite severe wounds",
+          "storyline": "investigation",
+          "function": "climax",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Marty also shoots Errol",
+          "storyline": "investigation",
+          "function": "climax",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": [
+            "conspiracy"
+          ]
+        },
+        {
+          "event": "Forensic teams link Errol to dozens of missing persons cases",
+          "storyline": "investigation",
+          "function": "resolution",
+          "characters": [
+            "papania",
+            "gilbough"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "State attorney general discredits connections to Senator Tuttle's family",
+          "storyline": "investigation",
+          "function": "resolution",
+          "characters": [
+            "guest:attorney_general"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marty's daughters visit him in the hospital",
+          "storyline": "family",
+          "function": "resolution",
+          "characters": [
+            "marty"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust describes his near-death experience feeling his daughter and father's love",
+          "storyline": "investigation",
+          "function": "climax",
+          "characters": [
+            "rust"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rust tells Marty that the light is winning, showing newfound hope",
+          "storyline": "investigation",
+          "function": "resolution",
+          "characters": [
+            "rust",
+            "marty"
+          ],
+          "also_affects": [
+            "partnership"
+          ]
+        }
+      ],
+      "theme": "light conquering darkness",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "investigation",
+            "redemption",
+            "conspiracy"
+          ],
+          "description": "all storylines explore the battle between light and darkness — uncovering truth vs. hiding it, hope vs. despair, good vs. evil",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "investigation",
+            "conspiracy"
+          ],
+          "description": "the investigation storyline physically converges with the conspiracy at Carcosa for the final confrontation",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "investigation",
+            "redemption"
+          ],
+          "description": "Rust's near-death experience during the investigation becomes his spiritual transformation",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    }
+  ]
+}

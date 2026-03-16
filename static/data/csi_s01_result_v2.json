@@ -1,0 +1,4754 @@
+{
+  "context": {
+    "franchise_type": "procedural",
+    "story_engine": "Every week forensic investigators solve crimes using scientific evidence, testing the limits of truth and justice",
+    "genre": "crime procedural",
+    "format": "ongoing"
+  },
+  "cast": [
+    {
+      "id": "grissom",
+      "name": "Gil Grissom",
+      "aliases": [
+        "Grissom",
+        "Gil"
+      ]
+    },
+    {
+      "id": "catherine",
+      "name": "Catherine Willows",
+      "aliases": [
+        "Catherine"
+      ]
+    },
+    {
+      "id": "nick",
+      "name": "Nick Stokes",
+      "aliases": [
+        "Nick"
+      ]
+    },
+    {
+      "id": "warrick",
+      "name": "Warrick Brown",
+      "aliases": [
+        "Warrick"
+      ]
+    },
+    {
+      "id": "sara",
+      "name": "Sara Sidle",
+      "aliases": [
+        "Sara"
+      ]
+    },
+    {
+      "id": "brass",
+      "name": "Jim Brass",
+      "aliases": [
+        "Brass",
+        "Captain Brass"
+      ]
+    },
+    {
+      "id": "holly",
+      "name": "Holly Gribbs",
+      "aliases": [
+        "Holly"
+      ]
+    },
+    {
+      "id": "millander",
+      "name": "Paul Millander",
+      "aliases": [
+        "Millander"
+      ]
+    },
+    {
+      "id": "ecklie",
+      "name": "Conrad Ecklie",
+      "aliases": [
+        "Ecklie"
+      ]
+    },
+    {
+      "id": "eddie",
+      "name": "Eddie Willows",
+      "aliases": [
+        "Eddie"
+      ]
+    }
+  ],
+  "plotlines": [
+    {
+      "id": "case_of_week",
+      "name": "Team: Case of the Week",
+      "driver": "grissom",
+      "goal": "solve crimes using scientific evidence and forensic analysis",
+      "obstacle": "complex crime scenes, false evidence, uncooperative witnesses, time pressure",
+      "stakes": "justice for victims, public safety, truth",
+      "type": "episodic",
+      "rank": "A",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E16",
+        "S01E17",
+        "S01E18",
+        "S01E19",
+        "S01E20",
+        "S01E21",
+        "S01E22",
+        "S01E23"
+      ]
+    },
+    {
+      "id": "leadership",
+      "name": "Grissom: Leadership",
+      "driver": "grissom",
+      "goal": "establish authority as night shift supervisor while maintaining scientific integrity",
+      "obstacle": "political pressure from sheriff and FBI, rivalry with day shift, team management challenges",
+      "stakes": "credibility, team unity, career",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E07",
+        "S01E09",
+        "S01E12",
+        "S01E13",
+        "S01E15",
+        "S01E16",
+        "S01E19",
+        "S01E22",
+        "S01E23"
+      ]
+    },
+    {
+      "id": "nemesis",
+      "name": "Grissom: Nemesis",
+      "driver": "grissom",
+      "goal": "catch Paul Millander, the serial killer targeting him personally",
+      "obstacle": "Millander's forensic knowledge and psychological games",
+      "stakes": "more victims, personal safety, professional reputation",
+      "type": "serialized",
+      "rank": "A",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E08"
+      ]
+    },
+    {
+      "id": "redemption",
+      "name": "Warrick: Redemption",
+      "driver": "warrick",
+      "goal": "overcome gambling addiction and prove himself after Holly's death",
+      "obstacle": "guilt, addiction, corrupt judge, team distrust",
+      "stakes": "career, self-respect, team acceptance",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E15",
+        "S01E19",
+        "S01E22"
+      ]
+    },
+    {
+      "id": "belonging",
+      "name": "Sara: Belonging",
+      "driver": "sara",
+      "goal": "integrate into the tight-knit night shift team",
+      "obstacle": "outsider status, internal investigation role, team suspicion",
+      "stakes": "career advancement, professional acceptance",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E02",
+        "S01E03",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E10",
+        "S01E11",
+        "S01E14",
+        "S01E16",
+        "S01E17",
+        "S01E23"
+      ]
+    },
+    {
+      "id": "advancement",
+      "name": "Nick: Advancement",
+      "driver": "nick",
+      "goal": "prove himself worthy of working cases independently",
+      "obstacle": "inexperience, evaluation pressure, personal involvement with victims",
+      "stakes": "promotion, professional respect, career growth",
+      "type": "serialized",
+      "rank": "runner",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E11",
+        "S01E13",
+        "S01E18",
+        "S01E21",
+        "S01E22"
+      ]
+    },
+    {
+      "id": "balance",
+      "name": "Catherine: Balance",
+      "driver": "catherine",
+      "goal": "maintain career excellence while protecting her daughter from Eddie's instability",
+      "obstacle": "demanding work schedule, Eddie's behavior, custody concerns",
+      "stakes": "daughter's welfare, career sustainability",
+      "type": "serialized",
+      "rank": "runner",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E06",
+        "S01E10",
+        "S01E18",
+        "S01E19",
+        "S01E21"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "episode": "S01E01",
+      "events": [
+        {
+          "event": "Grissom and Holly investigate Royce Harmon's apparent suicide in his bathtub",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "holly"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom notices the entry wound is inconsistent with self-inflicted shot",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom recovers a perfect fingerprint from the tape recorder laced with latex",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The fingerprint belongs to Paul Millander, manufacturer of novelty Halloween hands",
+          "storyline": "nemesis",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "millander"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Millander explains his prints are on ten thousand rubber hands shipped nationwide",
+          "storyline": "nemesis",
+          "function": "escalation",
+          "characters": [
+            "millander",
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Harmon's mother insists the voice on the suicide tape is not her son's",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "guest:harmon_mother"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Millander appears cooperative and is not charged, case remains open",
+          "storyline": "nemesis",
+          "function": "seed",
+          "characters": [
+            "millander",
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Catherine and Warrick respond to home invasion with claimed self-defense shooting",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom takes over and discovers toenail clippings proving homeowner staged break-in",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Nick handles case of man drugged and robbed by prostitute Kristy Hopkins",
+          "storyline": "advancement",
+          "function": "setup",
+          "characters": [
+            "nick",
+            "guest:kristy_hopkins"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Judge Cohen exploits Warrick's gambling weakness, demanding bet for blank warrant",
+          "storyline": "redemption",
+          "function": "setup",
+          "characters": [
+            "warrick",
+            "guest:judge_cohen"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brass discovers the arrangement and angrily removes Warrick from his case",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "brass",
+            "warrick"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Brass assigns Holly to shadow Warrick at a separate crime scene",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "brass",
+            "holly",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick leaves Holly alone at crime scene to place bet for Judge Cohen",
+          "storyline": "redemption",
+          "function": "turning_point",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Uniformed officer also departs, leaving Holly completely unprotected",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "holly",
+            "guest:uniformed_officer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Suspect returns, overpowers Holly, and shoots her with her own weapon",
+          "storyline": "leadership",
+          "function": "climax",
+          "characters": [
+            "holly",
+            "guest:suspect"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Nick celebrates reaching his hundredth case and promotion to CSI Level 3",
+          "storyline": "advancement",
+          "function": "climax",
+          "characters": [
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brass informs team Holly has been shot and is not expected to survive",
+          "storyline": "leadership",
+          "function": "resolution",
+          "characters": [
+            "brass",
+            "grissom",
+            "nick",
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption",
+            "advancement"
+          ]
+        }
+      ],
+      "theme": "the cost of compromised judgment",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "leadership",
+            "redemption",
+            "advancement"
+          ],
+          "description": "all storylines explore how personal weaknesses and poor decisions have deadly consequences",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "advancement",
+            "leadership"
+          ],
+          "description": "Nick celebrates his promotion just as the team's failure to protect Holly is revealed",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "leadership",
+            "redemption"
+          ],
+          "description": "Warrick's gambling addiction directly causes the leadership crisis when Holly is left unprotected",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E02",
+      "events": [
+        {
+          "event": "Brass is demoted from supervisor to homicide detective for failing to protect Holly",
+          "storyline": "leadership",
+          "function": "setup",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom is promoted to graveyard shift supervisor",
+          "storyline": "leadership",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom brings in Sara Sidle to investigate Warrick's actions",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "sara"
+          ],
+          "also_affects": [
+            "belonging",
+            "redemption"
+          ]
+        },
+        {
+          "event": "Sara confronts Warrick about leaving Holly alone at the crime scene",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Warrick struggles to justify his actions to Sara",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara tells Warrick that Holly died on the operating table",
+          "storyline": "redemption",
+          "function": "turning_point",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine throws herself into solving Holly's case",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Bobby Dawson confirms Holly was shot with her own service weapon",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:bobby_dawson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine finds a pager number on Holly's body and calls it posing as a customer",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The suspect gives up his motel address to Catherine",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine",
+            "guest:holly_suspect"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine and Brass arrest the suspect",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "catherine",
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "DNA from under Holly's fingernails matches the suspect",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom and Nick investigate Ted Sallinger's apparent suicide after winning forty million dollars",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "nick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Grissom suspects foul play despite the suicide appearance",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "They learn Red Carlton sat at the machine for eleven hours before Sallinger hit the jackpot",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom tracks Carlton and finds rooftop dust on his pants",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Evidence points to Carlton pushing Sallinger off the roof in rage",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom allows Warrick to remain on the team pending Sara's findings",
+          "storyline": "leadership",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Judge Cohen demands double repayment after Warrick bet on the wrong team",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "guest:judge_cohen",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara's arrival creates tension but begins earning grudging respect",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "accountability and second chances",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "leadership",
+            "redemption",
+            "belonging"
+          ],
+          "description": "all three storylines explore earning trust and proving worthiness after failure or as an outsider",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "leadership",
+            "redemption",
+            "belonging"
+          ],
+          "description": "Sara's investigation serves Grissom's leadership test, Warrick's redemption arc, and her own integration into the team",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E03",
+      "events": [
+        {
+          "event": "Laura Garris is kidnapped and buried alive in a wooden crate beneath the Nevada desert",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "guest:laura_garris"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jack Garris receives ransom call demanding two million dollars within three hours",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:jack_garris"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom, Nick, and Sara race against time to solve the kidnapping case",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "A/V lab matches digitally altered voice to Chip Rundle, Jack's personal trainer",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:chip_rundle"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brass catches Rundle collecting the ransom money",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "brass",
+            "guest:chip_rundle"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom notices sheepskin fibers on Laura's sleeves, indicating she was a willing passenger",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Blood test confirms Laura never inhaled halothane from the knockout rag",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara theorizes Laura staged her own abduction with Rundle to extort money and run away",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Evidence reveals Rundle planned to betray Laura and keep all the ransom money",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom",
+            "sara",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team locates and rescues Laura from the buried crate before her air runs out",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom",
+            "nick",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine and Warrick investigate hit-and-run death of young girl Renda Harris",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Partial license plate bruised into victim's body leads to Charles Moore's car",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Charles Moore confesses immediately to the hit-and-run",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:charles_moore"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine notices driver's seat positioning and radio station don't match Charles",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick recovers tooth fragment from steering wheel matching James Moore",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "James Moore confesses he was driving while on phone with grandfather",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "guest:james_moore"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine and Warrick arrest James despite Charles trying to protect him",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick writes his phone number on James's hand and offers personal support",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara works her first field case alongside Grissom and Nick",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "sara",
+            "grissom",
+            "nick"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "deception and sacrifice",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "redemption"
+          ],
+          "description": "both cases explore sacrifice and protection - Laura's fake kidnapping vs Charles protecting James, Warrick offering mentorship to James",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "belonging"
+          ],
+          "description": "Sara's integration into the team happens through her contributions to solving the kidnapping case",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E04",
+      "events": [
+        {
+          "event": "Catherine and Grissom identify severed leg victim as Wendy Barger",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Winston never reported Wendy missing despite two days in water",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "DNA sample from Winston doesn't match semen from Wendy's body",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom discovers head wound with lime green paint splinters",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom traces paint to Phil's boat and reconstructs accident",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine and Grissom find Phil dead, Winston with gun",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "catherine",
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick and Sara investigate James Johnson's apparent suicide",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "advancement",
+            "belonging"
+          ]
+        },
+        {
+          "event": "Autopsy reveals no teeth marks, liver lodged in throat",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "advancement",
+            "belonging"
+          ]
+        },
+        {
+          "event": "Nick and Sara learn about hazing ritual with liver on noose",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "advancement",
+            "belonging"
+          ]
+        },
+        {
+          "event": "Matt Daniels confesses Kyle strangled James and staged suicide",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "advancement",
+            "belonging"
+          ]
+        },
+        {
+          "event": "Kyle arrested for first-degree murder",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "advancement",
+            "belonging"
+          ]
+        },
+        {
+          "event": "Judge Cohen asks Warrick to tamper with rape case evidence",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick goes to Grissom and Brass for help with judge",
+          "storyline": "redemption",
+          "function": "turning_point",
+          "characters": [
+            "warrick",
+            "grissom",
+            "brass"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Warrick wears wire to lure judge into repeating demands",
+          "storyline": "redemption",
+          "function": "climax",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brass arrests corrupt Judge Cohen based on recorded evidence",
+          "storyline": "redemption",
+          "function": "resolution",
+          "characters": [
+            "brass",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick declares nobody owns him as Cohen is arrested",
+          "storyline": "redemption",
+          "function": "resolution",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the corruption of trust and the price of integrity",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "redemption"
+          ],
+          "description": "both storylines explore betrayal of trust - Winston's jealous murder of innocent Phil mirrors Judge Cohen's corruption of justice, while Warrick's choice to expose Cohen parallels the CSIs revealing the truth about Wendy's accidental death",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "redemption",
+            "leadership"
+          ],
+          "description": "Warrick's crisis forces him to trust Grissom's leadership, strengthening their working relationship",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E05",
+      "events": [
+        {
+          "event": "Naked teenage boy's body found in desert with no obvious cause of death",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom collects maggots from the body for analysis",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick analyzes maggots and finds Jimson weed in larvae stomachs",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Bobby Taylor identifies victim as Eric and reveals they attended a rave",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "guest:bobby_taylor"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick identifies specific rave from entrance stamp on Eric's wrist",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Investigation reveals Eric ingested Jimson weed causing hallucinations and death",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Bobby learns he unknowingly caused his friend's death by giving him the drug",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom",
+            "guest:bobby_taylor"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine and Nick respond to Catholic school murder scene",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Dean Vernon Woods found bludgeoned to death with stone",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kate Armstrong claims self-defense against Woods's attack",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "guest:kate_armstrong"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CSIs find evidence of multiple blows contradicting Kate's story",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Blood splatter gap reveals second person present during killing",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Hand-shaped gap on Woods's shirt proves Julia held him down",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Women confess Woods was blackmailing them over their relationship",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "catherine",
+            "guest:kate_armstrong",
+            "guest:julia"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara investigates woman's body in dumpster wrapped in plastic",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Glazed residue identified as biotone arterial fluid from embalming",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Victim identified as Stephanie Reyes, supposedly already buried",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara exhumes grave and finds no casket inside",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Sara discovers hairs from multiple donors in display caskets",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Fingerprints on plastic wrap link funeral director Gesek to body dumping",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara's solo handling demonstrates growing confidence and independence",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the corruption of trust and innocence",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "belonging",
+            "advancement",
+            "redemption"
+          ],
+          "description": "all storylines explore trust being broken or rebuilt - friends unknowingly harming each other, religious leaders betraying their calling, funeral directors violating sacred duties, team members proving their reliability",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "belonging"
+          ],
+          "description": "Sara's independent case work directly advances her integration into the team",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "advancement"
+          ],
+          "description": "Nick's work on the school murder case demonstrates his growing investigative skills",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "redemption"
+          ],
+          "description": "Warrick's crucial forensic analysis on the rave case shows his professional competence despite personal struggles",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E06",
+      "events": [
+        {
+          "event": "Plumber discovers mummified fingers in concrete foundation at Summercliff development",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "guest:plumber"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick and Grissom excavate skeleton of stabbed young woman encased in cement",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "nick",
+            "grissom"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Grissom brings in forensic sculptor Teri Miller, showing visible romantic interest",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "guest:teri_miller"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Robbins finds blunt force trauma and sand grains in victim's earwax",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:dr_robbins"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Facial reconstruction and dental records identify victim as Faye Green",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "guest:teri_miller"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom theorizes Jason killed Faye after fish tank fight, buried her at construction site",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Amy Hindler pulls gun on Nick during arrest, Grissom draws weapon to protect him",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "nick",
+            "grissom",
+            "guest:amy_hindler"
+          ],
+          "also_affects": [
+            "leadership",
+            "advancement"
+          ]
+        },
+        {
+          "event": "Jason arrested for Faye's murder",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick and Sara investigate police shooting with Officer Tyner's suicide claim",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "warrick",
+            "sara"
+          ],
+          "also_affects": [
+            "redemption",
+            "belonging"
+          ]
+        },
+        {
+          "event": "Warrick finds missing bullet embedded in jeep's spare tire after exhaustive search",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Lab analysis confirms bullet from victim's gun, corroborating Tyner's suicide story",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "warrick",
+            "sara"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Warrick and Sara work as primary partners, contrasting styles create productive tension",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "warrick",
+            "sara"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Catherine investigates rape accusation against ex-husband Eddie by stripper April",
+          "storyline": "balance",
+          "function": "setup",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom urges Catherine to recuse herself due to conflict of interest",
+          "storyline": "balance",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "catherine"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Catherine insists on handling the case despite obvious conflict",
+          "storyline": "balance",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine finds contraceptive film in April's locker, proving premeditation",
+          "storyline": "balance",
+          "function": "turning_point",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Evidence reveals consensual sex and false accusation motivated by broken promises",
+          "storyline": "balance",
+          "function": "climax",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Eddie cleared but Catherine left shaken by investigation's personal toll",
+          "storyline": "balance",
+          "function": "resolution",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of personal involvement in professional duty",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "balance",
+            "leadership"
+          ],
+          "description": "all storylines explore how personal relationships complicate professional judgment - Grissom's attraction to Teri, Catherine's conflict with Eddie's case, Grissom protecting Nick",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "leadership",
+            "advancement"
+          ],
+          "description": "Grissom's protective instinct toward Nick during the arrest demonstrates both his leadership role and Nick's growing independence",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E07",
+      "events": [
+        {
+          "event": "Four Collins family members found stabbed to death in their suburban home",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom notes single knife missing from drawer that was only one opened",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Entire night shift team assigned to work single case together for first time",
+          "storyline": "leadership",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick",
+            "warrick",
+            "sara"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Tina tells investigators she hid in closet when hearing unfamiliar footsteps",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:tina"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom reconstructs murder order and killer's path using blood drop direction",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "X-rays reveal signs of recent sexual abuse on four-year-old Brenda",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CSIs quietly shift focus to family dynamics after abuse discovery",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick",
+            "warrick",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom discovers Brenda's references to 'the buffalo' mean father's necklace",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "DNA analysis reveals Mr. Collins was both father and grandfather to Brenda",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team discovers Tina gave birth to Brenda at thirteen after years of abuse",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick",
+            "warrick",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CSIs find cigarette butts and matchbooks linking Jesse Overton to crime scene",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Investigation reveals Tina recruited Jesse through church group to carry out murders",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara shows visible emotional reaction to sexual abuse elements of case",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom shows uncharacteristic emotional strain dealing with child victims",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the corruption of innocence and the price of survival",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "leadership",
+            "belonging"
+          ],
+          "description": "all storylines explore how trauma and violence test personal boundaries and professional detachment",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "leadership"
+          ],
+          "description": "the case challenges Grissom's leadership by forcing him to confront his own emotional limits while managing the team",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E08",
+      "events": [
+        {
+          "event": "Stuart Rampler's body is found in hotel bathtub with gunshot wound and suicide tape, recreating the Royce Harmon murder",
+          "storyline": "nemesis",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Grissom recognizes the staging as Paul Millander's work and plays both suicide notes simultaneously",
+          "storyline": "nemesis",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team discovers victims were forced to read from identical scripts based on rustling paper sounds",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "nemesis"
+          ]
+        },
+        {
+          "event": "Investigation reveals killer used Millander's novelty rubber hand to plant false fingerprints with cooking spray",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "nemesis"
+          ]
+        },
+        {
+          "event": "Two thumbprints recovered from tape recorder reveal Millander's print layered over Grissom's own fingerprint",
+          "storyline": "nemesis",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara researches victims' backgrounds and discovers both share August 17 birthday",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Sara uncovers Millander's childhood trauma: witnessed father's staged suicide on August 17",
+          "storyline": "nemesis",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Catherine and Grissom obtain warrant for Millander's warehouse but find it cleaned out",
+          "storyline": "nemesis",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team finds only an envelope addressed to Grissom containing a blank piece of paper",
+          "storyline": "nemesis",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Millander walks into CSI headquarters asking for Grissom while team searches warehouse",
+          "storyline": "nemesis",
+          "function": "climax",
+          "characters": [
+            "guest:millander"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Millander waves at security camera on his way out, taunting the team",
+          "storyline": "nemesis",
+          "function": "cliffhanger",
+          "characters": [
+            "guest:millander"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick and Warrick investigate Walter Bangler's apparent DUI accident",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "nick",
+            "warrick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Investigation reveals Bangler was belted in back seat, not driving, suggesting someone fled the scene",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "nick",
+            "warrick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        }
+      ],
+      "theme": "the hunter becomes the hunted",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "nemesis",
+            "case_of_week"
+          ],
+          "description": "both cases involve deception and role reversal - Millander stages suicides while someone else staged Bangler's accident",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "nemesis"
+          ],
+          "description": "the audience knows Millander is at CSI headquarters while Grissom searches the empty warehouse",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "nemesis",
+            "case_of_week"
+          ],
+          "description": "the Millander case dominates and transforms the typical case-of-the-week structure",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E09",
+      "events": [
+        {
+          "event": "Flight 909 lands with dead passenger Tony Candlewell in first-class aisle",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sheriff Mobley informs Grissom FAA won't arrive until sunrise, giving CSI twelve hours",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "guest:mobley"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Grissom assigns entire night shift to work the aircraft as sealed crime scene",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Team conducts preliminary interviews with first-class passengers producing conflicting accounts",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick",
+            "warrick",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Blind passenger Preston Cash identifies three passengers by voice as involved in altercation",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:preston_cash"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Autopsy reveals Tony's brain swelling and abnormal spinal fluid protein levels",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "guest:dr_williams"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Williams concludes Tony had undiagnosed encephalitis causing erratic behavior at altitude",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "guest:dr_williams"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom reconstructs sequence: Tony's erratic behavior, bathroom pounding, drink spilling, cabin door attempt",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team finds shoe prints from three passengers on Tony's jacket and strangulation evidence",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick",
+            "warrick",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Crime scene reconstruction shows Tony crawled away but passengers continued beating him",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom determines attack became assault when Tony retreated from cabin door",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sheriff Mobley decides not to prosecute despite evidence of assault",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "guest:mobley",
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Team debates whether they would have acted the same way as passengers",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick",
+            "warrick",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom reminds team no one asked Tony what was wrong, simple question could have prevented death",
+          "storyline": "leadership",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        }
+      ],
+      "theme": "the gap between scientific truth and moral justice",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "leadership"
+          ],
+          "description": "both storylines explore the tension between what evidence proves and what society chooses to do with that truth",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "leadership"
+          ],
+          "description": "Grissom's scientific methodology in solving the case reinforces his philosophical leadership of the team",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "CHECK_LINE",
+          "target": "nemesis",
+          "reason": "Paul Millander storyline has no events in this episode",
+          "episodes": [
+            "S01E09"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "redemption",
+          "reason": "Warrick redemption storyline has no events in this episode",
+          "episodes": [
+            "S01E09"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "belonging",
+          "reason": "Sara belonging storyline has no events in this episode",
+          "episodes": [
+            "S01E09"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "advancement",
+          "reason": "Nick advancement storyline has no events in this episode",
+          "episodes": [
+            "S01E09"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "balance",
+          "reason": "Catherine balance storyline has no events in this episode",
+          "episodes": [
+            "S01E09"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E10",
+      "events": [
+        {
+          "event": "Hikers find Kaye Shelton's body wrapped in a blanket and covered in insects",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom determines from soil analysis that Kaye was killed elsewhere and dumped",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "AFIS identifies the victim as Kaye Shelton with history of spousal abuse complaints",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Scott Shelton claims he was out of town when Kaye disappeared",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom decides to use forensic entomology to establish precise time of death",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom and Sara set up pig carcass experiment to recreate decomposition conditions",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Grissom and Sara spend the night monitoring decomposition in the desert",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "sara",
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Adjusted timeline from experiment contradicts Scott's alibi",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom and Sara discover blue Teflon coating around bullet wound matching Scott's ammunition",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brass arrests Scott Shelton for his wife's murder",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara decides to become vegetarian after the decomposition experiment",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine and Warrick investigate missing painting at Ziegler home",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick finds ear print on wall and matches it to younger son Jason",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Catherine suspects and confirms recovered painting is a forgery",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Child Protective Services launches investigation into Catherine based on anonymous complaint",
+          "storyline": "balance",
+          "function": "setup",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CPS interviews Catherine's colleagues and Lindsey's teachers",
+          "storyline": "balance",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick tells CPS investigator Catherine is excellent mother but Eddie is screwed up",
+          "storyline": "balance",
+          "function": "turning_point",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Catherine admits her work schedule sometimes causes her to forget picking up Lindsey",
+          "storyline": "balance",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CPS investigation is dropped as baseless, likely filed by Eddie",
+          "storyline": "balance",
+          "function": "resolution",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the personal cost of professional dedication",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "belonging",
+            "balance"
+          ],
+          "description": "all storylines explore how professional commitment affects personal relationships and identity",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "case_of_week"
+          ],
+          "description": "Sara's integration into the team happens through shared scientific work with Grissom",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E11",
+      "events": [
+        {
+          "event": "Catherine, Grissom, and Brass are called to Moapa where a driver found Joan Simms' body alongside Interstate 15",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "grissom",
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Jenna Williams determines Joan Simms was strangled and frozen after death, with ice crystals indicating refrigeration truck transport",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:dr_williams"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Margaret Shorey disappears from Marty's Market with her purse left behind but wallet missing",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:margaret_shorey"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom discovers fluorescent ink message in store restroom: 'I've killed 5 women. Catch me if you can.'",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team contacts neighboring states and learns four other grocery stores along I-15 had bathroom messages counting victims one through four",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Graphologist determines the message writer is a poorly educated, left-handed female",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:graphologist"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom rearranges store photographs and realizes they all sit along Interstate 15, pointing to a trucker with refrigerated vehicle",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Catherine compiles list of female truckers, but Grissom suggests the woman is an accomplice since only three percent of serial killers are female",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Brass and police locate the truck at a rest stop and arrest the driver and his girlfriend",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom and Catherine search the refrigerated trailer and find three women's bodies",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom",
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "They find Margaret Shorey locked in a trunk, alive",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom",
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The girlfriend admits she lured Margaret out under pretense of baby locked in car, claims she was forced to participate and wrote messages as cry for help",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "guest:girlfriend"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara and Warrick investigate apparent murder and robbery of man found dead by his brother",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "belonging",
+            "redemption"
+          ]
+        },
+        {
+          "event": "Sara and Warrick put personal differences aside to work together despite tension from her earlier internal investigation of him",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Nick comes to aid of prostitute Kristy Hopkins when she gets into scuffle with hotel security guard",
+          "storyline": "advancement",
+          "function": "seed",
+          "characters": [
+            "nick",
+            "guest:kristy_hopkins"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "deception and hidden truths",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "belonging",
+            "advancement"
+          ],
+          "description": "all storylines involve characters hiding their true nature or motivations - the girlfriend's cry for help, Sara and Warrick's professional facade over personal tension, Nick's protective instincts",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "belonging",
+            "redemption"
+          ],
+          "description": "Sara and Warrick's secondary case forces them to work together, advancing both their personal arcs through professional cooperation",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E12",
+      "events": [
+        {
+          "event": "Grissom receives videotaped message from Frank Damon claiming innocence in arson case",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ecklie insists Frank is guilty and defends his original investigation",
+          "storyline": "leadership",
+          "function": "setup",
+          "characters": [
+            "ecklie",
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Grissom decides to re-examine the arson scene despite Ecklie's objections",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Grissom, Sara, and Warrick re-examine the fire scene and find accelerant pattern inconsistent with deliberate arson",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "belonging",
+            "redemption"
+          ]
+        },
+        {
+          "event": "Warrick discovers space heater in bedroom that caused circuit overload",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Frank explains his argument with wife and the thrown kerosene lamp",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "guest:frank_damon"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom proves circuit overload ignited spilled kerosene, exonerating Frank",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Frank is freed and Ecklie takes the public embarrassment personally",
+          "storyline": "leadership",
+          "function": "climax",
+          "characters": [
+            "grissom",
+            "ecklie"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Catherine and Nick investigate Joey Hillman's murder in casino parking lot",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Investigation reveals Joey was a sports gambling runner for illegal betting operation",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Catherine and Nick delve into underground sports gambling world",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        }
+      ],
+      "theme": "the courage to challenge authority when science demands it",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "leadership"
+          ],
+          "description": "both storylines explore the conflict between institutional loyalty and scientific truth",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "case_of_week",
+            "redemption"
+          ],
+          "description": "the gambling investigation exposes the world Warrick is secretly struggling with, while he helps solve the arson case",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "leadership"
+          ],
+          "description": "the arson case becomes the vehicle for establishing Grissom vs Ecklie rivalry",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E13",
+      "events": [
+        {
+          "event": "Security guard Jake Richards examines briefcase and is killed by explosion",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "guest:jake_richards"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom, Sara, and Warrick find sulfur residue and identify black gunpowder with SnoozeWell alarm clock",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dominic Kretzker demonstrates explosive knowledge during questioning",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "brass",
+            "guest:dominic_kretzker"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brass discovers Dominic bought seven SnoozeWell clocks and has bomb supplies",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dominic is arrested for the Hansen bombing",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "brass",
+            "guest:dominic_kretzker"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Second bomb explodes at Thrift-Right car rental, Dominic is released",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "guest:dominic_kretzker"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara connects both targets to Norman Stirling's firing from Thrift-Right",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Tyler Stirling confesses to planting bombs for 'Fair Play' after father's firing",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "guest:tyler_stirling"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dominic sacrifices himself carrying school bomb outside, saving students",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "guest:dominic_kretzker"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom pins newspaper article about Dominic's sacrifice on memorial board",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Nick encounters Kristy Hopkins being harassed by pimp Jack Willman",
+          "storyline": "advancement",
+          "function": "setup",
+          "characters": [
+            "nick",
+            "guest:kristy_hopkins",
+            "guest:jack_willman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick drives Kristy home and spends the night with her",
+          "storyline": "advancement",
+          "function": "escalation",
+          "characters": [
+            "nick",
+            "guest:kristy_hopkins"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick finds Kristy strangled to death with his DNA at the scene",
+          "storyline": "advancement",
+          "function": "turning_point",
+          "characters": [
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ecklie takes charge of investigation and builds case against Nick",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "ecklie",
+            "nick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Catherine asks Sheriff Mobley for twelve hours before accusing Nick",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": [
+            "balance"
+          ]
+        },
+        {
+          "event": "Catherine finds epithelial cells on cord matching Jack Willman",
+          "storyline": "leadership",
+          "function": "climax",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Nick is cleared but left shaken by Kristy's death and career threat",
+          "storyline": "advancement",
+          "function": "resolution",
+          "characters": [
+            "nick"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "sacrifice and loyalty",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "leadership",
+            "advancement"
+          ],
+          "description": "all storylines explore sacrifice and proving oneself - Dominic dies saving students, Catherine risks her position to save Nick, Nick's career is threatened by his compassion",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "leadership",
+            "advancement"
+          ],
+          "description": "Nick's personal crisis becomes a test of Grissom's team leadership against Ecklie's interference",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E14",
+      "events": [
+        {
+          "event": "Dog returns with human tibia bone from desert",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom assembles cadets to comb desert area for bone fragments",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Catherine and Grissom reassemble skeleton, determine victim was 60-70 year old man",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick enters mandible into dental database and identifies victim as Mel Bennett",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "nick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Catherine, Grissom, and Brass visit Rose Bennett who claims Mel is at the store",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "grissom",
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CSIs find blood in bathtub drain and cleaned electric saw in garage",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "grissom",
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Lab tests confirm saw was used to dismember Mel",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rose admits she never reported Mel missing during seven months",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick discovers Mel was already dead when dismembered, making it not technically illegal",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "nick"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Investigation reveals Rose's denial about Mel's death and methodical disposal",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara and Warrick respond to Lucky Seven Motel where stripper Darren Pyne is found dead",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Credit card receipts lead to Lynn Henry and friends who hired Darren for bachelorette party",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Autopsy reveals Darren died from multiple head blows causing cranial bleeding",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara notices bruises on Lynn's wrists, discovers missing zirconia from Luke's ring",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "CSIs determine Luke discovered party, grabbed Lynn, then beat Darren to death",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara and Warrick demonstrate improved working relationship and professional synergy",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        }
+      ],
+      "theme": "the destructive power of denial and deception in relationships",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "belonging"
+          ],
+          "description": "both cases explore how denial damages relationships - Rose's denial about Mel's death parallels the team's past denial about Sara's integration",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "redemption"
+          ],
+          "description": "Sara and Warrick's improved partnership shows both characters growing past their earlier struggles",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E15",
+      "events": [
+        {
+          "event": "Body found floating in pool at charity fundraiser at Portia Richmond's mansion",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sheriff Mobley puts political pressure on Grissom to solve case quickly",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Pool victim identified as Lacey Duvall, showgirl at Mediterranean casino",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine interviews Rachel about Lacey's relationship with married man",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom discovers Portia's belongings still in closet, suspects foul play",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom finds tooth fragment mixed with gravel near fireplace",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Greg processes fingernail DNA, discovers it shares markers with semen from assault kit",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:greg"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "DNA from Patrick's straw confirms Patrick and Amanda are siblings",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "guest:greg"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara discovers Patrick's Social Security number belongs to dead infant",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Grissom reveals Amanda killed Lacey after argument about Patrick's identity",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom discovers piranhas with elevated cholesterol from consuming human tissue",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Siblings exposed as con artists who grifted wealthy women nationwide",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick investigates shooting of Tyson Green in glass elevator",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Quarter wedged in bullet wound and burnt newspaper indicate mob hit",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Investigation hits dead end when witnesses refuse to cooperate",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick stands alone on casino floor, finally acknowledges gambling problem",
+          "storyline": "redemption",
+          "function": "turning_point",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "confronting hidden truths",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "redemption"
+          ],
+          "description": "both storylines involve characters confronting deceptions - the con artists' false identities and Warrick's denial about his addiction",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "redemption"
+          ],
+          "description": "the casino setting of Warrick's case forces his personal revelation about gambling addiction",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E16",
+      "events": [
+        {
+          "event": "Pamela Adler is carjacked, sexually assaulted, shot in the head, and dumped on desert highway but survives",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "guest:pamela_adler"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom sends Sara to the hospital to process the victim and collect sexual assault kit",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Sara identifies the victim as Pamela Adler, reported missing from shopping mall",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom warns Sara not to get emotionally involved in the case",
+          "storyline": "leadership",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Sara works the case with intense personal investment, staying at the hospital and forming connection with unconscious victim",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Nick and Sara match belt loop from crime scene to jeans, scent dogs lead to Tony Thorpe",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "advancement"
+          ]
+        },
+        {
+          "event": "Tony gloats in interrogation that juvenile law protects him from adult sentencing",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:tony_thorpe",
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brass warns Tony he'll be charged as adult for murder if Pamela dies within a year",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara visits Pamela to tell her they caught attacker and meets devastated husband Tom",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "sara",
+            "guest:tom_adler"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Sara breaks down in tears, frustrated by legal system that rewards attacker",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom finds Sara crying and sits with her instead of lecturing about objectivity",
+          "storyline": "leadership",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Catherine and Warrick inherit open murder case abandoned by day shift CSI who quit",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Roy McCall shot neighbor Chuckie Hastings, claims self-defense with screwdriver threat",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "guest:roy_mccall",
+            "guest:chuckie_hastings"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Key evidence screwdriver is missing from evidence locker due to day shift negligence",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine reexamines widow Laurianne's testimony and determines she couldn't witness actual shots",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Physical evidence supports McCall's self-defense claim despite missing screwdriver",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "catherine",
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        }
+      ],
+      "theme": "the limits of justice and the cost of caring",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "belonging",
+            "leadership"
+          ],
+          "description": "all storylines explore how personal investment in justice can be both necessary and painful",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "leadership",
+            "belonging"
+          ],
+          "description": "Grissom's leadership evolution intersects with Sara's emotional journey when he chooses compassion over clinical detachment",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E17",
+      "events": [
+        {
+          "event": "Joseph Felton found dead in pottery store with only $300 stolen from safe",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom runs fingerprints through AFIS and gets hit on 21-year-old kidnapping case",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team uses age-progression software to identify Melissa Marlowe as Tammy Felton",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Evidence reveals Mara and Joseph Felton kidnapped and raised Melissa as Tammy",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine",
+            "grissom",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team discovers Tammy killed Joseph during planned robbery as revenge for kidnapping",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine",
+            "grissom",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrant yields gloves with uranium-positive yellow paint and Tammy's fingerprint",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine catches Tammy lying about dissociative identity disorder defense",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team discovers Darin Hanson told Tammy about kidnapping to manipulate her into murder",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "catherine",
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Marlowes post bail and buy 22 bus tickets to help Tammy escape",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "guest:marlowes"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Tammy meets Hanson at desert bus stop and they drive off together",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "guest:tammy",
+            "guest:hanson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara and Warrick investigate woman burned to death in rocking chair",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Sara initially suspects spontaneous human combustion",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Warrick demonstrates wick effect explaining the burn pattern",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "belonging",
+            "redemption"
+          ]
+        },
+        {
+          "event": "Sara and Warrick show effective collaboration, moving past early antagonism",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        }
+      ],
+      "theme": "the complexity of family bonds and identity",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "belonging"
+          ],
+          "description": "both storylines explore what makes a family - Tammy's stolen identity vs Sara finding her place in the CSI family",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "redemption"
+          ],
+          "description": "Sara and Warrick's partnership advances both their individual goals through shared professional success",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E18",
+      "events": [
+        {
+          "event": "Amy and Kevin Shepherd are stabbed to death after anniversary dinner, their SUV stolen",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "guest:amy_shepherd",
+            "guest:kevin_shepherd"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rain compromises the crime scene immediately after CSIs arrive",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "nick",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Justin Green offers statement and coat to preserve evidence",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "guest:justin_green",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick leads the investigation with Sara and Warrick examining the victims",
+          "storyline": "advancement",
+          "function": "setup",
+          "characters": [
+            "nick",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Sara reviews Shepherds' records and finds nothing suspicious initially",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jessica Hall's body falls out of stolen SUV when found",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "guest:jessica_hall"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Bank records reveal Kevin wired Jessica thirty-five thousand dollars",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Investigation uncovers Jessica was Kevin's girlfriend who hired Justin to kill Amy",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "nick",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick has Sara and Warrick reenact the incident to prove Jessica held Kevin down",
+          "storyline": "advancement",
+          "function": "climax",
+          "characters": [
+            "nick",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Justin Green arrested for all three murders after collecting one hundred five thousand dollars",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "nick",
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine investigates collapse of city apartment building that killed three elderly sisters",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine examines structural failures: roof leaks, thin drywall, beetle damage",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine conducts experiment proving traffic vibrations loosened support column nails",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "District engineer Paul Newsome cleared but Catherine frustrated with bureaucratic indifference",
+          "storyline": "balance",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        }
+      ],
+      "theme": "the vulnerability of trust",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "balance"
+          ],
+          "description": "both storylines explore how those meant to protect can become sources of danger - Justin betrays trust as helpful witness, bureaucratic system fails vulnerable elderly residents",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "case_of_week"
+          ],
+          "description": "audience learns Justin is the killer while characters initially trust him as helpful witness",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E19",
+      "events": [
+        {
+          "event": "Gwen Anderson discovers four-month-old Zachary missing from his crib with ransom note",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "guest:gwen_anderson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CSI team arrives at Anderson house to investigate kidnapping scene",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick",
+            "warrick",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom struggles to control emotions on case involving a child",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Ransom call never comes despite six-hour deadline",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Fingerprints on ransom note match Needra Fenway, Steve's secretary",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:needra_fenway"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Fenway admits affair with Steve but claims she ended it",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:needra_fenway"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Fenway's hair found in baby's crib",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Baby's body found wrapped carefully beneath statue",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Robbins determines time of death and finds Metaradim fiber in throat",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "guest:dr_robbins"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom locates oven mitt with matching Metaradim fiber at Anderson home",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Gwen confesses to accidentally smothering Zachary with pot holder",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "guest:gwen_anderson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick catches crucial detail on Tyler's cell phone recording",
+          "storyline": "redemption",
+          "function": "climax",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Tyler reveals three-year-old Robbie accidentally killed Zachary while playing",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "guest:tyler_anderson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Parents staged kidnapping to protect Robbie from knowing he killed his brother",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "guest:steve_anderson",
+            "guest:gwen_anderson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom shows rare emotional response to child victim case",
+          "storyline": "leadership",
+          "function": "resolution",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine deeply affected by family tragedy as a mother herself",
+          "storyline": "balance",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the lengths parents will go to protect their children",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "balance"
+          ],
+          "description": "both storylines explore parental protection - the Andersons protecting Robbie from guilt, Catherine protecting Lindsey from Eddie's instability",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "redemption"
+          ],
+          "description": "Warrick's attention to detail proves crucial in solving the case, demonstrating his value to the team",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E20",
+      "events": [
+        {
+          "event": "Two teenage boys run over Brian Clemonds with their car, but autopsy reveals he was already dead",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brian is identified as a deaf student with dried blood on his knuckles indicating a fight",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Gilbert refuses to cooperate and is offended by Sara bringing an interpreter",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "sara",
+            "guest:dr_gilbert"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Grissom reveals he is fluent in ASL and shares his mother's hearing loss story",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "guest:dr_gilbert"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CSIs investigate Brian's roommate Paul Arrington who had complaints filed against him",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brain-printing technology clears Paul of involvement in Brian's death",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Investigation reveals Adam Walkey and Mark beat Brian after he couldn't hear them calling",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "sara",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara matches tire treads and lice evidence to identify the killers",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mass shooting at Vegas Grounds coffee shop kills five people including Frankie Flynn",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Initial investigation suggests mob hit targeting Flynn and his bodyguard",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doc Robbins reveals Flynn had terminal cancer and would have died soon anyway",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine discovers ricochet mark and determines shooting pattern",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Evidence reveals pregnant employee Erin McCarty was the actual target",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "catherine",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick and Catherine trace shooting to personal motive connected to Erin",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "nick",
+            "catherine"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the barriers to understanding and communication",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week"
+          ],
+          "description": "both cases involve miscommunication and misunderstanding - Brian couldn't hear his attackers, and the coffee shop shooting was misread as a mob hit when it was personal",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "belonging"
+          ],
+          "description": "Sara's cultural insensitivity with the interpreter mirrors the communication breakdown that led to Brian's death",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "personal_revelation",
+          "reason": "Grissom's ASL fluency and mother's hearing loss story represents significant character development that doesn't fit existing storylines",
+          "episodes": [
+            "S01E20"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E21",
+      "events": [
+        {
+          "event": "A jogger is found dead in a park, apparently mauled by a large animal",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "nick",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom, Nick, and Warrick initially consider a mountain lion but rule it out due to lack of scratch marks",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "nick",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doc Robbins discovers a surgical incision and determines the jogger's liver was surgically removed",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "guest:doc_robbins"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The attack dog is identified as a Great Dane and Mastiff mix, narrowing suspects to forty registered owners",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "nick",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CSIs confront Dr. Susan Hillridge, expecting black market organ harvesting",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "nick",
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Hillridge reveals she suffers from porphyria and trained dogs to attack for organ smoothies",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "guest:dr_hillridge"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom gathers evidence and arrests Hillridge despite being disturbed by the revelation",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Nick and Warrick work together with competitive but trusting partnership rhythm",
+          "storyline": "advancement",
+          "function": "escalation",
+          "characters": [
+            "nick",
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Catherine and Sara investigate six-year-old Sandy Dantini's death on carnival ride",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "catherine",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine notices mother's waterlogged watch but no dye bleeding from shoes",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine confronts the mother and determines she drowned Sandy to be free for her boyfriend",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": [
+            "balance"
+          ]
+        },
+        {
+          "event": "Catherine ensures the mother's arrest, deeply affected as a mother herself",
+          "storyline": "balance",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the corruption of natural bonds",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "balance"
+          ],
+          "description": "both cases involve the perversion of natural relationships - a doctor using animals to harm humans, a mother killing her child",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "advancement",
+            "redemption"
+          ],
+          "description": "Nick and Warrick's partnership development serves both their individual growth arcs",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E22",
+      "events": [
+        {
+          "event": "Grissom must write annual performance reviews for his entire team on evaluation day",
+          "storyline": "leadership",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Two half-naked women climb out of stolen BMW after high-speed chase",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom opens BMW trunk and finds Victor Da Silva's severed head",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Women explain they fled threatening man during strip poker, stole car to escape",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine observes cut marks on jawbone showing killer took practice swings",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "catherine"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Brass finds torn photograph of Victor with another person",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "brass"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom finds peanut shells on Victor's shoes matching shells on car's gas pedal",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Evidence leads to roommate Trent Calloway, who is arrested for murder",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nick and Sara find headless, handless, skinned body in desert",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "advancement",
+            "belonging"
+          ]
+        },
+        {
+          "event": "Forensic anthropologist determines bones are larger than human, body is a gorilla",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "guest:teri_miller"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Body identified as gorilla dropped from aircraft by smugglers",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "nick",
+            "sara"
+          ],
+          "also_affects": [
+            "advancement",
+            "belonging"
+          ]
+        },
+        {
+          "event": "Grissom tells Nick in review he's not ready to work cases alone",
+          "storyline": "advancement",
+          "function": "climax",
+          "characters": [
+            "grissom",
+            "nick"
+          ],
+          "also_affects": [
+            "leadership"
+          ]
+        },
+        {
+          "event": "Evaluations force Grissom into uncomfortable manager role he has resisted",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "James Moore calls Warrick from juvenile detention as only witness to murder",
+          "storyline": "redemption",
+          "function": "setup",
+          "characters": [
+            "warrick",
+            "guest:james_moore"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Gang member shanked to death in juvenile facility, James saw the killer",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "James faces impossible choice: testify and risk death or stay silent and be accused",
+          "storyline": "redemption",
+          "function": "escalation",
+          "characters": [
+            "guest:james_moore"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick finds bloody shirt in toilet and toothbrush shank in pipe",
+          "storyline": "redemption",
+          "function": "turning_point",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Evidence identifies Ronnie Connors as killer, freeing James from testifying",
+          "storyline": "redemption",
+          "function": "resolution",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the burden of responsibility and judgment",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_week",
+            "leadership",
+            "advancement",
+            "redemption"
+          ],
+          "description": "all storylines explore judgment and evaluation - solving cases requires judging evidence, Grissom judges his team's performance, Nick is judged unready, Warrick judges how to help James",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "leadership",
+            "advancement"
+          ],
+          "description": "Grissom's evaluation of Nick directly impacts both storylines in the same scene",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E23",
+      "events": [
+        {
+          "event": "Doc Robbins tells Grissom and Nick that victim Eileen Snow was killed with the Strip Strangler's signature methods",
+          "storyline": "case_of_week",
+          "function": "setup",
+          "characters": [
+            "grissom",
+            "nick"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom suspects the killer plants false DNA using collected semen in ketchup packets",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Warrick discovers white cotton fibers and links all victims to Strong's Gym",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "warrick"
+          ],
+          "also_affects": [
+            "redemption"
+          ]
+        },
+        {
+          "event": "Sheriff Mobley brings in FBI Agent Culpepper to oversee the case",
+          "storyline": "leadership",
+          "function": "escalation",
+          "characters": [
+            "guest:mobley",
+            "guest:culpepper"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "FBI arrests Brad Lewis, but Grissom publicly contradicts the arrest to a reporter",
+          "storyline": "leadership",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Sheriff Mobley removes Grissom from the case and orders him on vacation",
+          "storyline": "leadership",
+          "function": "climax",
+          "characters": [
+            "guest:mobley",
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom secretly continues working with his team off the books",
+          "storyline": "leadership",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Sara volunteers to act as bait at the specialty grocery store",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Grissom vehemently opposes Sara's bait plan, revealing emotional protectiveness beyond professional concern",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "grissom",
+            "sara"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sara goes through with the bait plan despite Grissom's objections",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "sara"
+          ],
+          "also_affects": [
+            "case_of_week"
+          ]
+        },
+        {
+          "event": "Investigation leads to Syd Booth Goggle, a motel security guard with forensic knowledge",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom visits Syd's apartment alone and finds forensic journals and grooming implements",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom finds ketchup packets in trash bag, confirming his planted semen theory",
+          "storyline": "case_of_week",
+          "function": "turning_point",
+          "characters": [
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grissom confronts Syd in the laundry room washing white gym towels",
+          "storyline": "case_of_week",
+          "function": "escalation",
+          "characters": [
+            "grissom",
+            "guest:syd"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Syd attacks Grissom with a shovel, knocking him down",
+          "storyline": "case_of_week",
+          "function": "climax",
+          "characters": [
+            "guest:syd",
+            "grissom"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Catherine arrives and shoots Syd dead, saving Grissom's life",
+          "storyline": "case_of_week",
+          "function": "resolution",
+          "characters": [
+            "catherine",
+            "grissom"
+          ],
+          "also_affects": [
+            "balance"
+          ]
+        },
+        {
+          "event": "Sheriff Mobley holds press conference announcing Strip Strangler's identification without crediting Grissom's team",
+          "storyline": "leadership",
+          "function": "resolution",
+          "characters": [
+            "guest:mobley"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "CSIs gather privately for breakfast to celebrate, united as a team despite political indignities",
+          "storyline": "leadership",
+          "function": "resolution",
+          "characters": [
+            "grissom",
+            "catherine",
+            "nick",
+            "warrick",
+            "sara"
+          ],
+          "also_affects": [
+            "belonging",
+            "redemption"
+          ]
+        }
+      ],
+      "theme": "loyalty versus authority",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "leadership",
+            "belonging",
+            "case_of_week"
+          ],
+          "description": "all storylines explore the tension between institutional authority and personal loyalty - Grissom defying the sheriff, Sara defying Grissom's orders, the team staying loyal to scientific truth over political pressure",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_week",
+            "leadership"
+          ],
+          "description": "the Strip Strangler investigation becomes the battleground for Grissom's authority conflict with the sheriff and FBI",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "belonging",
+            "leadership"
+          ],
+          "description": "Grissom's protective feelings for Sara are obvious to the audience but unspoken between the characters",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    }
+  ]
+}

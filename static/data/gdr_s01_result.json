@@ -1,0 +1,1769 @@
+{
+  "context": {
+    "franchise_type": "serial",
+    "story_engine": "Офицер КГБ ведёт расследование под прикрытием в распадающемся СССР, проверяя как далеко он готов зайти ради долга и выживания",
+    "genre": "thriller",
+    "format": "limited"
+  },
+  "cast": [
+    {
+      "id": "nechaev",
+      "name": "Александр Нечаев",
+      "aliases": [
+        "Нечаев",
+        "Александр"
+      ]
+    },
+    {
+      "id": "svetlana",
+      "name": "Светлана",
+      "aliases": [
+        "Света",
+        "Светлана Нечаева"
+      ]
+    },
+    {
+      "id": "ingrid",
+      "name": "Ингрид",
+      "aliases": [
+        "Ингрид"
+      ]
+    },
+    {
+      "id": "foss",
+      "name": "Фосс",
+      "aliases": [
+        "Фосс"
+      ]
+    },
+    {
+      "id": "zhdanov",
+      "name": "Жданов",
+      "aliases": [
+        "Жданов"
+      ]
+    },
+    {
+      "id": "chernykh",
+      "name": "Генерал Черных",
+      "aliases": [
+        "Черных",
+        "генерал Черных"
+      ]
+    },
+    {
+      "id": "konstantinov",
+      "name": "Константинов",
+      "aliases": [
+        "Константинов"
+      ]
+    },
+    {
+      "id": "chigir",
+      "name": "Чигирь",
+      "aliases": [
+        "Чигирь"
+      ]
+    },
+    {
+      "id": "wolf",
+      "name": "Маркус Вольф",
+      "aliases": [
+        "Вольф",
+        "Маркус Вольф"
+      ]
+    },
+    {
+      "id": "gorbachev",
+      "name": "Горбачёв",
+      "aliases": [
+        "Горбачёв"
+      ]
+    }
+  ],
+  "plotlines": [
+    {
+      "id": "archive_mission",
+      "name": "Nechaev: Archive",
+      "driver": "nechaev",
+      "goal": "получить архивы Штази с компрометирующими материалами на Запад",
+      "obstacle": "двойные агенты, предательство в собственных рядах, западные спецслужбы",
+      "stakes": "судьба СССР, геополитический баланс сил",
+      "type": "serialized",
+      "rank": "A",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E14"
+      ]
+    },
+    {
+      "id": "marriage_crisis",
+      "name": "Nechaev: Marriage",
+      "driver": "nechaev",
+      "goal": "сохранить брак и спасти жену",
+      "obstacle": "измена жены, её похищение и отравление ЦРУ, собственная двойная жизнь",
+      "stakes": "потеря семьи, смерть жены и ребёнка",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E06",
+        "S01E08",
+        "S01E10",
+        "S01E11",
+        "S01E13",
+        "S01E14"
+      ]
+    },
+    {
+      "id": "ingrid_manipulation",
+      "name": "Ingrid: Liberation",
+      "driver": "ingrid",
+      "goal": "освободиться от контроля Фосса и спасти брата",
+      "obstacle": "шантаж через брата, принуждение к предательству",
+      "stakes": "жизнь брата, собственная свобода",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E13"
+      ]
+    },
+    {
+      "id": "cia_counterop",
+      "name": "Foss: Counterintelligence",
+      "driver": "foss",
+      "goal": "помешать советским операциям и получить архивы",
+      "obstacle": "профессионализм Нечаева, двойная игра агентов",
+      "stakes": "провал западных планов в Восточной Европе",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E03",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E10",
+        "S01E12"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "episode": "S01E01",
+      "events": [
+        {
+          "event": "Самолёт Skyhawk с биологическим оружием нарушает советское воздушное пространство как провокация ЦРУ",
+          "storyline": "cia_counterop",
+          "function": "setup",
+          "characters": [
+            "guest:cia_operatives"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев участвует в предотвращении биологической угрозы от самолёта",
+          "storyline": "archive_mission",
+          "function": "setup",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Операция в Берлине проваливается, Нечаев теряет коллегу и репутацию",
+          "storyline": "archive_mission",
+          "function": "setup",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаева отстраняют от активной службы КГБ",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev",
+            "guest:kgb_leadership"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Коллега неофициально возвращает Нечаева в дело под прикрытием фотографа",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev",
+            "guest:colleague"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев получает задание наблюдать за американским журналистом Говардом Хейли",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Говард Хейли загадочно умирает в московском гостиничном номере",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "guest:howard_hayley"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев выходит на след фокусника Майерса, связанного со смертью Хейли",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев обнаруживает бриллианты, спрятанные в часах",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев слышит смех жены с другим мужчиной в доме",
+          "storyline": "marriage_crisis",
+          "function": "setup",
+          "characters": [
+            "nechaev",
+            "svetlana"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "цена верности",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "marriage_crisis",
+            "betrayal_hunt"
+          ],
+          "description": "все линии исследуют предательство — государства, личных отношений и коллег",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage_crisis",
+            "archive_mission"
+          ],
+          "description": "Нечаев служит стране, не подозревая о предательстве дома",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E02",
+      "events": [
+        {
+          "event": "Нечаев и команда отслеживают загадочные часы с ценной информацией у Майерса и Хейли",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Команда узнает что певец Джек Эванс получает посылку от Хейли",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев знакомится с дочерью посла Лизой для получения доступа",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "marriage_crisis"
+          ]
+        },
+        {
+          "event": "Нечаев обнаруживает у Эванса прослушивающие устройства",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Из озера извлекают автомобиль, что угрожает легенде прикрытия",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Светлана убеждает генерала Черных разрешить ей поездку в Берлин на три дня",
+          "storyline": "marriage_crisis",
+          "function": "turning_point",
+          "characters": [
+            "svetlana",
+            "chernykh"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "компромиссы ради миссии",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "marriage_crisis",
+            "betrayal_hunt"
+          ],
+          "description": "все линии про цену секретности — операционную, личную, профессиональную",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "archive_mission",
+            "marriage_crisis"
+          ],
+          "description": "зритель видит как знакомство с Лизой угрожает браку Нечаева",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "archive_mission",
+            "betrayal_hunt"
+          ],
+          "description": "автомобиль из озера связывает поиск архивов с охотой на предателя",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E03",
+      "events": [
+        {
+          "event": "Нечаев просит Лизу уговорить Эванса дать интервью московскому журналисту с условием объясниться в чувствах",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев обыскивает квартиру Эванса во время подготовки к интервью",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев находит скрытые часы и аппаратуру наблюдения в квартире Эванса",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Светлана приезжает в Берлин к Нечаеву",
+          "storyline": "marriage_crisis",
+          "function": "escalation",
+          "characters": [
+            "svetlana",
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев отказывается объяснять Светлане свою ситуацию",
+          "storyline": "marriage_crisis",
+          "function": "escalation",
+          "characters": [
+            "nechaev",
+            "svetlana"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Происходит взрыв в морге, где хранилось тело фокусника",
+          "storyline": "cia_counterop",
+          "function": "escalation",
+          "characters": [
+            "guest:unknown"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        }
+      ],
+      "theme": "скрытые угрозы",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "betrayal_hunt",
+            "marriage_crisis"
+          ],
+          "description": "все линии про скрытые угрозы — слежка за Эвансом, предательство в рядах, разрушение брака",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage_crisis",
+            "archive_mission"
+          ],
+          "description": "Светлана не знает о реальной миссии Нечаева, зритель знает",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E04",
+      "events": [
+        {
+          "event": "Нечаев прибывает на съёмочную площадку для встречи с Эвансом",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Эванс убит во время съёмок финальной сцены перед всей группой",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "guest:evans"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Часы с архивами исчезают с места преступления",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "guest:unknown_killer"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Смерть Эванса опустошает его подругу Лизу",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "guest:lisa"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев встречается с Майерсом-старшим после гибели сына",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev",
+            "guest:myers_sr"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Майерс-старший отказывается сотрудничать с Нечаевым",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "guest:myers_sr"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев получает фотографии Светланы с другим мужчиной",
+          "storyline": "marriage_crisis",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Ингрид приходит в квартиру Нечаева",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "ingrid",
+            "nechaev"
+          ],
+          "also_affects": [
+            "marriage_crisis"
+          ]
+        },
+        {
+          "event": "Нечаев и Ингрид проводят ночь вместе",
+          "storyline": "marriage_crisis",
+          "function": "climax",
+          "characters": [
+            "nechaev",
+            "ingrid"
+          ],
+          "also_affects": [
+            "ingrid_manipulation"
+          ]
+        }
+      ],
+      "theme": "крах доверия",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "marriage_crisis",
+            "betrayal_hunt"
+          ],
+          "description": "все линии исследуют разрушение доверительных связей — профессиональных, личных, семейных",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "marriage_crisis",
+            "ingrid_manipulation"
+          ],
+          "description": "измена Нечаева с Ингрид объединяет его семейный кризис с её планами освобождения",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage_crisis",
+            "ingrid_manipulation"
+          ],
+          "description": "зритель понимает что Ингрид использует уязвимость Нечаева, он этого не осознаёт",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E05",
+      "events": [
+        {
+          "event": "Взрыв убивает охранников Майерса",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "guest:unknown_operatives"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Майерс попадает в больницу после взрыва",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "guest:myers"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ингрид переодевается медсестрой и проникает в больницу",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Ингрид вводит яд Майерсу в больнице",
+          "storyline": "ingrid_manipulation",
+          "function": "climax",
+          "characters": [
+            "ingrid",
+            "guest:myers"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Константинов помогает Нечаеву скрыться",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "konstantinov",
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев прыгает из окна, пытаясь остановить Ингрид",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "ingrid_manipulation"
+          ]
+        },
+        {
+          "event": "Фосс встречается с бывшим начальником разведки КГБ",
+          "storyline": "cia_counterop",
+          "function": "escalation",
+          "characters": [
+            "foss",
+            "guest:former_kgb_chief"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Фосс убеждает бывшего начальника КГБ, что копии архивов могут попасть в чужие руки",
+          "storyline": "cia_counterop",
+          "function": "escalation",
+          "characters": [
+            "foss",
+            "guest:former_kgb_chief"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаева задерживают по поводу смерти Майерса",
+          "storyline": "archive_mission",
+          "function": "cliffhanger",
+          "characters": [
+            "nechaev",
+            "guest:authorities"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаева допрашивают по поводу смерти Майерса",
+          "storyline": "archive_mission",
+          "function": "cliffhanger",
+          "characters": [
+            "nechaev",
+            "guest:interrogators"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        }
+      ],
+      "theme": "цена операции",
+      "interactions": [
+        {
+          "type": "convergence",
+          "lines": [
+            "archive_mission",
+            "ingrid_manipulation"
+          ],
+          "description": "линии сливаются в больнице — Ингрид убивает Майерса, что влияет на миссию Нечаева",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "archive_mission",
+            "cia_counterop"
+          ],
+          "description": "зритель видит как Фосс работает против операции Нечаева, пока тот попадает в ловушку",
+          "subtype": null
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "ingrid_manipulation",
+            "cia_counterop"
+          ],
+          "description": "все линии исследуют тему жертв ради цели — Ингрид убивает, Нечаев рискует жизнью, Фосс манипулирует союзниками",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E06",
+      "events": [
+        {
+          "event": "Фосс организует встречу Жданова и Нечаева",
+          "storyline": "cia_counterop",
+          "function": "setup",
+          "characters": [
+            "foss",
+            "zhdanov",
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Жданов предупреждает, что Нечаев действует независимо от руководства Штази",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "zhdanov",
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев признаётся в убийстве, которого не совершал",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Во время следственного эксперимента Нечаев обнаруживает тайный проход",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Жданов давит на Нечаева, заставляя работать с ним",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "zhdanov",
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Жданов показывает Ингрид кассету с записью её ночи с Нечаевым",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "zhdanov",
+            "ingrid"
+          ],
+          "also_affects": [
+            "marriage_crisis"
+          ]
+        },
+        {
+          "event": "Жданов вынуждает Ингрид подчиниться шантажом",
+          "storyline": "ingrid_manipulation",
+          "function": "turning_point",
+          "characters": [
+            "zhdanov",
+            "ingrid"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ингрид избивает Светлану в туалете ресторана",
+          "storyline": "marriage_crisis",
+          "function": "escalation",
+          "characters": [
+            "ingrid",
+            "svetlana"
+          ],
+          "also_affects": [
+            "ingrid_manipulation"
+          ]
+        },
+        {
+          "event": "Светлану похищают после столкновения",
+          "storyline": "marriage_crisis",
+          "function": "cliffhanger",
+          "characters": [
+            "svetlana"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "принуждение и контроль",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "betrayal_hunt",
+            "ingrid_manipulation",
+            "marriage_crisis"
+          ],
+          "description": "все линии исследуют тему принуждения — Жданов принуждает Нечаева к сотрудничеству, шантажирует Ингрид, что приводит к насилию над Светланой",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "ingrid_manipulation",
+            "marriage_crisis"
+          ],
+          "description": "шантаж Ингрид напрямую приводит к нападению на Светлану, линии сливаются через насилие",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "betrayal_hunt",
+            "marriage_crisis"
+          ],
+          "description": "зритель знает о связи Нечаева с Ингрид, но не знает Светлана, что усиливает драматизм её похищения",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E07",
+      "events": [
+        {
+          "event": "Оперативники ЦРУ удерживают Нечаева и Свету в заложниках",
+          "storyline": "cia_counterop",
+          "function": "escalation",
+          "characters": [
+            "nechaev",
+            "svetlana"
+          ],
+          "also_affects": [
+            "archive_mission",
+            "marriage_crisis"
+          ]
+        },
+        {
+          "event": "ЦРУ вводит Светлане яд, чтобы принудить Нечаева к сотрудничеству",
+          "storyline": "cia_counterop",
+          "function": "escalation",
+          "characters": [
+            "svetlana"
+          ],
+          "also_affects": [
+            "marriage_crisis"
+          ]
+        },
+        {
+          "event": "ЦРУ понимает, что Нечаева невозможно сломать принуждением",
+          "storyline": "cia_counterop",
+          "function": "turning_point",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Оперативники ЦРУ меняют подход к принуждению Нечаева",
+          "storyline": "cia_counterop",
+          "function": "escalation",
+          "characters": [
+            "guest:cia_operatives"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев укрывается у Ингрид после освобождения",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev",
+            "ingrid"
+          ],
+          "also_affects": [
+            "ingrid_manipulation"
+          ]
+        },
+        {
+          "event": "Ингрид раскрывает Нечаеву, что Фосс манипулирует ею",
+          "storyline": "ingrid_manipulation",
+          "function": "turning_point",
+          "characters": [
+            "ingrid",
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Ингрид объясняет, что Фосс использует её брата Клауса как рычаг давления",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ингрид признаётся, что брата держат в плену для контроля над ней",
+          "storyline": "ingrid_manipulation",
+          "function": "climax",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        }
+      ],
+      "theme": "цена принуждения и манипуляций",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "cia_counterop",
+            "ingrid_manipulation",
+            "marriage_crisis"
+          ],
+          "description": "все линии исследуют принуждение через угрозы близким — жене, брату",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "archive_mission",
+            "ingrid_manipulation"
+          ],
+          "description": "откровения Ингрид меняют понимание Нечаевым ситуации с архивами",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "cia_counterop",
+            "ingrid_manipulation"
+          ],
+          "description": "зритель узнаёт о манипуляциях Фосса одновременно с Нечаевым",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E08",
+      "events": [
+        {
+          "event": "Жданов встречает Нечаева на охотничьей базе, требуя его возвращения в Москву",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "zhdanov",
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев настаивает на завершении берлинских операций перед возвращением",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев требует освобождения Светы как условие возвращения",
+          "storyline": "marriage_crisis",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Светлану допрашивают с помощью сыворотки правды, несмотря на беременность",
+          "storyline": "marriage_crisis",
+          "function": "climax",
+          "characters": [
+            "svetlana"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев восстанавливает контакт с Ингрид после перерыва",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "nechaev",
+            "ingrid"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ингрид признаёт, что Фосс контролирует её через брата",
+          "storyline": "ingrid_manipulation",
+          "function": "turning_point",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        }
+      ],
+      "theme": "цена верности",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "marriage_crisis",
+            "ingrid_manipulation"
+          ],
+          "description": "все линии исследуют конфликт между долгом и личными привязанностями",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "marriage_crisis",
+            "betrayal_hunt"
+          ],
+          "description": "допрос Светланы служит как личной драме Нечаева, так и поиску предателя",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "ingrid_manipulation",
+            "cia_counterop"
+          ],
+          "description": "зритель понимает что признание Ингрид раскрывает методы Фосса",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E09",
+      "events": [
+        {
+          "event": "Ингрид получает слепки ключей от квартиры Беттины",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев и Чигирь проникают в квартиру Беттины",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev",
+            "chigir"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Константинов помогает скопировать файлы о встречах полковника Хаулера",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "konstantinov",
+            "nechaev",
+            "chigir"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Команда обнаруживает компьютерные файлы, раскрывающие связь Хаулера с Майерсом",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev",
+            "chigir"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев и Чигирь пытают Хаулера, чтобы выяснить местоположение архива",
+          "storyline": "archive_mission",
+          "function": "climax",
+          "characters": [
+            "nechaev",
+            "chigir"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Ингрид связывается с Фоссом, предлагая обмен полковника на брата Клауса",
+          "storyline": "ingrid_manipulation",
+          "function": "turning_point",
+          "characters": [
+            "ingrid",
+            "foss"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        }
+      ],
+      "theme": "цена предательства",
+      "interactions": [
+        {
+          "type": "convergence",
+          "lines": [
+            "archive_mission",
+            "betrayal_hunt"
+          ],
+          "description": "поиск архивов приводит к раскрытию предательства Хаулера-Майерса",
+          "subtype": null
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "ingrid_manipulation",
+            "betrayal_hunt"
+          ],
+          "description": "обе линии исследуют предательство как инструмент выживания",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "ingrid_manipulation",
+            "archive_mission"
+          ],
+          "description": "Ингрид использует советскую операцию для своих целей, что может сорвать миссию Нечаева",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E10",
+      "events": [
+        {
+          "event": "Ингрид устанавливает фальшивую бомбу на полковника Хаулера",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Ингрид и Отто направляются к Берлинской стене для обмена пленными",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ингрид сообщает Фоссу о заминированном полковнике, давая тридцать минут",
+          "storyline": "ingrid_manipulation",
+          "function": "turning_point",
+          "characters": [
+            "ingrid",
+            "foss"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Отто убивает Клауса во время обмена пленными",
+          "storyline": "ingrid_manipulation",
+          "function": "climax",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Жданов ранен взрывом",
+          "storyline": "cia_counterop",
+          "function": "escalation",
+          "characters": [
+            "zhdanov"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "ЦРУ начинает тестировать сыворотку правды на Светлане",
+          "storyline": "marriage_crisis",
+          "function": "climax",
+          "characters": [
+            "svetlana"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Светлана впадает в кому от сыворотки правды",
+          "storyline": "marriage_crisis",
+          "function": "cliffhanger",
+          "characters": [
+            "svetlana"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "цена предательства",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "ingrid_manipulation",
+            "marriage_crisis"
+          ],
+          "description": "обе линии о жертвах ради близких — Ингрид рискует ради брата, Светлана страдает за мужа",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "ingrid_manipulation",
+            "cia_counterop"
+          ],
+          "description": "операция Ингрид напрямую влияет на планы ЦРУ через информацию Фоссу",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage_crisis",
+            "archive_mission"
+          ],
+          "description": "зритель знает что Светлана в опасности из-за миссии Нечаева, но он об этом не подозревает",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E11",
+      "events": [
+        {
+          "event": "Нечаев предлагает сделку Фоссу, обещая информацию об архиве",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev",
+            "foss"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Ингрид навещает отца, чтобы сообщить о гибели Клауса",
+          "storyline": "ingrid_manipulation",
+          "function": "escalation",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Отец обвиняет Ингрид в семейных трагедиях и отказывает в прощении",
+          "storyline": "ingrid_manipulation",
+          "function": "climax",
+          "characters": [
+            "ingrid",
+            "guest:father"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Отец выгоняет Ингрид из дома",
+          "storyline": "ingrid_manipulation",
+          "function": "resolution",
+          "characters": [
+            "ingrid",
+            "guest:father"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Светлану находят без сознания в церкви во время рейда",
+          "storyline": "marriage_crisis",
+          "function": "climax",
+          "characters": [
+            "svetlana"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Светлану спасают и она остаётся жива",
+          "storyline": "marriage_crisis",
+          "function": "resolution",
+          "characters": [
+            "svetlana"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "цена выживания и прощения",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "ingrid_manipulation",
+            "marriage_crisis"
+          ],
+          "description": "обе линии о семейных связях под угрозой — Ингрид теряет семью окончательно, Светлана получает шанс на спасение",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "archive_mission",
+            "cia_counterop"
+          ],
+          "description": "сделка Нечаева с Фоссом объединяет их противостояние вокруг архива",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E12",
+      "events": [
+        {
+          "event": "Генерал Черных помещает Нечаева под домашний арест",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "chernykh",
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "ЦРУ отправляет Ингрид с отравленным конвертом для доставки Светлане",
+          "storyline": "cia_counterop",
+          "function": "escalation",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": [
+            "marriage_crisis",
+            "ingrid_manipulation"
+          ]
+        },
+        {
+          "event": "Нечаев сбегает из-под домашнего ареста",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев встречается с Маркусом Вольфом — бывшим главой внешней разведки Штази",
+          "storyline": "archive_mission",
+          "function": "climax",
+          "characters": [
+            "nechaev",
+            "wolf"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Поступает приказ: Нечаев должен быть возвращён в Москву к завтрашнему дню",
+          "storyline": "archive_mission",
+          "function": "cliffhanger",
+          "characters": [
+            "chernykh"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        }
+      ],
+      "theme": "точка невозврата",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "betrayal_hunt",
+            "marriage_crisis"
+          ],
+          "description": "все линии достигают критической точки — Нечаев должен выбрать между миссией, лояльностью и семьёй",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "cia_counterop",
+            "marriage_crisis",
+            "ingrid_manipulation"
+          ],
+          "description": "отравленный конверт для Светланы объединяет операцию ЦРУ с личной драмой Нечаева и манипуляциями Ингрид",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage_crisis",
+            "cia_counterop"
+          ],
+          "description": "зритель знает об отравленном конверте для Светланы, но Нечаев — нет",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E13",
+      "events": [
+        {
+          "event": "Ингрид доставляет отравленное письмо Светлане",
+          "storyline": "ingrid_manipulation",
+          "function": "climax",
+          "characters": [
+            "ingrid",
+            "svetlana"
+          ],
+          "also_affects": [
+            "marriage_crisis"
+          ]
+        },
+        {
+          "event": "Ингрид и Светлана борются и падают из окна вместе",
+          "storyline": "ingrid_manipulation",
+          "function": "climax",
+          "characters": [
+            "ingrid",
+            "svetlana"
+          ],
+          "also_affects": [
+            "marriage_crisis"
+          ]
+        },
+        {
+          "event": "Жданов спасает Светлану",
+          "storyline": "marriage_crisis",
+          "function": "resolution",
+          "characters": [
+            "zhdanov",
+            "svetlana"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ингрид погибает от падения",
+          "storyline": "ingrid_manipulation",
+          "function": "resolution",
+          "characters": [
+            "ingrid"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Обнаружено дело Корнейчука, раскрывающее что Жданов — настоящий предатель",
+          "storyline": "archive_mission",
+          "function": "climax",
+          "characters": [
+            "zhdanov"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев оправдан — доказательства подтверждают его невиновность",
+          "storyline": "archive_mission",
+          "function": "resolution",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев объясняет выбор между одним человеком и массовым терроризмом",
+          "storyline": "archive_mission",
+          "function": "resolution",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "цена выбора между личным и долгом",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "marriage_crisis",
+            "ingrid_manipulation",
+            "betrayal_hunt"
+          ],
+          "description": "все линии исследуют жертвы ради высших целей — Нечаев жертвует личным ради долга, Ингрид — жизнью ради брата, Жданов предаёт ради собственных целей",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "marriage_crisis",
+            "ingrid_manipulation"
+          ],
+          "description": "физическое столкновение Ингрид и Светланы объединяет обе линии в одной сцене",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "betrayal_hunt",
+            "marriage_crisis"
+          ],
+          "description": "Жданов спасает Светлану, но зритель узнаёт что он предатель",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E14",
+      "events": [
+        {
+          "event": "Команда Нечаева проникает в хранилище и изымает архивы Штази",
+          "storyline": "archive_mission",
+          "function": "escalation",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Лукьянов предаёт команду Нечаева генералу Черных",
+          "storyline": "archive_mission",
+          "function": "climax",
+          "characters": [
+            "guest:lukyanov"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Генерал Черных раскрывается как агент ЦРУ",
+          "storyline": "archive_mission",
+          "function": "resolution",
+          "characters": [
+            "chernykh"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Нечаев получает настоящее местоположение архива от Маркуса Вольфа",
+          "storyline": "archive_mission",
+          "function": "turning_point",
+          "characters": [
+            "nechaev",
+            "wolf"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Хельга раскрывает что использовался фальшивый архив для поимки предателя",
+          "storyline": "archive_mission",
+          "function": "resolution",
+          "characters": [
+            "guest:helga"
+          ],
+          "also_affects": [
+            "archive_mission"
+          ]
+        },
+        {
+          "event": "Нечаев обменивает захваченного агента ЦРУ Эда Пециуса на отца Светланы",
+          "storyline": "marriage_crisis",
+          "function": "resolution",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": [
+            "cia_counterop"
+          ]
+        },
+        {
+          "event": "Нечаев исчезает после обмена",
+          "storyline": "marriage_crisis",
+          "function": "cliffhanger",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Архив содержит запись разговора Рейгана и Коля о планах обмануть Горбачёва",
+          "storyline": "archive_mission",
+          "function": "climax",
+          "characters": [
+            "nechaev"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Нечаев лично встречается с Горбачёвым и передаёт записи о западных планах",
+          "storyline": "archive_mission",
+          "function": "resolution",
+          "characters": [
+            "nechaev",
+            "gorbachev"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "цена истины и предательства",
+      "interactions": [
+        {
+          "type": "convergence",
+          "lines": [
+            "archive_mission",
+            "betrayal_hunt"
+          ],
+          "description": "операция по получению архива была ловушкой для выявления предателя",
+          "subtype": null
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "archive_mission",
+            "betrayal_hunt",
+            "marriage_crisis"
+          ],
+          "description": "все линии исследуют тему жертв ради высших целей - государства, истины, семьи",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "betrayal_hunt",
+            "cia_counterop"
+          ],
+          "description": "зритель узнаёт что генерал Черных - агент ЦРУ одновременно с персонажами",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    }
+  ]
+}

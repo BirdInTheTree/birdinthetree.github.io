@@ -1,0 +1,5002 @@
+{
+  "context": {
+    "franchise_type": "ensemble",
+    "story_engine": "Medical staff at a Chicago emergency room face life-and-death decisions, each experiencing their aspect of healing, ambition, and personal sacrifice",
+    "genre": "drama",
+    "format": "ongoing"
+  },
+  "cast": [
+    {
+      "id": "mark",
+      "name": "Mark Greene",
+      "aliases": [
+        "Mark",
+        "Dr. Greene",
+        "Greene"
+      ]
+    },
+    {
+      "id": "susan",
+      "name": "Susan Lewis",
+      "aliases": [
+        "Susan",
+        "Dr. Lewis",
+        "Lewis"
+      ]
+    },
+    {
+      "id": "doug",
+      "name": "Doug Ross",
+      "aliases": [
+        "Doug",
+        "Dr. Ross",
+        "Ross"
+      ]
+    },
+    {
+      "id": "carol",
+      "name": "Carol Hathaway",
+      "aliases": [
+        "Carol",
+        "Hathaway"
+      ]
+    },
+    {
+      "id": "peter",
+      "name": "Peter Benton",
+      "aliases": [
+        "Peter",
+        "Benton",
+        "Dr. Benton"
+      ]
+    },
+    {
+      "id": "carter",
+      "name": "John Carter",
+      "aliases": [
+        "Carter",
+        "John",
+        "Dr. Carter"
+      ]
+    },
+    {
+      "id": "jennifer",
+      "name": "Jennifer Greene",
+      "aliases": [
+        "Jennifer",
+        "Jen"
+      ]
+    },
+    {
+      "id": "tag",
+      "name": "John Taglieri",
+      "aliases": [
+        "Tag",
+        "Dr. Taglieri"
+      ]
+    },
+    {
+      "id": "chloe",
+      "name": "Chloe Lewis",
+      "aliases": [
+        "Chloe"
+      ]
+    },
+    {
+      "id": "jeanie",
+      "name": "Jeanie Boulet",
+      "aliases": [
+        "Jeanie"
+      ]
+    },
+    {
+      "id": "mae",
+      "name": "Mae Benton",
+      "aliases": [
+        "Mae"
+      ]
+    },
+    {
+      "id": "swift",
+      "name": "William Swift",
+      "aliases": [
+        "Swift",
+        "Dr. Swift",
+        "Wild Willy"
+      ]
+    },
+    {
+      "id": "kayson",
+      "name": "Jack Kayson",
+      "aliases": [
+        "Kayson",
+        "Dr. Kayson"
+      ]
+    },
+    {
+      "id": "cvetic",
+      "name": "Div Cvetic",
+      "aliases": [
+        "Cvetic",
+        "Dr. Cvetic"
+      ]
+    },
+    {
+      "id": "morgenstern",
+      "name": "David Morgenstern",
+      "aliases": [
+        "Morgenstern",
+        "Dr. Morgenstern"
+      ]
+    }
+  ],
+  "plotlines": [
+    {
+      "id": "marriage",
+      "name": "Mark: Marriage",
+      "driver": "mark",
+      "goal": "save his marriage while pursuing his medical career",
+      "obstacle": "competing career demands, geographic separation, Jennifer's resentment",
+      "stakes": "loss of family, divorce",
+      "type": "serialized",
+      "rank": "A",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E15",
+        "S01E17",
+        "S01E18",
+        "S01E19",
+        "S01E20",
+        "S01E21",
+        "S01E22",
+        "S01E23",
+        "S01E25"
+      ]
+    },
+    {
+      "id": "competence",
+      "name": "Susan: Competence",
+      "driver": "susan",
+      "goal": "prove herself as a capable physician",
+      "obstacle": "Dr. Kayson's attacks on her medical judgment",
+      "stakes": "career destruction, loss of medical license",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E16",
+        "S01E17",
+        "S01E18",
+        "S01E20",
+        "S01E23"
+      ]
+    },
+    {
+      "id": "love",
+      "name": "Doug: Love",
+      "driver": "doug",
+      "goal": "find lasting romantic connection",
+      "obstacle": "his own self-destructive patterns, unresolved feelings for Carol",
+      "stakes": "perpetual loneliness, inability to form family",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E13",
+        "S01E14",
+        "S01E17",
+        "S01E18",
+        "S01E21",
+        "S01E22",
+        "S01E23",
+        "S01E24",
+        "S01E25"
+      ]
+    },
+    {
+      "id": "choice",
+      "name": "Carol: Choice",
+      "driver": "carol",
+      "goal": "choose between Tag and Doug",
+      "obstacle": "conflicted feelings, fear of making wrong decision",
+      "stakes": "lifelong regret, emotional devastation",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E14",
+        "S01E16",
+        "S01E17",
+        "S01E18",
+        "S01E20",
+        "S01E23",
+        "S01E24",
+        "S01E25"
+      ]
+    },
+    {
+      "id": "ambition",
+      "name": "Peter: Ambition",
+      "driver": "peter",
+      "goal": "advance his surgical career",
+      "obstacle": "competition, family obligations to his mother",
+      "stakes": "career stagnation, loss of surgical opportunities",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E17",
+        "S01E18",
+        "S01E19",
+        "S01E20",
+        "S01E21",
+        "S01E22",
+        "S01E23",
+        "S01E24"
+      ]
+    },
+    {
+      "id": "belonging",
+      "name": "Carter: Belonging",
+      "driver": "carter",
+      "goal": "prove himself worthy of a medical career",
+      "obstacle": "inexperience, competition from other students, self-doubt",
+      "stakes": "failure in medicine, loss of purpose",
+      "type": "serialized",
+      "rank": "B",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E04",
+        "S01E05",
+        "S01E07",
+        "S01E08",
+        "S01E09",
+        "S01E10",
+        "S01E11",
+        "S01E12",
+        "S01E13",
+        "S01E14",
+        "S01E15",
+        "S01E16",
+        "S01E17",
+        "S01E20",
+        "S01E21",
+        "S01E22",
+        "S01E23",
+        "S01E24",
+        "S01E25"
+      ]
+    },
+    {
+      "id": "responsibility",
+      "name": "Susan: Responsibility",
+      "driver": "susan",
+      "goal": "manage her chaotic sister Chloe",
+      "obstacle": "Chloe's irresponsibility, pregnancy, abandonment",
+      "stakes": "family destruction, unwanted parenthood",
+      "type": "serialized",
+      "rank": "C",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E06",
+        "S01E07",
+        "S01E09",
+        "S01E11",
+        "S01E12",
+        "S01E21",
+        "S01E22",
+        "S01E23",
+        "S01E24",
+        "S01E25"
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "episode": "S01E01",
+      "events": [
+        {
+          "event": "Mark weighs a lucrative private practice offer while Jennifer pushes him to leave the ER",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter arrives for his first rotation and is assigned to Benton's surgical service",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter",
+            "peter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Benton gives Carter a whirlwind orientation then disappears to his own cases",
+          "storyline": "ambition",
+          "function": "setup",
+          "characters": [
+            "peter",
+            "carter"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "Carter treats a hand laceration and accidental gunshot wound",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter becomes nauseated treating a stabbing victim and steps outside",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Greene finds Carter outside and reassures him that emotional response makes him a good doctor",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "mark",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug suspects child abuse and presses the mother with pointed questions",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan consoles a fragile cancer patient struggling with her diagnosis",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Building collapse floods ER with dozen of critically injured victims",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "susan",
+            "doug",
+            "peter",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton encounters patient with ruptured abdominal aortic aneurysm",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton operates solo for the first time, clamping the bleed until Morgenstern arrives",
+          "storyline": "ambition",
+          "function": "climax",
+          "characters": [
+            "peter",
+            "morgenstern"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Morgenstern acknowledges both the risk and skill of Benton's solo surgery",
+          "storyline": "ambition",
+          "function": "resolution",
+          "characters": [
+            "morgenstern",
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Greene delivers death notification to man whose father died in collapse",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "guest:grieving_son"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol is brought to ER after overdosing on pills in suicide attempt",
+          "storyline": "choice",
+          "function": "setup",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": [
+            "love",
+            "choice"
+          ]
+        },
+        {
+          "event": "Doug is visibly shaken by Carol's suicide attempt",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        },
+        {
+          "event": "Team works frantically to stabilize Carol",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "susan",
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Greene leaves hospital with private practice offer still unresolved",
+          "storyline": "marriage",
+          "function": "cliffhanger",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of commitment",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "ambition",
+            "belonging",
+            "recovery"
+          ],
+          "description": "all storylines explore what characters sacrifice for their commitments - Mark's marriage for medicine, Benton's safety for advancement, Carter's comfort for belonging, Carol's life itself",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "love",
+            "choice",
+            "recovery"
+          ],
+          "description": "Carol's suicide attempt forces Doug to confront his feelings and impacts her choice between him and Tag",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage",
+            "recovery"
+          ],
+          "description": "Mark counsels Carter about keeping emotional response while suppressing his own feelings about his failing marriage",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "crisis_response",
+          "reason": "Building collapse creates major plot event that doesn't advance any character's personal goal but drives the episode structure",
+          "episodes": [
+            "S01E01"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E02",
+      "events": [
+        {
+          "event": "Susan is roused from sleep in a supply closet by a nurse",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan discovers an earring lodged in a baby's throat and removes it, restoring breathing",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan clashes with a psychiatric attending over admitting a dementia patient",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan spends the day lobbying every hospital department to take the elderly woman, being turned away at every turn",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark and Jennifer celebrate her passing the bar exam",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark and Jennifer are caught having sex in an ER storage room after triggering the emergency button",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jennifer hints that Mark never truly believed she would pass the bar",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark becomes preoccupied with needing to return to the hospital",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter misses his first trauma opportunity because Lydia lets him sleep through it",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter cares for German tourists and wedding party with food poisoning from the Hofbrauhaus",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter successfully defibrillates Mr. Zambano during cardiac arrest, his first successful code",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter treats a flirtatious young woman with a rash who climbs into his Jeep uninvited",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "carter",
+            "guest:rash_woman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter clashes with Dr. Langworthy over Carter's responsibilities and surgical assignments",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "guest:langworthy"
+          ],
+          "also_affects": [
+            "belonging"
+          ]
+        },
+        {
+          "event": "A patient Benton originally diagnosed is discharged prematurely by another attending, then returns to the ER",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton's surgical instincts are validated, reinforcing his ambition to advance",
+          "storyline": "ambition",
+          "function": "climax",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug finally visits Carol in recovery, eight weeks after her overdose",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        },
+        {
+          "event": "Carol's mother Helen is hostile when Doug appears",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "doug",
+            "guest:helen"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Carol accepts Doug's flowers and they talk briefly",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        },
+        {
+          "event": "Doug remains emotionally guarded, unable to articulate his feelings, and the visit ends without resolution",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        },
+        {
+          "event": "Mark treats an elderly woman whose husband is not ready to accept her decline",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "guest:elderly_woman",
+            "guest:husband"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "proving oneself worthy",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "competence",
+            "belonging",
+            "ambition"
+          ],
+          "description": "all three storylines explore characters proving their professional worth through crisis moments",
+          "subtype": null
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "love",
+            "recovery"
+          ],
+          "description": "all three storylines deal with relationships under strain and the difficulty of emotional connection",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "love",
+            "recovery"
+          ],
+          "description": "Doug's visit to Carol directly connects his romantic storyline with her recovery arc",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "compassion",
+          "reason": "Mark's treatment of the elderly woman and her husband represents a quiet medical storyline about accepting decline and mortality that doesn't fit existing character arcs",
+          "episodes": [
+            "S01E02"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E03",
+      "events": [
+        {
+          "event": "Carol returns to work at County General despite her mother's concerns",
+          "storyline": "choice",
+          "function": "setup",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug sees Carol briefly and says hello, then asks her to lunch",
+          "storyline": "choice",
+          "function": "setup",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Carol declines lunch because she has plans with Tag",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug invites Carol for coffee and she accepts",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Dr. Kayson disputes Susan's treatment of heart-attack patient Mr. Flannigan",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "susan",
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Morgenstern moves up the M&M conference time so Kayson can attend",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "morgenstern",
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan gets little support from colleagues at the M&M conference",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Morgenstern reprimands Kayson for failing to supervise the case",
+          "storyline": "competence",
+          "function": "resolution",
+          "characters": [
+            "morgenstern",
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Morgenstern questions whether Susan is assertive enough for future challenges",
+          "storyline": "competence",
+          "function": "seed",
+          "characters": [
+            "morgenstern",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark treats a beaten woman who refuses to report abuse or accept help",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol cares for a dying leukemia patient who offers wise counsel about valuing life",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Disoriented woman 'Madame X' is brought in singing nonstop",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "guest:madame_x"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Leukemia patient recognizes the melodies and identifies Madame X as Mary Kavanaugh",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "guest:leukemia_patient",
+            "guest:madame_x"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Staff throws Carol a surprise welcome-back party",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol delivers speech thanking everyone and promising to treat life as a gift",
+          "storyline": "choice",
+          "function": "resolution",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug watches Carol's speech with relief and lingering guilt",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        }
+      ],
+      "theme": "the courage to heal and move forward",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "recovery",
+            "competence",
+            "choice",
+            "marriage"
+          ],
+          "description": "all storylines explore different forms of healing and growth - Carol from trauma, Susan from professional attack, Carol choosing her path forward, Mark confronting limits of helping others",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "the audience sees Doug's guilt and feelings while Carol navigates between him and Tag",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E04",
+      "events": [
+        {
+          "event": "Steven Tierney is brought in after a hit-and-run accident",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "guest:steven_tierney"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton and Langworthy are unable to save Steven Tierney",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "guest:langworthy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter is assigned to identify the victim and notify parents",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter contacts the wrong family and tells them their son is dead",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Langworthy delivers news to wrong parents who reveal dead boy is not theirs",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "guest:langworthy",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter must locate Steven's actual parents for real notification",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Haleh tells Carter the hospital cannot save everyone",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "carter",
+            "guest:haleh"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug treats young boy Ozzy whose schizophrenic mother is brought in",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "doug",
+            "guest:ozzy",
+            "guest:ozzy_mother"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug promises Ozzy he will not be separated from his mother",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "guest:ozzy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cvetic diagnoses the mother as delusional and recommends placement",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "cvetic",
+            "doug"
+          ],
+          "also_affects": [
+            "competence"
+          ]
+        },
+        {
+          "event": "Mother has psychotic episode and Ozzy runs away in panic",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "guest:ozzy",
+            "guest:ozzy_mother"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug tells Ozzy the truth about his mother going to psychiatric facility",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "doug",
+            "guest:ozzy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan tells Mark she has begun dating Div Cvetic",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "susan",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark is surprised but supportive of Susan's relationship",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "susan"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Susan treats salesman whose cell phone interferes with equipment",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "guest:salesman"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Walt asks Benton to look after his mother Mae whose health is declining",
+          "storyline": "ambition",
+          "function": "setup",
+          "characters": [
+            "peter",
+            "guest:walt",
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton is too busy with surgical schedule to help with Mae",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Walt is left to manage Mae alone",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "guest:walt",
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Former patient visits Mark with frozen steaks declaring Dr. Greene Day",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "guest:former_patient"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of caring",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "love",
+            "ambition"
+          ],
+          "description": "all three storylines explore the painful gap between good intentions and harsh realities - Carter's mistake, Doug's broken promise, Benton's neglect of family",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "competence",
+            "love"
+          ],
+          "description": "Susan's romantic relationship with Cvetic intersects with Doug's case when Cvetic makes the psychiatric diagnosis",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "medical_cases",
+          "reason": "Steven Tierney case doesn't fit existing storylines - it's a procedural medical case that catalyzes Carter's growth but isn't about his belonging per se",
+          "episodes": [
+            "S01E04"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E05",
+      "events": [
+        {
+          "event": "Mark and Susan fight to keep Samuel Gasner alive on the heart-transplant waiting list",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark and Susan revive Samuel repeatedly, shocking his heart back into rhythm",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "No donor organ becomes available and Samuel dies despite their efforts",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "mark",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Samuel tells Mark to make every moment count with his family",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "guest:samuel"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol overhears and asks Mark if he'll tell her to be grateful to be alive",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark handles Carol's pointed reference to her suicide attempt with quiet sensitivity",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "mark",
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jennifer tells Mark she's been offered a federal clerkship in Milwaukee",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jennifer",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jennifer wants Mark to look for a hospital position in Milwaukee",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "jennifer",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark suggests Jen commute instead of him leaving his chief residency",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jennifer points out commuting would mean even less time with Rachel",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jennifer",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug treats a young girl with severe asthma whose mother cannot afford medication",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter treats Ivan, a liquor-store owner who shot himself in the foot",
+          "storyline": "ambition",
+          "function": "setup",
+          "characters": [
+            "peter",
+            "guest:ivan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter discovers his one-night stand Liz may have given him an STI",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter approaches Doug for advice on how to test himself",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter",
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Liz is seen pursuing Dr. Kayson, revealing her pattern of seducing multiple doctors",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "guest:liz",
+            "kayson"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of commitment",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "competence",
+            "recovery"
+          ],
+          "description": "all three storylines explore different forms of commitment - to family, to patients, to life itself",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "marriage",
+            "recovery"
+          ],
+          "description": "Samuel's dying words about family time directly impact both Mark's marriage crisis and his sensitive handling of Carol's recovery",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E06",
+      "events": [
+        {
+          "event": "Air conditioning fails on the hottest day in October, overwhelming County General with patients from two closed ERs",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "susan",
+            "doug",
+            "carol",
+            "peter",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark's babysitter's car breaks down, forcing him to bring daughter Rachel to the ER",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Rachel witnesses the harsh realities of the ER while spending the day with Mark",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug and Mark treat five-year-old Kanesha who swallowed cocaine",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "mark"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Doug initially suspects Kanesha's father is responsible for the cocaine",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Drug test reveals Kanesha's older sister possessed the cocaine, not the father",
+          "storyline": "competence",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Doug confides to the father that he has a son, revealing his complicated feelings about fatherhood",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ivan shoots and seriously wounds a teenage robber",
+          "storyline": "ambition",
+          "function": "setup",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton and Langworthy try in vain to save the fourteen-year-old boy",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Detective reveals Ivan chased the unarmed teenager before shooting him",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe Lewis appears unannounced at the hospital for the first time",
+          "storyline": "responsibility",
+          "function": "setup",
+          "characters": [
+            "susan",
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe steals Susan's television and VCR, wreaking havoc",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug shows up uninvited at Carol's apartment while she's with Tag",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "carol",
+            "tag"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Doug crosses the line with provocative behavior toward Carol and Tag",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "doug",
+            "carol",
+            "tag"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Carol slugs Doug, drawing a clear boundary but revealing deep emotion",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "carol",
+            "doug"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Doug meets Linda Farrell, an attractive pharmaceutical sales representative",
+          "storyline": "love",
+          "function": "seed",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the burden of responsibility",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "responsibility",
+            "choice",
+            "love",
+            "competence",
+            "ambition"
+          ],
+          "description": "all storylines explore different forms of responsibility - Mark to his daughter and marriage, Susan to her chaotic sister and patients, Carol choosing between two men, Doug confronting his feelings about fatherhood, Peter facing surgical failure",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "Doug's pursuit of Carol directly intersects with her choice between him and Tag",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E07",
+      "events": [
+        {
+          "event": "Peter Benton and Dr. Langworthy both interview for the prestigious Starzl Fellowship in surgery",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton saves a man with a severe throat wound, earning praise from Dr. Morgenstern",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "morgenstern"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark Greene walks Carter through a complex procedure successfully",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter wins a bottle of champagne and gets three leads on apartments",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug Ross and Carol Hathaway share a spontaneous kiss following a stressful trauma",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Carol quickly backtracks and acts cool toward Doug for the rest of the shift",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Carol has second thoughts about moving in with Tag but ultimately decides to go ahead",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Susan Lewis's drunk sister Chloe crashes her birthday celebration at the hospital",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe throws a violent tantrum, lacerating her hand in a fit of anger",
+          "storyline": "responsibility",
+          "function": "climax",
+          "characters": [
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Div Cvetic steps in to calm Chloe down, demonstrating his psychiatric skills",
+          "storyline": "responsibility",
+          "function": "resolution",
+          "characters": [
+            "cvetic",
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Haleh confronts Benton about refusing to act as a role model for a young gang member",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "guest:haleh"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton resists taking on responsibilities outside of surgery",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jennifer Greene visits from Milwaukee but has to return sooner than expected",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Both Mark and Jen feel the distance widening between them",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of ambition",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "ambition",
+            "choice",
+            "marriage",
+            "belonging"
+          ],
+          "description": "all storylines explore what characters must sacrifice to achieve their goals - Benton's humanity for surgical success, Carol's feelings for stability, Mark's marriage for career, Carter's comfort for growth",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "the audience sees Doug's hope and disappointment while Carol struggles with her decision, neither fully understanding the other's perspective",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E08",
+      "events": [
+        {
+          "event": "Mark calls in sick to spend the day with Jennifer",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug is left in charge of the ER for the full shift",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug struggles with administrative demands and patient volume",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol treats a rape victim who fears reporting the assault",
+          "storyline": "choice",
+          "function": "setup",
+          "characters": [
+            "carol",
+            "guest:rape_victim"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol navigates the victim's fear of her abusive boyfriend finding out",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "guest:rape_victim"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol tries to persuade the woman to cooperate with police",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "carol",
+            "guest:rape_victim"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Walt brings Mae to the ER with a sprained ankle",
+          "storyline": "ambition",
+          "function": "setup",
+          "characters": [
+            "peter",
+            "mae",
+            "guest:walt"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter realizes Mae's condition has deteriorated significantly",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter learns he was not awarded the Starzl Fellowship",
+          "storyline": "ambition",
+          "function": "climax",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cvetic shows signs of stress, lashing out at colleagues",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "cvetic",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan notices Cvetic's erratic behavior but doesn't intervene",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "cvetic"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "New aide Bob joins the ER staff",
+          "storyline": "belonging",
+          "function": "seed",
+          "characters": [
+            "guest:bob"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug appreciates Mark's steady leadership by shift's end",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        }
+      ],
+      "theme": "the weight of responsibility",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "ambition",
+            "recovery",
+            "competence",
+            "love"
+          ],
+          "description": "all storylines explore different forms of responsibility - Mark to his marriage vs career, Peter to family vs ambition, Carol to vulnerable patients, Susan to troubled relationships, Doug learning leadership responsibility",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage",
+            "love"
+          ],
+          "description": "the audience knows Mark is playing hooky while Doug struggles with his responsibilities",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E09",
+      "events": [
+        {
+          "event": "Carol faces ethical dilemma when car accident patient confesses he was the driver who killed a pedestrian",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol tells Tag the truth about sleeping with Doug a month before her suicide attempt and kissing him two weeks ago",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "carol",
+            "tag"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        },
+        {
+          "event": "Tag does not take the news well and their engagement is strained",
+          "storyline": "choice",
+          "function": "resolution",
+          "characters": [
+            "tag",
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter treats Ms. Carlton, a transgender woman, for head lacerations from traffic accident",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Staff treats Ms. Carlton with passive disregard after discovering her transgender status",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Ms. Carlton climbs to the hospital roof in despair",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "guest:ms_carlton"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cvetic fails to talk Ms. Carlton down and she jumps to her death",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "cvetic",
+            "guest:ms_carlton"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter explodes at Benton in frustration, blaming him for not doing enough",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "carter",
+            "peter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Benton invites Carter to spend Thanksgiving dinner with his family",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "peter",
+            "carter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Carter accepts Benton's invitation having no other plans",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cvetic breaks under stress and stands in crowded street daring cars to hit him",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "cvetic"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan discovers Cvetic has quit his job and moved out without telling her",
+          "storyline": "competence",
+          "function": "turning_point",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug treats a man pecked by a turkey",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug feels uncomfortable with Linda controlling their relationship and paying for everything",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug departs for Jamaican vacation with Linda despite his unease",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe announces to Susan that she is pregnant",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "chloe",
+            "susan"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the weight of truth and consequences",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "choice",
+            "belonging",
+            "love",
+            "responsibility"
+          ],
+          "description": "all storylines explore the burden of truth - Carol's confession to Tag, Carter confronting institutional prejudice, Doug's discomfort with his kept status, Susan facing Chloe's pregnancy",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "ambition"
+          ],
+          "description": "Carter's emotional breakdown brings him and Benton together, transforming their mentor-student dynamic",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "cvetic_breakdown",
+          "reason": "Cvetic's mental breakdown and suicidal behavior represents a major storyline that doesn't fit existing character arcs",
+          "episodes": [
+            "S01E09"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E10",
+      "events": [
+        {
+          "event": "Jerry sings 'Jingle Bells' and staff engage in playful activities during the empty ER",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "guest:jerry",
+            "guest:wendy",
+            "guest:malik"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Greene and Susan put a cast on Carter's leg as a practical joke",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "susan",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol announces her engagement to Tag, showing her ring to the staff",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "tag"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug returns from Jamaica with Linda and congratulates Carol on her engagement",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "carol",
+            "guest:linda"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Linda privately tells Carol that Doug is still in love with her",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "guest:linda",
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Dr. Angela Hicks arrives as new ER attending",
+          "storyline": "competence",
+          "function": "seed",
+          "characters": [
+            "guest:angela_hicks"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dispatch reports massive thirty-two-vehicle pileup on Kennedy Expressway",
+          "storyline": "competence",
+          "function": "turning_point",
+          "characters": [
+            "guest:dispatch"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Staff immediately enacts disaster protocol and readies trauma supplies",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "mark",
+            "doug",
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug triages patients to different trauma rooms including severe burns and spinal injuries",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": [
+            "competence"
+          ]
+        },
+        {
+          "event": "Susan struggles to save a patient who develops an aneurysm",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Bob makes a quick life-saving decision that stabilizes a critical patient",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "guest:bob"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter is called in from home and throws himself into surgical cases",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Entire staff works through the night handling mass casualties",
+          "storyline": "competence",
+          "function": "resolution",
+          "characters": [
+            "mark",
+            "susan",
+            "doug",
+            "carol",
+            "peter",
+            "carter"
+          ],
+          "also_affects": [
+            "ambition",
+            "belonging"
+          ]
+        }
+      ],
+      "theme": "the duality of medicine - calm and chaos",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "choice",
+            "competence",
+            "love"
+          ],
+          "description": "all storylines explore being tested under pressure - Carol's engagement doubts, Susan proving herself in crisis, Doug's professionalism despite heartbreak",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "the audience knows Doug still loves Carol while she's engaged to Tag, creating tension during their professional interactions",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "competence",
+            "ambition",
+            "belonging"
+          ],
+          "description": "the mass casualty event serves as a crucible that tests all characters' medical abilities",
+          "subtype": "pressure_cooker"
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E11",
+      "events": [
+        {
+          "event": "Peter Benton publicizes organ availability before getting wife's consent",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wife discovers Benton's premature announcement and becomes furious",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "guest:wife"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Wife refuses consent for organ harvest, eight recipients lose their chance",
+          "storyline": "ambition",
+          "function": "climax",
+          "characters": [
+            "peter",
+            "guest:wife"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Six-year-old child revived after nearly drowning while ice fishing",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Busload of choir kids treated for minor injuries after bus accident",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan discovers Div Cvetic has completely disappeared",
+          "storyline": "competence",
+          "function": "turning_point",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter gives Susan a piano-shaped music box as Christmas gift",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan gently deflects Carter's romantic advance",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "susan",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe's pregnancy becomes public knowledge",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug crashes Carol's engagement party",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Doug makes anguished declaration of love to Carol",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Carol is shaken but does not reciprocate Doug's feelings",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Tag confronts Doug and punches him in front of party guests",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "tag",
+            "doug"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Doug wanders the streets alone on Christmas Eve",
+          "storyline": "love",
+          "function": "resolution",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of emotional isolation",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "ambition",
+            "choice",
+            "love",
+            "belonging"
+          ],
+          "description": "all storylines explore how professional focus and emotional walls prevent genuine human connection",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "Doug's declaration forces both his and Carol's storylines to intersect and change direction",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E12",
+      "events": [
+        {
+          "event": "Carter discovers a gunshot victim on the street while off-shift",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter rushes into County General to alert Mark and the staff",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol identifies the victim as a gang member dumped by rivals",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Team rushes to victim's location and brings him back on stretcher",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "carol",
+            "carter"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        },
+        {
+          "event": "Mark teaches Carter how to intubate a patient in the field",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter takes charge of intubating a helicopter trauma patient",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter scrubs in for his first surgery with Benton's guidance",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "carter",
+            "peter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Susan confronts Kayson over Mr. Vennerbeck's case",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "susan",
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Vennerbeck dies in surgery after returning with undiagnosed heart murmur",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "guest:vennerbeck"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kayson accuses Susan of withholding information and incomplete medical history",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "kayson",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kayson brings the matter before hospital administration",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe announces plans to move to Texas with boyfriend for the baby",
+          "storyline": "responsibility",
+          "function": "resolution",
+          "characters": [
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jackie insists Mae needs to be placed in a nursing home",
+          "storyline": "ambition",
+          "function": "setup",
+          "characters": [
+            "guest:jackie",
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter resists fiercely against nursing home placement",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "proving oneself under pressure",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "belonging",
+            "competence",
+            "ambition"
+          ],
+          "description": "Carter, Susan, and Peter all face tests that could define their medical careers and personal lives",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "ambition"
+          ],
+          "description": "Carter's first surgery directly involves Benton as mentor, advancing both storylines",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E13",
+      "events": [
+        {
+          "event": "Carter is tasked with training new medical student Deb Chen",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Deb Chen introduces herself to Carter and Benton, insisting on being called 'Deb'",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter",
+            "peter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Carter realizes Chen may be his rival for surgical sub-internship",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol deals with emotionally challenging patient obsessed with colors",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mr. Desmond provokes ER staff as part of behavioral experiment",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Boxer knocks out Mr. Desmond, ending his experiment",
+          "storyline": "choice",
+          "function": "resolution",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kayson brings formal charges against Susan in Vennerbeck death",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Morgenstern questions Susan's assertiveness, advises her to stand up for herself",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan forced to prepare defense with limited institutional support",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter and Walt search for missing Mae who wandered away",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton realizes Mae cannot be left unsupervised but resists professional care",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol announces wedding date to Tag",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol pays more attention to Doug's behavior than wedding plans",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug turns down woman at bar, staying faithful to Linda",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        }
+      ],
+      "theme": "the burden of responsibility",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "competence",
+            "belonging",
+            "ambition",
+            "choice"
+          ],
+          "description": "all storylines explore different forms of responsibility - professional accountability, mentoring duties, family obligations, and commitment to relationships",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "the audience sees Carol's growing uncertainty about Tag while Doug commits to Linda, creating tension around their missed connection",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E14",
+      "events": [
+        {
+          "event": "Ms. Horne arrives with hematoma and bruises, claiming she fell off a ladder",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug investigates further and questions the children about who hit their mother",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Son David points finger at sister Mandy for hitting their mother",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mandy denies accusation but shows barely concealed rage",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan appears before hospital review board to defend against Kayson's charges",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "susan",
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Review board denies Kayson's reprimand against Susan",
+          "storyline": "competence",
+          "function": "turning_point",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Kayson is brought to ER as patient after heart attack",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Steinman wants angioplasty but frightened Kayson refuses",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan threatens to bring Steinman before review board if he overrides patient wishes",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Steinman backs down and grateful Kayson acknowledges Susan's assertiveness",
+          "storyline": "competence",
+          "function": "resolution",
+          "characters": [
+            "susan",
+            "kayson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter spends sleepless night preparing for presentation",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Deb Chen delivers more polished presentation than Carter",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter feels threatened by Chen's competence and questions if he belongs in surgery",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter hires Jeanie Boulet as physical therapist to care for Mae",
+          "storyline": "ambition",
+          "function": "setup",
+          "characters": [
+            "peter",
+            "jeanie",
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter's decision creates friction with sister Jackie who wasn't consulted",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug treats homeless teenager with AIDS who has no resources",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Woman who overdosed brought in with infant and suicide note",
+          "storyline": "choice",
+          "function": "setup",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol and Haleh discuss what drives a mother to suicide",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "standing up for what's right",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "competence",
+            "belonging",
+            "love"
+          ],
+          "description": "all storylines explore proving oneself worthy - Susan proving medical competence, Carter questioning his surgical belonging, Doug advocating for vulnerable patients",
+          "subtype": null
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "recovery",
+            "love"
+          ],
+          "description": "both storylines deal with protecting the vulnerable - Carol reflecting on maternal desperation, Doug investigating child abuse",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E15",
+      "events": [
+        {
+          "event": "Mark and Carter ride in ambulance to plane crash scene",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark nonchalantly eats sandwich while Carter is jostled around",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark and Carter intubate crash victim at scene",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Morgenstern offers Mark attending physician position",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "morgenstern"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark tells Jennifer about the job offer",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jennifer reacts with indignation, refuses to accept arrangement",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jennifer",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Grace begs Mark to let her die rather than continue cancer treatment",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "guest:grace"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Deb Chen delivers impressive presentation that wows Benton",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "guest:deb_chen",
+            "peter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Deb tells Carter she doesn't think he's cut out for surgery",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "guest:deb_chen",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton offends Haleh by trying to browbeat her into taking notes",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "guest:haleh"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Haleh retaliates by making Benton's day more difficult",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "guest:haleh",
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Child with handgun enters ER looking to execute Yummy",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "guest:child",
+            "guest:yummy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Staff defuses gunman situation before anyone is harmed",
+          "storyline": "competence",
+          "function": "turning_point",
+          "characters": [
+            "mark",
+            "susan",
+            "doug",
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Poisonous pet snake escapes in ER causing panic",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "guest:patient"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "New crash carts are stolen by cardiology department",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "guest:cardiology_staff"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "professional identity versus personal sacrifice",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "belonging",
+            "ambition",
+            "competence"
+          ],
+          "description": "all storylines explore the cost of medical careers - Mark's marriage suffers from his commitment, Carter questions if he belongs, Benton learns respect matters more than authority, staff proves competence under chaotic conditions",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage",
+            "belonging"
+          ],
+          "description": "Mark mentors Carter in emergency medicine while his own personal life crumbles from the same dedication",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E16",
+      "events": [
+        {
+          "event": "Six-year-old Russian girl Tatiana is abandoned in the ER by her adoptive mother",
+          "storyline": "choice",
+          "function": "setup",
+          "characters": [
+            "guest:tatiana"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol forms an immediate emotional bond with Tatiana, teaching Doug and Carter Russian phrases",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "doug",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug tells Carol the realistic outcome is antibiotics and foster care",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Carol refuses to accept the realistic prognosis and spends extra time at Tatiana's bedside",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol begins considering adoption despite her personal history complications",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark and Susan treat a dog hit by Officer Grabarsky",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The dog rescue becomes a bonding experience for the ER staff",
+          "storyline": "competence",
+          "function": "resolution",
+          "characters": [
+            "mark",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter and Deb Chen treat three cheerleaders who ingested LSD-laced chocolates",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter",
+            "guest:deb_chen"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Deb unknowingly eats contaminated candy and becomes impaired",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "guest:deb_chen"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Deb tells Carter she is 'very okay' while staring at a blank wall",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter",
+            "guest:deb_chen"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Nurse Wendy fractures her hand treating seizure patient Michael",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "guest:wendy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Impaired Deb wraps Wendy's hand in a comically oversized cast",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "guest:deb_chen",
+            "guest:wendy"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol promises to fix Wendy's oversized cast",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "carol",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Married Dr. Kayson asks Susan to dinner romantically",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "kayson",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan declines Kayson's advance, recognizing its inappropriateness",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the complexity of caring",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "recovery",
+            "competence",
+            "belonging"
+          ],
+          "description": "all storylines explore different aspects of caring - Carol's emotional investment in Tatiana, Susan's professional boundaries with Kayson, Carter learning to handle impaired colleagues",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "recovery",
+            "love"
+          ],
+          "description": "Doug and Carol's different approaches to Tatiana's case reveal their contrasting worldviews and relationship dynamic",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E17",
+      "events": [
+        {
+          "event": "Carter overhears Benton on phone about birthday party and assumes it's Benton's birthday",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "carter",
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter tells Mark it's Benton's birthday, Mark mentions it's also Rachel's birthday",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter",
+            "mark"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Carter organizes surprise celebration for Benton including belly dancers",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton desperately tries to get someone to cover his shift for Mae's birthday",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Angela Hicks berates Benton when he attempts to switch shifts",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "guest:hicks"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Benton misses his mother Mae's birthday party due to work obligations",
+          "storyline": "ambition",
+          "function": "climax",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark misses his daughter Rachel's birthday celebration",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug learns little girl was injured by abusive father",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug confronts and punches the abusive father Wilson in hospital lobby",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "doug",
+            "guest:wilson"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark tells Doug that Wilson can't press charges due to child-abuse investigation",
+          "storyline": "love",
+          "function": "resolution",
+          "characters": [
+            "mark",
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Morgenstern recommends Doug attend therapy for anger issues",
+          "storyline": "love",
+          "function": "resolution",
+          "characters": [
+            "morgenstern",
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Teenage girl Renee Franks brought in for drug overdose",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "guest:renee",
+            "guest:mr_franks"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mr. Franks is dismissive when Mark discusses Renee's recurring problems",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "guest:mr_franks"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Renee wheeled back in after another overdose with shaken father finally grasping severity",
+          "storyline": "competence",
+          "function": "resolution",
+          "characters": [
+            "guest:renee",
+            "guest:mr_franks"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol wants to adopt Tatiana but Tag is resistant to the idea",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "tag"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol visits group home and finds inadequate conditions for Tatiana",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jen accepts job in Milwaukee after Mark offered permanent attending position",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jennifer",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark and Jen's career incompatibility fully exposed with neither willing to compromise",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of professional dedication",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "ambition",
+            "choice"
+          ],
+          "description": "all storylines explore sacrifice of personal relationships for professional obligations",
+          "subtype": null
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "ambition"
+          ],
+          "description": "both Mark and Benton miss family birthday celebrations due to work demands",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "belonging",
+            "marriage",
+            "ambition"
+          ],
+          "description": "Carter's misunderstanding creates the situation that highlights both Mark's and Benton's family sacrifices",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E18",
+      "events": [
+        {
+          "event": "Peter trades two shifts to spend time with Mae and commits to a forty-eight-hour marathon shift",
+          "storyline": "ambition",
+          "function": "setup",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Hicks orders Peter to sleep but he refuses, pushing himself to dangerous exhaustion",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "guest:hicks"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mae breaks her hip while Peter is at the hospital working his marathon shift",
+          "storyline": "ambition",
+          "function": "climax",
+          "characters": [
+            "mae",
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter learns Mae fell because Walt and Jackie were on vacation and no one was there to help",
+          "storyline": "ambition",
+          "function": "resolution",
+          "characters": [
+            "peter",
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol learns her suicide attempt history makes her ineligible to adopt Tatiana",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Devastated Carol goes to Doug in vulnerability, seeming to want to rekindle their connection",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "doug"
+          ],
+          "also_affects": [
+            "love",
+            "choice"
+          ]
+        },
+        {
+          "event": "Doug refuses Carol and offers to drive her home to Tag instead",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug",
+            "carol"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        },
+        {
+          "event": "Doug notices Bonnie's star-shaped burn is inconsistent with mother's radiator story",
+          "storyline": "love",
+          "function": "setup",
+          "characters": [
+            "doug",
+            "guest:bonnie",
+            "guest:bonnie_mother"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug's investigation reveals Bonnie's mother deliberately burned her as punishment",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "guest:bonnie_mother"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug pursues the child abuse case aggressively",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "A man studying the ER offers Susan a job at a new hospital",
+          "storyline": "competence",
+          "function": "setup",
+          "characters": [
+            "susan",
+            "guest:fake_administrator"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan discovers the man is actually a psychiatric patient, not a hospital administrator",
+          "storyline": "competence",
+          "function": "turning_point",
+          "characters": [
+            "susan",
+            "guest:fake_administrator"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jennifer tells Mark she wants a separation",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "jennifer",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Morgenstern informs Mark he's leaving for Harvard residency program",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "morgenstern",
+            "mark"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of ambition and isolation",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "ambition",
+            "marriage",
+            "recovery",
+            "love"
+          ],
+          "description": "all storylines explore how personal ambition and professional dedication isolate characters from meaningful connections",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "the audience sees Doug's growth and restraint while Carol remains unaware of his emotional development",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "SPLIT_LINE",
+          "target": "love",
+          "reason": "Doug's love storyline covers both romantic development and child protection cases - these should be separate storylines",
+          "episodes": [
+            "S01E18"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E19",
+      "events": [
+        {
+          "event": "Jodi O'Brien arrives at ER with pregnancy symptoms, Mark diagnoses UTI and discharges her",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "guest:jodi",
+            "guest:sean"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jodi collapses in parking lot and suffers seizure",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "guest:jodi"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark realizes his misdiagnosis - preeclampsia not UTI",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "With OB attending unavailable, Mark decides to deliver baby himself in ER",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jodi goes into active labor in ER after 45 minutes with no OB response",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "guest:jodi",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Baby suffers shoulder dystocia, gets stuck on Jodi's pubic bone",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "guest:jodi"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark manages to free infant and deliver living child",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jodi hemorrhages catastrophically during delivery",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "guest:jodi",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Despite frantic efforts, Jodi dies on the table",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "mark",
+            "guest:jodi"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Coburn arrives too late and confronts Mark about his decisions",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "guest:coburn"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Sean O'Brien holds his newborn child, devastated by wife's death",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "guest:sean"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter insists on scrubbing in for his mother Mae's hip surgery",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter crosses professional line, unable to separate surgeon and son roles",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark breaks down crying alone on subway ride home",
+          "storyline": "marriage",
+          "function": "resolution",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the weight of responsibility and the cost of caring",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "ambition"
+          ],
+          "description": "both Mark and Peter struggle with professional judgment compromised by personal stakes - Mark's career crisis mirrors his marriage crisis, Peter can't separate being a surgeon from being a son",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "marriage"
+          ],
+          "description": "episode shifts from standard multi-storyline format to single-patient focus as Jodi's case consumes Mark's attention",
+          "subtype": "structural_shift"
+        }
+      ],
+      "patches": [
+        {
+          "action": "CHECK_LINE",
+          "target": "competence",
+          "reason": "Susan storyline has no events in this episode despite being ranked B",
+          "episodes": [
+            "S01E19"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "love",
+          "reason": "Doug storyline has no events in this episode despite being ranked B",
+          "episodes": [
+            "S01E19"
+          ]
+        },
+        {
+          "action": "CHECK_LINE",
+          "target": "choice",
+          "reason": "Carol storyline has no events in this episode despite being ranked B",
+          "episodes": [
+            "S01E19"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E20",
+      "events": [
+        {
+          "event": "Mark Greene is haunted by Jodi O'Brien's death and avoids seeing patients",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "competence"
+          ]
+        },
+        {
+          "event": "Susan Lewis convinces Mark to take the night off and steps up to manage the ER",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan treats a young man with hiccups, demonstrating diagnostic skill under pressure",
+          "storyline": "competence",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Swift arrives unannounced as the new ER chief",
+          "storyline": "marriage",
+          "function": "setup",
+          "characters": [
+            "swift"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark encounters Swift as a random cyclist at Doc Magoo's, not knowing he's the new boss",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "swift"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Swift runs an impromptu emergency drill at 2 AM, forcing Mark back to the hospital",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "swift",
+            "mark"
+          ],
+          "also_affects": [
+            "competence"
+          ]
+        },
+        {
+          "event": "Mark fails to impress Swift while Susan does well with the new chief",
+          "storyline": "competence",
+          "function": "resolution",
+          "characters": [
+            "susan",
+            "mark",
+            "swift"
+          ],
+          "also_affects": [
+            "marriage"
+          ]
+        },
+        {
+          "event": "Mae Benton falls out of bed again after being released from restraints",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter finally accepts Mae needs permanent nursing care",
+          "storyline": "ambition",
+          "function": "climax",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter asks Jeanie for help placing Mae in a facility",
+          "storyline": "ambition",
+          "function": "resolution",
+          "characters": [
+            "peter",
+            "jeanie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol learns Doug has a date with Diane Leeds and pretends not to be bothered",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Carol remains unenthusiastic about planning her wedding to Tag",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter and Deb Chen engage in increasingly absurd one-upmanship",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "accepting difficult truths",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "competence",
+            "ambition",
+            "choice"
+          ],
+          "description": "all storylines involve characters confronting realities they've been avoiding - Mark's professional decline, Susan's readiness to lead, Peter's mother's needs, Carol's true feelings",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "marriage",
+            "competence"
+          ],
+          "description": "the audience sees Mark's professional crisis while he remains unaware of how badly he's performing with Swift",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "leadership",
+          "reason": "Swift's arrival as new chief creates a new power dynamic storyline that doesn't fit existing character arcs",
+          "episodes": [
+            "S01E20"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E21",
+      "events": [
+        {
+          "event": "Mark leads a formal medical review of Jodi O'Brien's death from preeclampsia",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "competence"
+          ]
+        },
+        {
+          "event": "Mark faces scrutiny from colleagues over his decisions during the delivery",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Swift expresses concern about Mark's compromised judgment since the incident",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "swift",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark walks the board through his reasoning, exposing his misdiagnosis",
+          "storyline": "marriage",
+          "function": "climax",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter struggles to tell Mae she needs nursing home placement",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "mae"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter announces medical students' procedure books are due a week early",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "peter",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Deb and Carter race to log procedures before the deadline",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter",
+            "guest:deb"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Deb commits a nearly fatal error on a patient in her haste",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "guest:deb"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Deb reconsiders whether competitive pressure is worth the risk",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "guest:deb"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Deb leaves the program in the aftermath of her mistake",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "guest:deb"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe returns pregnant to live with Susan, abandoning Texas plans",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe's presence adds domestic chaos to Susan's professional life",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug stumbles upon Jake at Diane's apartment",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug",
+            "guest:diane",
+            "guest:jake"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jake reveals he already knows about Doug's overnight visits",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug",
+            "guest:jake"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug confronts what it means to be involved with a woman who has a child",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug and Carter encounter a patient who refuses tuberculosis treatment",
+          "storyline": "belonging",
+          "function": "setup",
+          "characters": [
+            "doug",
+            "carter"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the weight of responsibility",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "ambition",
+            "responsibility",
+            "love",
+            "belonging"
+          ],
+          "description": "all storylines explore different forms of responsibility - professional accountability, family duty, personal obligation, parental commitment, and competitive ethics",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "love",
+            "belonging"
+          ],
+          "description": "Doug fears commitment while Carter witnesses the consequences of reckless ambition in Deb's departure",
+          "subtype": null
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "medical_ethics",
+          "reason": "tuberculosis patient refusal raises public health vs autonomy questions that don't fit existing storylines",
+          "episodes": [
+            "S01E21"
+          ]
+        }
+      ]
+    },
+    {
+      "episode": "S01E22",
+      "events": [
+        {
+          "event": "Peter approaches multiple surgeons about operating on a sixteen-year-old boy with a severe brain aneurysm",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "All surgeons refuse to take on the high-risk aneurysm case",
+          "storyline": "ambition",
+          "function": "turning_point",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter channels his frustration into advocacy for the patient as compensation for his inability to help his mother Mae",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter and Jeanie go to dinner together, their relationship shifting from professional to personal",
+          "storyline": "ambition",
+          "function": "seed",
+          "characters": [
+            "peter",
+            "jeanie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan tries to get Chloe to take her pregnancy seriously",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe ignores prenatal appointments and makes impulsive decisions",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan becomes exhausted by constantly managing her sister while maintaining her career",
+          "storyline": "responsibility",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": [
+            "competence"
+          ]
+        },
+        {
+          "event": "Mark clashes with Dr. Swift over scheduling when he chooses family commitment over staying late",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "swift"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Swift questions whether Mark's personal problems are affecting his work",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "swift"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter makes a good impression on Swift, demonstrating initiative and competence",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter",
+            "swift"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug turns down Linda Farrell's offer to celebrate together",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug agrees to be assistant coach for Diane's son Jake's Little League team",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug chooses Diane over Linda, marking his first genuine attempt at domestic stability",
+          "storyline": "love",
+          "function": "resolution",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the helplessness of human planning against uncontrollable forces",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "ambition",
+            "marriage",
+            "responsibility",
+            "love"
+          ],
+          "description": "all storylines explore how carefully laid plans collide with realities beyond control - Peter can't save the patient or his mother, Mark can't balance work and family, Susan can't control Chloe, Doug tries to break his pattern",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "belonging",
+            "marriage"
+          ],
+          "description": "Carter's success with Swift contrasts with Mark's deteriorating relationship with the new chief",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E23",
+      "events": [
+        {
+          "event": "Mark moves in with Jennifer in Milwaukee to save their marriage",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark commutes to County General for his shifts from Milwaukee",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Mark tries to rekindle romance by talking about happy memories",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "jennifer"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jennifer remains resistant to Mark's romantic attempts",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "jennifer",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug coaches Jake's Little League team",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "guest:jake"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jake hits inside-the-park home run but misses first base",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "guest:jake",
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug lies to umpire about Jake touching first base",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol and Doug treat Catholic high school basketball team with meningitis",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "doug"
+          ],
+          "also_affects": [
+            "choice"
+          ]
+        },
+        {
+          "event": "Carol and Tag work on their wedding vows",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol",
+            "tag"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol invites Diane Leeds to wedding knowing she'll bring Doug",
+          "storyline": "choice",
+          "function": "turning_point",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Tag becomes upset about Doug's presence at the wedding",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "tag",
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Malik finds magazine article about Carter's wealthy family",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "guest:malik",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter, Malik and Jerry discover Carter's father worth $178 million",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "peter",
+            "guest:malik",
+            "guest:jerry",
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter decides to apply for both ER and surgical sub-internships",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Benton's attraction to Jeanie Boulet continues to grow",
+          "storyline": "ambition",
+          "function": "escalation",
+          "characters": [
+            "peter",
+            "jeanie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan finds Cvetic's photo in cabbie's dating-service book",
+          "storyline": "competence",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "guest:cabbie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe's irresponsibility continues to wear Susan down",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "chloe"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of commitment",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "marriage",
+            "choice",
+            "belonging"
+          ],
+          "description": "all three storylines explore different forms of commitment and the sacrifices required to maintain them",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "belonging",
+            "ambition"
+          ],
+          "description": "the audience now knows Carter's wealth while he continues to struggle for acceptance based on merit",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "Doug's presence at Carol's wedding forces the triangle to a head",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E24",
+      "events": [
+        {
+          "event": "Susan helps Chloe give birth to a baby girl",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "susan",
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Cookie announces she's done helping and won't take in Chloe and the baby",
+          "storyline": "responsibility",
+          "function": "turning_point",
+          "characters": [
+            "susan",
+            "guest:cookie"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Chloe shows no interest in caring for her newborn",
+          "storyline": "responsibility",
+          "function": "escalation",
+          "characters": [
+            "chloe"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan becomes suddenly responsible for the infant she didn't plan for",
+          "storyline": "responsibility",
+          "function": "climax",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Diane Leeds suggests she and Doug move in together",
+          "storyline": "love",
+          "function": "turning_point",
+          "characters": [
+            "doug",
+            "guest:diane"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Doug seeks comfort from his ex-girlfriend Linda Farrell",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "guest:linda"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Diane catches Doug with Linda and furiously ends their relationship",
+          "storyline": "love",
+          "function": "climax",
+          "characters": [
+            "doug",
+            "guest:diane"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter turns down the ER sub-internship offer",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Angela Hicks tells Carter he didn't get the surgical sub-internship",
+          "storyline": "belonging",
+          "function": "climax",
+          "characters": [
+            "carter",
+            "guest:hicks"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter is left without a clear path forward at County General",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter receives word that his mother Mae has died",
+          "storyline": "ambition",
+          "function": "climax",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Peter processes his grief and guilt while still on duty",
+          "storyline": "ambition",
+          "function": "resolution",
+          "characters": [
+            "peter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol is overwhelmed by final wedding preparations with forced enthusiasm",
+          "storyline": "choice",
+          "function": "escalation",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the cost of responsibility and sacrifice",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "responsibility",
+            "love",
+            "belonging",
+            "ambition",
+            "choice"
+          ],
+          "description": "all storylines explore the weight of responsibility and the sacrifices demanded by duty, career, and family obligations",
+          "subtype": null
+        },
+        {
+          "type": "dramatic_irony",
+          "lines": [
+            "responsibility",
+            "choice"
+          ],
+          "description": "Susan is forced into motherhood while Carol prepares for marriage, both facing unwanted family responsibilities",
+          "subtype": null
+        }
+      ],
+      "patches": []
+    },
+    {
+      "episode": "S01E25",
+      "events": [
+        {
+          "event": "Tag confronts Carol before the ceremony about her not loving him as much as he loves her",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "tag",
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carol admits Tag is right but insists she still wants to be with him",
+          "storyline": "choice",
+          "function": "climax",
+          "characters": [
+            "carol"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Tag calls off the wedding and becomes a runaway groom",
+          "storyline": "choice",
+          "function": "resolution",
+          "characters": [
+            "tag"
+          ],
+          "also_affects": [
+            "love"
+          ]
+        },
+        {
+          "event": "Mark learns he is being sued for malpractice by Jodi O'Brien's family",
+          "storyline": "marriage",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Dr. Swift changes his mind and decides to support Mark as the new attending physician",
+          "storyline": "marriage",
+          "function": "turning_point",
+          "characters": [
+            "swift",
+            "mark"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter fills out a harsh evaluation of Peter Benton on his last day",
+          "storyline": "belonging",
+          "function": "escalation",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Carter learns he has received the surgical sub-internship",
+          "storyline": "belonging",
+          "function": "turning_point",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Carter rescinds the negative report, choosing not to burn the bridge to Benton",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "carter"
+          ],
+          "also_affects": [
+            "ambition"
+          ]
+        },
+        {
+          "event": "Chloe disappears again, abandoning baby Susie with Susan",
+          "storyline": "responsibility",
+          "function": "climax",
+          "characters": [
+            "chloe",
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Susan faces being fully and solely responsible for a child she did not choose to have",
+          "storyline": "responsibility",
+          "function": "resolution",
+          "characters": [
+            "susan"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "Jake visits Doug at the hospital, reminding him of the family he lost",
+          "storyline": "love",
+          "function": "escalation",
+          "characters": [
+            "doug",
+            "guest:jake"
+          ],
+          "also_affects": null
+        },
+        {
+          "event": "The entire ER staff ends up celebrating at the cancelled wedding venue",
+          "storyline": "belonging",
+          "function": "resolution",
+          "characters": [
+            "mark",
+            "susan",
+            "doug",
+            "carol",
+            "peter",
+            "carter"
+          ],
+          "also_affects": null
+        }
+      ],
+      "theme": "the weight of choices and their consequences",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "choice",
+            "belonging",
+            "responsibility"
+          ],
+          "description": "all three storylines explore making difficult decisions that define one's future - Carol choosing between love and security, Carter choosing between honesty and career advancement, Susan accepting unwanted responsibility",
+          "subtype": null
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "choice",
+            "love"
+          ],
+          "description": "Carol's wedding cancellation directly affects Doug's romantic storyline, as her choice frees her from Tag but doesn't resolve her feelings for Doug",
+          "subtype": null
+        },
+        {
+          "type": "meta",
+          "lines": [
+            "marriage",
+            "choice",
+            "love",
+            "belonging",
+            "responsibility"
+          ],
+          "description": "the cancelled wedding reception becomes a symbolic gathering where all characters face their unresolved futures",
+          "subtype": "wraparound"
+        }
+      ],
+      "patches": [
+        {
+          "action": "ADD_LINE",
+          "target": "celebration",
+          "reason": "The cancelled wedding reception that brings all characters together doesn't fit existing storylines but serves as a major story element",
+          "episodes": [
+            "S01E25"
+          ]
+        }
+      ]
+    }
+  ]
+}
