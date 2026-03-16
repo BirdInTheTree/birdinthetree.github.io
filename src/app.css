@@ -165,3 +165,57 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .chart-body { padding: 0.5rem 1rem 1.25rem; }
 :root.dark .chart-card { background: #181825; box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 :root.dark .chart-description { color: #a6adc8; }
+
+/* ── Site nav ── */
+.site-nav { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: white; border-bottom: 1px solid #e5e7eb; }
+.site-nav-links { display: flex; gap: 1.5rem; }
+.site-nav-links a { text-decoration: none; color: #555; font-size: 0.95rem; padding: 0.25rem 0; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+.site-nav-links a:hover { color: #1a1a1a; }
+.site-nav-links a.active { color: #1a1a1a; font-weight: 600; border-bottom-color: #1a1a1a; }
+.site-content { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+:root.dark .site-nav { background: #181825; border-bottom-color: #313244; }
+:root.dark .site-nav-links a { color: #a6adc8; }
+:root.dark .site-nav-links a:hover { color: #cdd6f4; }
+:root.dark .site-nav-links a.active { color: #cba6f7; border-bottom-color: #cba6f7; }
+
+/* ── Landing page ── */
+.landing { text-align: center; padding: 4rem 1rem; }
+.landing-name { font-size: 2.5rem; margin-bottom: 1rem; }
+.landing-bio { max-width: 540px; margin: 0 auto 2rem; line-height: 1.7; color: #555; }
+.landing-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+:root.dark .landing-bio { color: #a6adc8; }
+
+/* ── Blog listing ── */
+.blog-listing { max-width: 720px; }
+.blog-listing h1 { margin-bottom: 1.5rem; }
+.blog-card { display: block; text-decoration: none; color: inherit; padding: 1.25rem; background: white; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; transition: box-shadow 0.15s; }
+.blog-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+.blog-card-title { font-size: 1.2rem; margin-bottom: 0.25rem; }
+.blog-card-date { font-size: 0.8rem; color: #888; }
+.blog-card-desc { font-size: 0.9rem; color: #555; margin-top: 0.5rem; line-height: 1.5; }
+:root.dark .blog-card { background: #181825; box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+:root.dark .blog-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.6); }
+:root.dark .blog-card-date { color: #7f849c; }
+:root.dark .blog-card-desc { color: #a6adc8; }
+
+/* ── Blog post ── */
+.blog-post { max-width: 720px; }
+.blog-post-header { margin-bottom: 2rem; }
+.blog-post-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.blog-post-header time { font-size: 0.85rem; color: #888; }
+:root.dark .blog-post-header time { color: #7f849c; }
+.blog-post-content h2 { font-size: 1.4rem; margin: 1.5rem 0 0.75rem; }
+.blog-post-content h3 { font-size: 1.15rem; margin: 1.25rem 0 0.5rem; }
+.blog-post-content p { line-height: 1.7; margin-bottom: 1rem; }
+.blog-post-content code { background: #f3f4f6; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+.blog-post-content pre { background: #1a1a2e; color: #e2e8f0; padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1rem; }
+.blog-post-content pre code { background: none; padding: 0; color: inherit; }
+.blog-post-content blockquote { border-left: 3px solid #cba6f7; padding-left: 1rem; margin: 1rem 0; color: #555; font-style: italic; }
+:root.dark .blog-post-content code { background: #313244; color: #cdd6f4; }
+:root.dark .blog-post-content blockquote { color: #a6adc8; }
+
+/* ── Error page ── */
+.error-page { text-align: center; padding: 4rem 1rem; }
+.error-page h1 { font-size: 4rem; margin-bottom: 0.5rem; }
+.error-page p { margin-bottom: 2rem; color: #555; }
+:root.dark .error-page p { color: #a6adc8; }
