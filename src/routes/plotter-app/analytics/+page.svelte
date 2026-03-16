@@ -36,7 +36,6 @@
   }
 
   onMount(async () => {
-    // Only load manifest if not already loaded (user may come from grid page)
     if ($manifest.length === 0) {
       const items = await loadManifest();
       manifest.set(items);
@@ -55,13 +54,13 @@
     {
       key: 'span',
       title: 'Plotline Span',
-      desc: 'Which episodes each plotline appears in. Wider bars mean the plotline runs through more of the season.',
-      type: 'bar'
+      desc: 'Which episodes each plotline appears in. Cells show event counts with plotline-colored backgrounds. Intensity reflects rank and event density.',
+      type: 'custom-canvas'
     },
     {
       key: 'balance',
       title: 'Episode Balance',
-      desc: 'How many events each plotline gets per episode. Uneven distribution can reveal episodes dominated by a single plotline.',
+      desc: 'How many events each plotline gets per episode. Numbers inside bar segments show exact counts.',
       type: 'bar'
     },
     {
@@ -79,14 +78,14 @@
     {
       key: 'fnDist',
       title: 'Function Distribution',
-      desc: 'Breakdown of narrative functions across the season. A healthy season arc typically starts heavy on setup and ends heavy on climax/resolution.',
-      type: 'bar'
+      desc: 'Breakdown of narrative functions per episode. One mini chart per episode showing function type counts as horizontal bars.',
+      type: 'custom-canvas'
     },
     {
       key: 'network',
       title: 'Character Network',
-      desc: 'How often characters appear together in events. Thicker lines mean more shared scenes.',
-      type: 'd3-force'
+      desc: 'Bipartite graph — characters (circles) on the left, plotlines (squares) on the right. Edge weight shows event participation.',
+      type: 'd3-bipartite'
     }
   ];
 
@@ -96,6 +95,20 @@
     if (key === 'tension') return tensionChart;
     if (key === 'fnDist') return fnDistChart;
     return null;
+  }
+
+  /**
+   * Bind custom canvas charts. Called after the canvas element is inserted
+   * into the DOM. Re-renders on data or theme change.
+   */
+  function bindCanvas(node, config) {
+    if (config?.render) config.render(node);
+
+    return {
+      update(newConfig) {
+        if (newConfig?.render) newConfig.render(node);
+      }
+    };
   }
 </script>
 
@@ -128,8 +141,15 @@
           <div class="chart-body">
             {#if chart.type === 'd3-heatmap'}
               <ConvergenceMap data={$seriesData} />
-            {:else if chart.type === 'd3-force'}
+            {:else if chart.type === 'd3-bipartite'}
               <CharacterNetwork data={$seriesData} />
+            {:else if chart.type === 'custom-canvas'}
+              {@const cfg = getChartConfig(chart.key)}
+              {#if cfg}
+                <div class="custom-canvas-wrapper">
+                  <canvas use:bindCanvas={cfg}></canvas>
+                </div>
+              {/if}
             {:else}
               {@const cfg = getChartConfig(chart.key)}
               {#if cfg}
@@ -137,6 +157,7 @@
                   type={chart.key === 'tension' ? 'line' : 'bar'}
                   data={cfg.data}
                   options={cfg.options}
+                  plugins={cfg.plugins}
                 />
               {/if}
             {/if}
@@ -148,3 +169,13 @@
     <p>Select a series to view analytics.</p>
   {/if}
 </div>
+
+<style>
+  .custom-canvas-wrapper {
+    overflow-x: auto;
+    min-height: 400px;
+  }
+  .custom-canvas-wrapper canvas {
+    display: block;
+  }
+</style>

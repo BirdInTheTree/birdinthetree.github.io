@@ -5,9 +5,14 @@
 
   Chart.register(...registerables);
 
+  // Global font defaults — large, legible text on all charts
+  Chart.defaults.font.size = 14;
+  Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+
   export let type = 'bar';
   export let data = { labels: [], datasets: [] };
   export let options = {};
+  export let plugins = [];
 
   let canvas;
   let chart = null;
@@ -66,7 +71,8 @@
     chart = new Chart(canvas, {
       type,
       data: deepClone(data),
-      options: themedOptions(options)
+      options: themedOptions(options),
+      plugins: plugins || []
     });
   }
 
@@ -99,6 +105,6 @@
   .chart-canvas-wrapper {
     position: relative;
     width: 100%;
-    min-height: 300px;
+    min-height: 450px;
   }
 </style>

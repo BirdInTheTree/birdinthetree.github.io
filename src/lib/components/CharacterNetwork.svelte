@@ -109,7 +109,7 @@
       .attr('y', 20)
       .attr('text-anchor', 'middle')
       .attr('fill', fg)
-      .attr('font-size', '14px')
+      .attr('font-size', '16px')
       .attr('font-weight', 'bold')
       .text('Character\u2013Storyline Network \u2014 who drives what');
 
@@ -154,7 +154,7 @@
         .attr('text-anchor', 'end')
         .attr('dominant-baseline', 'central')
         .attr('fill', fg)
-        .attr('font-size', '11px')
+        .attr('font-size', '15px')
         .attr('font-weight', 'bold')
         .text(cast[ch] || ch);
     }
@@ -184,7 +184,7 @@
         .attr('text-anchor', 'start')
         .attr('dominant-baseline', 'central')
         .attr('fill', fg)
-        .attr('font-size', '11px')
+        .attr('font-size', '15px')
         .attr('font-weight', 'bold')
         .text(`${plMap[sl]?.name || sl} [${rank}]`);
     }
@@ -208,7 +208,7 @@
         .attr('y', y)
         .attr('dominant-baseline', 'central')
         .attr('fill', fg)
-        .attr('font-size', '10px')
+        .attr('font-size', '14px')
         .text(`Rank ${rank}`);
     });
   }

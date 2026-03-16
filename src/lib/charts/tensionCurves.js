@@ -25,9 +25,9 @@ export function buildTensionCurves(data) {
       data: values,
       borderColor: colors[pl.id],
       backgroundColor: colors[pl.id],
-      borderWidth: 2,
-      pointRadius: 5,
-      pointHoverRadius: 7,
+      borderWidth: 2.5,
+      pointRadius: 6,
+      pointHoverRadius: 8,
       tension: 0.1,
       spanGaps: true
     };
@@ -39,18 +39,22 @@ export function buildTensionCurves(data) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom', labels: { boxWidth: 14, font: { size: 11 } } },
+        legend: {
+          position: 'bottom',
+          labels: { boxWidth: 14, font: { size: 14 } }
+        },
         tooltip: { mode: 'index', intersect: false }
       },
       scales: {
         x: {
-          ticks: { maxRotation: 45, font: { size: 10 } }
+          ticks: { maxRotation: 45, font: { size: 14 } }
         },
         y: {
           min: 0,
           max: 4.5,
           ticks: {
             stepSize: 0.5,
+            font: { size: 14 },
             callback: (value) => {
               const labels = {
                 0.5: 'resolution',
@@ -62,7 +66,7 @@ export function buildTensionCurves(data) {
               return labels[value] || '';
             }
           },
-          title: { display: true, text: 'Tension' }
+          title: { display: true, text: 'Tension', font: { size: 14 } }
         }
       }
     }

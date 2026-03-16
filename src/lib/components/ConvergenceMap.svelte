@@ -58,8 +58,8 @@
     const fg = isDark ? '#a9b1d6' : '#1a1a1a';
     const bg = isDark ? '#1a1b26' : '#ffffff';
 
-    const margin = { top: 10, right: 10, bottom: 100, left: 120 };
-    const cellSize = Math.min(50, Math.max(30, 400 / n));
+    const margin = { top: 40, right: 10, bottom: 120, left: 150 };
+    const cellSize = Math.min(55, Math.max(35, 500 / n));
     const width = margin.left + margin.right + n * cellSize;
     const height = margin.top + margin.bottom + n * cellSize;
 
@@ -68,6 +68,16 @@
       .attr('width', width)
       .attr('height', height)
       .style('background', bg);
+
+    // Title
+    svg.append('text')
+      .attr('x', width / 2)
+      .attr('y', 24)
+      .attr('text-anchor', 'middle')
+      .attr('fill', fg)
+      .attr('font-size', '16px')
+      .attr('font-weight', 'bold')
+      .text('Storyline Convergence — how storylines interact');
 
     const g = svg.append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -100,7 +110,7 @@
             .attr('text-anchor', 'middle')
             .attr('dominant-baseline', 'central')
             .attr('fill', fg)
-            .attr('font-size', '11px')
+            .attr('font-size', '14px')
             .attr('font-weight', 'bold')
             .text(val);
         }
@@ -128,7 +138,7 @@
       .attr('text-anchor', 'end')
       .attr('dominant-baseline', 'central')
       .attr('fill', fg)
-      .attr('font-size', '11px')
+      .attr('font-size', '14px')
       .text((d) => d);
 
     // X-axis labels
@@ -141,7 +151,7 @@
       .attr('text-anchor', 'start')
       .attr('dominant-baseline', 'hanging')
       .attr('fill', fg)
-      .attr('font-size', '11px')
+      .attr('font-size', '14px')
       .attr('transform', (_, i) => `rotate(35, ${i * cellSize + cellSize / 2}, ${n * cellSize + 8})`)
       .text((d) => d);
   }
@@ -168,6 +178,6 @@
   .convergence-map {
     width: 100%;
     overflow-x: auto;
-    min-height: 200px;
+    min-height: 400px;
   }
 </style>
