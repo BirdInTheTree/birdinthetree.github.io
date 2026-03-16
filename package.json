@@ -1,0 +1,22 @@
+{
+  "name": "birdinthetree.github.io",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "type": "module",
+  "dependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.55.0",
+    "svelte": "^5.53.12",
+    "vite": "^8.0.0"
+  },
+  "devDependencies": {
+    "chart.js": "^4.5.1",
+    "d3": "^7.9.0",
+    "mdsvex": "^0.12.7"
+  }
+}
