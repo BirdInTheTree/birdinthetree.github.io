@@ -80,6 +80,24 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .fn-resolution { background: #d1fae5; }
 .fn-cliffhanger { background: #e9d5ff; }
 
+/* Side panel (plotline detail) */
+.side-panel-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 100; display: flex; justify-content: flex-end; }
+.side-panel { width: 400px; max-width: 90vw; height: 100vh; background: white; box-shadow: -4px 0 20px rgba(0,0,0,0.15); padding: 1.5rem; overflow-y: auto; animation: slideIn 0.2s ease-out; }
+.side-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.side-panel-header h2 { margin: 0; font-size: 1.25rem; }
+.side-panel-close { font-size: 1.5rem; line-height: 1; padding: 0.25rem 0.5rem; border: none; }
+@keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }
+
+/* Detail fields */
+.detail-field { margin-bottom: 0.75rem; }
+.detail-label { font-weight: 600; font-size: 0.8rem; color: #666; display: block; margin-bottom: 0.25rem; }
+.detail-field .value { font-size: 0.9rem; }
+
+/* Modal */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; z-index: 100; }
+.modal { background: white; border-radius: 12px; padding: 1.5rem; max-width: 600px; width: 90%; max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+.modal h2 { margin-bottom: 1rem; }
+
 /* ── Dark theme ── */
 :root.dark body { background: #1e1e2e; color: #cdd6f4; }
 :root.dark .sticky-top { background: #1e1e2e; }
@@ -110,6 +128,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 :root.dark .fn-climax { background: #3d2332; color: #f38ba8; }
 :root.dark .fn-resolution { background: #1e3d2e; color: #a6e3a1; }
 :root.dark .fn-cliffhanger { background: #302040; color: #cba6f7; }
+
+/* Dark side panel & modal */
+:root.dark .side-panel-overlay { background: rgba(0,0,0,0.55); }
+:root.dark .side-panel { background: #181825; box-shadow: -4px 0 20px rgba(0,0,0,0.5); }
+:root.dark .modal-overlay { background: rgba(0,0,0,0.65); }
+:root.dark .modal { background: #181825; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+:root.dark .detail-label { color: #a6adc8; }
 
 /* Dark rank badges */
 :root.dark .rank-a { background: #243347; color: #89b4fa; }

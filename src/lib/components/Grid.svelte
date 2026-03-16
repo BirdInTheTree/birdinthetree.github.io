@@ -97,7 +97,7 @@
               {@const events = getEvents(pl.id, ep.episode)}
               <td class="event-cell" class:empty-cell={events.length === 0}>
                 {#each events as event}
-                  <EventCard {event} on:select={(e) => dispatch('selectEvent', e.detail)} />
+                  <EventCard {event} on:select={() => dispatch('selectEvent', { event, episode: ep.episode })} />
                 {/each}
               </td>
             {/each}
