@@ -108,7 +108,7 @@
             .attr('text-anchor', 'middle')
             .attr('dominant-baseline', 'central')
             .attr('fill', fg)
-            .attr('font-size', '14px')
+            .attr('font-size', '16px')
             .attr('font-weight', 'bold')
             .text(val);
         }
@@ -136,21 +136,22 @@
       .attr('text-anchor', 'end')
       .attr('dominant-baseline', 'central')
       .attr('fill', fg)
-      .attr('font-size', '14px')
+      .attr('font-size', '16px')
       .text((d) => d);
 
-    // X-axis labels
+    // X-axis labels — horizontal, no rotation
     g.selectAll('.x-label')
       .data(plNames)
       .enter()
       .append('text')
       .attr('x', (_, i) => i * cellSize + cellSize / 2)
-      .attr('y', n * cellSize + 8)
-      .attr('text-anchor', 'start')
+      .attr('y', n * cellSize + 12)
+      .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'hanging')
       .attr('fill', fg)
-      .attr('font-size', '14px')
-      .attr('transform', (_, i) => `rotate(35, ${i * cellSize + cellSize / 2}, ${n * cellSize + 8})`)
+      .attr('font-size', '16px')
+      .text((d) => d.length > 12 ? d.slice(0, 11) + '\u2026' : d)
+      .append('title')
       .text((d) => d);
 
     // Color scale legend (right side)
@@ -169,9 +170,9 @@
     }
     // Legend labels
     g.append('text').attr('x', legendX + legendW + 6).attr('y', 4)
-      .attr('fill', fg).attr('font-size', '12px').attr('dominant-baseline', 'hanging').text(maxVal);
+      .attr('fill', fg).attr('font-size', '16px').attr('dominant-baseline', 'hanging').text(maxVal);
     g.append('text').attr('x', legendX + legendW + 6).attr('y', legendH)
-      .attr('fill', fg).attr('font-size', '12px').attr('dominant-baseline', 'auto').text('0');
+      .attr('fill', fg).attr('font-size', '16px').attr('dominant-baseline', 'auto').text('0');
   }
 
   let mounted = false;

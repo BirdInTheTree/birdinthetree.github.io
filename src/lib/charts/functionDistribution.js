@@ -67,7 +67,7 @@ export function buildFunctionDistribution(data) {
 
       // Episode title
       ctx.fillStyle = fg;
-      ctx.font = 'bold 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(ep.episode, originX + chartW / 2, originY - 10);
 
@@ -89,7 +89,7 @@ export function buildFunctionDistribution(data) {
 
         // Function label
         ctx.fillStyle = fg;
-        ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+        ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
         ctx.textAlign = 'right';
         ctx.textBaseline = 'middle';
         ctx.fillText(fnName, originX - 8, y + barHeight / 2);
@@ -105,7 +105,7 @@ export function buildFunctionDistribution(data) {
 
           // Value label
           ctx.fillStyle = labelColor;
-          ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+          ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
           ctx.textAlign = 'left';
           ctx.textBaseline = 'middle';
           ctx.fillText(String(v), originX + barW + 4, y + barHeight / 2);

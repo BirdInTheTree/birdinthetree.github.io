@@ -104,7 +104,7 @@
     display: inline-block;
     padding: 0.125rem 0.5rem;
     border-radius: 10px;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 600;
   }
 

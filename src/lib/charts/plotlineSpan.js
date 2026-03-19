@@ -35,9 +35,12 @@ export function buildPlotlineSpan(data) {
     const nRows = plotlines.length;
     const nCols = episodeNames.length;
 
-    // Stretch to container width
+    // Compute left margin from longest label
     const containerW = canvas.parentElement?.clientWidth || 1000;
-    const leftMargin = 220;
+    const measureCtx = canvas.getContext('2d');
+    measureCtx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    const maxLabelW = Math.max(...plotlines.map((pl) => measureCtx.measureText(`[${pl.rank}] ${pl.name}`).width));
+    const leftMargin = Math.max(220, maxLabelW + 20);
     const totalColW = 70;
     const gap = 3;
     const availW = containerW - leftMargin - totalColW - gap - 10;
@@ -76,14 +79,14 @@ export function buildPlotlineSpan(data) {
     ctx.fillText('Total', totalColX + totalColW / 2, headerH);
 
     // Theme row
-    ctx.font = '14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
     ctx.fillStyle = fgSub;
     ctx.textBaseline = 'top';
     for (let c = 0; c < nCols; c++) {
       const x = leftMargin + c * (cellW + gap) + cellW / 2;
       const theme = episodeThemes[c];
-      const maxChars = Math.floor(cellW / 8);
-      const truncated = theme.length > maxChars ? theme.slice(0, maxChars) + '\u2026' : theme;
+      const maxChars = Math.floor(cellW / 9);
+      const truncated = theme.length > maxChars ? 'Theme: ' + theme.slice(0, maxChars - 7) + '\u2026' : 'Theme: ' + theme;
       ctx.fillText(truncated, x, headerH + 4);
     }
 

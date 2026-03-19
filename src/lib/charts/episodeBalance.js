@@ -51,7 +51,7 @@ export function buildEpisodeBalance(data) {
       plugins: {
         legend: {
           position: 'top',
-          labels: { boxWidth: 14, font: { size: 14 } }
+          labels: { boxWidth: 14, font: { size: 16 } }
         },
         tooltip: {
           mode: 'index',
@@ -68,7 +68,7 @@ export function buildEpisodeBalance(data) {
       scales: {
         x: {
           stacked: true,
-          ticks: { maxRotation: 45, font: { size: 12 } }
+          ticks: { maxRotation: 0, font: { size: 16 } }
         },
         y: {
           stacked: true,
@@ -87,7 +87,7 @@ export function buildEpisodeBalance(data) {
       afterDraw(chart) {
         const ctx = chart.ctx;
         ctx.save();
-        ctx.font = 'bold 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+        ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = '#ffffff';

@@ -51,7 +51,7 @@
 
   function truncateTheme(theme) {
     if (!theme) return '';
-    return theme.length > 60 ? theme.slice(0, 60) + '\u2026' : theme;
+    return theme.length > 80 ? theme.slice(0, 80) + '\u2026' : theme;
   }
 </script>
 
