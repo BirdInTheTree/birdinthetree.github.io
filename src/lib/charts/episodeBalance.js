@@ -13,7 +13,7 @@ export function buildEpisodeBalance(data) {
     data: episodes.map((ep) => {
       let count = 0;
       for (const ev of ep.events || []) {
-        if (ev.storyline === pl.id) count++;
+        if ((ev.plotline || ev.storyline) === pl.id) count++;
       }
       return count;
     }),

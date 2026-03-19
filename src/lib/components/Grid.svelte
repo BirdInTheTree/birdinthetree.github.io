@@ -21,7 +21,8 @@
 
     for (const ep of data.episodes) {
       for (const event of ep.events || []) {
-        if (!event.storyline) continue;
+        const storyline = event.plotline || event.storyline;
+        if (!storyline) continue;
 
         // Filter by active function types
         if (hasFnFilter && !activeFns.has(event.function)) continue;
@@ -33,7 +34,7 @@
           if (!hasMatch) continue;
         }
 
-        const key = `${event.storyline}|${ep.episode}`;
+        const key = `${storyline}|${ep.episode}`;
         if (!grid.has(key)) grid.set(key, []);
         grid.get(key).push(event);
       }

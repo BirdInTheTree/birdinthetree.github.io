@@ -64,6 +64,12 @@
       <h1>Plotter</h1>
       <div class="toolbar-actions">
         <SeriesSelect />
+        {#if $seriesData?.franchise_type}
+          <span class="context-badge">{$seriesData.franchise_type}</span>
+        {/if}
+        {#if $seriesData?.format}
+          <span class="context-badge">{$seriesData.format}</span>
+        {/if}
         <a href="/plotter-app/analytics" class="btn">Analytics</a>
         <button class="btn" on:click={toggleTheme}>
           {$theme === 'light' ? 'Dark' : 'Light'}

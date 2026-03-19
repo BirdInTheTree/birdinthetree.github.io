@@ -41,6 +41,9 @@
       {#if plotline.nature}
         <span class="nature-badge">{plotline.nature}</span>
       {/if}
+      {#if plotline.confidence}
+        <span class="confidence-badge confidence-{plotline.confidence}">{plotline.confidence}</span>
+      {/if}
     </div>
 
     {#if driver}

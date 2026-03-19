@@ -24,7 +24,7 @@
     return pl ? pl.name : plotlineId;
   }
 
-  $: plotlineName = resolvePlotlineName(event.storyline);
+  $: plotlineName = resolvePlotlineName(event.plotline || event.storyline);
 
   $: alsoAffectsNames = (event.also_affects || [])
     .map(resolvePlotlineName)
