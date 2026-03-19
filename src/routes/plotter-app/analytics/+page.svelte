@@ -11,12 +11,11 @@
   import SeriesSelect from '$lib/components/SeriesSelect.svelte';
   import ChartCanvas from '$lib/components/ChartCanvas.svelte';
   import ConvergenceMap from '$lib/components/ConvergenceMap.svelte';
-  import CharacterNetwork from '$lib/components/CharacterNetwork.svelte';
 
-  import { buildPlotlineSpan } from '$lib/charts/plotlineSpan.js';
+  import { buildArcMap } from '$lib/charts/arcMap.js';
   import { buildEpisodeBalance } from '$lib/charts/episodeBalance.js';
-  // Tension Curves removed by user request
-  import { buildFunctionDistribution } from '$lib/charts/functionDistribution.js';
+  import { buildArcCompletenessChart } from '$lib/charts/arcCompleteness.js';
+  import { buildPlotlineSpan } from '$lib/charts/plotlineSpan.js';
 
   $: if ($currentSeries) {
     loadCurrentSeries($currentSeries);
@@ -45,47 +44,49 @@
     }
   });
 
-  $: spanChart = $seriesData ? buildPlotlineSpan($seriesData) : null;
+  $: arcMapChart = $seriesData ? buildArcMap($seriesData) : null;
   $: balanceChart = $seriesData ? buildEpisodeBalance($seriesData) : null;
-  $: fnDistChart = $seriesData ? buildFunctionDistribution($seriesData) : null;
+  $: completenessChart = $seriesData ? buildArcCompletenessChart($seriesData) : null;
+  $: spanChart = $seriesData ? buildPlotlineSpan($seriesData) : null;
 
   const charts = [
     {
-      key: 'span',
-      title: 'Plotline Span',
-      desc: 'Which episodes each plotline appears in. Cells show event counts with plotline-colored backgrounds. Intensity reflects rank and event density.',
+      key: 'arcMap',
+      title: 'Fractal Arc Map',
+      desc: 'How each storyline develops across the season. Columns are narrative phases, rows are plotlines. Season arc (top) follows the A-storyline. Cell intensity reflects event density.',
       type: 'custom-canvas'
     },
     {
       key: 'balance',
       title: 'Episode Balance',
-      desc: 'How many events each plotline gets per episode. Numbers inside bar segments show exact counts.',
+      desc: 'Event count per plotline per episode. Bar height shows total density — a 24-event episode towers over a 5-event one.',
       type: 'bar'
     },
     {
       key: 'convergence',
-      title: 'Convergence Map',
-      desc: 'Where plotlines intersect via shared events (also_affects links). Clusters of convergence often mark key turning points.',
+      title: 'Convergence',
+      desc: 'Directed storyline interactions via also_affects links. Row → column shows how many events from source storyline affect target. Asymmetric: A→B ≠ B→A.',
       type: 'd3-heatmap'
     },
     {
-      key: 'fnDist',
-      title: 'Function Distribution',
-      desc: 'Breakdown of narrative functions per episode. One mini chart per episode showing function type counts as horizontal bars.',
+      key: 'completeness',
+      title: 'Arc Completeness',
+      desc: 'Which narrative phases each plotline covers. Filled cells = phase present, empty = missing. Score on right shows structural completeness.',
       type: 'custom-canvas'
     },
     {
-      key: 'network',
-      title: 'Character Network',
-      desc: 'Bipartite graph — characters (circles) on the left, plotlines (squares) on the right. Edge weight shows event participation.',
-      type: 'd3-bipartite'
+      key: 'span',
+      title: 'Plotline Span',
+      desc: 'Which episodes each plotline appears in. Cells show event counts. Intensity reflects rank and event density.',
+      type: 'custom-canvas'
     }
   ];
 
   function getChartConfig(key) {
-    if (key === 'span') return spanChart;
+    if (key === 'arcMap') return arcMapChart;
     if (key === 'balance') return balanceChart;
-    if (key === 'fnDist') return fnDistChart;
+    if (key === 'completeness') return completenessChart;
+    if (key === 'span') return spanChart;
     return null;
   }
 
@@ -133,8 +134,6 @@
           <div class="chart-body">
             {#if chart.type === 'd3-heatmap'}
               <ConvergenceMap data={$seriesData} />
-            {:else if chart.type === 'd3-bipartite'}
-              <CharacterNetwork data={$seriesData} />
             {:else if chart.type === 'custom-canvas'}
               {@const cfg = getChartConfig(chart.key)}
               {#if cfg}
@@ -146,7 +145,7 @@
               {@const cfg = getChartConfig(chart.key)}
               {#if cfg}
                 <ChartCanvas
-                  type={chart.key === 'tension' ? 'line' : 'bar'}
+                  type="bar"
                   data={cfg.data}
                   options={cfg.options}
                   plugins={cfg.plugins}

@@ -1,4 +1,4 @@
-import { sortPlotlines, buildColorMap } from './helpers.js';
+import { sortPlotlines, buildColorMap, roundRect } from './helpers.js';
 
 /**
  * Plotline span grid — table with totals.
@@ -27,10 +27,10 @@ export function buildPlotlineSpan(data) {
 
   function renderGrid(canvas) {
     const isDark = document.documentElement.classList.contains('dark');
-    const fg = isDark ? '#cdd6f4' : '#1a1a1a';
-    const fgSub = isDark ? '#a6adc8' : '#666';
-    const gridLine = isDark ? '#3b4261' : '#d1d5db';
-    const totalBg = isDark ? '#313244' : '#f0f0f0';
+    const fg = isDark ? '#c6c6c6' : '#0e0e0e';
+    const fgSub = isDark ? '#8a8a8a' : '#666';
+    const gridLine = isDark ? '#343434' : '#d1d5db';
+    const totalBg = isDark ? '#343434' : '#f0f0f0';
 
     const nRows = plotlines.length;
     const nCols = episodeNames.length;
@@ -132,7 +132,7 @@ export function buildPlotlineSpan(data) {
         ctx.globalAlpha = 1.0;
 
         if (count > 0) {
-          ctx.fillStyle = alpha > 0.5 ? '#ffffff' : (isDark ? '#cdd6f4' : '#333');
+          ctx.fillStyle = alpha > 0.5 ? '#ffffff' : (isDark ? '#c6c6c6' : '#333');
           ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
@@ -188,18 +188,4 @@ export function buildPlotlineSpan(data) {
     ctx.textBaseline = 'middle';
     ctx.fillText(String(grandTotal), totalColX + totalColW / 2, totalRowY + cellH / 2);
   }
-}
-
-function roundRect(ctx, x, y, w, h, r) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.lineTo(x + w - r, y);
-  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-  ctx.lineTo(x + w, y + h - r);
-  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-  ctx.lineTo(x + r, y + h);
-  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-  ctx.lineTo(x, y + r);
-  ctx.quadraticCurveTo(x, y, x + r, y);
-  ctx.closePath();
 }

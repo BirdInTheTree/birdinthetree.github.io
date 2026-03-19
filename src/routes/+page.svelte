@@ -9,7 +9,12 @@
   </header>
 
   <section class="bio-epigraph">
-    <p>Queen Victoria was charmed by <span class="book-title">Alice&rsquo;s Adventures in Wonderland</span> and asked to receive the author&rsquo;s next book. She was sent <span class="book-title">An Elementary Treatise on Determinants, with Their Application to Simultaneous Linear Equations and Algebraic Geometry</span>.</p>
+    <p>Queen Victoria was so charmed by Lewis Carroll&rsquo;s <span class="book-title">Alice&rsquo;s Adventures in Wonderland</span> that she asked to receive the author&rsquo;s next book. She was sent <span class="book-title">An Elementary Treatise on Determinants, with Their Application to Simultaneous Linear Equations and Algebraic Geometry</span>.</p>
+    <p class="bio-epigraph-note">Apocryphal. Carroll denied it in <em>Symbolic Logic</em>, 1896.</p>
+    <blockquote class="bio-epigraph-quote">
+      <p>My desire and wish is that the things I start with should be so obvious that you wonder why I spend my time stating them. This is what I aim at because the point of philosophy is to start with something so simple as not to seem worth stating, and to end with something so paradoxical that no one will believe it.</p>
+      <cite>Russell, <em>The Philosophy of Logical Atomism</em>, 1918</cite>
+    </blockquote>
   </section>
 
   <section class="bio-facts">
@@ -17,7 +22,7 @@
     <h2>Background</h2>
     <ul>
       <li>Head of Channel &mdash; 2x2, TET, PlusPlus, Luxe&nbsp;TV</li>
-      <li>Head of Programming &mdash; TNT</li>
+      <li>Head of Research &amp; Programming &mdash; TNT</li>
       <li>Head of Development &mdash; Concept Space, Los Angeles</li>
       <li>Data &amp; Media Analyst &mdash; Nestl&eacute;, Lausanne</li>
     </ul>
@@ -30,7 +35,7 @@
     </ul>
 
     <h2>Now</h2>
-    <p>Building <a href="https://github.com/BirdInTheTree/plotter">plotter</a> &mdash; an open-source Python library that uses LLMs to extract formal narrative structure from TV&nbsp;series. Propp&rsquo;s morphology, but for <em>Desperate Housewives</em>.</p>
+    <p>housewife</p>
   </section>
 
   <section class="bio-quotes">
@@ -69,10 +74,6 @@
       <cite>Aristotle, <em>Poetics</em></cite>
     </blockquote>
 
-    <blockquote>
-      <p>The point of philosophy is to start with something so simple as not to seem worth stating, and to end with something so paradoxical that no one will believe it.</p>
-      <cite>Russell</cite>
-    </blockquote>
   </section>
 
   <nav class="bio-links">

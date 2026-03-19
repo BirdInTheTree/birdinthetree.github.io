@@ -47,3 +47,27 @@ export const FUNCTION_COLORS = {
 
 /** Plotline rank sort order — lower is more important. */
 export const RANK_ORDER = { A: 0, B: 1, C: 2, runner: 3 };
+
+/** Narrative function weights — position in arc. */
+export const FUNCTION_WEIGHTS = {
+  setup: 1,
+  catalyst: 2,
+  escalation: 3,
+  turning_point: 4,
+  crisis: 5,
+  climax: 6,
+  resolution: 1,
+  seed: 1,
+  cliffhanger: 6
+};
+
+/** Legacy functions that may appear in older data. */
+export const LEGACY_FUNCTIONS = ['seed', 'cliffhanger'];
+
+/** Rank badge colors — consistent across all views. */
+export const RANK_COLORS = {
+  A: { bg: '#dbeafe', fg: '#1e40af', darkBg: '#1e3a5f', darkFg: '#7dd3fc' },
+  B: { bg: '#fef3c7', fg: '#92400e', darkBg: '#433a2a', darkFg: '#f9e2af' },
+  C: { bg: '#e5e7eb', fg: '#374151', darkBg: '#343434', darkFg: '#8a8a8a' },
+  runner: { bg: '#f3e8ff', fg: '#6b21a8', darkBg: '#302040', darkFg: '#b07aa1' }
+};
