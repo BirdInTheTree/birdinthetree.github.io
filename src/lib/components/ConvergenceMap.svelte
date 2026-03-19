@@ -58,8 +58,8 @@
     const fg = isDark ? '#a9b1d6' : '#1a1a1a';
     const bg = isDark ? '#1a1b26' : '#ffffff';
 
-    const margin = { top: 40, right: 10, bottom: 120, left: 150 };
-    const cellSize = Math.min(55, Math.max(35, 500 / n));
+    const margin = { top: 40, right: 60, bottom: 160, left: 200 };
+    const cellSize = Math.min(80, Math.max(50, 600 / n));
     const width = margin.left + margin.right + n * cellSize;
     const height = margin.top + margin.bottom + n * cellSize;
 
@@ -83,9 +83,7 @@
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
     const maxVal = Math.max(1, ...matrix.flat());
-    const colorScale = isDark
-      ? d3.scaleSequential(d3.interpolateMagma).domain([maxVal, 0])
-      : d3.scaleSequential(d3.interpolatePurples).domain([0, maxVal]);
+    const colorScale = d3.scaleSequential(d3.interpolatePurples).domain([0, maxVal]);
 
     // Cells
     for (let i = 0; i < n; i++) {
@@ -154,6 +152,26 @@
       .attr('font-size', '14px')
       .attr('transform', (_, i) => `rotate(35, ${i * cellSize + cellSize / 2}, ${n * cellSize + 8})`)
       .text((d) => d);
+
+    // Color scale legend (right side)
+    const legendH = n * cellSize;
+    const legendW = 16;
+    const legendX = n * cellSize + 30;
+    const legendSteps = 10;
+    for (let i = 0; i < legendSteps; i++) {
+      const val = maxVal * (1 - i / legendSteps);
+      g.append('rect')
+        .attr('x', legendX)
+        .attr('y', (i / legendSteps) * legendH)
+        .attr('width', legendW)
+        .attr('height', legendH / legendSteps + 1)
+        .attr('fill', colorScale(val));
+    }
+    // Legend labels
+    g.append('text').attr('x', legendX + legendW + 6).attr('y', 4)
+      .attr('fill', fg).attr('font-size', '12px').attr('dominant-baseline', 'hanging').text(maxVal);
+    g.append('text').attr('x', legendX + legendW + 6).attr('y', legendH)
+      .attr('fill', fg).attr('font-size', '12px').attr('dominant-baseline', 'auto').text('0');
   }
 
   let mounted = false;

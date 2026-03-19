@@ -6,7 +6,7 @@
   Chart.register(...registerables);
 
   // Global font defaults — large, legible text on all charts
-  Chart.defaults.font.size = 14;
+  Chart.defaults.font.size = 16;
   Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
 
   export let type = 'bar';

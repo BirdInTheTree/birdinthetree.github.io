@@ -1,23 +1,16 @@
-import { sortPlotlines, buildColorMap, buildCastMap } from './helpers.js';
+import { sortPlotlines, buildColorMap } from './helpers.js';
 
 /**
- * Plotline span grid — custom canvas rendering.
- *
- * Returns a render function instead of Chart.js config.
- * Each row = plotline, each column = episode.
- * Cells show event count with plotline-colored background.
- * Gaps where the plotline is not active.
+ * Plotline span grid — table with totals.
+ * A-rank at top. Stretches to fill container width.
  */
 export function buildPlotlineSpan(data) {
   const plotlines = sortPlotlines(data.plotlines || []);
-  const episodes = data.episodes || [];
+  const episodes = (data.episodes || []).sort((a, b) => a.episode.localeCompare(b.episode));
   const episodeNames = episodes.map((ep) => ep.episode);
-  const epIdx = {};
-  episodeNames.forEach((name, i) => { epIdx[name] = i; });
+  const episodeThemes = episodes.map((ep) => ep.theme || '');
   const colors = buildColorMap(plotlines);
-  const cast = buildCastMap(data);
 
-  // Count events per plotline per episode
   const eventCounts = {};
   for (const ep of episodes) {
     for (const ev of ep.events || []) {
@@ -28,34 +21,35 @@ export function buildPlotlineSpan(data) {
     }
   }
 
-  // Reversed so A-rank plotlines appear at top
-  const reversed = [...plotlines].reverse();
-  const rankAlpha = { A: 1.0, B: 0.7, C: 0.45, runner: 0.3 };
+  const rankAlpha = { A: 0.85, B: 0.6, C: 0.4, runner: 0.25 };
 
   return { type: 'custom-canvas', render: renderGrid };
 
-  /**
-   * Draw the grid directly onto a canvas element.
-   * Called from the analytics page with a canvas reference.
-   */
   function renderGrid(canvas) {
     const isDark = document.documentElement.classList.contains('dark');
-    const fg = isDark ? '#a9b1d6' : '#1a1a1a';
-    const bg = isDark ? '#1a1b26' : '#ffffff';
-    const gridLine = isDark ? '#3b4261' : '#e5e7eb';
+    const fg = isDark ? '#cdd6f4' : '#1a1a1a';
+    const fgSub = isDark ? '#a6adc8' : '#666';
+    const gridLine = isDark ? '#3b4261' : '#d1d5db';
+    const totalBg = isDark ? '#313244' : '#f0f0f0';
 
-    const nRows = reversed.length;
+    const nRows = plotlines.length;
     const nCols = episodeNames.length;
 
-    // Sizing
-    const leftMargin = 240;
-    const topMargin = 80;
-    const cellW = 60;
-    const cellH = 40;
+    // Stretch to container width
+    const containerW = canvas.parentElement?.clientWidth || 1000;
+    const leftMargin = 220;
+    const totalColW = 70;
     const gap = 3;
+    const availW = containerW - leftMargin - totalColW - gap - 10;
+    const cellW = Math.max(70, Math.floor(availW / nCols) - gap);
+    const cellH = 42;
+    const headerH = 28;
+    const themeH = 24;
+    const topMargin = headerH + themeH;
 
-    const totalW = leftMargin + nCols * (cellW + gap) + 20;
-    const totalH = topMargin + nRows * (cellH + gap) + 20;
+    const gridW = nCols * (cellW + gap) + totalColW + gap;
+    const totalW = leftMargin + gridW + 10;
+    const totalH = topMargin + (nRows + 1) * (cellH + gap) + 10;
 
     const dpr = window.devicePixelRatio || 1;
     canvas.width = totalW * dpr;
@@ -66,89 +60,133 @@ export function buildPlotlineSpan(data) {
     const ctx = canvas.getContext('2d');
     ctx.scale(dpr, dpr);
 
-    // Background
-    ctx.fillStyle = bg;
-    ctx.fillRect(0, 0, totalW, totalH);
+    // Transparent background (inherits from page)
+    ctx.clearRect(0, 0, totalW, totalH);
 
-    // Title
-    ctx.fillStyle = fg;
+    // Episode code headers
     ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('Span Timeline — when each storyline is active', totalW / 2, 22);
-
-    // Episode labels (top)
-    ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
-    ctx.textAlign = 'center';
+    ctx.textBaseline = 'bottom';
+    ctx.fillStyle = fg;
     for (let c = 0; c < nCols; c++) {
       const x = leftMargin + c * (cellW + gap) + cellW / 2;
-      ctx.save();
-      ctx.translate(x, topMargin - 8);
-      ctx.rotate(-Math.PI / 6);
-      ctx.fillStyle = fg;
-      ctx.textAlign = 'right';
-      ctx.fillText(episodeNames[c], 0, 0);
-      ctx.restore();
+      ctx.fillText(episodeNames[c], x, headerH);
+    }
+    const totalColX = leftMargin + nCols * (cellW + gap);
+    ctx.fillText('Total', totalColX + totalColW / 2, headerH);
+
+    // Theme row
+    ctx.font = '14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.fillStyle = fgSub;
+    ctx.textBaseline = 'top';
+    for (let c = 0; c < nCols; c++) {
+      const x = leftMargin + c * (cellW + gap) + cellW / 2;
+      const theme = episodeThemes[c];
+      const maxChars = Math.floor(cellW / 8);
+      const truncated = theme.length > maxChars ? theme.slice(0, maxChars) + '\u2026' : theme;
+      ctx.fillText(truncated, x, headerH + 4);
     }
 
-    // Row labels and cells
+    // Data rows
     for (let r = 0; r < nRows; r++) {
-      const pl = reversed[r];
-      const rank = pl.rank || '?';
-      const driver = cast[pl.driver] || pl.driver || '';
-      const label = `[${rank}] ${pl.name} (${driver})`;
-
+      const pl = plotlines[r];
+      const label = `[${pl.rank}] ${pl.name}`;
       const y = topMargin + r * (cellH + gap);
 
-      // Row label
       ctx.fillStyle = fg;
-      ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
       ctx.textAlign = 'right';
       ctx.textBaseline = 'middle';
-      ctx.fillText(label, leftMargin - 12, y + cellH / 2);
+      ctx.fillText(label, leftMargin - 10, y + cellH / 2);
 
       const span = new Set(pl.span || []);
       const plCounts = eventCounts[pl.id] || {};
       const maxCount = Math.max(1, ...Object.values(plCounts));
       const baseAlpha = rankAlpha[pl.rank] ?? 0.5;
       const baseColor = colors[pl.id] || '#999';
+      let rowTotal = 0;
 
       for (let c = 0; c < nCols; c++) {
         const epName = episodeNames[c];
         const x = leftMargin + c * (cellW + gap);
 
         if (!span.has(epName)) {
-          // Empty cell — light border
           ctx.strokeStyle = gridLine;
-          ctx.lineWidth = 1;
+          ctx.lineWidth = 0.5;
           ctx.strokeRect(x, y, cellW, cellH);
           continue;
         }
 
         const count = plCounts[epName] || 0;
-        const weightFactor = maxCount > 0 ? Math.max(0.4, count / maxCount) : 0.4;
-        const alpha = baseAlpha * weightFactor;
+        rowTotal += count;
+        const intensity = maxCount > 0 ? Math.max(0.35, count / maxCount) : 0.35;
+        const alpha = baseAlpha * intensity;
 
-        // Colored cell
         ctx.globalAlpha = alpha;
         ctx.fillStyle = baseColor;
-        roundRect(ctx, x, y, cellW, cellH, 4);
+        roundRect(ctx, x, y, cellW, cellH, 3);
         ctx.fill();
         ctx.globalAlpha = 1.0;
 
-        // Event count number
         if (count > 0) {
-          ctx.fillStyle = alpha > 0.5 ? '#ffffff' : (isDark ? '#cdd6f4' : '#1a1a1a');
-          ctx.font = 'bold 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+          ctx.fillStyle = alpha > 0.5 ? '#ffffff' : (isDark ? '#cdd6f4' : '#333');
+          ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           ctx.fillText(String(count), x + cellW / 2, y + cellH / 2);
         }
       }
+
+      // Row total
+      ctx.fillStyle = totalBg;
+      roundRect(ctx, totalColX, y, totalColW, cellH, 3);
+      ctx.fill();
+      ctx.fillStyle = fg;
+      ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(String(rowTotal), totalColX + totalColW / 2, y + cellH / 2);
     }
+
+    // Total row
+    const totalRowY = topMargin + nRows * (cellH + gap);
+    ctx.fillStyle = fg;
+    ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.textAlign = 'right';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('Total', leftMargin - 10, totalRowY + cellH / 2);
+
+    let grandTotal = 0;
+    for (let c = 0; c < nCols; c++) {
+      const epName = episodeNames[c];
+      let colTotal = 0;
+      for (const pl of plotlines) {
+        colTotal += (eventCounts[pl.id] || {})[epName] || 0;
+      }
+      grandTotal += colTotal;
+      const x = leftMargin + c * (cellW + gap);
+      ctx.fillStyle = totalBg;
+      roundRect(ctx, x, totalRowY, cellW, cellH, 3);
+      ctx.fill();
+      ctx.fillStyle = fg;
+      ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(String(colTotal), x + cellW / 2, totalRowY + cellH / 2);
+    }
+
+    // Grand total
+    ctx.fillStyle = totalBg;
+    roundRect(ctx, totalColX, totalRowY, totalColW, cellH, 3);
+    ctx.fill();
+    ctx.fillStyle = fg;
+    ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(String(grandTotal), totalColX + totalColW / 2, totalRowY + cellH / 2);
   }
 }
 
-/** Draw a rounded rectangle path. */
 function roundRect(ctx, x, y, w, h, r) {
   ctx.beginPath();
   ctx.moveTo(x + r, y);

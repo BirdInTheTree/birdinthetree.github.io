@@ -1,34 +1,46 @@
 import { sortPlotlines, buildColorMap } from './helpers.js';
 
 /**
- * Stacked bar chart: event count per plotline per episode.
- * Uses afterDraw plugin to render count numbers inside each bar segment.
+ * 100% stacked bar chart: plotline proportions per episode.
+ * All columns same height, absolute event counts shown inside segments.
  */
 export function buildEpisodeBalance(data) {
   const plotlines = sortPlotlines(data.plotlines || []);
-  const episodes = data.episodes || [];
+  const episodes = (data.episodes || []).sort((a, b) => a.episode.localeCompare(b.episode));
   const colors = buildColorMap(plotlines);
 
-  const datasets = plotlines.map((pl) => {
-    const values = episodes.map((ep) => {
+  // Count events per plotline per episode
+  const rawCounts = plotlines.map((pl) =>
+    episodes.map((ep) => {
       let count = 0;
       for (const ev of ep.events || []) {
         if (ev.storyline === pl.id) count++;
       }
       return count;
-    });
+    })
+  );
 
-    return {
-      label: pl.name,
-      data: values,
-      backgroundColor: colors[pl.id],
-      borderWidth: 0
-    };
-  });
+  // Episode totals for 100% calculation
+  const epTotals = episodes.map((_, eIdx) =>
+    plotlines.reduce((sum, _, pIdx) => sum + rawCounts[pIdx][eIdx], 0)
+  );
+
+  // Convert to percentages for display, keep raw counts for labels
+  const datasets = plotlines.map((pl, pIdx) => ({
+    label: pl.name,
+    data: episodes.map((_, eIdx) => {
+      const total = epTotals[eIdx];
+      return total > 0 ? (rawCounts[pIdx][eIdx] / total) * 100 : 0;
+    }),
+    // Store raw counts for the label plugin
+    rawCounts: rawCounts[pIdx],
+    backgroundColor: colors[pl.id],
+    borderWidth: 0
+  }));
 
   const labels = episodes.map((ep) => {
     const theme = ep.theme || '';
-    return theme ? `${ep.episode}\n${theme.slice(0, 20)}` : ep.episode;
+    return theme ? `${ep.episode} ${theme.slice(0, 18)}\u2026` : ep.episode;
   });
 
   return {
@@ -41,45 +53,58 @@ export function buildEpisodeBalance(data) {
           position: 'top',
           labels: { boxWidth: 14, font: { size: 14 } }
         },
-        tooltip: { mode: 'index', intersect: false }
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label(ctx) {
+              const raw = ctx.dataset.rawCounts?.[ctx.dataIndex] ?? 0;
+              const pct = ctx.raw?.toFixed?.(0) ?? ctx.raw;
+              return `${ctx.dataset.label}: ${raw} events (${pct}%)`;
+            }
+          }
+        }
       },
       scales: {
         x: {
           stacked: true,
-          ticks: { maxRotation: 45, font: { size: 14 } }
+          ticks: { maxRotation: 45, font: { size: 12 } }
         },
         y: {
           stacked: true,
-          title: { display: true, text: 'Number of events', font: { size: 14 } },
+          max: 100,
+          title: { display: true, text: 'Share of events (%)', font: { size: 14 } },
           beginAtZero: true,
-          ticks: { font: { size: 14 } }
+          ticks: {
+            font: { size: 14 },
+            callback: (v) => v + '%'
+          }
         }
       }
     },
-    // Custom plugin to draw event count numbers inside bar segments
     plugins: [{
       id: 'barDataLabels',
       afterDraw(chart) {
         const ctx = chart.ctx;
         ctx.save();
-        const isDark = document.documentElement.classList.contains('dark');
-        ctx.fillStyle = '#ffffff';
         ctx.font = 'bold 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
+        ctx.fillStyle = '#ffffff';
 
         for (const dataset of chart.getSortedVisibleDatasetMetas()) {
-          for (const element of dataset.data) {
-            const value = element.$context?.parsed?.y;
-            if (!value || value < 1) continue;
+          const rawCounts = chart.data.datasets[dataset.index]?.rawCounts;
+          for (let i = 0; i < dataset.data.length; i++) {
+            const element = dataset.data[i];
+            const rawCount = rawCounts?.[i] ?? 0;
+            if (rawCount < 1) continue;
 
             const barHeight = Math.abs(element.base - element.y);
-            // Only show label if bar segment is tall enough
             if (barHeight < 16) continue;
 
             const cx = element.x;
             const cy = (element.y + element.base) / 2;
-            ctx.fillText(String(value), cx, cy);
+            ctx.fillText(String(rawCount), cx, cy);
           }
         }
         ctx.restore();

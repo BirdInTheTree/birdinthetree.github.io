@@ -15,7 +15,7 @@
 
   import { buildPlotlineSpan } from '$lib/charts/plotlineSpan.js';
   import { buildEpisodeBalance } from '$lib/charts/episodeBalance.js';
-  import { buildTensionCurves } from '$lib/charts/tensionCurves.js';
+  // Tension Curves removed by user request
   import { buildFunctionDistribution } from '$lib/charts/functionDistribution.js';
 
   $: if ($currentSeries) {
@@ -47,7 +47,6 @@
 
   $: spanChart = $seriesData ? buildPlotlineSpan($seriesData) : null;
   $: balanceChart = $seriesData ? buildEpisodeBalance($seriesData) : null;
-  $: tensionChart = $seriesData ? buildTensionCurves($seriesData) : null;
   $: fnDistChart = $seriesData ? buildFunctionDistribution($seriesData) : null;
 
   const charts = [
@@ -62,12 +61,6 @@
       title: 'Episode Balance',
       desc: 'How many events each plotline gets per episode. Numbers inside bar segments show exact counts.',
       type: 'bar'
-    },
-    {
-      key: 'tension',
-      title: 'Tension Curves',
-      desc: 'Narrative intensity per plotline across episodes, based on event function weights (setup=1, escalation=2, turning point=3, climax=4).',
-      type: 'line'
     },
     {
       key: 'convergence',
@@ -92,7 +85,6 @@
   function getChartConfig(key) {
     if (key === 'span') return spanChart;
     if (key === 'balance') return balanceChart;
-    if (key === 'tension') return tensionChart;
     if (key === 'fnDist') return fnDistChart;
     return null;
   }
