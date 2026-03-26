@@ -25,6 +25,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 /* Toolbar */
 .toolbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: white; border-radius: 8px; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
 .toolbar h1 { font-size: 1.5rem; }
+.toolbar-title-link { color: inherit; text-decoration: none; }
+.toolbar-title-link:hover { text-decoration: underline; }
 .toolbar-actions { display: flex; gap: 0.5rem; align-items: center; }
 
 /* Buttons */
@@ -91,12 +93,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .fn-setup { background: #f3f4f6; }
 .fn-escalation { background: #fef9c3; }
 .fn-turning_point { background: #fed7aa; }
-.fn-seed { background: #dbeafe; }
+.fn-inciting_incident { background: #dbeafe; }
 .fn-climax { background: #fecaca; }
 .fn-resolution { background: #d1fae5; }
+.fn-crisis { background: #fee2e2; }
+.fn-seed { background: #dbeafe; }
 .fn-cliffhanger { background: #e9d5ff; }
 .fn-catalyst { background: #dbeafe; }
-.fn-crisis { background: #fee2e2; }
 
 /* Context badges (franchise type, format) */
 .context-badge { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 4px; font-size: 1rem; background: #f3f4f6; color: #374151; margin-right: 0.5rem; }
@@ -149,12 +152,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 :root.dark .fn-setup { background: #343434; color: #c6c6c6; }
 :root.dark .fn-escalation { background: #433a2a; color: #f9e2af; }
 :root.dark .fn-turning_point { background: #3d2f24; color: #fab387; }
-:root.dark .fn-seed { background: #243347; color: #7dd3fc; }
+:root.dark .fn-inciting_incident { background: #243347; color: #7dd3fc; }
 :root.dark .fn-climax { background: #3d2332; color: #f38ba8; }
 :root.dark .fn-resolution { background: #1e3d2e; color: #a6e3a1; }
+:root.dark .fn-crisis { background: #3d2332; color: #fca5a5; }
+:root.dark .fn-seed { background: #243347; color: #7dd3fc; }
 :root.dark .fn-cliffhanger { background: #302040; color: #b07aa1; }
 :root.dark .fn-catalyst { background: #1e3a5f; color: #7dd3fc; }
-:root.dark .fn-crisis { background: #3d2332; color: #fca5a5; }
 :root.dark .context-badge { background: #343434; color: #c6c6c6; }
 :root.dark .confidence-solid { background: #1e3d2e; color: #a6e3a1; }
 :root.dark .confidence-moderate { background: #433a2a; color: #f9e2af; }
@@ -200,7 +204,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .bio { max-width: 640px; margin: 0 auto; padding: 3rem 1rem 4rem; }
 
 .bio-header { text-align: center; margin-bottom: 3rem; }
-.bio-name { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+.bio-name { font-size: 2.5rem; font-weight: 400; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
 .bio-tagline { font-size: 1.5rem; color: #888; font-weight: 400; }
 :root.dark .bio-tagline { color: #797979; }
 

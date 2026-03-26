@@ -42,7 +42,7 @@ export function plotlineCharacters(data, plotlineId) {
   const counts = new Map();
   for (const ep of data.episodes || []) {
     for (const event of ep.events || []) {
-      if ((event.plotline || event.storyline) === plotlineId) {
+      if ((event.plotline_id || event.plotline || event.storyline) === plotlineId) {
         for (const char of event.characters || []) {
           counts.set(char, (counts.get(char) || 0) + 1);
         }

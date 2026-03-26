@@ -21,7 +21,7 @@
 
     for (const ep of data.episodes) {
       for (const event of ep.events || []) {
-        const storyline = event.plotline || event.storyline;
+        const storyline = event.plotline_id || event.plotline || event.storyline;
         if (!storyline) continue;
 
         // Filter by active function types

@@ -106,12 +106,12 @@
 </script>
 
 <svelte:head>
-  <title>Analytics — Plotter</title>
+  <title>tvplot app — analytics</title>
 </svelte:head>
 
 <div class="page">
   <div class="toolbar">
-    <h1>Analytics</h1>
+    <h1><a href="https://github.com/BirdInTheTree/tvplotlines" class="toolbar-title-link">tvplot app</a> <span style="font-weight: 400; opacity: 0.6;">/ analytics</span></h1>
     <div class="toolbar-actions">
       <SeriesSelect />
       <a href="/plotter-app" class="btn">Grid View</a>

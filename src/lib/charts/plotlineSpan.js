@@ -14,7 +14,7 @@ export function buildPlotlineSpan(data) {
   const eventCounts = {};
   for (const ep of episodes) {
     for (const ev of ep.events || []) {
-      const sl = ev.plotline || ev.storyline;
+      const sl = ev.plotline_id || ev.plotline || ev.storyline;
       if (!sl) continue;
       if (!eventCounts[sl]) eventCounts[sl] = {};
       eventCounts[sl][ep.episode] = (eventCounts[sl][ep.episode] || 0) + 1;

@@ -38,7 +38,7 @@
     const cellSize = Math.min(80, Math.max(50, 600 / n));
     const totalColW = 70;
     const totalRowH = 30;
-    const margin = { top: 40, right: 80, bottom: 80, left: 200 };
+    const margin = { top: 40, right: 80, bottom: 110, left: 200 };
     const width = margin.left + n * cellSize + totalColW + margin.right;
     const height = margin.top + n * cellSize + totalRowH + margin.bottom;
 
@@ -132,20 +132,34 @@
       .attr('font-size', '16px')
       .text((d) => d);
 
-    // X-axis labels — horizontal, truncated
-    g.selectAll('.x-label')
-      .data(plotlineNames)
-      .enter()
-      .append('text')
-      .attr('x', (_, i) => i * cellSize + cellSize / 2)
-      .attr('y', n * cellSize + totalRowH + 16)
-      .attr('text-anchor', 'middle')
-      .attr('dominant-baseline', 'hanging')
-      .attr('fill', fg)
-      .attr('font-size', '16px')
-      .text((d) => d.length > 12 ? d.slice(0, 11) + '\u2026' : d)
-      .append('title')
-      .text((d) => d);
+    // X-axis labels — wrap long names into two lines
+    for (let i = 0; i < plotlineNames.length; i++) {
+      const name = plotlineNames[i];
+      const x = i * cellSize + cellSize / 2;
+      const y = n * cellSize + totalRowH + 16;
+      const words = name.split(/[:\s]+/);
+      // Split into two roughly equal lines
+      let line1, line2;
+      if (words.length <= 2 || name.length <= 12) {
+        line1 = name;
+        line2 = null;
+      } else {
+        const mid = Math.ceil(words.length / 2);
+        line1 = words.slice(0, mid).join(' ');
+        line2 = words.slice(mid).join(' ');
+      }
+
+      const label = g.append('text')
+        .attr('x', x)
+        .attr('y', y)
+        .attr('text-anchor', 'middle')
+        .attr('dominant-baseline', 'hanging')
+        .attr('fill', fg)
+        .attr('font-size', '14px');
+      label.append('tspan').attr('x', x).attr('dy', 0).text(line1);
+      if (line2) label.append('tspan').attr('x', x).attr('dy', '1.2em').text(line2);
+      label.append('title').text(name);
+    }
 
     // Color scale legend
     const legendH = n * cellSize;

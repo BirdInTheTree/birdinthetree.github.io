@@ -13,7 +13,7 @@ export function buildEpisodeBalance(data) {
     data: episodes.map((ep) => {
       let count = 0;
       for (const ev of ep.events || []) {
-        if ((ev.plotline || ev.storyline) === pl.id) count++;
+        if ((ev.plotline_id || ev.plotline || ev.storyline) === pl.id) count++;
       }
       return count;
     }),
@@ -22,6 +22,12 @@ export function buildEpisodeBalance(data) {
   }));
 
   const labels = episodes.map((ep) => ep.episode);
+
+  // Auto-scale Y-axis to fit tallest stacked bar
+  const epTotals = episodes.map((_, eIdx) =>
+    datasets.reduce((sum, ds) => sum + ds.data[eIdx], 0)
+  );
+  const yMax = Math.max(5, ...epTotals);
 
   return {
     data: { labels, datasets },
@@ -50,9 +56,10 @@ export function buildEpisodeBalance(data) {
         },
         y: {
           stacked: true,
+          max: yMax,
           title: { display: true, text: 'Event count', font: { size: 16 } },
           beginAtZero: true,
-          ticks: { font: { size: 16 } }
+          ticks: { font: { size: 16 }, precision: 0 }
         }
       }
     },

@@ -55,20 +55,17 @@
 </script>
 
 <svelte:head>
-  <title>Plotter App</title>
+  <title>tvplot app</title>
 </svelte:head>
 
 <div class="page">
   <div class="sticky-top">
     <div class="toolbar">
-      <h1>Plotter</h1>
+      <h1><a href="https://github.com/BirdInTheTree/tvplotlines" class="toolbar-title-link">tvplot app</a></h1>
       <div class="toolbar-actions">
         <SeriesSelect />
-        {#if $seriesData?.franchise_type}
-          <span class="context-badge">{$seriesData.franchise_type}</span>
-        {/if}
-        {#if $seriesData?.format}
-          <span class="context-badge">{$seriesData.format}</span>
+        {#if $seriesData?.context?.format}
+          <span class="context-badge">{$seriesData.context.format}</span>
         {/if}
         <a href="/plotter-app/analytics" class="btn">Analytics</a>
         <button class="btn" on:click={toggleTheme}>

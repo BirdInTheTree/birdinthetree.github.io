@@ -10,11 +10,11 @@
 </script>
 
 <svelte:head>
-  <title>Blog</title>
+  <title>Endnotes</title>
 </svelte:head>
 
 <div class="blog-listing">
-  <h1>Blog</h1>
+  <h1>Endnotes</h1>
 
   {#each posts as post}
     <a href="/blog/{post.slug}" class="blog-card">

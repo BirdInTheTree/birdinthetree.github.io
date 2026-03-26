@@ -8,7 +8,7 @@ export function buildStorylineArc(data, plotlineId) {
   const events = [];
   for (const ep of data.episodes || []) {
     for (const ev of ep.events || []) {
-      if ((ev.plotline || ev.storyline) === plotlineId) {
+      if ((ev.plotline_id || ev.plotline || ev.storyline) === plotlineId) {
         events.push({ ...ev, episode: ep.episode });
       }
     }
@@ -61,7 +61,7 @@ export function computeArcCompleteness(data) {
     const funcs = new Set();
     for (const ep of data.episodes || []) {
       for (const ev of ep.events || []) {
-        if ((ev.plotline || ev.storyline) === pl.id && ev.function) {
+        if ((ev.plotline_id || ev.plotline || ev.storyline) === pl.id && ev.function) {
           funcs.add(ev.function);
         }
       }
@@ -93,7 +93,7 @@ export function buildConvergenceMatrix(data) {
 
   for (const ep of data.episodes || []) {
     for (const ev of ep.events || []) {
-      const src = (ev.plotline || ev.storyline);
+      const src = (ev.plotline_id || ev.plotline || ev.storyline);
       if (!src || !(src in idToIdx) || !ev.also_affects) continue;
       for (const tgt of ev.also_affects) {
         if (tgt in idToIdx && tgt !== src) {

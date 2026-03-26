@@ -16,13 +16,19 @@ export function buildArcMap(data) {
   for (const phases of arcs.values()) {
     for (const p of phases) funcsInData.add(p.function);
   }
-  const columns = [...ALL_FUNCTIONS, ...LEGACY_FUNCTIONS].filter(
-    (f) => funcsInData.has(f)
-  );
+  // Display order: arc progression from setup through resolution
+  const DISPLAY_ORDER = {
+    setup: 1, seed: 1.5, catalyst: 2,
+    escalation: 3, turning_point: 4, crisis: 5,
+    climax: 6, cliffhanger: 6.5, resolution: 7
+  };
+  const columns = [...ALL_FUNCTIONS, ...LEGACY_FUNCTIONS]
+    .filter((f) => funcsInData.has(f))
+    .sort((a, b) => (DISPLAY_ORDER[a] || 0) - (DISPLAY_ORDER[b] || 0));
 
-  // ACT assignments for column grouping
+  // ACT assignments based on arc weight
   const ACT_MAP = {
-    setup: 1, catalyst: 1, seed: 1,
+    setup: 1, seed: 1, catalyst: 1,
     escalation: 2, turning_point: 2, crisis: 2,
     climax: 3, cliffhanger: 3, resolution: 3
   };

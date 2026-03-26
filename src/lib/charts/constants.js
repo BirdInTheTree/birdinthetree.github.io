@@ -1,18 +1,18 @@
 /** Narrative function tension weights — higher = more dramatic. */
 export const FUNCTION_TENSION = {
   setup: 1,
-  seed: 1,
+  inciting_incident: 2,
   escalation: 2,
   turning_point: 3,
+  crisis: 4,
   climax: 4,
-  cliffhanger: 4,
   resolution: 0.5
 };
 
-/** Ordered list of all narrative functions. */
+/** Ordered list of all narrative functions (current schema). */
 export const ALL_FUNCTIONS = [
-  'setup', 'seed', 'escalation', 'turning_point',
-  'climax', 'resolution', 'cliffhanger'
+  'setup', 'inciting_incident', 'escalation', 'turning_point',
+  'crisis', 'climax', 'resolution'
 ];
 
 /**
@@ -37,12 +37,12 @@ export const STORYLINE_PALETTE = [
 /** Colors matching narrative function CSS classes. */
 export const FUNCTION_COLORS = {
   setup: '#D4D4D4',
+  inciting_incident: '#009E73',
   escalation: '#F0E442',
   turning_point: '#56B4E9',
-  seed: '#009E73',
+  crisis: '#E69F00',
   climax: '#D55E00',
-  resolution: '#CC79A7',
-  cliffhanger: '#E69F00'
+  resolution: '#CC79A7'
 };
 
 /** Plotline rank sort order — lower is more important. */
@@ -51,18 +51,16 @@ export const RANK_ORDER = { A: 0, B: 1, C: 2, runner: 3 };
 /** Narrative function weights — position in arc. */
 export const FUNCTION_WEIGHTS = {
   setup: 1,
-  catalyst: 2,
+  inciting_incident: 2,
   escalation: 3,
   turning_point: 4,
   crisis: 5,
   climax: 6,
-  resolution: 1,
-  seed: 1,
-  cliffhanger: 6
+  resolution: 7
 };
 
-/** Legacy functions that may appear in older data. */
-export const LEGACY_FUNCTIONS = ['seed', 'cliffhanger'];
+/** Legacy functions from older data that may still appear. */
+export const LEGACY_FUNCTIONS = ['seed', 'catalyst', 'cliffhanger'];
 
 /** Rank badge colors — consistent across all views. */
 export const RANK_COLORS = {

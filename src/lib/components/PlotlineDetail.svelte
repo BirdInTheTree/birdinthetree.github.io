@@ -16,8 +16,8 @@
     if (e.target === e.currentTarget) close();
   }
 
-  $: driver = plotline.driver
-    ? resolveCharacterName(plotline.driver, cast)
+  $: driver = plotline.hero || plotline.driver
+    ? resolveCharacterName(plotline.hero || plotline.driver, cast)
     : null;
 
   $: span = (plotline.span || []).join(', ');

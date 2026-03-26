@@ -7,12 +7,12 @@
 
   const FUNCTION_TYPES = [
     { name: 'setup', label: 'Setup' },
+    { name: 'inciting_incident', label: 'Inciting Incident' },
     { name: 'escalation', label: 'Escalation' },
     { name: 'turning_point', label: 'Turning Point' },
-    { name: 'seed', label: 'Seed' },
+    { name: 'crisis', label: 'Crisis' },
     { name: 'climax', label: 'Climax' },
-    { name: 'resolution', label: 'Resolution' },
-    { name: 'cliffhanger', label: 'Cliffhanger' }
+    { name: 'resolution', label: 'Resolution' }
   ];
 
   $: charFreqs = data ? characterFrequencies(data) : [];
