@@ -25,8 +25,8 @@
     const entry = $manifest.find((s) => s.slug === slug);
     if (!entry) return;
     isLoading.set(true);
-    const data = await loadSeriesData(entry.file);
-    seriesData.set(data);
+    const result = await loadSeriesData(slug, entry.file);
+    seriesData.set(result.data);
     isLoading.set(false);
   }
 

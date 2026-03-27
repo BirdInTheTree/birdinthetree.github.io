@@ -6,6 +6,7 @@
   export let episode;
   export let data;
   export let cast;
+  export let editable = false;
 
   const dispatch = createEventDispatcher();
 
@@ -36,6 +37,9 @@
   <div class="modal">
     <div class="modal-header">
       <h2>{episode}</h2>
+      {#if editable}
+        <button class="btn btn-primary" on:click={() => dispatch('edit')}>Edit</button>
+      {/if}
       <button class="btn side-panel-close" on:click={close}>&times;</button>
     </div>
 

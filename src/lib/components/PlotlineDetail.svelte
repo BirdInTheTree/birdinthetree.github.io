@@ -5,6 +5,7 @@
   export let plotline;
   export let data;
   export let cast;
+  export let editable = false;
 
   const dispatch = createEventDispatcher();
 
@@ -30,6 +31,9 @@
   <div class="side-panel">
     <div class="side-panel-header">
       <h2>{plotline.name}</h2>
+      {#if editable}
+        <button class="btn btn-primary" on:click={() => dispatch('edit')}>Edit</button>
+      {/if}
       <button class="btn side-panel-close" on:click={close}>&times;</button>
     </div>
 

@@ -6,6 +6,9 @@
 
   export let data;
   export let cast;
+  export let editable = false;
+  export let mergeMode = false;
+  export let mergeSelection = [];
 
   const dispatch = createEventDispatcher();
 
@@ -79,6 +82,7 @@
           <tr>
             <td
               class="sticky-col plotline-cell"
+              class:merge-selected={mergeMode && mergeSelection.includes(pl.id)}
               on:click={() => dispatch('selectPlotline', pl)}
               on:keydown={(e) => e.key === 'Enter' && dispatch('selectPlotline', pl)}
               role="button"
@@ -96,10 +100,25 @@
             </td>
             {#each $sortedEpisodes as ep}
               {@const events = eventGrid.get(`${pl.id}|${ep.episode}`) || []}
-              <td class="event-cell" class:empty-cell={events.length === 0}>
+              <td
+                class="event-cell"
+                class:empty-cell={events.length === 0}
+                class:clickable-empty={editable && events.length === 0}
+                on:click={() => {
+                  if (editable && events.length === 0) {
+                    dispatch('addEvent', { episode: ep.episode, plotlineId: pl.id });
+                  }
+                }}
+                on:keydown={() => {}}
+                role={editable && events.length === 0 ? 'button' : undefined}
+                tabindex={editable && events.length === 0 ? 0 : undefined}
+              >
                 {#each events as event}
                   <EventCard {event} on:select={() => dispatch('selectEvent', { event, episode: ep.episode })} />
                 {/each}
+                {#if editable && events.length === 0}
+                  <span class="add-hint">+</span>
+                {/if}
               </td>
             {/each}
           </tr>
