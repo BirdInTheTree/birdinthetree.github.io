@@ -1,5 +1,8 @@
-import adapter from '@sveltejs/adapter-static';
+import adapterStatic from '@sveltejs/adapter-static';
+import adapterNode from '@sveltejs/adapter-node';
 import { mdsvex } from 'mdsvex';
+
+const useStatic = process.env.ADAPTER === 'static';
 
 const config = {
   extensions: ['.svelte', '.md'],
@@ -7,13 +10,17 @@ const config = {
     mdsvex({ extensions: ['.md'] })
   ],
   kit: {
-    adapter: adapter({
-      pages: 'build',
-      assets: 'build',
-      fallback: '404.html',
-      precompress: false,
-      strict: true
-    }),
+    adapter: useStatic
+      ? adapterStatic({
+          pages: 'build',
+          assets: 'build',
+          fallback: '404.html',
+          precompress: false,
+          strict: true
+        })
+      : adapterNode({
+          out: 'build-node'
+        }),
     paths: { base: '' }
   }
 };

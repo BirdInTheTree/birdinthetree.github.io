@@ -6,11 +6,14 @@
     "dev": "vite dev",
     "build:manifest": "node scripts/build-manifest.js",
     "prebuild": "npm run build:manifest",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "ADAPTER=static vite build",
+    "build:node": "vite build",
+    "preview": "vite preview",
+    "start": "node build-node"
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-node": "^5.5.4",
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.55.0",
     "svelte": "^5.53.12",
