@@ -1,6 +1,8 @@
 import { json, error } from '@sveltejs/kit';
 import { getSeriesData, updateSeriesData } from '$lib/server/store.js';
 
+export const prerender = false;
+
 export function GET({ params }) {
   const result = getSeriesData(params.slug);
   if (!result) throw error(404, `Series '${params.slug}' not found`);
