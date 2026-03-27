@@ -71,15 +71,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .plotline-cell { cursor: pointer; border-radius: 6px; border: 1px solid #e5e5e5; transition: background 0.15s; }
 .plotline-cell:hover { background: #f0f4ff; }
 .plotline-name { font-weight: 600; margin-bottom: 0.25rem; }
-.plotline-characters { font-size: 1rem; color: #666; line-height: 1.4; }
+.plotline-badges { display: flex; gap: 0.25rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.25rem; }
+.plotline-characters { font-size: 0.85rem; color: #888; line-height: 1.3; }
 .guest-char { font-style: italic; }
+.chars-more { color: #aaa; font-size: 0.8rem; }
 
 /* Rank badges */
-.rank-badge { display: inline-block; padding: 0.125rem 0.5rem; border-radius: 10px; font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+.rank-badge { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 10px; font-size: 0.75rem; font-weight: 700; }
 .rank-a { background: #dbeafe; color: #1e40af; }
 .rank-b { background: #fef3c7; color: #92400e; }
 .rank-c { background: #e5e7eb; color: #374151; }
 .rank-runner { background: #f3e8ff; color: #6b21a8; }
+.rank-computed { opacity: 0.6; border: 1px dashed currentColor; }
+
+/* Stat badges */
+.stat-badge { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 10px; font-size: 0.7rem; font-weight: 600; background: #f3f4f6; color: #555; }
+.stat-affected { background: #ede9fe; color: #6b21a8; }
 
 /* Event cells */
 .event-cell { min-width: 180px; min-height: 80px; border-radius: 6px; border: 1px solid #e5e5e5; }
@@ -144,7 +151,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 :root.dark .plotline-cell { border-color: #343434; }
 :root.dark .plotline-cell:hover { background: #343434; }
 :root.dark .plotline-name { color: #c6c6c6; }
-:root.dark .plotline-characters { color: #8a8a8a; }
+:root.dark .plotline-characters { color: #666; }
+:root.dark .chars-more { color: #555; }
+:root.dark .stat-badge { background: #2a2a2a; color: #8a8a8a; }
+:root.dark .stat-affected { background: #302040; color: #b07aa1; }
 :root.dark .event-cell { border-color: #343434; }
 :root.dark .empty-cell { border-color: #454545; }
 :root.dark .legend-active { border-color: #c6c6c6; }

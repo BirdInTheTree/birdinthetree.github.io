@@ -1,8 +1,10 @@
 <script>
   import { createEventDispatcher } from 'svelte';
   import EventCard from './EventCard.svelte';
-  import { sortedPlotlines, sortedEpisodes, selectedChars, activeFunctions, isLoading } from '$lib/stores/app.js';
+  import { sortedPlotlines, sortedEpisodes, selectedChars, activeFunctions, isLoading, plotlineStats } from '$lib/stores/app.js';
   import { plotlineCharacters, resolveCharacterName, isGuest } from '$lib/helpers.js';
+
+  const MAX_CHARS = 3;
 
   export let data;
   export let cast;
@@ -90,14 +92,29 @@
               tabindex="0"
             >
               <div class="plotline-name">{pl.name}</div>
-              <span class="rank-badge rank-{pl.rank.toLowerCase()}">{pl.rank}</span>
-              <div class="plotline-characters">
-                {#each getPlotlineChars(pl.id) as charId, i}
-                  <span class:guest-char={isGuest(charId)}
-                    >{resolveCharacterName(charId, cast)}</span
-                  >{#if i < getPlotlineChars(pl.id).length - 1},&nbsp;{/if}
-                {/each}
-              </div>
+              {#if $plotlineStats.has(pl.id)}
+                {@const stats = $plotlineStats.get(pl.id)}
+                {@const chars = getPlotlineChars(pl.id)}
+                <div class="plotline-badges">
+                  <span class="rank-badge rank-{pl.rank.toLowerCase()}" title="Model rank">{pl.rank}</span>
+                  {#if stats.computedRank && stats.computedRank !== pl.rank && stats.computedRank !== 'runner'}
+                    <span class="rank-badge rank-{stats.computedRank.toLowerCase()} rank-computed" title="Computed rank">{stats.computedRank}*</span>
+                  {/if}
+                  <span class="stat-badge" title="Events">{stats.events} ev</span>
+                  <span class="stat-badge" title="Span">{stats.span}/{stats.totalEpisodes} ep</span>
+                  {#if stats.affected > 0}
+                    <span class="stat-badge stat-affected" title="Also affects">{stats.affected} aff</span>
+                  {/if}
+                </div>
+                <div class="plotline-characters">
+                  {#each chars.slice(0, MAX_CHARS) as charId, i}
+                    <span class:guest-char={isGuest(charId)}>{resolveCharacterName(charId, cast)}</span>{#if i < Math.min(chars.length, MAX_CHARS) - 1},&nbsp;{/if}
+                  {/each}
+                  {#if chars.length > MAX_CHARS}
+                    <span class="chars-more">+{chars.length - MAX_CHARS}</span>
+                  {/if}
+                </div>
+              {/if}
             </td>
             {#each $sortedEpisodes as ep}
               {@const events = eventGrid.get(`${pl.id}|${ep.episode}`) || []}
