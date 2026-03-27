@@ -10,6 +10,11 @@ export const isLoading = writable(false);
 export const selectedChars = writable(new Set());
 export const activeFunctions = writable(new Set());
 
+// Editing stores
+export const editMode = writable(false);
+export const isDirty = writable(false);
+export const toastMessage = writable(null);
+
 function getInitialTheme() {
   if (!browser) return 'light';
   return localStorage.getItem('theme') || 'light';
@@ -23,6 +28,14 @@ if (browser) {
     document.documentElement.classList.toggle('dark', value === 'dark');
     localStorage.setItem('theme', value);
   });
+}
+
+/** Show a toast message that auto-dismisses after 3s. */
+export function showToast(message) {
+  toastMessage.set(message);
+  if (browser) {
+    setTimeout(() => toastMessage.set(null), 3000);
+  }
 }
 
 /** Plotlines sorted by rank: A < B < C < runner */
