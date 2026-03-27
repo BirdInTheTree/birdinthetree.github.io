@@ -39,8 +39,8 @@ export function showToast(message) {
 }
 
 /**
- * Per-plotline stats: event count, span ratio, also_affects count, computed rank.
- * Map of plotlineId -> { events, span, totalEpisodes, affected, computedRank }
+ * Per-plotline stats: event count, span ratio, also_affects count.
+ * Map of plotlineId -> { events, span, totalEpisodes, affected }
  */
 export const plotlineStats = derived(seriesData, ($data) => {
   if (!$data?.plotlines || !$data?.episodes) return new Map();
@@ -48,7 +48,6 @@ export const plotlineStats = derived(seriesData, ($data) => {
   const stats = new Map();
   const totalEp = $data.episodes.length;
 
-  // Count primary events and span per plotline
   for (const pl of $data.plotlines) {
     stats.set(pl.id, { events: 0, span: (pl.span || []).length, totalEpisodes: totalEp, affected: 0 });
   }
@@ -64,27 +63,6 @@ export const plotlineStats = derived(seriesData, ($data) => {
           stats.get(aid).affected++;
         }
       }
-    }
-  }
-
-  // Compute rank from event counts (same logic as pipeline)
-  const ranked = [...stats.entries()]
-    .filter(([id]) => {
-      const pl = $data.plotlines.find(p => p.id === id);
-      return pl && pl.type !== 'runner';
-    })
-    .sort((a, b) => b[1].events - a[1].events);
-
-  ranked.forEach(([id, s], i) => {
-    if (i === 0) s.computedRank = 'A';
-    else if (i === 1) s.computedRank = 'B';
-    else s.computedRank = 'C';
-  });
-
-  // Runners get no computed rank
-  for (const pl of $data.plotlines) {
-    if (pl.type === 'runner' && stats.has(pl.id)) {
-      stats.get(pl.id).computedRank = 'runner';
     }
   }
 

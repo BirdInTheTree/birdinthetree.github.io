@@ -96,9 +96,9 @@
                 {@const stats = $plotlineStats.get(pl.id)}
                 {@const chars = getPlotlineChars(pl.id)}
                 <div class="plotline-badges">
-                  <span class="rank-badge rank-{pl.rank.toLowerCase()}" title="Model rank">{pl.rank}</span>
-                  {#if stats.computedRank && stats.computedRank !== pl.rank && stats.computedRank !== 'runner'}
-                    <span class="rank-badge rank-{stats.computedRank.toLowerCase()} rank-computed" title="Computed rank">{stats.computedRank}*</span>
+                  <span class="rank-badge rank-{pl.rank.toLowerCase()}">{pl.rank}</span>
+                  {#if pl.computed_rank && pl.reviewed_rank && pl.computed_rank !== pl.reviewed_rank}
+                    <span class="rank-badge rank-{pl.computed_rank.toLowerCase()} rank-computed" title="Computed rank (before review)">{pl.computed_rank}</span>
                   {/if}
                   <span class="stat-badge" title="Events">{stats.events} ev</span>
                   <span class="stat-badge" title="Span">{stats.span}/{stats.totalEpisodes} ep</span>
