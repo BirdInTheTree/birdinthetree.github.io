@@ -18,6 +18,20 @@
   $: charFreqs = data ? characterFrequencies(data) : [];
   $: hasActiveFilters = $activeFunctions.size > 0;
 
+  /** Count events per function type across all episodes. */
+  $: fnCounts = countByFunction(data);
+
+  function countByFunction(data) {
+    const counts = new Map();
+    for (const ep of data?.episodes || []) {
+      for (const ev of ep.events || []) {
+        const fn = ev.function;
+        if (fn) counts.set(fn, (counts.get(fn) || 0) + 1);
+      }
+    }
+    return counts;
+  }
+
   function toggleChar(charId) {
     selectedChars.update((set) => {
       const next = new Set(set);
@@ -70,7 +84,7 @@
         role="button"
         tabindex="0"
       >
-        {fn.label}
+        {fn.label}<span class="fn-count">{fnCounts.get(fn.name) || 0}</span>
       </span>
     {/each}
   </div>
