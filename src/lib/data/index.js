@@ -6,11 +6,21 @@ let useApi = null; // null = not checked, true/false after check
  * Detect whether server API is available (adapter-node mode).
  * Caches the result after first check.
  */
+/**
+ * Detect whether server API is available (adapter-node mode).
+ * Caches the result and the manifest response to avoid double-fetch.
+ */
 async function detectApiMode() {
   if (useApi !== null) return useApi;
   try {
     const res = await fetch('/api/manifest');
-    useApi = res.ok;
+    if (res.ok) {
+      useApi = true;
+      // Cache the manifest from the detection request
+      manifestCache = await res.json();
+    } else {
+      useApi = false;
+    }
   } catch {
     useApi = false;
   }
@@ -18,11 +28,10 @@ async function detectApiMode() {
 }
 
 export async function loadManifest() {
+  await detectApiMode();
   if (manifestCache) return manifestCache;
 
-  const isApi = await detectApiMode();
-  const url = isApi ? '/api/manifest' : '/data/manifest.json';
-  const res = await fetch(url);
+  const res = await fetch('/data/manifest.json');
   manifestCache = await res.json();
   return manifestCache;
 }
@@ -53,17 +62,24 @@ export async function loadSeriesData(slug, file) {
 export async function updateSeriesData(slug, data) {
   dataCache.set(slug, { data, isDirty: true });
   if (!useApi) return;
-  await fetch(`/api/series/${slug}`, {
+  const res = await fetch(`/api/series/${slug}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
   });
+  if (!res.ok) {
+    console.error(`Failed to update series ${slug}: ${res.status}`);
+  }
 }
 
 /** Save series to disk. Returns the new filename. */
 export async function saveSeriesData(slug) {
   if (!useApi) return null;
   const res = await fetch(`/api/series/${slug}/save`, { method: 'POST' });
+  if (!res.ok) {
+    console.error(`Failed to save series ${slug}: ${res.status}`);
+    return null;
+  }
   const result = await res.json();
   dataCache.delete(slug);
   return result.filename;

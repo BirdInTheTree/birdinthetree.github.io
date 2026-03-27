@@ -26,6 +26,7 @@
   let selectedPlotline = null;
   let selectedEvent = null;
   let selectedEpisode = null;
+  let selectedEventIndex = -1;
 
   // Editing modal state
   let editingPlotline = null;
@@ -154,17 +155,16 @@
     showToast(`Plotline '${name}' deleted`);
   }
 
-  function handleSelectEvent(event, episode) {
+  function handleSelectEvent(event, episode, eventIndex) {
     selectedEvent = event;
     selectedEpisode = episode;
+    selectedEventIndex = eventIndex;
   }
 
   function handleEditEvent() {
     editingEvent = selectedEvent;
     editingEpisode = selectedEpisode;
-    // Find event index within episode
-    const ep = $seriesData.episodes.find(e => e.episode === selectedEpisode);
-    editingEventIndex = ep ? ep.events.indexOf(selectedEvent) : -1;
+    editingEventIndex = selectedEventIndex;
     isNewEvent = false;
     selectedEvent = null;
   }
@@ -321,7 +321,7 @@
     {mergeMode}
     mergeSelection={mergeSelection.map(p => p.id)}
     on:selectPlotline={(e) => handleSelectPlotline(e.detail)}
-    on:selectEvent={(e) => handleSelectEvent(e.detail.event, e.detail.episode)}
+    on:selectEvent={(e) => handleSelectEvent(e.detail.event, e.detail.episode, e.detail.eventIndex)}
     on:addEvent={(e) => handleAddEvent(e.detail.episode, e.detail.plotlineId)}
   />
 </div>

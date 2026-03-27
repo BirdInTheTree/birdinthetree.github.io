@@ -23,7 +23,8 @@
     const hasFnFilter = activeFns.size > 0;
 
     for (const ep of data.episodes) {
-      for (const event of ep.events || []) {
+      for (let idx = 0; idx < (ep.events || []).length; idx++) {
+        const event = ep.events[idx];
         const storyline = event.plotline_id || event.plotline || event.storyline;
         if (!storyline) continue;
 
@@ -39,7 +40,7 @@
 
         const key = `${storyline}|${ep.episode}`;
         if (!grid.has(key)) grid.set(key, []);
-        grid.get(key).push(event);
+        grid.get(key).push({ event, idx });
       }
     }
     return grid;
@@ -113,8 +114,8 @@
                 role={editable && events.length === 0 ? 'button' : undefined}
                 tabindex={editable && events.length === 0 ? 0 : undefined}
               >
-                {#each events as event}
-                  <EventCard {event} on:select={() => dispatch('selectEvent', { event, episode: ep.episode })} />
+                {#each events as entry}
+                  <EventCard event={entry.event} on:select={() => dispatch('selectEvent', { event: entry.event, episode: ep.episode, eventIndex: entry.idx })} />
                 {/each}
                 {#if editable && events.length === 0}
                   <span class="add-hint">+</span>
