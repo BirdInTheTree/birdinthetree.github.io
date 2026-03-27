@@ -12,16 +12,22 @@ const states = new Map();
 /** @type {string|null} */
 let dataDir = null;
 
-/** Derive slug from filename: "bb_s01_result.json" -> "bb_s01" */
+/**
+ * Derive slug from filename.
+ * "bb_s01_result.json" -> "bb_s01"
+ * "breaking-bad_s01_20260327_124618.json" -> "breaking-bad_s01"
+ */
 function deriveSlug(filename) {
   const base = filename.replace('.json', '');
-  const versionMatch = base.match(/^(.+)_result_(v\d+)$/);
+  // Strip pipeline timestamp suffix: _YYYYMMDD_HHMMSS
+  const noTimestamp = base.replace(/_\d{8}_\d{6}$/, '');
+  const versionMatch = noTimestamp.match(/^(.+)_result_(v\d+)$/);
   if (versionMatch) return `${versionMatch[1]}_${versionMatch[2]}`;
-  const resultMatch = base.match(/^(.+)_result$/);
+  const resultMatch = noTimestamp.match(/^(.+)_result$/);
   if (resultMatch) return resultMatch[1];
-  const finalMatch = base.match(/^(.+)_final$/);
+  const finalMatch = noTimestamp.match(/^(.+)_final$/);
   if (finalMatch) return finalMatch[1];
-  return base;
+  return noTimestamp;
 }
 
 /** Find the latest versioned file for a given original path. */
@@ -87,12 +93,30 @@ export function loadDirectory(dirPath) {
   return getManifest();
 }
 
+/**
+ * Format slug into readable title.
+ * "breaking-bad_s01" -> "Breaking Bad S01"
+ * "game-of-thrones_s01" -> "Game of Thrones S01"
+ */
+function formatDisplayName(slug) {
+  // Split on underscore to separate show name from season
+  const parts = slug.split('_');
+  return parts.map(part => {
+    if (/^s\d+$/i.test(part)) return part.toUpperCase(); // S01, S02
+    if (/^v\d+$/i.test(part)) return part; // v2, v3
+    // Capitalize each word in hyphenated names
+    return part.split('-')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+  }).join(' ');
+}
+
 /** Return manifest array: [{ slug, displayName, file }] */
 export function getManifest() {
   if (!dataDir) return [];
   return [...states.entries()].map(([slug, state]) => ({
     slug,
-    displayName: slug.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()),
+    displayName: formatDisplayName(slug),
     file: basename(state.originalPath)
   }));
 }
