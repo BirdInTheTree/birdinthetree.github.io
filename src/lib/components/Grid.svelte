@@ -96,7 +96,7 @@
                 {@const stats = $plotlineStats.get(pl.id)}
                 {@const chars = getPlotlineChars(pl.id)}
                 <div class="plotline-stats" title="Rank | Span | Events (primary +affected)">
-                  <span class="rank-badge rank-{pl.rank.toLowerCase()}">{pl.rank}</span>{#if pl.computed_rank && pl.reviewed_rank && pl.computed_rank !== pl.reviewed_rank}<span class="rank-badge rank-{pl.computed_rank.toLowerCase()} rank-computed">/{pl.computed_rank}</span>{/if}
+                  <span class="rank-badge rank-{(pl.rank || 'c').toLowerCase()}">{pl.rank || '–'}</span>{#if pl.computed_rank && pl.reviewed_rank && pl.computed_rank !== pl.reviewed_rank}<span class="rank-badge rank-{pl.computed_rank.toLowerCase()} rank-computed">/{pl.computed_rank}</span>{/if}
                   <span class="stat-sep">|</span>
                   <span class="stat-num">{stats.span}/{stats.totalEpisodes}</span>
                   <span class="stat-sep">|</span>
