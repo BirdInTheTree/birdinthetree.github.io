@@ -312,7 +312,7 @@
     {#if $seriesData}
       <Filters data={$seriesData} {cast} />
       {#if $seriesData.context?.story_engine}
-        <div class="story-engine">{$seriesData.context.story_engine}</div>
+        <div class="story-engine"><span class="story-engine-label">story engine:</span> {$seriesData.context.story_engine}</div>
       {/if}
     {/if}
   </div>
