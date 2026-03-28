@@ -65,7 +65,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .header-cell { text-align: center; background: #f8f8f8; border-radius: 6px; }
 .sticky-col.header-cell { z-index: 4; }
 .ep-code { font-weight: 600; font-size: 0.9rem; }
-.ep-theme { font-size: 1rem; color: #666; margin-top: 0.25rem; line-height: 1.3; word-wrap: break-word; overflow-wrap: break-word; }
+.ep-theme { font-size: 0.85rem; font-weight: 400; color: #888; margin-top: 0.25rem; line-height: 1.3; word-wrap: break-word; overflow-wrap: break-word; }
+.story-engine { font-size: 0.8rem; font-weight: 400; color: #888; line-height: 1.4; margin-top: 0.25rem; font-style: italic; text-align: left; }
 
 /* Plotline left cell */
 .plotline-cell { cursor: pointer; border-radius: 6px; border: 1px solid #e5e5e5; transition: background 0.15s; }
@@ -147,7 +148,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 :root.dark .sticky-col { background: #151515; }
 :root.dark .header-cell { background: #101010; }
 :root.dark .ep-code { color: #2d82cd; }
-:root.dark .ep-theme { color: #8a8a8a; }
+:root.dark .ep-theme { color: #666; }
+:root.dark .story-engine { color: #666; }
 :root.dark .plotline-cell { border-color: #343434; }
 :root.dark .plotline-cell:hover { background: #343434; }
 :root.dark .plotline-name { color: #c6c6c6; }

@@ -71,11 +71,16 @@
     <table class="timeline-grid">
       <thead>
         <tr>
-          <th class="sticky-col header-cell">Plotline</th>
+          <th class="sticky-col header-cell">
+            <div>Plotline</div>
+            {#if data?.context?.story_engine}
+              <div class="story-engine">{data.context.story_engine}</div>
+            {/if}
+          </th>
           {#each $sortedEpisodes as ep}
             <th class="header-cell">
               <div class="ep-code">{ep.episode}</div>
-              <div class="ep-theme">Theme: {truncateTheme(ep.theme)}</div>
+              <div class="ep-theme">{truncateTheme(ep.theme)}</div>
             </th>
           {/each}
         </tr>
