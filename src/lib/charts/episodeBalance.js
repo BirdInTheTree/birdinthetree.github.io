@@ -37,7 +37,7 @@ export function buildEpisodeBalance(data) {
       plugins: {
         legend: {
           position: 'top',
-          labels: { boxWidth: 14, font: { size: 16 } }
+          labels: { boxWidth: 14, font: { size: 16 }, padding: 20 }
         },
         tooltip: {
           mode: 'index',
