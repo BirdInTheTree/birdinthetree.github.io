@@ -1,7 +1,7 @@
 {
   "context": {
     "format": "procedural",
-    "story_engine": "An antisocial maverick doctor uses unconventional methods to diagnose mysterious medical cases that baffle other physicians",
+    "story_engine": "An antisocial maverick doctor does whatever it takes to solve puzzling cases that come his way",
     "genre": "medical drama",
     "is_anthology": false
   },
@@ -12,7 +12,7 @@
       "aliases": [
         "House",
         "Dr. House",
-        "Greg"
+        "Dr. Gregory House"
       ]
     },
     {
@@ -20,7 +20,8 @@
       "name": "Lisa Cuddy",
       "aliases": [
         "Cuddy",
-        "Dr. Cuddy"
+        "Dr. Cuddy",
+        "Dr. Lisa Cuddy"
       ]
     },
     {
@@ -28,15 +29,8 @@
       "name": "James Wilson",
       "aliases": [
         "Wilson",
-        "Dr. Wilson"
-      ]
-    },
-    {
-      "id": "cameron",
-      "name": "Allison Cameron",
-      "aliases": [
-        "Cameron",
-        "Dr. Cameron"
+        "Dr. Wilson",
+        "Dr. James Wilson"
       ]
     },
     {
@@ -44,7 +38,17 @@
       "name": "Eric Foreman",
       "aliases": [
         "Foreman",
-        "Dr. Foreman"
+        "Dr. Foreman",
+        "Dr. Eric Foreman"
+      ]
+    },
+    {
+      "id": "cameron",
+      "name": "Allison Cameron",
+      "aliases": [
+        "Cameron",
+        "Dr. Cameron",
+        "Dr. Allison Cameron"
       ]
     },
     {
@@ -52,7 +56,8 @@
       "name": "Robert Chase",
       "aliases": [
         "Chase",
-        "Dr. Chase"
+        "Dr. Chase",
+        "Dr. Robert Chase"
       ]
     },
     {
@@ -75,8 +80,8 @@
       "id": "case_of_the_week",
       "name": "Case of the Week",
       "hero": "house",
-      "goal": "diagnose and treat mysterious medical cases that baffle other physicians",
-      "obstacle": "complex symptoms, misleading evidence, patient deception, time pressure",
+      "goal": "diagnose and treat mysterious medical cases",
+      "obstacle": "complex symptoms that defy conventional diagnosis",
       "stakes": "patient death or permanent disability",
       "type": "case_of_the_week",
       "nature": "plot-led",
@@ -113,9 +118,9 @@
       "id": "authority",
       "name": "House: Authority",
       "hero": "house",
-      "goal": "maintain autonomy in his medical practice and avoid administrative duties",
-      "obstacle": "Cuddy's demands for clinic duty, hospital rules, Vogler's interference",
-      "stakes": "loss of diagnostic freedom, forced conformity",
+      "goal": "maintain autonomy in his medical practice",
+      "obstacle": "administrative pressure from Cuddy and institutional demands",
+      "stakes": "loss of independence, forced conformity to hospital protocols",
       "type": "serialized",
       "nature": "character-led",
       "confidence": "solid",
@@ -124,7 +129,6 @@
       "span": [
         "S01E01",
         "S01E05",
-        "S01E08",
         "S01E14",
         "S01E16",
         "S01E17",
@@ -138,8 +142,8 @@
       "id": "control",
       "name": "Vogler: Control",
       "hero": "vogler",
-      "goal": "transform the hospital into a profitable biotech venture and eliminate House's department",
-      "obstacle": "House's resistance, Cuddy's protection, board opposition",
+      "goal": "transform the hospital into a profitable biotech venture",
+      "obstacle": "House's resistance and board opposition",
       "stakes": "loss of investment and control over hospital direction",
       "type": "serialized",
       "nature": "plot-led",
@@ -159,9 +163,9 @@
       "id": "past",
       "name": "House: Past",
       "hero": "house",
-      "goal": "navigate his unresolved feelings for Stacy and help her husband",
-      "obstacle": "emotional barriers, professional boundaries, Stacy's marriage",
-      "stakes": "reopening old wounds, compromising professional judgment",
+      "goal": "navigate his unresolved feelings for his ex-girlfriend Stacy",
+      "obstacle": "her marriage to Mark and their complicated history",
+      "stakes": "emotional closure, potential relationship disruption",
       "type": "serialized",
       "nature": "character-led",
       "confidence": "solid",
@@ -178,7 +182,7 @@
       "name": "House: Addiction",
       "hero": "house",
       "goal": "manage his Vicodin dependency while functioning as a doctor",
-      "obstacle": "withdrawal symptoms, impaired judgment, physical dependence",
+      "obstacle": "physical withdrawal symptoms and impaired judgment",
       "stakes": "compromised patient care, loss of medical license",
       "type": "runner",
       "nature": "character-led",
@@ -202,7 +206,8 @@
           "characters": [
             "guest:rebecca"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "setup"
         },
         {
           "event": "House initially refuses the case",
@@ -211,7 +216,10 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": [
+            "authority"
+          ],
+          "plot_fn": "setup"
         },
         {
           "event": "Wilson claims Rebecca is his cousin to get House to take the case",
@@ -220,17 +228,19 @@
           "characters": [
             "wilson"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "inciting_incident"
         },
         {
           "event": "Cuddy tries to force House to fulfill his clinic duties",
           "plotline_id": "authority",
-          "function": "setup",
+          "function": "escalation",
           "characters": [
             "cuddy",
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "inciting_incident"
         },
         {
           "event": "House refuses clinic duties and has his MRI authorization revoked as punishment",
@@ -242,7 +252,8 @@
           ],
           "also_affects": [
             "case_of_the_week"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "House diagnoses Rebecca with cerebral vasculitis and begins treatment",
@@ -251,7 +262,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Rebecca's condition initially improves with treatment",
@@ -260,7 +272,8 @@
           "characters": [
             "guest:rebecca"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House convinces Foreman to break into Rebecca's house to investigate",
@@ -270,7 +283,10 @@
             "house",
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": [
+            "authority"
+          ],
+          "plot_fn": null
         },
         {
           "event": "Rebecca suddenly loses her vision and suffers another seizure",
@@ -279,7 +295,8 @@
           "characters": [
             "guest:rebecca"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Foreman discovers ham in Rebecca's house, revealing Wilson's lie",
@@ -288,16 +305,18 @@
           "characters": [
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "The ham discovery leads House to suspect tapeworms as the cause",
+          "event": "House suspects tapeworms as the cause based on the ham discovery",
           "plotline_id": "case_of_the_week",
           "function": "turning_point",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Rebecca refuses treatment for neurocysticercosis",
@@ -306,17 +325,18 @@
           "characters": [
             "guest:rebecca"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House has Chase perform an X-ray that reveals a tapeworm larva in Rebecca's leg",
+          "event": "Chase performs a non-invasive X-ray revealing tapeworm larva in Rebecca's leg",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
-            "house",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Rebecca agrees to treatment and recovers",
@@ -325,7 +345,8 @@
           "characters": [
             "guest:rebecca"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "the necessity of breaking rules to save lives",
@@ -336,7 +357,7 @@
             "case_of_the_week",
             "authority"
           ],
-          "description": "both plotlines explore House's willingness to break rules—medical protocol for diagnosis, hospital rules for autonomy"
+          "description": "both plotlines explore the tension between institutional rules and effective patient care"
         }
       ]
     },
@@ -352,7 +373,8 @@
             "guest:dan_parents",
             "cameron"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House starts a bet with his team about Dan's biological parentage",
@@ -360,11 +382,12 @@
           "function": "setup",
           "characters": [
             "house",
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Dan's condition worsens with myoclonic twitches and blocked blood vessel",
@@ -373,16 +396,18 @@
           "characters": [
             "guest:dan"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House makes an initial diagnosis based on Dan's symptoms",
+          "event": "House makes an initial diagnosis based on symptoms",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Dan suffers auditory hallucination during procedure, ruling out House's diagnosis",
@@ -392,7 +417,8 @@
             "guest:dan",
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House secretly performs unauthorized paternity test using coffee cups",
@@ -403,7 +429,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "House discovers neither parent is biologically related to Dan",
@@ -412,7 +439,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House recalls previous case involving vaccination refusal",
@@ -421,7 +449,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House theorizes Dan contracted measles virus during childhood",
@@ -430,7 +459,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House confirms subacute sclerosing panencephalitis with retinal biopsy",
@@ -439,7 +469,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House successfully treats Dan",
@@ -449,7 +480,8 @@
             "house",
             "guest:dan"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "the hidden truths that shape our lives",
@@ -474,7 +506,8 @@
           "characters": [
             "guest:brandon"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Foreman proposes a diagnosis arguing it follows Occam's razor",
@@ -483,7 +516,8 @@
           "characters": [
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House proposes a competing diagnosis also claiming it follows Occam's razor",
@@ -492,7 +526,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Brandon's white blood cell count drops dramatically",
@@ -501,26 +536,29 @@
           "characters": [
             "guest:brandon"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Both Foreman's and House's theories are proven wrong by the blood test results",
+          "event": "Both Foreman's and House's theories are proven wrong",
           "plotline_id": "case_of_the_week",
           "function": "crisis",
           "characters": [
             "house",
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "At the clinic pharmacy, House theorizes the pharmacist accidentally dispensed colchicine instead of cough medicine",
+          "event": "House theorizes at the clinic pharmacy that the pharmacist accidentally dispensed colchicine instead of cough medicine",
           "plotline_id": "case_of_the_week",
           "function": "turning_point",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House administers the antidote and Brandon begins recovering immediately",
@@ -529,7 +567,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The pharmacist denies making any mistake",
@@ -538,16 +577,18 @@
           "characters": [
             "guest:pharmacist"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Brandon mentions his old cough medicine didn't have letters on the pills like his current medication",
           "plotline_id": "case_of_the_week",
-          "function": "resolution",
+          "function": "escalation",
           "characters": [
             "guest:brandon"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House discovers colchicine pills that closely resemble cough medicine tablets, confirming the accidental poisoning",
@@ -556,7 +597,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "the danger of assumptions and the importance of looking beyond the obvious",
@@ -572,7 +614,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House predicts an epidemic in the maternity ward",
@@ -581,7 +624,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House confirms the severity of the outbreak",
@@ -590,7 +634,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Cuddy quarantines the entire maternity ward",
@@ -599,7 +644,10 @@
           "characters": [
             "cuddy"
           ],
-          "also_affects": null
+          "also_affects": [
+            "authority"
+          ],
+          "plot_fn": null
         },
         {
           "event": "House begins treating the affected children",
@@ -608,7 +656,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Two babies develop kidney failure",
@@ -617,25 +666,38 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House must test which drug caused the complication, resulting in one infant's death",
+          "event": "House must test which drug caused the complication",
+          "plotline_id": "case_of_the_week",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "One infant dies during the drug testing",
           "plotline_id": "case_of_the_week",
           "function": "crisis",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "An autopsy reveals the presence of echovirus 11, CMV, and parvovirus B19 antibodies in the deceased baby",
+          "event": "Autopsy reveals echovirus 11, CMV, and parvovirus B19 antibodies in the deceased baby",
           "plotline_id": "case_of_the_week",
           "function": "turning_point",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The team tests the mothers and identifies echovirus as the epidemic's cause",
@@ -643,29 +705,32 @@
           "function": "escalation",
           "characters": [
             "house",
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Using an experimental antiviral treatment, they successfully cure the remaining babies",
+          "event": "House uses experimental antiviral treatment to successfully cure the remaining babies",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House discovers an elderly hospital volunteer who has been coughing and wiping her nose while distributing toys and blankets throughout the ward",
+          "event": "House discovers an elderly hospital volunteer who has been coughing and wiping her nose while distributing toys",
           "plotline_id": "case_of_the_week",
           "function": "resolution",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House identifies the volunteer as the source of contamination",
@@ -674,23 +739,34 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
-      "theme": "the cost of medical decisions and the responsibility that comes with saving lives",
-      "interactions": []
+      "theme": "the cost of medical decisions and unintended consequences",
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_the_week",
+            "authority"
+          ],
+          "description": "both plotlines explore the tension between individual judgment and institutional responsibility in medical care"
+        }
+      ]
     },
     {
       "episode": "S01E05",
       "events": [
         {
-          "event": "Sister Augustine arrives with severe hand rashes that nuns believe resemble stigmata",
+          "event": "Sister Augustine arrives at the hospital with severe hand rashes that her fellow nuns believe resemble stigmata",
           "plotline_id": "case_of_the_week",
           "function": "setup",
           "characters": [
             "guest:sister_augustine"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House diagnoses contact dermatitis from dish soap allergy and prescribes antihistamines",
@@ -699,36 +775,42 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "The antihistamines trigger an asthma attack in Augustine",
-          "plotline_id": "case_of_the_week",
-          "function": "escalation",
-          "characters": [
-            "guest:sister_augustine"
-          ],
-          "also_affects": null
-        },
-        {
-          "event": "House administers epinephrine which causes Augustine to suffer a minor heart attack",
+          "event": "The medication triggers an asthma attack, prompting House to administer epinephrine",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Augustine suffers a minor heart attack from the epinephrine",
+          "plotline_id": "case_of_the_week",
+          "function": "escalation",
+          "characters": [
+            "guest:sister_augustine"
+          ],
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House's team suspects he made an error with the epinephrine dosage",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": [
+            "authority"
+          ],
+          "plot_fn": null
         },
         {
           "event": "Augustine develops new symptoms including hallucinations, convulsions, and leg rashes",
@@ -737,7 +819,8 @@
           "characters": [
             "guest:sister_augustine"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Cuddy removes House from the case due to his controversial methods",
@@ -748,18 +831,20 @@
           ],
           "also_affects": [
             "case_of_the_week"
-          ]
+          ],
+          "plot_fn": "escalation"
         },
         {
           "event": "Investigation of the convent reveals figwort tea, which explains only the epinephrine reaction",
           "plotline_id": "case_of_the_week",
           "function": "turning_point",
           "characters": [
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Despite being placed in a hypoallergenic room, Augustine continues having allergic reactions",
@@ -768,7 +853,8 @@
           "characters": [
             "guest:sister_augustine"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Augustine begins shouting about having God inside her",
@@ -777,7 +863,8 @@
           "characters": [
             "guest:sister_augustine"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House realizes she has a copper IUD that's causing the allergic responses",
@@ -786,19 +873,21 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "The copper IUD is surgically removed and Augustine fully recovers",
+          "event": "The device is surgically removed and Augustine fully recovers",
           "plotline_id": "case_of_the_week",
           "function": "resolution",
           "characters": [
             "guest:sister_augustine"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
-      "theme": "hidden truths beneath surface appearances",
+      "theme": "the conflict between faith and reason in understanding the human condition",
       "interactions": [
         {
           "type": "thematic_rhyme",
@@ -806,7 +895,15 @@
             "case_of_the_week",
             "authority"
           ],
-          "description": "both plotlines explore the conflict between unconventional methods and institutional expectations"
+          "description": "both plotlines explore the tension between unconventional methods and institutional expectations"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "case_of_the_week",
+            "authority"
+          ],
+          "description": "House's controversial diagnostic approach directly leads to Cuddy removing him from the case"
         }
       ]
     },
@@ -820,7 +917,8 @@
           "characters": [
             "guest:lucille"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Lucille begins vomiting blood at the hospital",
@@ -829,7 +927,8 @@
           "characters": [
             "guest:lucille"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House suspects vitamin K deficiency based on the bleeding",
@@ -838,85 +937,96 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The team discovers unused ampicillin and frozen microwave dinners in Lucille's home",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "An ultrasound reveals liver cirrhosis and a cancerous tumor too large for surgical removal",
-          "plotline_id": "case_of_the_week",
-          "function": "crisis",
-          "characters": [
-            "house"
-          ],
-          "also_affects": null
-        },
-        {
-          "event": "House orders ethanol injection to shrink the tumor, making surgery possible",
+          "event": "Ultrasound reveals liver cirrhosis and a large cancerous tumor",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "The team cannot explain the cirrhosis despite the treatment progress",
+          "event": "House orders ethanol injection to shrink the tumor for surgery",
           "plotline_id": "case_of_the_week",
-          "function": "turning_point",
+          "function": "escalation",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "The team cannot explain the cause of cirrhosis",
+          "plotline_id": "case_of_the_week",
+          "function": "crisis",
           "characters": [
             "house",
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Lucille makes an unexpected decision to call Social Services to remove her son",
+          "event": "Lucille calls Social Services to remove her son",
           "plotline_id": "case_of_the_week",
           "function": "turning_point",
           "characters": [
             "guest:lucille"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House claims Lucille's decision is inconsistent with her supposed schizophrenia",
+          "event": "House claims this decision is inconsistent with supposed schizophrenia",
           "plotline_id": "case_of_the_week",
           "function": "turning_point",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "The team considers Wilson's disease as an explanation for all symptoms",
+          "event": "The team considers Wilson's disease as explanation for all symptoms",
           "plotline_id": "case_of_the_week",
-          "function": "escalation",
+          "function": "turning_point",
           "characters": [
             "house",
-            "wilson"
+            "foreman",
+            "cameron",
+            "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "An eye exam reveals copper-colored rings around Lucille's irises, confirming Wilson's disease",
+          "event": "Eye exam reveals copper-colored rings around Lucille's irises",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Lucille receives treatment for Wilson's disease and recovers completely",
@@ -925,19 +1035,21 @@
           "characters": [
             "guest:lucille"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Lucille reunites with her son after her recovery",
+          "event": "Lucille reunites with her son",
           "plotline_id": "case_of_the_week",
           "function": "resolution",
           "characters": [
             "guest:lucille"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
-      "theme": "the complexity of human behavior and the danger of misdiagnosis",
+      "theme": "the complexity of maternal sacrifice and medical truth",
       "interactions": []
     },
     {
@@ -949,19 +1061,20 @@
           "function": "setup",
           "characters": [
             "guest:ed",
-            "guest:elise",
-            "guest:best_friend"
+            "guest:elise"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House concludes Elise either has rabbit fever from cooking rabbits or African sleeping sickness",
           "plotline_id": "case_of_the_week",
-          "function": "escalation",
+          "function": "inciting_incident",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House notes that sleeping sickness would require sexual transmission since neither has traveled to Africa",
@@ -970,7 +1083,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Both Ed and Elise vehemently deny having affairs",
@@ -980,7 +1094,8 @@
             "guest:ed",
             "guest:elise"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House begins treating Elise for rabbit fever",
@@ -989,7 +1104,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The rabbit fever treatment fails",
@@ -998,7 +1114,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House successfully treats Elise for sleeping sickness",
@@ -1007,7 +1124,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Under pressure of her diagnosis and treatment, Elise confesses to having an affair with her husband's best friend",
@@ -1016,7 +1134,8 @@
           "characters": [
             "guest:elise"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Ed leaves Elise despite her recovery",
@@ -1025,10 +1144,11 @@
           "characters": [
             "guest:ed"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
-      "theme": "the truth that medicine reveals can destroy as well as heal",
+      "theme": "the truth that medicine reveals can destroy what it saves",
       "interactions": []
     },
     {
@@ -1041,7 +1161,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Another teenager arrives with identical symptoms but no apparent connection to Matt",
@@ -1050,7 +1171,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House must find the common link between the cases",
@@ -1059,7 +1181,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The team discovers both teens purchased inexpensive jeans at a car boot sale",
@@ -1067,11 +1190,12 @@
           "function": "crisis",
           "characters": [
             "house",
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The team determines the jeans were exposed to high doses of pesticides, causing phosdrin poisoning",
@@ -1079,42 +1203,36 @@
           "function": "climax",
           "characters": [
             "house",
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House treats an elderly woman at the clinic who has been flirting with him",
-          "plotline_id": "authority",
+          "plotline_id": "case_of_the_week",
           "function": "setup",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House diagnoses the elderly woman with neurosyphilis",
-          "plotline_id": "authority",
+          "plotline_id": "case_of_the_week",
           "function": "resolution",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "hidden connections reveal dangerous truths",
-      "interactions": [
-        {
-          "type": "thematic_rhyme",
-          "lines": [
-            "case_of_the_week",
-            "authority"
-          ],
-          "description": "both plotlines involve House uncovering hidden medical truths through careful investigation"
-        }
-      ]
+      "interactions": []
     },
     {
       "episode": "S01E09",
@@ -1127,7 +1245,8 @@
             "guest:john_henry",
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House attempts to prove John Henry doesn't actually have ALS",
@@ -1136,7 +1255,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House's intervention causes respiratory failure in John Henry",
@@ -1146,7 +1266,8 @@
             "house",
             "guest:john_henry"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House intubates John Henry in violation of his DNR order",
@@ -1157,7 +1278,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "House uses a legal technicality to keep John Henry on life support",
@@ -1168,7 +1290,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "Cameron discovers a blood clot in John Henry",
@@ -1177,7 +1300,8 @@
           "characters": [
             "cameron"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The blood clot is removed from John Henry",
@@ -1186,7 +1310,8 @@
           "characters": [
             "guest:medical_team"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "MRI reveals an arteriovenous malformation in John Henry",
@@ -1194,11 +1319,10 @@
           "function": "crisis",
           "characters": [
             "house",
-            "cameron",
-            "foreman",
-            "chase"
+            "cameron"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Surgery corrects the arteriovenous malformation and restores John Henry's ability to walk",
@@ -1208,7 +1332,8 @@
             "guest:surgeons",
             "guest:john_henry"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House's theory is proven correct - John Henry never had ALS",
@@ -1217,7 +1342,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Foreman receives a lucrative job offer from John Henry's doctor, who is his former mentor",
@@ -1227,7 +1353,8 @@
             "foreman",
             "guest:mentor_doctor"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Foreman faces a professional dilemma about the job offer",
@@ -1236,7 +1363,8 @@
           "characters": [
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "challenging authority and conventional wisdom to save lives",
@@ -1247,7 +1375,7 @@
             "case_of_the_week",
             "authority"
           ],
-          "description": "both plotlines involve House defying established rules and authority - medical consensus about ALS and DNR protocols"
+          "description": "both plotlines explore defying established protocols - House violates DNR orders while also challenging the ALS diagnosis"
         }
       ]
     },
@@ -1255,32 +1383,35 @@
       "episode": "S01E10",
       "events": [
         {
-          "event": "Foreman believes homeless woman is faking seizures for food and shelter",
+          "event": "Foreman believes the homeless woman is faking seizures for food and shelter",
           "plotline_id": "case_of_the_week",
           "function": "setup",
           "characters": [
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Wilson becomes invested in the homeless woman's case",
+          "event": "Wilson becomes invested in the homeless woman's case to prevent her falling through healthcare cracks",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
             "wilson"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House uses the case to teach two medical students about patient histories",
+          "event": "House uses the case to teach two medical students about conducting patient histories",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
             "house",
             "guest:medical_students"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The team diagnoses the woman with tuberculoma and rabies",
@@ -1289,20 +1420,24 @@
           "characters": [
             "house",
             "foreman",
-            "wilson"
+            "cameron",
+            "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Team discovers the rabies is too advanced for treatment",
+          "event": "The team discovers the rabies is too advanced for treatment",
           "plotline_id": "case_of_the_week",
           "function": "crisis",
           "characters": [
             "house",
             "foreman",
-            "wilson"
+            "cameron",
+            "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The patient bites Foreman during treatment",
@@ -1312,16 +1447,18 @@
             "guest:homeless_woman",
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Foreman undergoes rabies prophylaxis",
+          "event": "Foreman undergoes rabies prophylaxis after being bitten",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Foreman and Wilson search for the patient's family",
@@ -1331,27 +1468,30 @@
             "foreman",
             "wilson"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "They discover she became homeless after losing husband and son in car accident",
+          "event": "They discover she became homeless after losing her husband and son in a car accident two years earlier",
           "plotline_id": "case_of_the_week",
           "function": "turning_point",
           "characters": [
             "foreman",
             "wilson"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Foreman pretends to be her deceased husband and offers forgiveness as she dies",
+          "event": "Foreman pretends to be her deceased husband and offers her forgiveness as she dies",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
             "foreman",
             "guest:homeless_woman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The homeless woman dies",
@@ -1360,10 +1500,11 @@
           "characters": [
             "guest:homeless_woman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
-      "theme": "the humanity behind medical judgment",
+      "theme": "compassion and the human cost of medical judgment",
       "interactions": []
     },
     {
@@ -1376,7 +1517,8 @@
           "characters": [
             "guest:patient"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House accepts Cuddy's challenge to go off Vicodin for a week in exchange for no clinic duty for a month",
@@ -1388,7 +1530,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "inciting_incident"
         },
         {
           "event": "House's withdrawal symptoms intensify",
@@ -1397,7 +1540,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "escalation"
         },
         {
           "event": "House's diagnostic methods become increasingly harsh and risky",
@@ -1408,7 +1552,8 @@
           ],
           "also_affects": [
             "addiction"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "Foreman and Cameron worry about House's judgment",
@@ -1420,7 +1565,8 @@
           ],
           "also_affects": [
             "case_of_the_week"
-          ]
+          ],
+          "plot_fn": "crisis"
         },
         {
           "event": "House decides to exhume the family's recently deceased cat",
@@ -1429,27 +1575,28 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House performs an autopsy on the cat despite his impaired state",
+          "event": "House performs an autopsy on the cat",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
             "house"
           ],
-          "also_affects": [
-            "addiction"
-          ]
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House discovers high levels of naphthalene in the cat",
+          "event": "House discovers high levels of naphthalene from termite excretion in the cat",
           "plotline_id": "case_of_the_week",
           "function": "resolution",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House reveals the patient has been exposed to poisonous vapors from a termite nest behind his bedroom walls",
@@ -1458,10 +1605,11 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
-      "theme": "the cost of brilliance",
+      "theme": "the paradox of impairment and insight",
       "interactions": [
         {
           "type": "thematic_rhyme",
@@ -1469,15 +1617,15 @@
             "case_of_the_week",
             "addiction"
           ],
-          "description": "both plotlines explore how House's methods—medical and personal—are simultaneously destructive and effective"
+          "description": "both plotlines explore how limitation can lead to breakthrough—withdrawal symptoms parallel the hidden poison affecting the patient"
         },
         {
-          "type": "convergence",
+          "type": "dramatic_irony",
           "lines": [
-            "case_of_the_week",
-            "addiction"
+            "addiction",
+            "case_of_the_week"
           ],
-          "description": "House's withdrawal symptoms directly affect his ability to diagnose the patient, making his medical judgment increasingly risky"
+          "description": "the team worries House's impaired judgment will hurt the patient, but his desperate state actually drives him to the unconventional solution"
         }
       ]
     },
@@ -1491,16 +1639,18 @@
           "characters": [
             "guest:hank"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House suspects Hank is lying about steroid use given his history of drug abuse",
           "plotline_id": "case_of_the_week",
-          "function": "setup",
+          "function": "escalation",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Hank's condition deteriorates",
@@ -1509,35 +1659,48 @@
           "characters": [
             "guest:hank"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Hank's kidneys begin failing",
           "plotline_id": "case_of_the_week",
-          "function": "escalation",
+          "function": "turning_point",
           "characters": [
             "guest:hank"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Hank's wife offers to donate one of her kidneys",
           "plotline_id": "case_of_the_week",
-          "function": "turning_point",
+          "function": "escalation",
           "characters": [
             "guest:hanks_wife"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Wife would have to abort her early pregnancy for the donation, which Hank opposes",
+          "event": "Wife would have to abort her early pregnancy for the donation",
           "plotline_id": "case_of_the_week",
           "function": "crisis",
           "characters": [
-            "guest:hank",
             "guest:hanks_wife"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Hank opposes the abortion",
+          "plotline_id": "case_of_the_week",
+          "function": "crisis",
+          "characters": [
+            "guest:hank"
+          ],
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House discovers that Hank's wife has lost her sense of smell",
@@ -1546,26 +1709,38 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House realizes both have smoked cannabis grown on cadmium-polluted soil, causing cadmium poisoning",
+          "event": "House realizes both have smoked cannabis grown on cadmium-polluted soil",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "House diagnoses cadmium poisoning",
+          "plotline_id": "case_of_the_week",
+          "function": "resolution",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Foreman dates a pharmaceutical representative",
           "plotline_id": "case_of_the_week",
           "function": "setup",
           "characters": [
-            "foreman",
-            "guest:pharma_rep"
+            "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House attends a monster truck rally with Cameron",
@@ -1575,17 +1750,18 @@
             "house",
             "cameron"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
-      "theme": "the hidden costs of choices and deception",
+      "theme": "the cost of choices and their unintended consequences",
       "interactions": [
         {
           "type": "thematic_rhyme",
           "lines": [
             "case_of_the_week"
           ],
-          "description": "the case explores how past choices (drug use, environmental exposure) create present consequences that force impossible decisions"
+          "description": "the patient's past drug choices create present medical crisis, paralleling how personal decisions have lasting health consequences"
         }
       ]
     },
@@ -1599,7 +1775,8 @@
           "characters": [
             "guest:boy"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The boy is hospitalized with pneumonia",
@@ -1608,17 +1785,19 @@
           "characters": [
             "guest:boy"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Chase's estranged father arrives at the hospital",
           "plotline_id": "case_of_the_week",
-          "function": "setup",
+          "function": "escalation",
           "characters": [
-            "guest:chase_father",
-            "chase"
+            "chase",
+            "guest:chase_father"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Chase's father assists House's team with the diagnosis",
@@ -1629,36 +1808,40 @@
             "house",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House becomes suspicious of the seemingly random visit",
           "plotline_id": "case_of_the_week",
-          "function": "escalation",
+          "function": "turning_point",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House questions Chase's father about his visit",
           "plotline_id": "case_of_the_week",
-          "function": "turning_point",
+          "function": "escalation",
           "characters": [
             "house",
             "guest:chase_father"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Chase's father reveals he has terminal cancer",
           "plotline_id": "case_of_the_week",
-          "function": "climax",
+          "function": "turning_point",
           "characters": [
             "guest:chase_father",
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The team diagnoses the boy with both anthrax and leprosy",
@@ -1667,10 +1850,11 @@
           "characters": [
             "house",
             "chase",
-            "cameron",
-            "foreman"
+            "foreman",
+            "cameron"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Chase and his father briefly reconcile",
@@ -1680,7 +1864,8 @@
             "chase",
             "guest:chase_father"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Chase's father departs for the airport, leaving their relationship somewhat resolved",
@@ -1690,19 +1875,12 @@
             "guest:chase_father",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "confronting mortality and unfinished relationships",
-      "interactions": [
-        {
-          "type": "thematic_rhyme",
-          "lines": [
-            "case_of_the_week"
-          ],
-          "description": "both the boy's fear of death from the Ouija board and Chase's father's terminal cancer explore themes of mortality and facing death"
-        }
-      ]
+      "interactions": []
     },
     {
       "episode": "S01E14",
@@ -1716,40 +1894,50 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "inciting_incident"
         },
         {
-          "event": "Vogler plans to transform the clinic into a profitable biotech venture and eliminate House's department",
+          "event": "Vogler plans to transform the clinic into a profitable biotech venture",
           "plotline_id": "control",
           "function": "setup",
           "characters": [
             "vogler"
           ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Vogler targets House's financially draining department for elimination",
+          "plotline_id": "control",
+          "function": "escalation",
+          "characters": [
+            "vogler"
+          ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "escalation"
         },
         {
           "event": "A successful businesswoman arrives with inexplicable paralysis despite her seemingly perfect life and health",
           "plotline_id": "case_of_the_week",
-          "function": "inciting_incident",
+          "function": "setup",
           "characters": [
-            "house",
             "guest:businesswoman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House begins investigating the businesswoman's paralysis symptoms",
+          "event": "House begins investigating the businesswoman's mysterious paralysis",
           "plotline_id": "case_of_the_week",
-          "function": "escalation",
+          "function": "inciting_incident",
           "characters": [
-            "house",
-            "cameron",
-            "foreman",
-            "chase"
+            "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House diagnoses the businesswoman with congestive heart failure caused by bulimia and regular ipecac use",
@@ -1758,32 +1946,36 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Vogler opposes House's methods and threatens his department",
-          "plotline_id": "control",
+          "plotline_id": "authority",
           "function": "escalation",
           "characters": [
-            "vogler"
+            "vogler",
+            "house"
           ],
           "also_affects": [
-            "authority"
-          ]
+            "control"
+          ],
+          "plot_fn": null
         },
         {
-          "event": "House faces the risk of losing his job and medical license due to Vogler's opposition",
-          "plotline_id": "authority",
+          "event": "House realizes that treating the patient puts his job and medical license at risk",
+          "plotline_id": "case_of_the_week",
           "function": "crisis",
           "characters": [
             "house"
           ],
           "also_affects": [
-            "control"
-          ]
+            "authority"
+          ],
+          "plot_fn": null
         },
         {
-          "event": "House treats the businesswoman despite the professional risks",
+          "event": "House proceeds with treatment despite Vogler's opposition",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
@@ -1791,27 +1983,28 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": null
         }
       ],
-      "theme": "the cost of doing what's right when authority opposes you",
+      "theme": "the cost of doing what's right when institutional power opposes you",
       "interactions": [
         {
-          "type": "thematic_rhyme",
+          "type": "convergence",
           "lines": [
             "case_of_the_week",
             "authority",
             "control"
           ],
-          "description": "all three plotlines explore power dynamics—medical authority over patient, administrative authority over doctor, corporate authority over institution"
+          "description": "Vogler's corporate takeover directly threatens House's ability to treat his patient"
         },
         {
-          "type": "convergence",
+          "type": "thematic_rhyme",
           "lines": [
             "case_of_the_week",
             "authority"
           ],
-          "description": "House's treatment of the patient directly conflicts with Vogler's demands, forcing him to choose between patient care and job security"
+          "description": "both plotlines explore the conflict between doing what's medically right versus what's institutionally acceptable"
         }
       ]
     },
@@ -1825,7 +2018,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Joey is scheduled for federal testimony and entry into Witness Protection",
@@ -1834,7 +2028,8 @@
           "characters": [
             "guest:joey_arnello"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Joey's brother, a lawyer, works against the medical team",
@@ -1843,7 +2038,8 @@
           "characters": [
             "guest:joey_brother"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The team diagnoses Joey with Hepatitis C",
@@ -1851,11 +2047,12 @@
           "function": "turning_point",
           "characters": [
             "house",
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Joey's brother works against the testimony when Joey is diagnosed with Hepatitis C",
@@ -1864,22 +2061,24 @@
           "characters": [
             "guest:joey_brother"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "The team discovers Joey has ornithine transcarbamylase deficiency",
+          "event": "The team ultimately discovers Joey has ornithine transcarbamylase deficiency",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
             "house",
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "Cuddy battles Vogler over House's value to the hospital",
+          "event": "Cuddy continues battling Vogler over House's value to the hospital",
           "plotline_id": "control",
           "function": "escalation",
           "characters": [
@@ -1888,7 +2087,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "escalation"
         },
         {
           "event": "Vogler becomes increasingly determined to eliminate House's department",
@@ -1899,7 +2099,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": null
         }
       ],
       "theme": "the conflict between institutional control and individual autonomy",
@@ -1910,7 +2111,7 @@
             "case_of_the_week",
             "control"
           ],
-          "description": "both plotlines involve external forces trying to control House's medical practice—the court system and Vogler's corporate agenda"
+          "description": "both plotlines explore resistance to authority—Joey's brother resisting federal testimony, Vogler resisting House's independence"
         },
         {
           "type": "convergence",
@@ -1918,7 +2119,7 @@
             "control",
             "authority"
           ],
-          "description": "Vogler's campaign against House directly threatens House's autonomy and diagnostic freedom"
+          "description": "Vogler's campaign against House directly threatens House's autonomy and medical practice"
         }
       ]
     },
@@ -1932,7 +2133,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The girl's mother insists the team look beyond her weight for the real diagnosis",
@@ -1941,7 +2143,8 @@
           "characters": [
             "guest:mother"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Vogler demands House fire a team member",
@@ -1952,7 +2155,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "escalation"
         },
         {
           "event": "House discovers that Chase has been feeding information about his cases to Vogler",
@@ -1964,7 +2168,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "turning_point"
         },
         {
           "event": "House tells Cuddy and Vogler he chooses to fire Chase",
@@ -1977,7 +2182,8 @@
           ],
           "also_affects": [
             "control"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "Vogler rejects this decision and demands House fire either Foreman or Cameron instead",
@@ -1988,7 +2194,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "The team diagnoses the girl with Cushing's disease, explaining both her weight and cardiac symptoms",
@@ -1996,11 +2203,12 @@
           "function": "climax",
           "characters": [
             "house",
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "the cost of loyalty and betrayal",
@@ -2012,7 +2220,7 @@
             "control",
             "authority"
           ],
-          "description": "all three plotlines explore looking beyond surface appearances—the girl's weight masks Cushing's disease, Chase's loyalty masks betrayal, House's defiance masks strategic thinking"
+          "description": "all three plotlines explore looking beyond surface appearances—the girl's weight hiding Cushing's, Chase's loyalty hiding betrayal, House's defiance hiding strategic thinking"
         },
         {
           "type": "convergence",
@@ -2034,7 +2242,8 @@
           "characters": [
             "guest:senator"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Vogler assigns House to the high-profile senator case",
@@ -2046,7 +2255,8 @@
           ],
           "also_affects": [
             "case_of_the_week"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "Vogler offers to let House keep his entire team if he endorses Vogler's pharmaceutical company in a speech",
@@ -2058,7 +2268,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "escalation"
         },
         {
           "event": "The senator's symptoms initially suggest AIDS",
@@ -2067,7 +2278,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House investigates deeper into the senator's condition",
@@ -2076,7 +2288,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House deduces that Chase is Vogler's informant within his team",
@@ -2088,39 +2301,44 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "During his required speech, House insults Vogler and his company instead of endorsing them",
-          "plotline_id": "authority",
+          "plotline_id": "control",
           "function": "climax",
           "characters": [
-            "house"
+            "house",
+            "vogler"
           ],
           "also_affects": [
-            "control"
-          ]
+            "authority"
+          ],
+          "plot_fn": "crisis"
         },
         {
           "event": "Cameron quits the team in response to the ongoing political pressure",
           "plotline_id": "authority",
-          "function": "resolution",
+          "function": "escalation",
           "characters": [
             "cameron"
           ],
           "also_affects": [
             "control"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "House treats a woman who claims to be pregnant without having sex",
           "plotline_id": "case_of_the_week",
-          "function": "setup",
+          "function": "escalation",
           "characters": [
             "house",
-            "guest:woman"
+            "guest:pregnant_woman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The senator is diagnosed with toxoplasmosis and delayed-onset CVID secondary to phenytoin-mediated Epstein-Barr virus infection",
@@ -2129,27 +2347,28 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
-      "theme": "the cost of integrity",
+      "theme": "the cost of integrity versus compromise",
       "interactions": [
         {
           "type": "thematic_rhyme",
           "lines": [
-            "authority",
             "control",
+            "authority",
             "case_of_the_week"
           ],
-          "description": "all three plotlines explore the tension between doing what's right and what's expedient"
+          "description": "all three plotlines explore different forms of pressure and resistance—political manipulation, institutional control, and diagnostic challenges"
         },
         {
           "type": "convergence",
           "lines": [
-            "authority",
-            "control"
+            "control",
+            "case_of_the_week"
           ],
-          "description": "House's defiant speech directly confronts Vogler's ultimatum, merging both conflicts"
+          "description": "Vogler uses the high-profile senator case as leverage to force House's compliance"
         }
       ]
     },
@@ -2165,7 +2384,8 @@
             "chase",
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "A pregnant woman arrives with brain and kidney problems",
@@ -2174,7 +2394,8 @@
           "characters": [
             "guest:pregnant_woman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The team discovers she has small cell lung cancer",
@@ -2185,7 +2406,8 @@
             "chase",
             "foreman"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "She and her husband must choose between her life and their unborn child's survival",
@@ -2195,7 +2417,8 @@
             "guest:pregnant_woman",
             "guest:husband"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Vogler proposes the board revoke House's tenure and fire him",
@@ -2206,7 +2429,8 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "escalation"
         },
         {
           "event": "Wilson opposes the motion",
@@ -2215,7 +2439,8 @@
           "characters": [
             "wilson"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Vogler proposes removing Wilson from the board, which passes",
@@ -2224,7 +2449,8 @@
           "characters": [
             "vogler"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Wilson resigns in protest",
@@ -2233,7 +2459,8 @@
           "characters": [
             "wilson"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Cuddy challenges Vogler's control over the board",
@@ -2242,28 +2469,30 @@
           "characters": [
             "cuddy"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "turning_point"
         },
         {
-          "event": "Four other board members support Cuddy, forcing Vogler to leave as chairman",
+          "event": "Four other board members support Cuddy",
           "plotline_id": "control",
           "function": "climax",
           "characters": [
-            "cuddy",
-            "guest:board_members"
+            "cuddy"
           ],
-          "also_affects": [
-            "authority"
-          ]
+          "also_affects": null,
+          "plot_fn": "climax"
         },
         {
-          "event": "Vogler revokes his $100 million donation",
+          "event": "Vogler is forced to leave as chairman and revoke his $100 million donation",
           "plotline_id": "control",
           "function": "resolution",
           "characters": [
             "vogler"
           ],
-          "also_affects": null
+          "also_affects": [
+            "authority"
+          ],
+          "plot_fn": "resolution"
         },
         {
           "event": "The team celebrates Vogler's departure",
@@ -2274,9 +2503,8 @@
             "chase",
             "foreman"
           ],
-          "also_affects": [
-            "authority"
-          ]
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Cuddy reminds House the conflict was unnecessary",
@@ -2286,17 +2514,18 @@
             "cuddy",
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "resolution"
         },
         {
           "event": "House treats a malnourished baby whose vegan parents are arrested for child endangerment",
           "plotline_id": "case_of_the_week",
           "function": "setup",
           "characters": [
-            "house",
-            "guest:vegan_parents"
+            "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "A CT scan reveals the baby has DiGeorge syndrome, exonerating the parents",
@@ -2305,7 +2534,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "the cost of standing up to authority",
@@ -2313,10 +2543,10 @@
         {
           "type": "thematic_rhyme",
           "lines": [
-            "control",
-            "case_of_the_week"
+            "case_of_the_week",
+            "control"
           ],
-          "description": "both plotlines explore making difficult choices to protect what matters most—Wilson and Cuddy protect House, parents protect their child"
+          "description": "both cases involve making difficult choices to protect the vulnerable—the unborn child and House's medical practice"
         },
         {
           "type": "convergence",
@@ -2324,7 +2554,7 @@
             "control",
             "authority"
           ],
-          "description": "Vogler's defeat resolves both his campaign for control and House's struggle against administrative interference"
+          "description": "Vogler's defeat resolves both his power grab and House's autonomy struggle"
         }
       ]
     },
@@ -2338,7 +2568,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House identifies a young patient who doesn't fit typical meningitis criteria",
@@ -2347,16 +2578,20 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House gives his team one hour to produce diagnostic results",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
-            "house"
+            "house",
+            "foreman",
+            "chase"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House attempts to convince Cameron to return following Vogler's departure",
@@ -2366,7 +2601,8 @@
             "house",
             "cameron"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "setup"
         },
         {
           "event": "Cameron demands House explain why he really wants her back",
@@ -2376,7 +2612,8 @@
             "cameron",
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "escalation"
         },
         {
           "event": "House and Wilson interview potential replacements for Cameron's position",
@@ -2386,7 +2623,8 @@
             "house",
             "wilson"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The young patient is diagnosed with thrombotic thrombocytopenic purpura secondary to pregnancy",
@@ -2395,7 +2633,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Cameron agrees to return to the team in exchange for House taking her on a dinner date",
@@ -2405,7 +2644,8 @@
             "cameron",
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "resolution"
         }
       ],
       "theme": "the price of getting what you want",
@@ -2416,7 +2656,7 @@
             "case_of_the_week",
             "authority"
           ],
-          "description": "both plotlines involve House having to work harder and make concessions to achieve his goals—solving the case under time pressure and agreeing to Cameron's terms to get her back"
+          "description": "both plotlines involve House having to work within constraints—time pressure for the diagnosis, Cameron's conditions for returning"
         }
       ]
     },
@@ -2424,14 +2664,15 @@
       "episode": "S01E20",
       "events": [
         {
-          "event": "The hospital buzzes with rumors about House's upcoming date with Cameron",
+          "event": "Hospital staff buzz with rumors about House's upcoming date with Cameron",
           "plotline_id": "case_of_the_week",
           "function": "setup",
           "characters": [
             "house",
             "cameron"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House treats a clinic patient harshly",
@@ -2440,9 +2681,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": [
-            "authority"
-          ]
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The clinic patient subsequently develops a mysterious stroke",
@@ -2451,7 +2691,8 @@
           "characters": [
             "guest:clinic_patient"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House diagnoses the stroke as fulminating osteomyelitis",
@@ -2460,16 +2701,18 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House deals with an elderly couple whose overactive sex life appears to be causing them medical problems",
+          "event": "House encounters an elderly couple with medical problems from their overactive sex life",
           "plotline_id": "case_of_the_week",
           "function": "escalation",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House navigates his complicated personal dynamics with Cameron",
@@ -2479,7 +2722,8 @@
             "house",
             "cameron"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         }
       ],
       "theme": "the intersection of professional duty and personal relationships",
@@ -2489,7 +2733,7 @@
           "lines": [
             "case_of_the_week"
           ],
-          "description": "both medical cases explore themes of intimacy and consequences - harsh treatment leading to illness, and sexual intimacy causing medical problems"
+          "description": "both medical cases involve relationship dynamics - harsh treatment leading to consequences and intimate relationships causing medical issues"
         }
       ]
     },
@@ -2504,7 +2748,8 @@
             "stacy",
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "inciting_incident"
         },
         {
           "event": "Cuddy forces House to lecture medical students on patient diagnosis",
@@ -2514,7 +2759,8 @@
             "cuddy",
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "escalation"
         },
         {
           "event": "House presents three scenarios involving different causes of leg pain to students",
@@ -2523,7 +2769,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House discusses farmer with streptococcal infection case",
@@ -2532,7 +2779,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House presents volleyball player with osteosarcoma case",
@@ -2541,7 +2789,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House reveals his own past case of thigh muscle infarction",
@@ -2552,7 +2801,8 @@
           ],
           "also_affects": [
             "past"
-          ]
+          ],
+          "plot_fn": null
         },
         {
           "event": "House covers Professor Riley's lead paint poisoning case",
@@ -2561,30 +2811,32 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House uses teaching opportunity to explore his diagnostic methodology",
+          "event": "House reflects on his diagnostic methodology during the lecture",
           "plotline_id": "case_of_the_week",
           "function": "climax",
           "characters": [
             "house"
           ],
-          "also_affects": [
-            "authority"
-          ]
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House reflects on his diagnostic approach while dealing with Stacy's return",
+          "event": "House deals with Stacy's unexpected return while teaching",
           "plotline_id": "past",
           "function": "escalation",
           "characters": [
-            "house"
+            "house",
+            "stacy"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "escalation"
         }
       ],
-      "theme": "confronting the past through present challenges",
+      "theme": "confronting the past to understand the present",
       "interactions": [
         {
           "type": "thematic_rhyme",
@@ -2597,18 +2849,10 @@
         {
           "type": "convergence",
           "lines": [
-            "case_of_the_week",
-            "authority"
+            "authority",
+            "case_of_the_week"
           ],
-          "description": "House transforms Cuddy's forced teaching assignment into his own diagnostic showcase"
-        },
-        {
-          "type": "dramatic_irony",
-          "lines": [
-            "case_of_the_week",
-            "past"
-          ],
-          "description": "House's revelation of his own leg case parallels his current emotional vulnerability with Stacy's return"
+          "description": "Cuddy's demand for House to teach becomes the vehicle for his diagnostic demonstration"
         }
       ]
     },
@@ -2622,7 +2866,8 @@
           "characters": [
             "guest:mark"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House discovers Mark's brain appears to be deteriorating",
@@ -2631,7 +2876,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House initially diagnoses abdominal epilepsy but cannot detect memory loss",
@@ -2640,7 +2886,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Mark develops paralysis",
@@ -2649,7 +2896,8 @@
           "characters": [
             "guest:mark"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House treats Mark for Guillain-Barré syndrome",
@@ -2658,7 +2906,8 @@
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "House confides in Stacy that he still has feelings for her",
@@ -2668,50 +2917,55 @@
             "house",
             "stacy"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": "climax"
         },
         {
-          "event": "House realizes Mark has been experiencing delusions",
+          "event": "House realizes Mark has been experiencing delusions and suffers from acute intermittent porphyria",
           "plotline_id": "case_of_the_week",
           "function": "turning_point",
           "characters": [
             "house"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
-          "event": "House determines Mark suffers from acute intermittent porphyria",
+          "event": "House's team opposes his dangerous drug cocktail treatment plan",
           "plotline_id": "case_of_the_week",
           "function": "crisis",
           "characters": [
-            "house"
-          ],
-          "also_affects": null
-        },
-        {
-          "event": "House's team opposes his dangerous treatment plan",
-          "plotline_id": "case_of_the_week",
-          "function": "crisis",
-          "characters": [
-            "cameron",
             "foreman",
+            "cameron",
             "chase"
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "escalation"
         },
         {
-          "event": "House administers dangerous drug cocktail with Stacy's support",
+          "event": "Stacy supports House's dangerous treatment plan despite team opposition",
           "plotline_id": "case_of_the_week",
-          "function": "climax",
+          "function": "crisis",
           "characters": [
-            "house",
-            "stacy"
+            "stacy",
+            "house"
           ],
           "also_affects": [
             "past"
-          ]
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "House administers the dangerous drug cocktail to confirm AIP diagnosis",
+          "plotline_id": "case_of_the_week",
+          "function": "climax",
+          "characters": [
+            "house"
+          ],
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "The treatment succeeds and Mark recovers",
@@ -2720,7 +2974,8 @@
           "characters": [
             "guest:mark"
           ],
-          "also_affects": null
+          "also_affects": null,
+          "plot_fn": null
         },
         {
           "event": "Cuddy decides to hire Stacy as the hospital's lawyer",
@@ -2732,30 +2987,38 @@
           ],
           "also_affects": [
             "authority"
-          ]
+          ],
+          "plot_fn": "resolution"
         }
       ],
-      "theme": "the cost of emotional vulnerability in professional decisions",
+      "theme": "the cost of emotional honesty in professional relationships",
       "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "case_of_the_week",
+            "past"
+          ],
+          "description": "both plotlines explore the tension between professional duty and personal feelings"
+        },
         {
           "type": "convergence",
           "lines": [
             "case_of_the_week",
             "past"
           ],
-          "description": "House's feelings for Stacy directly influence his medical decisions and treatment of her husband"
+          "description": "House's confession to Stacy occurs while treating her husband, merging the medical case with their personal history"
         },
         {
-          "type": "thematic_rhyme",
+          "type": "dramatic_irony",
           "lines": [
             "case_of_the_week",
-            "past",
-            "authority"
+            "past"
           ],
-          "description": "all plotlines explore the tension between personal desires and professional responsibilities"
+          "description": "the audience knows House is treating the husband of the woman he loves, while Mark remains unaware of House's feelings"
         }
       ]
     }
   ],
-  "usage": "27 requests, 67,776 input + 21,816 output tokens, ~$0.594"
+  "usage": "27 requests, 68,032 input + 23,185 output tokens, ~$0.322"
 }
