@@ -92,7 +92,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 
 
 /* Event cells */
-.event-cell { min-width: 180px; min-height: 80px; border-radius: 6px; border: 1px solid #e5e5e5; }
+.event-cell { width: 220px; min-width: 220px; max-width: 220px; min-height: 80px; border-radius: 6px; border: 1px solid #e5e5e5; }
 .empty-cell { border-style: dashed; border-color: #d1d5db; }
 
 /* Event cards */
