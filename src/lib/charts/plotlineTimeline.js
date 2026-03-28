@@ -24,7 +24,7 @@ export function buildPlotlineTimeline(data) {
     const rowPadding = 16;
 
     const ctx = canvas.getContext('2d');
-    ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
     const maxLabelW = Math.max(...plotlines.map(pl => ctx.measureText(pl.name).width));
     const computedLeft = Math.max(200, maxLabelW + 24);
 
@@ -76,7 +76,7 @@ export function buildPlotlineTimeline(data) {
 
       // Label
       ctx.fillStyle = fg;
-      ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
       ctx.textAlign = 'right';
       ctx.textBaseline = 'middle';
       ctx.fillText(pl.name, computedLeft - 12, rowCenter);
@@ -119,9 +119,9 @@ export function buildPlotlineTimeline(data) {
       }
     }
 
-    // Legend — two rows if needed
-    const legendY = y + 16;
-    ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    // Legend
+    const legendY = y + 20;
+    ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
     ctx.textAlign = 'left';
     ctx.textBaseline = 'middle';
     let lx = computedLeft;
