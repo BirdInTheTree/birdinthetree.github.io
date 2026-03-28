@@ -19,16 +19,25 @@ export function buildPlotlineTimeline(data) {
 
     const dotR = 6;
     const dotSpacing = dotR * 2 + 3;
-    const colW = 100;
-    const topMargin = 40;
+    const colW = 130;
     const rowPadding = 16;
+    const legendH = 30;
+    const epHeaderH = 30;
 
     const ctx = canvas.getContext('2d');
-    ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
     const maxLabelW = Math.max(...plotlines.map(pl => ctx.measureText(pl.name).width));
     const computedLeft = Math.max(200, maxLabelW + 24);
 
-    // Compute max events per cell for each plotline to set row height
+    // Measure legend width
+    let legendTotalW = 0;
+    for (const fn of ALL_FUNCTIONS) {
+      legendTotalW += ctx.measureText(fn.replace(/_/g, ' ')).width + 28;
+    }
+
+    const totalW = Math.max(computedLeft + epCodes.length * colW + 20, legendTotalW + 40);
+
+    // Compute row heights
     const rowHeights = plotlines.map(pl => {
       let maxEvents = 0;
       for (const ep of episodes) {
@@ -40,15 +49,15 @@ export function buildPlotlineTimeline(data) {
       return Math.max(dotSpacing * 2, maxEvents * dotSpacing + rowPadding);
     });
 
-    const totalW = computedLeft + epCodes.length * colW + 20;
+    // Layout: episode headers → rows → legend (bottom)
+    const topOffset = epHeaderH;
     const rowTops = [];
-    let y = topMargin;
+    let y = topOffset;
     for (const h of rowHeights) {
       rowTops.push(y);
       y += h;
     }
-    const legendH = 40;
-    const totalH = y + legendH;
+    const totalH = y + legendH + 10;
 
     const dpr = window.devicePixelRatio || 1;
     canvas.width = totalW * dpr;
@@ -60,11 +69,22 @@ export function buildPlotlineTimeline(data) {
 
     // Episode headers
     ctx.fillStyle = fg;
-    ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
     for (let i = 0; i < epCodes.length; i++) {
-      ctx.fillText(epCodes[i], computedLeft + i * colW + colW / 2, topMargin - 8);
+      ctx.fillText(epCodes[i], computedLeft + i * colW + colW / 2, topOffset - 8);
+    }
+
+    // Vertical dividers between episodes
+    ctx.strokeStyle = fgMuted;
+    ctx.lineWidth = 0.5;
+    for (let e = 1; e < epCodes.length; e++) {
+      const x = computedLeft + e * colW - colW / 2 + colW / 2;
+      ctx.beginPath();
+      ctx.moveTo(computedLeft + e * colW, topOffset);
+      ctx.lineTo(computedLeft + e * colW, y);
+      ctx.stroke();
     }
 
     // Rows
@@ -76,7 +96,7 @@ export function buildPlotlineTimeline(data) {
 
       // Label
       ctx.fillStyle = fg;
-      ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
       ctx.textAlign = 'right';
       ctx.textBaseline = 'middle';
       ctx.fillText(pl.name, computedLeft - 12, rowCenter);
@@ -119,26 +139,21 @@ export function buildPlotlineTimeline(data) {
       }
     }
 
-    // Legend
-    const legendY = y + 20;
-    ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
-    ctx.textAlign = 'left';
+    // Legend — bottom, centered
+    ctx.font = '16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
     ctx.textBaseline = 'middle';
-    let lx = computedLeft;
+    ctx.textAlign = 'left';
+    const legendY = y + legendH / 2;
+    let lx = (totalW - legendTotalW) / 2;
     for (const fn of ALL_FUNCTIONS) {
       const label = fn.replace(/_/g, ' ');
-      const labelW = ctx.measureText(label).width + 28;
-      if (lx + labelW > totalW - 20) {
-        // Don't wrap — just stop (canvas doesn't support wrapping well)
-        break;
-      }
       ctx.beginPath();
       ctx.arc(lx + 6, legendY, 5, 0, Math.PI * 2);
       ctx.fillStyle = FUNCTION_COLORS[fn] || '#999';
       ctx.fill();
       ctx.fillStyle = fg;
       ctx.fillText(label, lx + 16, legendY);
-      lx += labelW;
+      lx += ctx.measureText(label).width + 28;
     }
   }
 }

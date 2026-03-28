@@ -100,17 +100,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .event-card:hover { transform: scale(1.02); box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
 .event-card:last-child { margin-bottom: 0; }
 
-/* Function colors */
-.fn-setup { background: #f3f4f6; }
-.fn-escalation { background: #fef9c3; }
-.fn-turning_point { background: #fed7aa; }
-.fn-inciting_incident { background: #dbeafe; }
-.fn-climax { background: #fecaca; }
-.fn-resolution { background: #d1fae5; }
-.fn-crisis { background: #fee2e2; }
-.fn-seed { background: #dbeafe; }
-.fn-cliffhanger { background: #e9d5ff; }
-.fn-catalyst { background: #dbeafe; }
+/* Function colors — light theme: pastel bg + saturated text */
+.fn-setup { background: #ebebeb; color: #555; }
+.fn-inciting_incident { background: #d4f4f9; color: #1a8a9e; }
+.fn-escalation { background: #faf0d4; color: #8a6d2a; }
+.fn-turning_point { background: #ece4fc; color: #6b4fb5; }
+.fn-crisis { background: #ffe8d6; color: #a05a2a; }
+.fn-climax { background: #ffdde0; color: #b03a42; }
+.fn-resolution { background: #ddf5d3; color: #4a7a3a; }
+.fn-seed { background: #d4f4f9; color: #1a8a9e; }
+.fn-cliffhanger { background: #ebebeb; color: #555; }
+.fn-catalyst { background: #d4f4f9; color: #1a8a9e; }
 
 /* Context badges (franchise type, format) */
 .context-badge { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 4px; font-size: 1rem; background: #f3f4f6; color: #374151; margin-right: 0.5rem; }
@@ -166,20 +166,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 :root.dark .fn-count { background: rgba(255,255,255,0.15); }
 
 /* Dark function colors */
-:root.dark .fn-setup { background: #343434; color: #c6c6c6; }
-:root.dark .fn-escalation { background: #433a2a; color: #f9e2af; }
-:root.dark .fn-turning_point { background: #3d2f24; color: #fab387; }
-:root.dark .fn-inciting_incident { background: #243347; color: #7dd3fc; }
-:root.dark .fn-climax { background: #3d2332; color: #f38ba8; }
-:root.dark .fn-resolution { background: #1e3d2e; color: #a6e3a1; }
-:root.dark .fn-crisis { background: #3d2332; color: #fca5a5; }
-:root.dark .fn-seed { background: #243347; color: #7dd3fc; }
-:root.dark .fn-cliffhanger { background: #302040; color: #b07aa1; }
-:root.dark .fn-catalyst { background: #1e3a5f; color: #7dd3fc; }
-:root.dark .context-badge { background: #343434; color: #c6c6c6; }
-:root.dark .confidence-solid { background: #1e3d2e; color: #a6e3a1; }
-:root.dark .confidence-moderate { background: #433a2a; color: #f9e2af; }
-:root.dark .confidence-tentative { background: #3d2332; color: #fca5a5; }
+:root.dark .fn-setup { background: #303030; color: #b0b0b0; }
+:root.dark .fn-inciting_incident { background: #1a3038; color: #2ac3de; }
+:root.dark .fn-escalation { background: #332e1e; color: #e0af68; }
+:root.dark .fn-turning_point { background: #2a2040; color: #bb9af7; }
+:root.dark .fn-crisis { background: #3a2518; color: #ff9e64; }
+:root.dark .fn-climax { background: #3a1e22; color: #ff757f; }
+:root.dark .fn-resolution { background: #1e3020; color: #9ece6a; }
+:root.dark .fn-seed { background: #1a3038; color: #2ac3de; }
+:root.dark .fn-cliffhanger { background: #303030; color: #b0b0b0; }
+:root.dark .fn-catalyst { background: #1a3038; color: #2ac3de; }
+:root.dark .context-badge { background: #2a2b3d; color: #c0caf5; }
+:root.dark .confidence-solid { background: #1e3020; color: #9ece6a; }
+:root.dark .confidence-moderate { background: #332e1e; color: #e0af68; }
+:root.dark .confidence-tentative { background: #3a1e22; color: #ff757f; }
 
 /* Dark side panel & modal */
 :root.dark .side-panel-overlay { background: rgba(0,0,0,0.55); }

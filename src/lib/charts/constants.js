@@ -16,33 +16,37 @@ export const ALL_FUNCTIONS = [
 ];
 
 /**
- * 12 visually distinct colors for plotlines.
- * Warm, saturated tones — neighbours differ in hue and lightness.
+ * 12 visually distinct colors for plotlines — Tokyo Night derived.
+ * Each differs in hue and saturation to stay distinguishable on both themes.
  */
 export const STORYLINE_PALETTE = [
-  '#E15759', // coral red
-  '#4E79A7', // classic blue
-  '#F28E2B', // warm amber
-  '#76B7B2', // sage teal
-  '#59A14F', // leaf green
-  '#EDC948', // marigold
-  '#B07AA1', // dusty plum
-  '#FF9DA7', // blush pink
-  '#9C755F', // cocoa
-  '#BAB0AC', // warm gray
-  '#86BCB6', // seafoam
-  '#D37295'  // rose
+  '#7aa2f7', // blue
+  '#ff9e64', // orange
+  '#9ece6a', // green
+  '#bb9af7', // purple
+  '#7dcfff', // cyan
+  '#e0af68', // yellow
+  '#ff757f', // red
+  '#c0caf5', // lavender
+  '#73daca', // teal
+  '#f7768e', // pink
+  '#a9b1d6', // gray-blue
+  '#d5a487'  // warm tan
 ];
 
-/** Colors matching narrative function CSS classes. */
+/**
+ * Unified function color palette — 7 maximally distinct hues.
+ * Every color occupies a different part of the spectrum.
+ * Works on both light and dark backgrounds.
+ */
 export const FUNCTION_COLORS = {
-  setup: '#D4D4D4',
-  inciting_incident: '#009E73',
-  escalation: '#F0E442',
-  turning_point: '#56B4E9',
-  crisis: '#E69F00',
-  climax: '#D55E00',
-  resolution: '#CC79A7'
+  setup: '#a0a0a0',            // gray — neutral start
+  inciting_incident: '#2ac3de', // teal — something sparks
+  escalation: '#e0af68',       // amber/yellow — building heat
+  turning_point: '#bb9af7',    // purple — shift
+  crisis: '#ff9e64',           // orange — danger
+  climax: '#ff757f',           // red — peak
+  resolution: '#9ece6a'        // green — calm
 };
 
 /** Plotline rank sort order — lower is more important. */
