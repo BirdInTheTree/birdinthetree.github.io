@@ -114,7 +114,7 @@
     <h1><a href="https://github.com/BirdInTheTree/tvplotlines" class="toolbar-title-link">tvplot app</a> <span style="font-weight: 400; opacity: 0.6;">/ analytics</span></h1>
     <div class="toolbar-actions">
       <SeriesSelect />
-      <a href="/plotter-app" class="btn">Grid View</a>
+      <a href="/plotter-app/" class="btn">Grid View</a>
       <button class="btn" on:click={toggleTheme}>
         {$theme === 'light' ? 'Dark' : 'Light'}
       </button>

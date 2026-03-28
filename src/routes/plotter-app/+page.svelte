@@ -295,7 +295,7 @@
             Save
           </button>
         {/if}
-        <a href="/plotter-app/analytics" class="btn">Analytics</a>
+        <a href="/plotter-app/analytics/" class="btn">Analytics</a>
         <button class="btn" on:click={toggleTheme}>
           {$theme === 'light' ? 'Dark' : 'Light'}
         </button>
