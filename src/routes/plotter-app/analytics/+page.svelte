@@ -13,7 +13,6 @@
 
   import { buildEpisodeBalance } from '$lib/charts/episodeBalance.js';
   import { buildPlotlineTimeline } from '$lib/charts/plotlineTimeline.js';
-  import { buildPlotlineFnBars, buildPlotlineFnBarConfig } from '$lib/charts/plotlineFnBars.js';
 
   $: if ($currentSeries) {
     loadCurrentSeries($currentSeries);
@@ -44,7 +43,6 @@
 
   $: balanceChart = $seriesData ? buildEpisodeBalance($seriesData) : null;
   $: timelineChart = $seriesData ? buildPlotlineTimeline($seriesData) : null;
-  $: fnBarsCharts = $seriesData ? buildPlotlineFnBars($seriesData) : [];
 
   function bindCanvas(node, config) {
     if (config?.render) config.render(node);
@@ -95,7 +93,7 @@
 
       <div class="chart-card">
         <div class="chart-card-header">
-          <h2 class="chart-title">Option A: Arc Timeline</h2>
+          <h2 class="chart-title">Arc Timeline</h2>
           <p class="chart-description">Each dot is an event. Color = plot function (role in the plotline's arc). Rows = plotlines, columns = episodes.</p>
         </div>
         <div class="chart-body">
@@ -107,29 +105,6 @@
         </div>
       </div>
 
-      <div class="chart-card">
-        <div class="chart-card-header">
-          <h2 class="chart-title">Option B: Arc Bars (small multiples)</h2>
-          <p class="chart-description">Stacked bars per episode for each plotline. Color = plot function. See how each arc develops episode by episode.</p>
-        </div>
-        <div class="chart-body">
-          {#if fnBarsCharts.length > 0}
-            <div class="small-multiples">
-              {#each fnBarsCharts as chart}
-                {@const cfg = buildPlotlineFnBarConfig(chart)}
-                <div class="small-multiple">
-                  <h3>{chart.plotline.name}</h3>
-                  <ChartCanvas
-                    type="bar"
-                    data={cfg.data}
-                    options={cfg.options}
-                  />
-                </div>
-              {/each}
-            </div>
-          {/if}
-        </div>
-      </div>
     </div>
   {:else}
     <p>Select a series to view analytics.</p>
