@@ -12,6 +12,8 @@
   import ChartCanvas from '$lib/components/ChartCanvas.svelte';
 
   import { buildEpisodeBalance } from '$lib/charts/episodeBalance.js';
+  import { buildPlotlineTimeline } from '$lib/charts/plotlineTimeline.js';
+  import { buildPlotlineFnBars, buildPlotlineFnBarConfig } from '$lib/charts/plotlineFnBars.js';
 
   $: if ($currentSeries) {
     loadCurrentSeries($currentSeries);
@@ -41,6 +43,17 @@
   });
 
   $: balanceChart = $seriesData ? buildEpisodeBalance($seriesData) : null;
+  $: timelineChart = $seriesData ? buildPlotlineTimeline($seriesData) : null;
+  $: fnBarsCharts = $seriesData ? buildPlotlineFnBars($seriesData) : [];
+
+  function bindCanvas(node, config) {
+    if (config?.render) config.render(node);
+    return {
+      update(newConfig) {
+        if (newConfig?.render) newConfig.render(node);
+      }
+    };
+  }
 </script>
 
 <svelte:head>
@@ -66,7 +79,7 @@
       <div class="chart-card">
         <div class="chart-card-header">
           <h2 class="chart-title">Episode Balance</h2>
-          <p class="chart-description">Event count per plotline per episode. Each color is a plotline. Bar height shows total event density.</p>
+          <p class="chart-description">Event count per plotline per episode.</p>
         </div>
         <div class="chart-body">
           {#if balanceChart}
@@ -79,8 +92,69 @@
           {/if}
         </div>
       </div>
+
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Option A: Arc Timeline</h2>
+          <p class="chart-description">Each dot is an event. Color = plot function (role in the plotline's arc). Rows = plotlines, columns = episodes.</p>
+        </div>
+        <div class="chart-body">
+          {#if timelineChart}
+            <div class="custom-canvas-wrapper">
+              <canvas use:bindCanvas={timelineChart}></canvas>
+            </div>
+          {/if}
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Option B: Arc Bars (small multiples)</h2>
+          <p class="chart-description">Stacked bars per episode for each plotline. Color = plot function. See how each arc develops episode by episode.</p>
+        </div>
+        <div class="chart-body">
+          {#if fnBarsCharts.length > 0}
+            <div class="small-multiples">
+              {#each fnBarsCharts as chart}
+                {@const cfg = buildPlotlineFnBarConfig(chart)}
+                <div class="small-multiple">
+                  <h3>{chart.plotline.name}</h3>
+                  <ChartCanvas
+                    type="bar"
+                    data={cfg.data}
+                    options={cfg.options}
+                  />
+                </div>
+              {/each}
+            </div>
+          {/if}
+        </div>
+      </div>
     </div>
   {:else}
     <p>Select a series to view analytics.</p>
   {/if}
 </div>
+
+<style>
+  .custom-canvas-wrapper {
+    overflow-x: auto;
+    min-height: 300px;
+  }
+  .custom-canvas-wrapper canvas {
+    display: block;
+  }
+  .small-multiples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  .small-multiple {
+    min-height: 200px;
+  }
+  .small-multiple h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+</style>
