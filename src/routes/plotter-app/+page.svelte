@@ -259,7 +259,7 @@
     const items = await loadManifest();
     manifest.set(items);
     editMode.set(isEditingMode());
-    if (items.length > 0) {
+    if (items.length > 0 && !$currentSeries) {
       currentSeries.set(items[0].slug);
     }
   });
