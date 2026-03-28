@@ -52,11 +52,13 @@ export function buildEpisodeBalance(data) {
       scales: {
         x: {
           stacked: true,
+          grid: { display: false },
           ticks: { maxRotation: 0, font: { size: 16 } }
         },
         y: {
           stacked: true,
           max: yMax,
+          grid: { display: false },
           title: { display: true, text: 'Event count', font: { size: 16 } },
           beginAtZero: true,
           ticks: { font: { size: 16 }, precision: 0 }
