@@ -284,11 +284,8 @@
       </h1>
       <div class="toolbar-actions">
         <SeriesSelect />
-        {#if $seriesData?.context}
+        {#if $seriesData?.context?.format}
           <span class="context-badge">{$seriesData.context.format}</span>
-          {#if $seriesData.context.story_engine}
-            <span class="story-engine-toolbar">{$seriesData.context.story_engine}</span>
-          {/if}
         {/if}
         {#if $editMode}
           <button class="btn" class:btn-active={mergeMode} on:click={toggleMergeMode}>
@@ -314,6 +311,9 @@
 
     {#if $seriesData}
       <Filters data={$seriesData} {cast} />
+      {#if $seriesData.context?.story_engine}
+        <div class="story-engine">{$seriesData.context.story_engine}</div>
+      {/if}
     {/if}
   </div>
 
