@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Как украсть сериал</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #1a1a1a;
+    background: #fff;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  article {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 3rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 2rem;
+  }
+
+  p { margin-bottom: 0.6rem; }
+  em { font-style: italic; }
+  strong { font-weight: 600; }
+
+  a { color: #2563eb; text-decoration: underline; text-decoration-color: #dbeafe; text-underline-offset: 2px; }
+  a:hover { text-decoration-color: #2563eb; }
+
+  sup { font-size: 0.65em; vertical-align: super; line-height: 0; }
+  sup a { color: #2563eb; text-decoration: none; font-weight: 600; }
+
+  code {
+    font-family: 'SF Mono', 'Menlo', monospace;
+    font-size: 0.85em;
+    background: #f3f4f6;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+  }
+
+  .screenshot-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem 0.5rem;
+  }
+
+  .screenshot-page img {
+    max-width: 960px;
+    width: 100%;
+    max-height: 88vh;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+  }
+
+  .screenshot-caption {
+    margin-top: 0.5rem;
+    font-size: 16px;
+    color: #6b7280;
+    text-align: center;
+  }
+
+  .screenshot-caption a {
+    color: #2563eb;
+    font-size: 16px;
+  }
+
+  .footnotes {
+    margin-top: 1.5rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #6b7280;
+  }
+  .footnotes ol { padding-left: 1rem; }
+  .footnotes li { margin-bottom: 0.4rem; }
+
+  .page-break {}
+
+  @media print {
+    article { padding: 1rem; max-width: 100%; }
+    .page-break { page-break-before: always; }
+    .screenshot-page { padding: 0.5rem 0; height: 100vh; }
+    .screenshot-page img { max-height: 90vh; border: none; }
+    a { color: #2563eb; text-decoration: underline; }
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.7rem; }
+    article { padding: 1.5rem 1rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<article>
+
+  <h1>Как украсть сериал</h1>
+
+  <p>Я написала инструмент, который показывает &laquo;рентген&raquo; сериала: движок и&nbsp;главные сюжетные линии (А/B/C), события разносит по&nbsp;линиям, у&nbsp;каждой линии указывает — героя, цель, препятствия, ставки. Каждому событию присваивает роль в&nbsp;серии — от&nbsp;завязки до&nbsp;развязки.</p>
+
+  <p>Всё, что нужно на&nbsp;входе — синопсисы сезона, 150–500 слов на&nbsp;серию. Даже синопсисы не&nbsp;нужны, если сериал уже был в&nbsp;эфире — достаточно дать название и&nbsp;номер сезона утилите <code>write_synopses</code>, и&nbsp;она сходит (пока только в&nbsp;Wikipedia) и&nbsp;сама напишет синопсисы к&nbsp;каждому эпизоду.</p>
+
+  <p><a href="https://github.com/BirdInTheTree/tvplotlines">tvplotlines</a> — open-source python библиотека (<code>pip install tvplotlines</code>), которая извлекает структуру сериала при помощи LLM.</p>
+
+  <p>Я придумала её для себя, когда отчаявшейся домохозяйкой в&nbsp;Швейцарии решила, что буду писать сериал. А&nbsp;потом Claude стал вайб-кодить, и&nbsp;решение &laquo;на&nbsp;коленке&raquo; мы довели до&nbsp;библиотеки.</p>
+
+  <p>В&nbsp;основе библиотеки &laquo;знание&raquo; из&nbsp;6&nbsp;книг о&nbsp;ТВ-сценариях<sup><a href="#fn1">1</a></sup>, последние идеи из&nbsp;промпт-инженерии<sup><a href="#fn2">2</a></sup> и&nbsp;50+ экспериментов <a href="https://github.com/karpathy/autoresearch">autoresearch</a>'ем Карпаты.</p>
+
+  <p>Библиотека бесплатная. Но для визуализации и&nbsp;работы с&nbsp;результатами нужно приложение — это отдельный продукт. Его мы тоже написали. <a href="https://birdinthetree.github.io/plotter-app">tvplot&nbsp;app</a> — демо на&nbsp;github.io.</p>
+
+  <footer class="footnotes">
+    <ol>
+      <li id="fn1">Nash, <em>Save the Cat! Writes for TV</em> (2022); McKee, <em>Story</em> (1997); Douglas, <em>Writing the TV Drama Series</em> (2011); Landau, <em>The TV Showrunner's Roadmap</em> (2018); Oberg, <em>Writing a Successful TV Series</em> (2023); Mittell, <em>Complex TV</em> (2015).</li>
+      <li id="fn2">Zhou et&nbsp;al., <em>Least-to-Most Prompting</em> (2022) — декомпозиция сложных задач на&nbsp;последовательные шаги; Wei et&nbsp;al., <em>Chain-of-Thought Prompting</em> (2022); Wang et&nbsp;al., <em>Plan-and-Solve Prompting</em> (2023). Тестирование промптов — Karpathy, <a href="https://github.com/karpathy/autoresearch">autoresearch</a> (2026).</li>
+    </ol>
+  </footer>
+
+</article>
+
+<div class="page-break"></div>
+<div class="screenshot-page">
+  <img src="images/app-screenshot-1.png" alt="Breaking Bad S01 — Walt: Empire">
+  <div class="screenshot-caption">Breaking Bad S01 — линия Walt: Empire, эпизоды 1–3<br><a href="https://birdinthetree.github.io/plotter-app/">birdinthetree.github.io/plotter-app</a></div>
+</div>
+
+<div class="page-break"></div>
+<div class="screenshot-page">
+  <img src="images/app-screenshot-2.png" alt="Breaking Bad S01 — Walt: Family">
+  <div class="screenshot-caption">Breaking Bad S01 — линия Walt: Family, эпизоды 5–7<br><a href="https://birdinthetree.github.io/plotter-app/">birdinthetree.github.io/plotter-app</a></div>
+</div>
+
+<div class="page-break"></div>
+<div class="screenshot-page">
+  <img src="images/app-screenshot-3.png" alt="House S01 — Case of the Week">
+  <div class="screenshot-caption">House S01 — линия Case of the Week, эпизоды 1–4<br><a href="https://birdinthetree.github.io/plotter-app/">birdinthetree.github.io/plotter-app</a></div>
+</div>
+
+<div class="page-break"></div>
+<div class="screenshot-page">
+  <img src="images/app-screenshot-4.png" alt="House S01 — Vogler: Control">
+  <div class="screenshot-caption">House S01 — линия Vogler: Control, эпизоды 14–17<br><a href="https://birdinthetree.github.io/plotter-app/">birdinthetree.github.io/plotter-app</a></div>
+</div>
+
+<div class="page-break"></div>
+<div class="screenshot-page">
+  <img src="images/app-screenshot-5.png" alt="House S01 — House: Authority">
+  <div class="screenshot-caption">House S01 — линия House: Authority, эпизоды 16–19<br><a href="https://birdinthetree.github.io/plotter-app/">birdinthetree.github.io/plotter-app</a></div>
+</div>
+
+</body>
+</html>
