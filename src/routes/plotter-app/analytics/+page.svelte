@@ -10,6 +10,7 @@
   } from '$lib/stores/app.js';
   import SeriesSelect from '$lib/components/SeriesSelect.svelte';
   import ChartCanvas from '$lib/components/ChartCanvas.svelte';
+  import ConvergenceMap from '$lib/components/ConvergenceMap.svelte';
 
   import { buildEpisodeBalance } from '$lib/charts/episodeBalance.js';
   import { buildPlotlineTimeline } from '$lib/charts/plotlineTimeline.js';
@@ -76,8 +77,7 @@
     <div class="charts-list">
       <div class="chart-card">
         <div class="chart-card-header">
-          <h2 class="chart-title">Episode Balance</h2>
-          <p class="chart-description">Event count per plotline per episode.</p>
+          <h2 class="chart-title">Event count per plotline per episode</h2>
         </div>
         <div class="chart-body">
           {#if balanceChart}
@@ -91,17 +91,27 @@
         </div>
       </div>
 
-      <div class="chart-card">
-        <div class="chart-card-header">
-          <h2 class="chart-title">Arc Timeline</h2>
-          <p class="chart-description">Each dot is an event. Color = plot function (role in the plotline's arc). Rows = plotlines, columns = episodes.</p>
+      <div class="charts-row">
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h2 class="chart-title">Span Timeline</h2>
+          </div>
+          <div class="chart-body">
+            {#if timelineChart}
+              <div class="custom-canvas-wrapper">
+                <canvas use:bindCanvas={timelineChart}></canvas>
+              </div>
+            {/if}
+          </div>
         </div>
-        <div class="chart-body">
-          {#if timelineChart}
-            <div class="custom-canvas-wrapper">
-              <canvas use:bindCanvas={timelineChart}></canvas>
-            </div>
-          {/if}
+
+        <div class="chart-card">
+          <div class="chart-card-header">
+            <h2 class="chart-title">Convergence</h2>
+          </div>
+          <div class="chart-body">
+            <ConvergenceMap data={$seriesData} />
+          </div>
         </div>
       </div>
 
@@ -112,9 +122,13 @@
 </div>
 
 <style>
+  .charts-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
   .custom-canvas-wrapper {
     overflow-x: auto;
-    min-height: 300px;
   }
   .custom-canvas-wrapper canvas {
     display: block;

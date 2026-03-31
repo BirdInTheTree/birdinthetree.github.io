@@ -66,11 +66,20 @@ export function buildEpisodeBalance(data) {
       }
     },
     plugins: [{
+      id: 'legendMargin',
+      beforeInit(chart) {
+        const originalFit = chart.legend.fit;
+        chart.legend.fit = function () {
+          originalFit.call(this);
+          this.height += 40;
+        };
+      }
+    }, {
       id: 'barDataLabels',
       afterDraw(chart) {
         const ctx = chart.ctx;
         ctx.save();
-        ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+        ctx.font = '14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillStyle = '#ffffff';
@@ -82,13 +91,35 @@ export function buildEpisodeBalance(data) {
             if (count < 1) continue;
 
             const barHeight = Math.abs(element.base - element.y);
-            if (barHeight < 16) continue;
+            if (barHeight < 14) continue;
 
             const cx = element.x;
             const cy = (element.y + element.base) / 2;
             ctx.fillText(String(count), cx, cy);
           }
         }
+        // Totals above each stacked bar
+        const metas = chart.getSortedVisibleDatasetMetas();
+        const nPoints = metas[0]?.data.length || 0;
+        const isDark = document.documentElement.classList.contains('dark');
+        ctx.fillStyle = isDark ? '#c6c6c6' : '#333';
+        ctx.font = 'bold 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+        ctx.textBaseline = 'bottom';
+        for (let i = 0; i < nPoints; i++) {
+          let total = 0;
+          let topY = Infinity;
+          let cx = 0;
+          for (const meta of metas) {
+            const val = chart.data.datasets[meta.index]?.data[i] ?? 0;
+            total += val;
+            if (meta.data[i].y < topY) topY = meta.data[i].y;
+            cx = meta.data[i].x;
+          }
+          if (total > 0) {
+            ctx.fillText(String(total), cx, topY - 6);
+          }
+        }
+
         ctx.restore();
       }
     }]

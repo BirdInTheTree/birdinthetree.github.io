@@ -19,19 +19,16 @@ export const ALL_FUNCTIONS = [
  * 12 visually distinct colors for plotlines — Tokyo Night derived.
  * Each differs in hue and saturation to stay distinguishable on both themes.
  */
+/** Monet Water Lilies (1916–1919) palette — 8 pigment-accurate colors. */
 export const STORYLINE_PALETTE = [
-  '#7aa2f7', // blue
-  '#ff9e64', // orange
-  '#9ece6a', // green
-  '#bb9af7', // purple
-  '#7dcfff', // cyan
-  '#e0af68', // yellow
-  '#ff757f', // red
-  '#c0caf5', // lavender
-  '#73daca', // teal
-  '#f7768e', // pink
-  '#a9b1d6', // gray-blue
-  '#d5a487'  // warm tan
+  '#2a4a80', // deep azure — water
+  '#6a4890', // cobalt violet — reflections
+  '#3a7868', // viridian — lily pads
+  '#2a5a3a', // forest green — vegetation
+  '#d8c040', // cadmium yellow — lily accents
+  '#c07890', // lily rose — flowers
+  '#b89858', // warm ochre — light
+  '#1a2848', // deep water — shadows
 ];
 
 /**
@@ -39,14 +36,18 @@ export const STORYLINE_PALETTE = [
  * Every color occupies a different part of the spectrum.
  * Works on both light and dark backgrounds.
  */
+/**
+ * Narrative function colors — derived from Saul Bass "Man with the Golden Arm"
+ * poster palette (teal, blue, purple) plus gold and matching purple.
+ */
 export const FUNCTION_COLORS = {
-  setup: '#a0a0a0',            // gray — neutral start
-  inciting_incident: '#2ac3de', // teal — something sparks
-  escalation: '#e0af68',       // amber/yellow — building heat
-  turning_point: '#bb9af7',    // purple — shift
-  crisis: '#ff9e64',           // orange — danger
-  climax: '#ff757f',           // red — peak
-  resolution: '#9ece6a'        // green — calm
+  setup:             '#888888', // neutral gray — calm start
+  inciting_incident: '#d0a020', // gold — catalyst moment
+  escalation:        '#a8a090', // muted warm gray — lots of these, stays quiet
+  turning_point:     '#7038a8', // bright purple (poster)
+  crisis:            '#2048a8', // royal blue (poster bottom)
+  climax:            '#5c2882', // deep purple (poster bottom)
+  resolution:        '#0098b0'  // teal cyan (poster top-left) — cool down
 };
 
 /** Plotline rank sort order — lower is more important. */

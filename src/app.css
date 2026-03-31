@@ -11,6 +11,15 @@
   --chart-grid: #343434;
   --chart-tooltip-bg: #151515;
 }
+/* Browser dark mode without .dark class — match dark vars */
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark):not(.light) {
+    --chart-bg: #202020;
+    --chart-fg: #c6c6c6;
+    --chart-grid: #343434;
+    --chart-tooltip-bg: #151515;
+  }
+}
 
 /* Reset & base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -102,15 +111,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 
 /* Function colors — light theme: pastel bg + saturated text */
 .fn-setup { background: #ebebeb; color: #555; }
-.fn-inciting_incident { background: #d4f4f9; color: #1a8a9e; }
-.fn-escalation { background: #faf0d4; color: #8a6d2a; }
-.fn-turning_point { background: #ece4fc; color: #6b4fb5; }
-.fn-crisis { background: #ffe8d6; color: #a05a2a; }
-.fn-climax { background: #ffdde0; color: #b03a42; }
-.fn-resolution { background: #ddf5d3; color: #4a7a3a; }
-.fn-seed { background: #d4f4f9; color: #1a8a9e; }
+.fn-inciting_incident { background: #d4f4f9; color: #007a8a; }
+.fn-escalation { background: #fdf3d0; color: #8a6d1a; }
+.fn-turning_point { background: #ede0fc; color: #6b35c5; }
+.fn-crisis { background: #fff0d0; color: #b05a00; }
+.fn-climax { background: #fcd4e0; color: #a01050; }
+.fn-resolution { background: #d4f5d8; color: #2a8a2a; }
+.fn-seed { background: #d4f4f9; color: #007a8a; }
 .fn-cliffhanger { background: #ebebeb; color: #555; }
-.fn-catalyst { background: #d4f4f9; color: #1a8a9e; }
+.fn-catalyst { background: #d4f4f9; color: #007a8a; }
 
 /* Context badges (franchise type, format) */
 .context-badge { display: inline-block; padding: 0.25rem 0.625rem; border-radius: 4px; font-size: 1rem; background: #f3f4f6; color: #374151; margin-right: 0.5rem; }
@@ -167,15 +176,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 
 /* Dark function colors */
 :root.dark .fn-setup { background: #303030; color: #b0b0b0; }
-:root.dark .fn-inciting_incident { background: #1a3038; color: #2ac3de; }
-:root.dark .fn-escalation { background: #332e1e; color: #e0af68; }
-:root.dark .fn-turning_point { background: #2a2040; color: #bb9af7; }
-:root.dark .fn-crisis { background: #3a2518; color: #ff9e64; }
-:root.dark .fn-climax { background: #3a1e22; color: #ff757f; }
-:root.dark .fn-resolution { background: #1e3020; color: #9ece6a; }
-:root.dark .fn-seed { background: #1a3038; color: #2ac3de; }
+:root.dark .fn-inciting_incident { background: #0a2a30; color: #00b4d8; }
+:root.dark .fn-escalation { background: #302a10; color: #e6b422; }
+:root.dark .fn-turning_point { background: #2a1840; color: #9b5de5; }
+:root.dark .fn-crisis { background: #3a2a10; color: #f57c00; }
+:root.dark .fn-climax { background: #3a0a20; color: #d81b60; }
+:root.dark .fn-resolution { background: #0a3010; color: #3cb44b; }
+:root.dark .fn-seed { background: #0a2a30; color: #00b4d8; }
 :root.dark .fn-cliffhanger { background: #303030; color: #b0b0b0; }
-:root.dark .fn-catalyst { background: #1a3038; color: #2ac3de; }
+:root.dark .fn-catalyst { background: #0a2a30; color: #00b4d8; }
 :root.dark .context-badge { background: #2a2b3d; color: #c0caf5; }
 :root.dark .confidence-solid { background: #1e3020; color: #9ece6a; }
 :root.dark .confidence-moderate { background: #332e1e; color: #e0af68; }
@@ -200,7 +209,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .chart-card-header { padding: 1.25rem 1.5rem 0.5rem; }
 .chart-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.25rem; }
 .chart-description { font-size: 1rem; color: #666; line-height: 1.5; }
-.chart-body { padding: 0.5rem 1rem 1.25rem; min-height: 450px; }
+.chart-body { padding: 0.5rem 1rem 1.25rem; }
 :root.dark .chart-card { background: #151515; box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 :root.dark .chart-description { color: #8a8a8a; }
 

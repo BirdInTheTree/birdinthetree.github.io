@@ -17,7 +17,10 @@ export const toastMessage = writable(null);
 
 function getInitialTheme() {
   if (!browser) return 'light';
-  return localStorage.getItem('theme') || 'light';
+  const saved = localStorage.getItem('theme');
+  if (saved) return saved;
+  // Respect browser preference
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 export const theme = writable(getInitialTheme());
