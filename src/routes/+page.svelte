@@ -5,7 +5,7 @@
 <div class="bio">
   <header class="bio-header">
     <h1 class="bio-name">Nataliia Vashko</h1>
-    <p class="bio-tagline">Long-form storytelling &#xb7; Formal logic &#xb7; LLM enculturation</p>
+    <p class="bio-tagline">Long-form storytelling &#xb7; Formal logic</p>
   </header>
 
   <section class="bio-facts">
@@ -25,8 +25,6 @@
       <li>Data &amp; Media Analyst &mdash; Nestl&eacute;, Lausanne</li>
     </ul>
 
-    <h2>Now</h2>
-    <p>housewife</p>
   </section>
 
   <section class="bio-epigraph">
