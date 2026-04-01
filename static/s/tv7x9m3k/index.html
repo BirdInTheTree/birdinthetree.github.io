@@ -33,6 +33,14 @@
     margin-bottom: 2rem;
   }
 
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 1.8rem;
+    margin-bottom: 0.6rem;
+    color: #1a1a1a;
+  }
+
   p { margin-bottom: 0.6rem; }
   em { font-style: italic; }
   strong { font-weight: 600; }
@@ -50,6 +58,22 @@
     padding: 0.1rem 0.35rem;
     border-radius: 3px;
   }
+
+  .cta {
+    display: inline-block;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    padding: 0.7rem 1.8rem;
+    background: #2563eb;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+  .cta:hover { background: #1d4ed8; color: #fff; text-decoration: none; }
 
   .screenshot-page {
     display: flex;
@@ -98,6 +122,7 @@
     .screenshot-page { padding: 0.5rem 0; height: 100vh; }
     .screenshot-page img { max-height: 90vh; border: none; }
     a { color: #2563eb; text-decoration: underline; }
+    .cta { background: none; color: #2563eb; border: 2px solid #2563eb; }
   }
 
   @media (max-width: 600px) {
@@ -112,17 +137,27 @@
 
   <h1>Как украсть сериал</h1>
 
-  <p>Я написала инструмент, который показывает &laquo;рентген&raquo; сериала: движок и&nbsp;главные сюжетные линии (А/B/C), события разносит по&nbsp;линиям, у&nbsp;каждой линии указывает — героя, цель, препятствия, ставки. Каждому событию присваивает роль в&nbsp;серии — от&nbsp;завязки до&nbsp;развязки.</p>
+  <p style="margin-bottom: 1.6rem; color: #4b5563; font-style: italic;">&laquo;В&nbsp;каждом сериале — несколько параллельных сюжетных линий, каждая со&nbsp;своим героем, целью и&nbsp;ставками.&raquo;<br><span style="font-style: normal; font-size: 16px;">&mdash; Emmanuel Oberg, <em>Writing a Successful TV Series</em></span></p>
 
-  <p>Всё, что нужно на&nbsp;входе — синопсисы сезона, 150–500 слов на&nbsp;серию. Даже синопсисы не&nbsp;нужны, если сериал уже был в&nbsp;эфире — достаточно дать название и&nbsp;номер сезона утилите <code>write_synopses</code>, и&nbsp;она сходит (пока только в&nbsp;Wikipedia) и&nbsp;сама напишет синопсисы к&nbsp;каждому эпизоду.</p>
+  <p>Я&nbsp;написала Python-библиотеку, которая делает &laquo;рентген&raquo; сериала — извлекает эти линии из&nbsp;текста, разносит события по&nbsp;линиям и&nbsp;присваивает каждому роль, от&nbsp;завязки до&nbsp;развязки.</p>
 
-  <p><a href="https://github.com/BirdInTheTree/tvplotlines">tvplotlines</a> — open-source python библиотека (<code>pip install tvplotlines</code>), которая извлекает структуру сериала при помощи LLM.</p>
+  <h2>Как использовать?</h2>
 
-  <p>Я придумала её для себя, когда отчаявшейся домохозяйкой в&nbsp;Швейцарии решила, что буду писать сериал. А&nbsp;потом Claude стал вайб-кодить, и&nbsp;решение &laquo;на&nbsp;коленке&raquo; мы довели до&nbsp;библиотеки.</p>
+  <p><strong>Оценить новый проект.</strong> Вы читаете синопсисы нового сериала и&nbsp;хотите увидеть структуру целиком. На&nbsp;входе — синопсисы, 150–350 слов на&nbsp;серию.</p>
 
-  <p>В&nbsp;основе библиотеки &laquo;знание&raquo; из&nbsp;6&nbsp;книг о&nbsp;ТВ-сценариях<sup><a href="#fn1">1</a></sup>, последние идеи из&nbsp;промпт-инженерии<sup><a href="#fn2">2</a></sup> и&nbsp;50+ экспериментов <a href="https://github.com/karpathy/autoresearch">autoresearch</a>'ем Карпаты.</p>
+  <p><strong>Деконструкция.</strong> Вы хотите понять, как устроен сериал, который уже был в&nbsp;эфире — чтобы повторить приём или адаптировать структуру. Достаточно дать название и&nbsp;номер сезона — инструмент сам напишет синопсисы по&nbsp;открытым данным и&nbsp;покажет анатомию.</p>
 
-  <p>Библиотека бесплатная. Но для визуализации и&nbsp;работы с&nbsp;результатами нужно приложение — это отдельный продукт. Его мы тоже написали. <a href="https://birdinthetree.github.io/plotter-app">tvplot&nbsp;app</a> — демо на&nbsp;github.io.</p>
+  <p>
+    <a class="cta" href="https://birdinthetree.github.io/plotter-app">ПОПРОБОВАТЬ ДЕМО</a>
+  </p>
+
+  <h2>Технические детали</h2>
+
+  <p><a href="https://github.com/BirdInTheTree/tvplotlines">tvplotlines</a> — open-source Python-библиотека (<code>pip install tvplotlines</code>), которая извлекает структуру сериала при помощи LLM. В&nbsp;основе — шесть книг о&nbsp;ТВ-сценариях<sup><a href="#fn1">1</a></sup> и&nbsp;последние идеи промпт-инженерии<sup><a href="#fn2">2</a></sup>. Если у&nbsp;вас есть разработчик — можно взять, настроить и&nbsp;интегрировать в&nbsp;свой процесс.</p>
+
+  <p><a href="https://birdinthetree.github.io/plotter-app">tvplot&nbsp;app</a> — приложение для визуализации и&nbsp;работы с&nbsp;результатами. Библиотека открытая, пользоваться может любой. Код приложения закрыт, но&nbsp;я&nbsp;могу настроить его под ваши задачи и&nbsp;помочь с&nbsp;работой.</p>
+
+  <p>Мне интересны результаты и&nbsp;обратная связь — инструмент становится лучше с&nbsp;каждым кейсом. Пишите в&nbsp;телеграм <a href="https://t.me/bird_in_the_tree">@bird_in_the_tree</a>.</p>
 
   <footer class="footnotes">
     <ol>
