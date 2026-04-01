@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<title>Bible Anatomy — Stalactite Chart</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+[data-theme="dark"] {
+  --bg: #1a1b26;
+  --text: #c0caf5;
+  --text-muted: #a9b1d6;
+  --text-faint: #565f89;
+  --unit-note: #3b3f52;
+  --hook:  #e0af68;
+  --world: #9ece6a;
+  --char:  #7aa2f7;
+  --story: #f7768e;
+  --divider: #565f89;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #0e0e0e;
+  --text-muted: #7f7f7f;
+  --text-faint: #aaaaaa;
+  --unit-note: #ccc;
+  --hook:  #d1945b;
+  --world: #099d4e;
+  --char:  #4393c9;
+  --story: #c94070;
+  --divider: #ccc;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--text);
+  padding: 32px 48px;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: 1px solid var(--text-faint);
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--text); }
+
+h1 { font-size: 22px; font-weight: 700; margin-bottom: 2px; }
+.subtitle { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+
+/* ── Layout: legend left, chart right ── */
+.layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ── Vertical legend ── */
+.legend {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  flex-shrink: 0;
+  width: 100px;
+}
+.legend-unit {
+  color: var(--unit-note);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.legend-unit .swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: var(--text-faint);
+  opacity: 0.5;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+/* ── Chart area ── */
+.chart-area {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.group {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  flex-direction: column;
+}
+.group-header {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.group-cols {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.group-divider {
+  width: 1px;
+  background: var(--divider);
+  align-self: stretch;
+  margin: 0 24px;
+  margin-top: 0;
+}
+
+/* ── Bible column ── */
+.bible-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Top label: name + studio + year */
+.col-label-top {
+  text-align: center;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+.col-label-top .name {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.col-label-top .meta {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.2;
+  margin-top: 1px;
+}
+
+/* Bottom label: pages */
+.col-label-bottom {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--text-faint);
+}
+
+.unit-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+
+.unit {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+.cat-hook  { background: var(--hook); }
+.cat-world { background: var(--world); }
+.cat-char  { background: var(--char); }
+.cat-story { background: var(--story); }
+
+/* Custom tooltip */
+.tooltip {
+  position: fixed;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 14px;
+  font-style: italic;
+  padding: 8px 12px;
+  border-radius: 4px;
+  max-width: 320px;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
+.tooltip.visible { opacity: 1; }
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()">◑ theme</button>
+
+<h1 style="font-size:22px; font-weight:400; letter-spacing:2px; text-transform:uppercase;">Anatomy of 11 bibles that sold</h1>
+<div class="subtitle">Four ingredients, no proportions</div>
+
+<div class="layout">
+
+  <div class="legend" id="legend"></div>
+
+  <div class="chart-area" id="chart"></div>
+
+</div>
+
+<script>
+const prePilot = [
+  { name:'The Wire',           studio:'HBO', year:'2000', pages:79, logline:'A police procedural set in the drug culture of an American rust-belt city', sections:[{cat:'hook',p:4},{cat:'world',p:3},{cat:'char',p:12},{cat:'story',p:60}] },
+  { name:'Gangs of London',    studio:'Sky', year:'2016', pages:46, logline:'A ground-breaking television series that shows gangland London as we\u2019ve never seen it before', sections:[{cat:'hook',p:3},{cat:'world',p:4},{cat:'char',p:3},{cat:'story',p:36}] },
+  { name:'Stranger Things',    studio:'Netflix', year:'2015', pages:23, logline:'An eight-hour sci-fi horror epic set in Long Island in 1980', sections:[{cat:'hook',p:3},{cat:'world',p:3},{cat:'char',p:5},{cat:'story',p:12}] },
+  { name:'House of Cards',     studio:'Netflix', year:'2012', pages:15, logline:'The tale of Francis Underwood\u2019s masterful scheme to vault himself to the highest circles of Power', sections:[{cat:'hook',p:2},{cat:'world',p:1},{cat:'char',p:5},{cat:'story',p:7}] },
+  { name:'Fargo',              studio:'FX', year:'2013', pages:12, logline:'A unique brand of true crime story, part tragedy, part farce, in which simple, good hearted people come face to face with something monstrous', sections:[{cat:'hook',p:2},{cat:'char',p:8},{cat:'story',p:2}] },
+  { name:'Six',                studio:'History', year:'2015', pages:12, logline:'A ripped from reality, kick in the teeth drama about SEAL Team 6, America\u2019s premiere counterterrorist team', sections:[{cat:'hook',p:2},{cat:'world',p:1},{cat:'char',p:4},{cat:'story',p:5}] },
+  { name:'True Detective',     studio:'HBO', year:'2013', pages:10, logline:'An hour-long serial narrative which functions as a layered, literary mystery novel for television', sections:[{cat:'hook',p:2},{cat:'world',p:1},{cat:'char',p:3},{cat:'story',p:4}] },
+];
+
+const postPilot = [
+  { name:'Lost',                studio:'ABC', year:'2004', pages:27, logline:'', sections:[{cat:'hook',p:5},{cat:'world',p:2},{cat:'char',p:5},{cat:'story',p:10}] },
+  { name:"Grey's Anatomy",     studio:'ABC', year:'2004', pages:18, logline:'Welcome to Seattle Grace Hospital. Where surgery is the game, surgeons are the all-stars and the interns are exhausted', sections:[{cat:'hook',p:1},{cat:'char',p:4},{cat:'story',p:12}] },
+  { name:'Desperate Housewives',studio:'ABC', year:'2004', pages:14, logline:'Welcome to Wisteria Lane. It\u2019s a nice place to live\u2026 and a fascinating place to die', sections:[{cat:'hook',p:1},{cat:'char',p:10},{cat:'story',p:3}] },
+  { name:'Homeland',           studio:'Showtime', year:'2011', pages:2, logline:'A psychological thriller dramatizing the collision of a rescued Marine POW and a CIA case officer convinced he was turned by Al Qaeda', sections:[{cat:'hook',p:1},{cat:'char',p:1}] },
+];
+
+function buildLegend() {
+  // Wait for DOM to render, then align legend to actual stalactite positions
+  requestAnimationFrame(() => {
+    const legend = document.getElementById('legend');
+    const chartTop = document.getElementById('chart').getBoundingClientRect().top;
+
+    // Find the first stalactite (Wire) to get real pixel positions
+    const firstStack = document.querySelector('.unit-stack');
+    const firstLabel = document.querySelector('.col-label-top');
+    if (!firstStack || !firstLabel) return;
+
+    const units = firstStack.querySelectorAll('.unit');
+    const labelRect = firstLabel.getBoundingClientRect();
+    const legendRect = legend.getBoundingClientRect();
+
+    // "= 1 page" aligned with series name level
+    const unitItem = document.createElement('div');
+    unitItem.className = 'legend-unit';
+    const nameOffset = labelRect.top - legendRect.top;
+    unitItem.style.marginTop = nameOffset + 'px';
+    unitItem.innerHTML = `<div class="swatch"></div>= 1 page`;
+    legend.appendChild(unitItem);
+
+    // Find where each category starts in the first stalactite (Wire)
+    // Wire sections: hook=4, world=3, char=12, story=60
+    const catStarts = { hook: 0, world: 4, char: 7, story: 19 };
+    const catLabels = { hook: 'Hook', world: 'World', char: 'Characters', story: 'Story' };
+
+    let prevBottom = unitItem.getBoundingClientRect().bottom;
+
+    ['hook', 'world', 'char', 'story'].forEach(cat => {
+      const idx = catStarts[cat];
+      if (idx >= units.length) return;
+      const unitRect = units[idx].getBoundingClientRect();
+
+      const el = document.createElement('div');
+      el.className = 'legend-item';
+      el.innerHTML = `<div class="legend-swatch cat-${cat}"></div>${catLabels[cat]}`;
+
+      const targetTop = unitRect.top;
+      const gap = Math.max(6, targetTop - prevBottom);
+      el.style.marginTop = gap + 'px';
+      legend.appendChild(el);
+      prevBottom = targetTop + 20;
+    });
+  });
+}
+
+function buildCol(bible) {
+  const col = document.createElement('div');
+  col.className = 'bible-col';
+
+  // Top: name + studio + year
+  const topLabel = document.createElement('div');
+  topLabel.className = 'col-label-top';
+  topLabel.innerHTML = `<div class="name">${bible.name}</div><div class="meta">${bible.studio} · ${bible.year}</div>`;
+  col.appendChild(topLabel);
+
+  // Stalactite
+  const stack = document.createElement('div');
+  stack.className = 'unit-stack';
+  if (bible.logline) stack.dataset.logline = bible.logline;
+  bible.sections.forEach(s => {
+    for (let i = 0; i < s.p; i++) {
+      const u = document.createElement('div');
+      u.className = `unit cat-${s.cat}`;
+      stack.appendChild(u);
+    }
+  });
+  col.appendChild(stack);
+
+  // Bottom: page count
+  const bottomLabel = document.createElement('div');
+  bottomLabel.className = 'col-label-bottom';
+  bottomLabel.textContent = bible.pages + 'p';
+  col.appendChild(bottomLabel);
+
+  return col;
+}
+
+const chart = document.getElementById('chart');
+
+const preGroup = document.createElement('div');
+preGroup.className = 'group';
+const preHeader = document.createElement('div');
+preHeader.className = 'group-header';
+preHeader.textContent = 'Pitch Bible';
+preGroup.appendChild(preHeader);
+const preCols = document.createElement('div');
+preCols.className = 'group-cols';
+prePilot.forEach(b => preCols.appendChild(buildCol(b)));
+preGroup.appendChild(preCols);
+chart.appendChild(preGroup);
+
+const divEl = document.createElement('div');
+divEl.className = 'group-divider';
+chart.appendChild(divEl);
+
+const postGroup = document.createElement('div');
+postGroup.className = 'group';
+const postHeader = document.createElement('div');
+postHeader.className = 'group-header';
+postHeader.textContent = 'Series Bible';
+postGroup.appendChild(postHeader);
+const postCols = document.createElement('div');
+postCols.className = 'group-cols';
+postPilot.forEach(b => postCols.appendChild(buildCol(b)));
+postGroup.appendChild(postCols);
+chart.appendChild(postGroup);
+
+buildLegend();
+
+// Custom tooltip
+const tip = document.createElement('div');
+tip.className = 'tooltip';
+document.body.appendChild(tip);
+
+document.addEventListener('mousemove', e => {
+  const stack = e.target.closest('.unit-stack');
+  if (stack && stack.dataset.logline) {
+    tip.textContent = stack.dataset.logline;
+    tip.classList.add('visible');
+    tip.style.left = (e.clientX + 16) + 'px';
+    tip.style.top = (e.clientY - 8) + 'px';
+  } else {
+    tip.classList.remove('visible');
+  }
+});
+
+function toggleTheme() {
+  const html = document.documentElement;
+  html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+}
+</script>
+
+</body>
+</html>
