@@ -307,7 +307,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; b
 .blog-post-content code { background: #f3f4f6; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
 .blog-post-content pre { background: #1a1a2e; color: #e2e8f0; padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1rem; }
 .blog-post-content pre code { background: none; padding: 0; color: inherit; }
-.blog-post-content blockquote { border-left: 3px solid #2d82cd; padding-left: 1rem; margin: 1rem 0; color: #555; font-style: italic; }
+.blog-post-content a { color: var(--accent); }
+.blog-post-content a:visited { color: var(--accent); }
+.blog-post-content blockquote { border-left: 3px solid var(--accent); padding-left: 1rem; margin: 1rem 0; color: var(--text-muted); font-style: italic; }
 :root.dark .blog-post-content code { background: #343434; color: #c6c6c6; }
 :root.dark .blog-post-content blockquote { color: #8a8a8a; }
 
