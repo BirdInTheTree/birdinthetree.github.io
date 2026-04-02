@@ -70,11 +70,9 @@
     }
   }
 
-  /** Background: tension color at ~19% opacity. */
+  /** Cell background: neutral, no color. */
   function tensionBg(tension) {
-    const color = tensionColor(tension);
-    if (color === 'transparent') return color;
-    return color + '30';
+    return 'transparent';
   }
 
   /** Circle fill: full tension color. */
