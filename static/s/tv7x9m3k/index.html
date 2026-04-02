@@ -13,8 +13,8 @@
   body {
     font-family: 'DM Sans', Helvetica, Arial, sans-serif;
     font-size: 20px;
-    color: #1a1a1a;
-    background: #fff;
+    color: #c0caf5;
+    background: #1a1b26;
     line-height: 1.45;
     -webkit-font-smoothing: antialiased;
   }
@@ -31,6 +31,7 @@
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin-bottom: 2rem;
+    color: #ff757f;
   }
 
   h2 {
@@ -38,23 +39,24 @@
     font-weight: 600;
     margin-top: 1.8rem;
     margin-bottom: 0.6rem;
-    color: #1a1a1a;
+    color: #e0af68;
   }
 
   p { margin-bottom: 0.6rem; }
-  em { font-style: italic; }
-  strong { font-weight: 600; }
+  em { font-style: italic; color: #7dcfff; }
+  strong { font-weight: 600; color: #7dcfff; }
 
-  a { color: #2563eb; text-decoration: underline; text-decoration-color: #dbeafe; text-underline-offset: 2px; }
-  a:hover { text-decoration-color: #2563eb; }
+  a { color: #bb9af7; text-decoration: underline; text-decoration-color: #3b4261; text-underline-offset: 2px; }
+  a:hover { text-decoration-color: #bb9af7; }
 
   sup { font-size: 0.65em; vertical-align: super; line-height: 0; }
-  sup a { color: #2563eb; text-decoration: none; font-weight: 600; }
+  sup a { color: #bb9af7; text-decoration: none; font-weight: 600; }
 
   code {
     font-family: 'SF Mono', 'Menlo', monospace;
     font-size: 0.85em;
-    background: #f3f4f6;
+    background: #292e42;
+    color: #a9b1d6;
     padding: 0.1rem 0.35rem;
     border-radius: 3px;
   }
@@ -64,8 +66,8 @@
     margin-top: 1.2rem;
     margin-bottom: 0.4rem;
     padding: 0.7rem 1.8rem;
-    background: #2563eb;
-    color: #fff;
+    background: #bb9af7;
+    color: #1a1b26;
     font-size: 1.05rem;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -73,7 +75,7 @@
     border-radius: 6px;
     transition: background 0.15s;
   }
-  .cta:hover { background: #1d4ed8; color: #fff; text-decoration: none; }
+  .cta:hover { background: #c9a9ff; color: #1a1b26; text-decoration: none; }
 
   .screenshot-page {
     display: flex;
@@ -88,41 +90,48 @@
     width: 100%;
     max-height: 88vh;
     border-radius: 6px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #292e42;
   }
 
   .screenshot-caption {
     margin-top: 0.5rem;
     font-size: 16px;
-    color: #6b7280;
+    color: #565f89;
     text-align: center;
   }
 
   .screenshot-caption a {
-    color: #2563eb;
+    color: #bb9af7;
     font-size: 16px;
   }
 
   .footnotes {
     margin-top: 1.5rem;
     padding-top: 0.8rem;
-    border-top: 1px solid #e5e7eb;
+    border-top: 1px solid #292e42;
     font-size: 16px;
     line-height: 1.5;
-    color: #6b7280;
+    color: #565f89;
   }
   .footnotes ol { padding-left: 1rem; }
   .footnotes li { margin-bottom: 0.4rem; }
+  .footnotes em { color: #6b7394; }
+  .footnotes a { color: #8a7bb5; text-decoration-color: #3b4261; }
 
   .page-break {}
 
   @media print {
+    body { background: #fff; color: #1a1a1a; }
+    h1, h2 { color: #1a1a1a; }
+    em { color: inherit; }
+    strong { color: inherit; }
     article { padding: 1rem; max-width: 100%; }
     .page-break { page-break-before: always; }
     .screenshot-page { padding: 0.5rem 0; height: 100vh; }
     .screenshot-page img { max-height: 90vh; border: none; }
     a { color: #2563eb; text-decoration: underline; }
     .cta { background: none; color: #2563eb; border: 2px solid #2563eb; }
+    .footnotes { color: #6b7280; border-top-color: #e5e7eb; }
   }
 
   @media (max-width: 600px) {
@@ -137,32 +146,44 @@
 
   <h1>Как украсть сериал</h1>
 
-  <p style="margin-bottom: 1.6rem; color: #4b5563; font-style: italic;">&laquo;В&nbsp;каждом сериале — несколько параллельных сюжетных линий, каждая со&nbsp;своим героем, целью и&nbsp;ставками.&raquo;<br><span style="font-style: normal; font-size: 16px;">&mdash; Emmanuel Oberg, <em>Writing a Successful TV Series</em></span></p>
+  <p><em>Breaking Bad, Succession, Sopranos, Mad Men</em>&nbsp;— рассказывают истории, сравнимые с&nbsp;романами Толстого и&nbsp;Диккенса. Десятки сюжетных линий. Та&nbsp;же фактура, плотность событий, то&nbsp;же внимание к&nbsp;деталям.</p>
 
-  <p>Я&nbsp;написала Python-библиотеку, которая делает &laquo;рентген&raquo; сериала — извлекает основные сюжетные линии из&nbsp;синопсисов, разносит события серий по&nbsp;этим линиям и&nbsp;присваивает каждому событию роль — от&nbsp;завязки до&nbsp;развязки.</p>
+  <p>Я&nbsp;сделала ИИ-инструмент tvplotlines, который выдаёт &laquo;рентген&raquo; сезона: выделяет главные сюжетные линии, сортирует события по&nbsp;линиям, определяет роль каждого события в&nbsp;серии и&nbsp;в&nbsp;линии.</p>
 
-  <h2>Как использовать?</h2>
+  <p>На&nbsp;входе&nbsp;— синопсисы серий, 150–300 слов на&nbsp;серию достаточно.</p>
 
-  <p><strong>Оценить новый проект.</strong> Вы читаете синопсисы нового сериала и&nbsp;хотите увидеть структуру целиком. На&nbsp;входе — синопсисы, 150–350 слов на&nbsp;серию.</p>
+  <h2>Как пользоваться</h2>
 
-  <p><strong>Деконструкция.</strong> Вы хотите понять, как устроен сериал, который уже был в&nbsp;эфире — чтобы повторить приём или адаптировать структуру. Достаточно дать название и&nbsp;номер сезона — инструмент сам напишет синопсисы по&nbsp;открытым данным и&nbsp;покажет анатомию.</p>
+  <p><strong>Оценить свой:</strong> у&nbsp;вас есть синопсисы сезона&nbsp;— tvplotlines покажет рентген ещё до&nbsp;сценариев. Где провисает напряжение, какая линия или серия перегружена, где не&nbsp;хватает событий.</p>
+
+  <p><strong>Разобрать чужой:</strong> хотите разобрать сериал, который уже вышел,&nbsp;— подсмотреть приём, понять, как работает структура? Достаточно названия и&nbsp;номера сезона. Инструмент сам напишет синопсисы и&nbsp;сделает &laquo;рентген&raquo;.</p>
+
+  <h2>Русские сериалы</h2>
+
+  <p>Я&nbsp;тестировала на&nbsp;<em>Слово пацана</em>, <em>ГДР</em>, <em>Мажор</em> и&nbsp;<em>Метод</em>&nbsp;— работает не&nbsp;хуже, чем на&nbsp;английских. Когда синопсисы на&nbsp;русском, инструмент сам переключается на&nbsp;русские промпты&nbsp;— результат лучше.</p>
+
+  <h2>Что я&nbsp;предлагаю</h2>
+
+  <p><strong>Знаете Python</strong>&nbsp;— пользуйтесь. Библиотека open-source, встраивается куда угодно. Мне интересны новые сериалы и&nbsp;задачи&nbsp;— пишите, помогу.</p>
+
+  <p><strong>Без Python</strong>&nbsp;— есть приложение, ниже демо. Оно пока не&nbsp;open-source. Но&nbsp;если хотите попробовать на&nbsp;своём сериале&nbsp;— настрою.</p>
+
+  <p><strong>Пишите</strong>&nbsp; <svg style="vertical-align: middle; margin: 0 0.15em;" width="20" height="20" viewBox="0 0 24 24" fill="#bb9af7"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg> <a href="https://t.me/bird_in_the_tree">@bird_in_the_tree</a>.</p>
 
   <p>
-    <a class="cta" href="https://birdinthetree.github.io/plotter-app">ПОПРОБОВАТЬ ДЕМО</a>
+    <a class="cta" href="https://birdinthetree.github.io/plotter-app">ПОПРОБОВАТЬ ДЕМО&nbsp;&mdash; Breaking Bad, House, Game&nbsp;of&nbsp;Thrones</a>
   </p>
 
-  <h2>Технические детали</h2>
+  <h2>Что &laquo;под капотом&raquo;</h2>
 
-  <p><a href="https://github.com/BirdInTheTree/tvplotlines">tvplotlines</a> — open-source Python-библиотека (<code>pip install tvplotlines</code>), которая извлекает структуру сериала при помощи LLM. В&nbsp;основе — шесть книг о&nbsp;ТВ-сценариях<sup><a href="#fn1">1</a></sup> и&nbsp;последние идеи промпт-инженерии<sup><a href="#fn2">2</a></sup>. Если у&nbsp;вас есть разработчик — можно взять, настроить и&nbsp;интегрировать в&nbsp;свой процесс.</p>
+  <p><a href="https://github.com/BirdInTheTree/tvplotlines">tvplotlines</a>&nbsp;— open-source Python-библиотека (<code>pip install tvplotlines</code>). На&nbsp;входе&nbsp;— синопсисы, на&nbsp;выходе&nbsp;— сюжетные линии с&nbsp;героями, целями, препятствиями и&nbsp;ставками. В&nbsp;основе&nbsp;— книги о&nbsp;ТВ-драматургии<sup><a href="#fn1">1</a></sup> и&nbsp;промпт-инженерия: декомпозиция задач и&nbsp;chain-of-thought<sup><a href="#fn2">2</a></sup>.</p>
 
-  <p><a href="https://birdinthetree.github.io/plotter-app">tvplot&nbsp;app</a> — приложение для визуализации и&nbsp;работы с&nbsp;результатами. Библиотека открытая, пользоваться может любой. Код приложения закрыт, но&nbsp;я&nbsp;могу настроить его под ваши задачи и&nbsp;помочь с&nbsp;работой.</p>
-
-  <p>Мне интересны результаты и&nbsp;обратная связь — инструмент становится лучше с&nbsp;каждым кейсом. Пишите в&nbsp;телеграм <a href="https://t.me/bird_in_the_tree">@bird_in_the_tree</a>.</p>
+  <p><a href="https://birdinthetree.github.io/plotter-app">tvplot&nbsp;app</a>&nbsp;— приложение, в&nbsp;котором видна сетка серий и&nbsp;линий: можно листать, редактировать и&nbsp;сравнивать сезоны.</p>
 
   <footer class="footnotes">
     <ol>
       <li id="fn1">Nash, <em>Save the Cat! Writes for TV</em> (2022); McKee, <em>Story</em> (1997); Douglas, <em>Writing the TV Drama Series</em> (2011); Landau, <em>The TV Showrunner's Roadmap</em> (2018); Oberg, <em>Writing a Successful TV Series</em> (2023); Mittell, <em>Complex TV</em> (2015).</li>
-      <li id="fn2">Zhou et&nbsp;al., <em>Least-to-Most Prompting</em> (2022) — декомпозиция сложных задач на&nbsp;последовательные шаги; Wei et&nbsp;al., <em>Chain-of-Thought Prompting</em> (2022); Wang et&nbsp;al., <em>Plan-and-Solve Prompting</em> (2023). Тестирование промптов — Karpathy, <a href="https://github.com/karpathy/autoresearch">autoresearch</a> (2026).</li>
+      <li id="fn2">Zhou et&nbsp;al., <em>Least-to-Most Prompting</em> (2022)&nbsp;— декомпозиция сложных задач на&nbsp;последовательные шаги; Wei et&nbsp;al., <em>Chain-of-Thought Prompting</em> (2022); Wang et&nbsp;al., <em>Plan-and-Solve Prompting</em> (2023). Тестирование промптов&nbsp;— Karpathy, <a href="https://github.com/karpathy/autoresearch">autoresearch</a> (2026).</li>
     </ol>
   </footer>
 
