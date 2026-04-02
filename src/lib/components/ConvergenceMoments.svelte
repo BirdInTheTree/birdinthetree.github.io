@@ -75,7 +75,7 @@
   }
 
   .conv-ep-label {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--text);
     font-weight: 600;
     margin-bottom: 6px;
@@ -101,11 +101,15 @@
     margin-bottom: 4px;
     padding: 4px 8px;
     border-radius: 4px;
-    background: var(--bg-secondary, #313244);
+    background: var(--bg-secondary);
+  }
+
+  :global(:root:not(.dark)) .conv-item {
+    background: #f3f4f6;
   }
 
   .conv-type {
-    font-size: 0.65rem;
+    font-size: 0.875rem;
     padding: 2px 6px;
     border-radius: 3px;
     flex-shrink: 0;
@@ -128,15 +132,34 @@
     color: #74c7ec;
   }
 
+  :global(:root:not(.dark)) .conv-type.convergence {
+    background: #fde8ef;
+    color: #c01f47;
+  }
+
+  :global(:root:not(.dark)) .conv-type.dramatic_irony {
+    background: #ede8fb;
+    color: #5c35a0;
+  }
+
+  :global(:root:not(.dark)) .conv-type.thematic_rhyme {
+    background: #ddf0fa;
+    color: #1a6fa8;
+  }
+
   .conv-lines {
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: #f9e2af;
     flex-shrink: 0;
     min-width: 100px;
   }
 
+  :global(:root:not(.dark)) .conv-lines {
+    color: #7a5500;
+  }
+
   .conv-desc {
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: var(--text-muted);
   }
 </style>

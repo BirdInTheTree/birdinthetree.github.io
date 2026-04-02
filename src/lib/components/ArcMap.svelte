@@ -11,6 +11,7 @@
   $: grid = buildGrid(plotlines, episodes);
 
   // Grid columns: 1 for labels + N for episodes
+  $: isDark = $theme === 'dark';
   $: gridCols = `200px repeat(${episodes.length}, 1fr)`;
 
   /**
@@ -47,28 +48,48 @@
     return { cells, maxEvents };
   }
 
-  /** Map tension value to hardcoded HSL background color. */
-  function tensionBg(tension) {
+  /** Map tension value to HSL background color, theme-aware. */
+  function tensionBg(tension, isDark) {
     if (tension <= 0) return 'transparent';
-    if (tension <= 1.2) return 'hsl(170, 50%, 18%)';
-    if (tension <= 1.8) return 'hsl(55, 50%, 22%)';
-    if (tension <= 2.2) return 'hsl(42, 55%, 23%)';
-    if (tension <= 2.5) return 'hsl(35, 60%, 25%)';
-    if (tension <= 2.8) return 'hsl(25, 66%, 27%)';
-    if (tension <= 3.0) return 'hsl(15, 65%, 28%)';
-    return 'hsl(5, 65%, 32%)';
+    if (isDark) {
+      if (tension <= 1.2) return 'hsl(170, 50%, 18%)';
+      if (tension <= 1.8) return 'hsl(55, 50%, 22%)';
+      if (tension <= 2.2) return 'hsl(42, 55%, 23%)';
+      if (tension <= 2.5) return 'hsl(35, 60%, 25%)';
+      if (tension <= 2.8) return 'hsl(25, 66%, 27%)';
+      if (tension <= 3.0) return 'hsl(15, 65%, 28%)';
+      return 'hsl(5, 65%, 32%)';
+    } else {
+      if (tension <= 1.2) return 'hsl(170, 45%, 85%)';
+      if (tension <= 1.8) return 'hsl(55, 50%, 85%)';
+      if (tension <= 2.2) return 'hsl(42, 55%, 82%)';
+      if (tension <= 2.5) return 'hsl(35, 55%, 78%)';
+      if (tension <= 2.8) return 'hsl(25, 55%, 75%)';
+      if (tension <= 3.0) return 'hsl(15, 55%, 72%)';
+      return 'hsl(5, 55%, 68%)';
+    }
   }
 
-  /** Map tension value to hardcoded HSL circle color. */
-  function tensionCircle(tension) {
+  /** Map tension value to HSL circle color, theme-aware. */
+  function tensionCircle(tension, isDark) {
     if (tension <= 0) return 'transparent';
-    if (tension <= 1.2) return 'hsl(170, 50%, 30%)';
-    if (tension <= 1.8) return 'hsl(55, 50%, 32%)';
-    if (tension <= 2.2) return 'hsl(42, 55%, 35%)';
-    if (tension <= 2.5) return 'hsl(35, 60%, 35%)';
-    if (tension <= 2.8) return 'hsl(25, 66%, 38%)';
-    if (tension <= 3.0) return 'hsl(15, 65%, 40%)';
-    return 'hsl(5, 65%, 44%)';
+    if (isDark) {
+      if (tension <= 1.2) return 'hsl(170, 50%, 30%)';
+      if (tension <= 1.8) return 'hsl(55, 50%, 32%)';
+      if (tension <= 2.2) return 'hsl(42, 55%, 35%)';
+      if (tension <= 2.5) return 'hsl(35, 60%, 35%)';
+      if (tension <= 2.8) return 'hsl(25, 66%, 38%)';
+      if (tension <= 3.0) return 'hsl(15, 65%, 40%)';
+      return 'hsl(5, 65%, 44%)';
+    } else {
+      if (tension <= 1.2) return 'hsl(170, 45%, 72%)';
+      if (tension <= 1.8) return 'hsl(55, 50%, 72%)';
+      if (tension <= 2.2) return 'hsl(42, 55%, 68%)';
+      if (tension <= 2.5) return 'hsl(35, 55%, 65%)';
+      if (tension <= 2.8) return 'hsl(25, 55%, 60%)';
+      if (tension <= 3.0) return 'hsl(15, 55%, 55%)';
+      return 'hsl(5, 55%, 50%)';
+    }
   }
 
   /** Circle diameter: 14px min, 44px max, linear by event count. */
@@ -81,13 +102,13 @@
 <!-- Legend -->
 <div class="arc-legend">
   <span class="legend-label">low tension</span>
-  <span class="legend-box" style="background: hsl(170, 50%, 18%)"></span>
-  <span class="legend-box" style="background: hsl(55, 50%, 22%)"></span>
-  <span class="legend-box" style="background: hsl(42, 55%, 23%)"></span>
-  <span class="legend-box" style="background: hsl(35, 60%, 25%)"></span>
-  <span class="legend-box" style="background: hsl(25, 66%, 27%)"></span>
-  <span class="legend-box" style="background: hsl(15, 65%, 28%)"></span>
-  <span class="legend-box" style="background: hsl(5, 65%, 32%)"></span>
+  <span class="legend-box" style="background: {tensionBg(1.0, isDark)}"></span>
+  <span class="legend-box" style="background: {tensionBg(1.5, isDark)}"></span>
+  <span class="legend-box" style="background: {tensionBg(2.0, isDark)}"></span>
+  <span class="legend-box" style="background: {tensionBg(2.3, isDark)}"></span>
+  <span class="legend-box" style="background: {tensionBg(2.6, isDark)}"></span>
+  <span class="legend-box" style="background: {tensionBg(2.9, isDark)}"></span>
+  <span class="legend-box" style="background: {tensionBg(3.1, isDark)}"></span>
   <span class="legend-label">high tension</span>
   <span class="legend-sep">|</span>
   <span class="legend-label">circle size = event count</span>
@@ -110,7 +131,7 @@
       {@const cell = grid.cells[`${pl.id}|${ep.episode}`]}
       <div
         class="arc-cell"
-        style="background: {tensionBg(cell.tension)};"
+        style="background: {tensionBg(cell.tension, isDark)};"
       >
         {#if cell.count > 0}
           <span
@@ -118,7 +139,8 @@
             style="
               width: {circleSize(cell.count, grid.maxEvents)}px;
               height: {circleSize(cell.count, grid.maxEvents)}px;
-              background: {tensionCircle(cell.tension)};
+              background: {tensionCircle(cell.tension, isDark)};
+              color: {isDark ? 'var(--text)' : '#1a1a1a'};
             "
           >
             {cell.count}
@@ -143,7 +165,7 @@
     align-items: center;
     gap: 6px;
     margin-bottom: 12px;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: var(--text-muted);
     flex-wrap: wrap;
   }
@@ -170,14 +192,14 @@
   }
 
   .arc-header {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     text-align: center;
     padding: 4px;
   }
 
   .arc-label {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--text);
     text-align: right;
     padding-right: 10px;
@@ -202,18 +224,17 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    color: var(--text);
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 
   .arc-empty {
     color: var(--text-faint);
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 
   .arc-theme {
-    font-size: 0.72rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     font-style: italic;
     text-align: center;

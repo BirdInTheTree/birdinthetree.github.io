@@ -1,5 +1,5 @@
 <script>
-  import { sortPlotlines, buildColorMap, buildCastMap } from '$lib/charts/helpers.js';
+  import { sortPlotlines, buildColorMap, buildCastMap, isDarkColor } from '$lib/charts/helpers.js';
 
   export let data;
 
@@ -78,7 +78,7 @@
       <div class="char-bar-wrap">
         <div
           class="char-bar"
-          style="width: {(char.events / maxEvents) * 100}%; background: {barGradient(char.segments, char.events)};"
+          style="width: {(char.events / maxEvents) * 100}%; background: {barGradient(char.segments, char.events)}; color: {isDarkColor(char.segments[0]?.color || '#888') ? '#ffffff' : '#1a1a1a'};"
         >
           {char.events}
         </div>
@@ -101,7 +101,7 @@
   }
 
   .char-name {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--text);
     width: 110px;
     text-align: right;
@@ -120,8 +120,7 @@
     display: flex;
     align-items: center;
     padding-left: 8px;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
   }
 
   .char-dots {
@@ -130,8 +129,8 @@
   }
 
   .char-dot {
-    width: 8px;
-    height: 8px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
   }
 </style>

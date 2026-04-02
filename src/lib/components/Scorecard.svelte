@@ -115,7 +115,7 @@
 <style>
   .story-engine {
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
     padding: 8px 12px;
     background: var(--bg-secondary, #313244);
@@ -131,7 +131,7 @@
 
   .scorecard th {
     text-align: left;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     font-weight: 400;
     padding: 6px 12px;
@@ -142,7 +142,7 @@
 
   .scorecard td {
     padding: 8px 12px;
-    font-size: 0.85rem;
+    font-size: 1rem;
     border-bottom: 1px solid color-mix(in srgb, var(--border) 40%, transparent);
     color: var(--text);
   }
@@ -158,7 +158,7 @@
     border-radius: 4px;
     text-align: center;
     line-height: 22px;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 700;
   }
 
@@ -184,6 +184,6 @@
 
   .arc-summary {
     color: var(--text-muted);
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 </style>

@@ -1,5 +1,5 @@
 <script>
-  import { sortPlotlines, buildColorMap } from '$lib/charts/helpers.js';
+  import { sortPlotlines, buildColorMap, isDarkColor } from '$lib/charts/helpers.js';
 
   export let data;
 
@@ -70,7 +70,7 @@
           {#each row.segments as seg}
             <div
               class="pulse-bar"
-              style="flex: {seg.count}; background: {seg.color};"
+              style="flex: {seg.count}; background: {seg.color}; color: {isDarkColor(seg.color) ? '#ffffff' : '#1a1a1a'};"
               title="{seg.name}: {seg.count}"
             >
               {#if seg.count >= 2}{seg.count}{/if}
@@ -102,7 +102,7 @@
   }
 
   .pulse-ep {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--text);
     width: 35px;
     text-align: right;
@@ -124,13 +124,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.6rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
     min-width: 14px;
   }
 
   .pulse-total {
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     width: 30px;
     text-align: right;
@@ -138,7 +137,7 @@
   }
 
   .pulse-theme {
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: var(--text-muted);
     width: 200px;
     text-align: left;
@@ -160,7 +159,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: var(--text-muted);
   }
 

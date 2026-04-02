@@ -62,12 +62,53 @@
   {#if $isLoading}
     <p>Loading...</p>
   {:else if $seriesData}
+    <nav class="section-nav">
+      <a href="#scorecard">Scorecard</a>
+      <a href="#arc-map">Arc Map</a>
+      <a href="#pulse">Episode Pulse</a>
+      <a href="#convergence">Convergence</a>
+      <a href="#characters">Characters</a>
+    </nav>
     <div class="analytics-sections">
-      <section class="chart-card"><Scorecard data={$seriesData} /></section>
-      <section class="chart-card"><ArcMap data={$seriesData} /></section>
-      <section class="chart-card"><EpisodePulse data={$seriesData} /></section>
-      <section class="chart-card"><ConvergenceMoments data={$seriesData} /></section>
-      <section class="chart-card"><CharacterWeight data={$seriesData} /></section>
+      <section class="chart-card" id="scorecard">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Season Scorecard</h2>
+          <p class="chart-description">What is this season about, and what are its building blocks?</p>
+        </div>
+        <Scorecard data={$seriesData} />
+      </section>
+
+      <section class="chart-card" id="arc-map">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Arc Map</h2>
+          <p class="chart-description">Where does tension rise and fall for each plotline across episodes?</p>
+        </div>
+        <ArcMap data={$seriesData} />
+      </section>
+
+      <section class="chart-card" id="pulse">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Episode Pulse</h2>
+          <p class="chart-description">How balanced is each episode? Which plotlines dominate?</p>
+        </div>
+        <EpisodePulse data={$seriesData} />
+      </section>
+
+      <section class="chart-card" id="convergence">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Convergence Moments</h2>
+          <p class="chart-description">Where do storylines collide? What are the key dramatic intersections?</p>
+        </div>
+        <ConvergenceMoments data={$seriesData} />
+      </section>
+
+      <section class="chart-card" id="characters">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Character Weight</h2>
+          <p class="chart-description">Who carries the story? How are characters distributed across plotlines?</p>
+        </div>
+        <CharacterWeight data={$seriesData} />
+      </section>
     </div>
   {:else}
     <p>Select a series to view analytics.</p>
@@ -75,6 +116,26 @@
 </div>
 
 <style>
+  .section-nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .section-nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+
+  .section-nav a:hover {
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+
   .analytics-sections {
     display: flex;
     flex-direction: column;
