@@ -113,16 +113,12 @@
     white-space: nowrap;
   }
 
-  .conv-type.convergence { background: color-mix(in srgb, #e74c3c 15%, transparent); color: #c01f47; }
-  .conv-type.dramatic_irony { background: color-mix(in srgb, #8e44ad 15%, transparent); color: #7c3aed; }
-  .conv-type.thematic_rhyme { background: color-mix(in srgb, #2980b9 15%, transparent); color: #1a6fa8; }
-
-  :global(:root.dark) .conv-type.convergence { background: #f38ba820; color: #f38ba8; }
-  :global(:root.dark) .conv-type.dramatic_irony { background: #cba6f720; color: #cba6f7; }
-  :global(:root.dark) .conv-type.thematic_rhyme { background: #74c7ec20; color: #74c7ec; }
+  .conv-type.convergence { background: #f7768e20; color: #f7768e; }
+  .conv-type.dramatic_irony { background: #bb9af720; color: #bb9af7; }
+  .conv-type.thematic_rhyme { background: #7dcfff20; color: #7dcfff; }
 
   .conv-lines {
-    color: var(--text-muted);
+    color: var(--text);
     font-weight: 600;
     font-size: 1rem;
     flex-shrink: 0;

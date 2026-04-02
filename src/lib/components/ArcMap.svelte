@@ -1,7 +1,6 @@
 <script>
-  import { sortPlotlines, buildColorMap } from '$lib/charts/helpers.js';
+  import { sortPlotlines, buildColorMap, isDarkColor } from '$lib/charts/helpers.js';
   import { FUNCTION_TENSION } from '$lib/charts/constants.js';
-  import { theme } from '$lib/stores/app.js';
 
   export let data;
 
@@ -11,7 +10,6 @@
   $: grid = buildGrid(plotlines, episodes);
 
   // Grid columns: 1 for labels + N for episodes
-  $: isDark = $theme === 'dark';
   $: gridCols = `200px repeat(${episodes.length}, 1fr)`;
 
   /**
@@ -48,48 +46,28 @@
     return { cells, maxEvents };
   }
 
-  /** Map tension value to HSL background color, theme-aware. */
-  function tensionBg(tension, isDark) {
+  /** Map tension value to a Tokyo Night background color (30-35% opacity). */
+  function tensionBg(tension) {
     if (tension <= 0) return 'transparent';
-    if (isDark) {
-      if (tension <= 1.2) return 'hsl(170, 50%, 18%)';
-      if (tension <= 1.8) return 'hsl(55, 50%, 22%)';
-      if (tension <= 2.2) return 'hsl(42, 55%, 23%)';
-      if (tension <= 2.5) return 'hsl(35, 60%, 25%)';
-      if (tension <= 2.8) return 'hsl(25, 66%, 27%)';
-      if (tension <= 3.0) return 'hsl(15, 65%, 28%)';
-      return 'hsl(5, 65%, 32%)';
-    } else {
-      if (tension <= 1.2) return 'hsl(170, 45%, 85%)';
-      if (tension <= 1.8) return 'hsl(55, 50%, 85%)';
-      if (tension <= 2.2) return 'hsl(42, 55%, 82%)';
-      if (tension <= 2.5) return 'hsl(35, 55%, 78%)';
-      if (tension <= 2.8) return 'hsl(25, 55%, 75%)';
-      if (tension <= 3.0) return 'hsl(15, 55%, 72%)';
-      return 'hsl(5, 55%, 68%)';
-    }
+    if (tension <= 1.2) return '#73daca30';
+    if (tension <= 1.8) return '#9ece6a30';
+    if (tension <= 2.2) return '#e0af6830';
+    if (tension <= 2.5) return '#ff9e6430';
+    if (tension <= 2.8) return '#f7768e30';
+    if (tension <= 3.0) return '#db4b4b35';
+    return '#bb9af735';
   }
 
-  /** Map tension value to HSL circle color, theme-aware. */
-  function tensionCircle(tension, isDark) {
+  /** Map tension value to a Tokyo Night circle color. */
+  function tensionCircle(tension) {
     if (tension <= 0) return 'transparent';
-    if (isDark) {
-      if (tension <= 1.2) return 'hsl(170, 50%, 30%)';
-      if (tension <= 1.8) return 'hsl(55, 50%, 32%)';
-      if (tension <= 2.2) return 'hsl(42, 55%, 35%)';
-      if (tension <= 2.5) return 'hsl(35, 60%, 35%)';
-      if (tension <= 2.8) return 'hsl(25, 66%, 38%)';
-      if (tension <= 3.0) return 'hsl(15, 65%, 40%)';
-      return 'hsl(5, 65%, 44%)';
-    } else {
-      if (tension <= 1.2) return 'hsl(170, 45%, 72%)';
-      if (tension <= 1.8) return 'hsl(55, 50%, 72%)';
-      if (tension <= 2.2) return 'hsl(42, 55%, 68%)';
-      if (tension <= 2.5) return 'hsl(35, 55%, 65%)';
-      if (tension <= 2.8) return 'hsl(25, 55%, 60%)';
-      if (tension <= 3.0) return 'hsl(15, 55%, 55%)';
-      return 'hsl(5, 55%, 50%)';
-    }
+    if (tension <= 1.2) return '#73daca';
+    if (tension <= 1.8) return '#9ece6a';
+    if (tension <= 2.2) return '#e0af68';
+    if (tension <= 2.5) return '#ff9e64';
+    if (tension <= 2.8) return '#f7768e';
+    if (tension <= 3.0) return '#db4b4b';
+    return '#bb9af7';
   }
 
   /** Circle diameter: 14px min, 44px max, linear by event count. */
@@ -102,13 +80,13 @@
 <!-- Legend -->
 <div class="arc-legend">
   <span class="legend-label">low tension</span>
-  <span class="legend-box" style="background: {tensionBg(1.0, isDark)}"></span>
-  <span class="legend-box" style="background: {tensionBg(1.5, isDark)}"></span>
-  <span class="legend-box" style="background: {tensionBg(2.0, isDark)}"></span>
-  <span class="legend-box" style="background: {tensionBg(2.3, isDark)}"></span>
-  <span class="legend-box" style="background: {tensionBg(2.6, isDark)}"></span>
-  <span class="legend-box" style="background: {tensionBg(2.9, isDark)}"></span>
-  <span class="legend-box" style="background: {tensionBg(3.1, isDark)}"></span>
+  <span class="legend-box" style="background: {tensionBg(1.0)}"></span>
+  <span class="legend-box" style="background: {tensionBg(1.5)}"></span>
+  <span class="legend-box" style="background: {tensionBg(2.0)}"></span>
+  <span class="legend-box" style="background: {tensionBg(2.3)}"></span>
+  <span class="legend-box" style="background: {tensionBg(2.6)}"></span>
+  <span class="legend-box" style="background: {tensionBg(2.9)}"></span>
+  <span class="legend-box" style="background: {tensionBg(3.1)}"></span>
   <span class="legend-label">high tension</span>
   <span class="legend-sep">|</span>
   <span class="legend-label">circle size = event count</span>
@@ -131,16 +109,17 @@
       {@const cell = grid.cells[`${pl.id}|${ep.episode}`]}
       <div
         class="arc-cell"
-        style="background: {tensionBg(cell.tension, isDark)};"
+        style="background: {tensionBg(cell.tension)};"
       >
         {#if cell.count > 0}
+          {@const circleColor = tensionCircle(cell.tension)}
           <span
             class="arc-circle"
             style="
               width: {circleSize(cell.count, grid.maxEvents)}px;
               height: {circleSize(cell.count, grid.maxEvents)}px;
-              background: {tensionCircle(cell.tension, isDark)};
-              color: var(--text);
+              background: {circleColor};
+              color: {isDarkColor(circleColor) ? '#c0caf5' : '#1a1b26'};
             "
           >
             {cell.count}
