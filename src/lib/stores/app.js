@@ -29,6 +29,7 @@ export const theme = writable(getInitialTheme());
 if (browser) {
   theme.subscribe((value) => {
     document.documentElement.classList.toggle('dark', value === 'dark');
+    document.documentElement.classList.toggle('light', value === 'light');
     localStorage.setItem('theme', value);
   });
 }
