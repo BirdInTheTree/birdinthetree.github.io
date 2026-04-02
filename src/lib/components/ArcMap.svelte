@@ -140,7 +140,7 @@
               width: {circleSize(cell.count, grid.maxEvents)}px;
               height: {circleSize(cell.count, grid.maxEvents)}px;
               background: {tensionCircle(cell.tension, isDark)};
-              color: {isDark ? 'var(--text)' : '#1a1a1a'};
+              color: var(--text);
             "
           >
             {cell.count}

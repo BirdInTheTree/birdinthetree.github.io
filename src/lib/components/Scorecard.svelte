@@ -69,10 +69,6 @@
   }
 </script>
 
-{#if storyEngine}
-  <div class="story-engine">{storyEngine}</div>
-{/if}
-
 <table class="scorecard">
   <thead>
     <tr>
@@ -113,16 +109,6 @@
 </table>
 
 <style>
-  .story-engine {
-    color: var(--text-muted);
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    padding: 8px 12px;
-    background: var(--bg-secondary, #313244);
-    border-radius: 6px;
-    border-left: 3px solid var(--accent);
-  }
-
   .scorecard {
     width: 100%;
     border-collapse: separate;

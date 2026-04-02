@@ -70,7 +70,7 @@
           {#each row.segments as seg}
             <div
               class="pulse-bar"
-              style="flex: {seg.count}; background: {seg.color}; color: {isDarkColor(seg.color) ? '#ffffff' : '#1a1a1a'};"
+              style="flex: {seg.count}; background: {seg.color}; color: {isDarkColor(seg.color) ? 'var(--card-bg)' : 'var(--text)'};"
               title="{seg.name}: {seg.count}"
             >
               {#if seg.count >= 2}{seg.count}{/if}

@@ -104,10 +104,6 @@
     background: var(--bg-secondary);
   }
 
-  :global(:root:not(.dark)) .conv-item {
-    background: #f3f4f6;
-  }
-
   .conv-type {
     font-size: 0.875rem;
     padding: 2px 6px;
@@ -117,45 +113,20 @@
     white-space: nowrap;
   }
 
-  .conv-type.convergence {
-    background: #f38ba820;
-    color: #f38ba8;
-  }
+  .conv-type.convergence { background: color-mix(in srgb, #e74c3c 15%, transparent); color: #c01f47; }
+  .conv-type.dramatic_irony { background: color-mix(in srgb, #8e44ad 15%, transparent); color: #7c3aed; }
+  .conv-type.thematic_rhyme { background: color-mix(in srgb, #2980b9 15%, transparent); color: #1a6fa8; }
 
-  .conv-type.dramatic_irony {
-    background: #cba6f720;
-    color: #cba6f7;
-  }
-
-  .conv-type.thematic_rhyme {
-    background: #74c7ec20;
-    color: #74c7ec;
-  }
-
-  :global(:root:not(.dark)) .conv-type.convergence {
-    background: #fde8ef;
-    color: #c01f47;
-  }
-
-  :global(:root:not(.dark)) .conv-type.dramatic_irony {
-    background: #ede8fb;
-    color: #5c35a0;
-  }
-
-  :global(:root:not(.dark)) .conv-type.thematic_rhyme {
-    background: #ddf0fa;
-    color: #1a6fa8;
-  }
+  :global(:root.dark) .conv-type.convergence { background: #f38ba820; color: #f38ba8; }
+  :global(:root.dark) .conv-type.dramatic_irony { background: #cba6f720; color: #cba6f7; }
+  :global(:root.dark) .conv-type.thematic_rhyme { background: #74c7ec20; color: #74c7ec; }
 
   .conv-lines {
+    color: var(--text-muted);
+    font-weight: 600;
     font-size: 1rem;
-    color: #f9e2af;
     flex-shrink: 0;
     min-width: 100px;
-  }
-
-  :global(:root:not(.dark)) .conv-lines {
-    color: #7a5500;
   }
 
   .conv-desc {

@@ -78,7 +78,7 @@
       <div class="char-bar-wrap">
         <div
           class="char-bar"
-          style="width: {(char.events / maxEvents) * 100}%; background: {barGradient(char.segments, char.events)}; color: {isDarkColor(char.segments[0]?.color || '#888') ? '#ffffff' : '#1a1a1a'};"
+          style="width: {(char.events / maxEvents) * 100}%; background: {barGradient(char.segments, char.events)}; color: {isDarkColor(char.segments[0]?.color || '#888') ? 'var(--card-bg)' : 'var(--text)'};"
         >
           {char.events}
         </div>
