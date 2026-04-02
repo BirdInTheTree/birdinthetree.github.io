@@ -16,38 +16,36 @@ export const ALL_FUNCTIONS = [
 ];
 
 /**
- * 12 visually distinct colors for plotlines — Tokyo Night derived.
- * Each differs in hue and saturation to stay distinguishable on both themes.
+ * 12 visually distinct colors for plotlines — Tokyo Night rainbow.
+ * Uses night-theme colors (brighter, work on both light and dark backgrounds).
  */
-/** Monet Water Lilies (1916–1919) palette — 8 pigment-accurate colors. */
 export const STORYLINE_PALETTE = [
-  '#2a4a80', // deep azure — water
-  '#6a4890', // cobalt violet — reflections
-  '#3a7868', // viridian — lily pads
-  '#2a5a3a', // forest green — vegetation
-  '#d8c040', // cadmium yellow — lily accents
-  '#c07890', // lily rose — flowers
-  '#b89858', // warm ochre — light
-  '#1a2848', // deep water — shadows
+  '#7aa2f7', // blue
+  '#e0af68', // yellow
+  '#9ece6a', // green
+  '#7dcfff', // cyan
+  '#bb9af7', // magenta
+  '#ff9e64', // orange
+  '#f7768e', // red
+  '#2ac3de', // blue1
+  '#73daca', // green1/teal
+  '#9d7cd8', // purple
+  '#b4f9f8', // blue6
+  '#db4b4b', // red1
 ];
 
 /**
- * Unified function color palette — 7 maximally distinct hues.
- * Every color occupies a different part of the spectrum.
- * Works on both light and dark backgrounds.
- */
-/**
- * Narrative function colors — derived from Saul Bass "Man with the Golden Arm"
- * poster palette (teal, blue, purple) plus gold and matching purple.
+ * Narrative function colors — Tokyo Night derived.
+ * Night-theme colors for visibility on both backgrounds.
  */
 export const FUNCTION_COLORS = {
-  setup:             '#888888', // neutral gray — calm start
-  inciting_incident: '#d0a020', // gold — catalyst moment
-  escalation:        '#a8a090', // muted warm gray — lots of these, stays quiet
-  turning_point:     '#7038a8', // bright purple (poster)
-  crisis:            '#2048a8', // royal blue (poster bottom)
-  climax:            '#5c2882', // deep purple (poster bottom)
-  resolution:        '#0098b0'  // teal cyan (poster top-left) — cool down
+  setup:             '#565f89', // muted gray — calm start
+  inciting_incident: '#e0af68', // yellow — catalyst moment
+  escalation:        '#a9b1d6', // muted blue-gray — lots of these, stays quiet
+  turning_point:     '#bb9af7', // magenta — dramatic shift
+  crisis:            '#7aa2f7', // blue — rising stakes
+  climax:            '#f7768e', // red — peak moment
+  resolution:        '#9ece6a'  // green — cool down
 };
 
 /** Plotline rank sort order — lower is more important. */
@@ -67,10 +65,10 @@ export const FUNCTION_WEIGHTS = {
 /** Legacy functions from older data that may still appear. */
 export const LEGACY_FUNCTIONS = ['seed', 'catalyst', 'cliffhanger'];
 
-/** Rank badge colors — consistent across all views. */
+/** Rank badge colors — Tokyo Night palette, consistent across all views. */
 export const RANK_COLORS = {
-  A: { bg: '#dbeafe', fg: '#1e40af', darkBg: '#1e3a5f', darkFg: '#7dd3fc' },
-  B: { bg: '#fef3c7', fg: '#92400e', darkBg: '#433a2a', darkFg: '#f9e2af' },
-  C: { bg: '#e5e7eb', fg: '#374151', darkBg: '#343434', darkFg: '#8a8a8a' },
-  runner: { bg: '#f3e8ff', fg: '#6b21a8', darkBg: '#302040', darkFg: '#b07aa1' }
+  A: { bg: '#3d59a120', fg: '#7aa2f7', darkBg: '#3d59a130', darkFg: '#7aa2f7' },
+  B: { bg: '#e0af6820', fg: '#8c6c3e', darkBg: '#e0af6830', darkFg: '#e0af68' },
+  C: { bg: '#565f8920', fg: '#6172b0', darkBg: '#565f8930', darkFg: '#a9b1d6' },
+  runner: { bg: '#bb9af720', fg: '#7847bd', darkBg: '#bb9af730', darkFg: '#bb9af7' }
 };

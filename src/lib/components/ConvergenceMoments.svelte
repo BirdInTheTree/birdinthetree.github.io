@@ -117,6 +117,11 @@
   .conv-type.dramatic_irony { background: #bb9af720; color: #bb9af7; }
   .conv-type.thematic_rhyme { background: #7dcfff20; color: #7dcfff; }
 
+  /* Light theme: darker variants for contrast on light bg */
+  :global(:root:not(.dark)) .conv-type.convergence { background: #f52a6520; color: #f52a65; }
+  :global(:root:not(.dark)) .conv-type.dramatic_irony { background: #9854f120; color: #9854f1; }
+  :global(:root:not(.dark)) .conv-type.thematic_rhyme { background: #00719720; color: #007197; }
+
   .conv-lines {
     color: var(--text);
     font-weight: 600;

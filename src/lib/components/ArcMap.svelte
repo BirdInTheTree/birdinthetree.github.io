@@ -1,13 +1,16 @@
 <script>
   import { sortPlotlines, buildColorMap, isDarkColor } from '$lib/charts/helpers.js';
   import { FUNCTION_TENSION } from '$lib/charts/constants.js';
+  import { theme } from '$lib/stores/app.js';
 
   export let data;
 
+  $: isDark = $theme === 'dark';
   $: plotlines = data?.plotlines ? sortPlotlines(data.plotlines) : [];
   $: colorMap = data?.plotlines ? buildColorMap(data.plotlines) : {};
   $: episodes = data?.episodes || [];
-  $: grid = buildGrid(plotlines, episodes);
+  // isDark dependency forces re-render of tension colors on theme change
+  $: grid = (isDark, buildGrid(plotlines, episodes));
 
   // Grid columns: 1 for labels + N for episodes
   $: gridCols = `200px repeat(${episodes.length}, 1fr)`;
@@ -46,28 +49,37 @@
     return { cells, maxEvents };
   }
 
-  /** Map tension value to a Tokyo Night background color (30-35% opacity). */
-  function tensionBg(tension) {
+  /**
+   * Map tension value to a Tokyo Night color.
+   * Dark theme uses night colors (bright), light theme uses day colors (saturated).
+   */
+  function tensionColor(tension) {
     if (tension <= 0) return 'transparent';
-    if (tension <= 1.2) return '#73daca30';
-    if (tension <= 1.8) return '#9ece6a30';
-    if (tension <= 2.2) return '#e0af6830';
-    if (tension <= 2.5) return '#ff9e6430';
-    if (tension <= 2.8) return '#f7768e30';
-    if (tension <= 3.0) return '#db4b4b35';
-    return '#bb9af735';
+
+    const dark = [
+      [1.2, '#73daca'], [1.8, '#9ece6a'], [2.2, '#e0af68'],
+      [2.5, '#ff9e64'], [2.8, '#f7768e'], [3.0, '#db4b4b'], [Infinity, '#bb9af7']
+    ];
+    const light = [
+      [1.2, '#387068'], [1.8, '#587539'], [2.2, '#8c6c3e'],
+      [2.5, '#b15c00'], [2.8, '#f52a65'], [3.0, '#c64343'], [Infinity, '#9854f1']
+    ];
+    const scale = isDark ? dark : light;
+    for (const [max, color] of scale) {
+      if (tension <= max) return color;
+    }
   }
 
-  /** Map tension value to a Tokyo Night circle color. */
+  /** Background: tension color at ~19% opacity. */
+  function tensionBg(tension) {
+    const color = tensionColor(tension);
+    if (color === 'transparent') return color;
+    return color + '30';
+  }
+
+  /** Circle fill: full tension color. */
   function tensionCircle(tension) {
-    if (tension <= 0) return 'transparent';
-    if (tension <= 1.2) return '#73daca';
-    if (tension <= 1.8) return '#9ece6a';
-    if (tension <= 2.2) return '#e0af68';
-    if (tension <= 2.5) return '#ff9e64';
-    if (tension <= 2.8) return '#f7768e';
-    if (tension <= 3.0) return '#db4b4b';
-    return '#bb9af7';
+    return tensionColor(tension);
   }
 
   /** Circle diameter: 14px min, 44px max, linear by event count. */
