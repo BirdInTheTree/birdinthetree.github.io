@@ -63,52 +63,11 @@
     <p>Loading...</p>
   {:else if $seriesData}
     <div class="analytics-sections">
-      <section class="chart-card">
-        <div class="chart-card-header">
-          <h2 class="chart-title">Season Scorecard</h2>
-        </div>
-        <div class="chart-body">
-          <Scorecard data={$seriesData} />
-        </div>
-      </section>
-
-      <section class="chart-card">
-        <div class="chart-card-header">
-          <h2 class="chart-title">Tension Arc Map</h2>
-        </div>
-        <div class="chart-body">
-          <ArcMap data={$seriesData} />
-        </div>
-      </section>
-
-      <section class="chart-card">
-        <div class="chart-card-header">
-          <h2 class="chart-title">Episode Pulse</h2>
-        </div>
-        <div class="chart-body">
-          <EpisodePulse data={$seriesData} />
-        </div>
-      </section>
-
-      <div class="two-col">
-        <section class="chart-card">
-          <div class="chart-card-header">
-            <h2 class="chart-title">Convergence Moments</h2>
-          </div>
-          <div class="chart-body">
-            <ConvergenceMoments data={$seriesData} />
-          </div>
-        </section>
-
-        <section class="chart-card">
-          <div class="chart-card-header">
-            <h2 class="chart-title">Character Weight</h2>
-          </div>
-          <div class="chart-body">
-            <CharacterWeight data={$seriesData} />
-          </div>
-        </section>
-      </div>
+      <section class="chart-card"><Scorecard data={$seriesData} /></section>
+      <section class="chart-card"><ArcMap data={$seriesData} /></section>
+      <section class="chart-card"><EpisodePulse data={$seriesData} /></section>
+      <section class="chart-card"><ConvergenceMoments data={$seriesData} /></section>
+      <section class="chart-card"><CharacterWeight data={$seriesData} /></section>
     </div>
   {:else}
     <p>Select a series to view analytics.</p>
@@ -120,17 +79,5 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .two-col {
-      grid-template-columns: 1fr;
-    }
   }
 </style>

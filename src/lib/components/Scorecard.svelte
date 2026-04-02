@@ -1,12 +1,13 @@
 <script>
-  import { sortPlotlines } from '$lib/charts/helpers.js';
+  import { sortPlotlines, buildColorMap } from '$lib/charts/helpers.js';
   import { RANK_COLORS, FUNCTION_TENSION } from '$lib/charts/constants.js';
   import { theme } from '$lib/stores/app.js';
 
   export let data;
 
-  $: quote = data?.context?.story_engine || '';
+  $: storyEngine = data?.context?.story_engine || '';
   $: plotlines = data?.plotlines ? sortPlotlines(data.plotlines) : [];
+  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines) : {};
   $: episodes = (data?.episodes || []).map(ep => ep.episode);
   $: stats = buildStats(plotlines, data?.episodes || []);
 
@@ -17,7 +18,7 @@
     }
     for (const ep of episodes) {
       for (const ev of ep.events || []) {
-        const id = ev.plotline_id || ev.plotline || ev.storyline;
+        const id = ev.plotline || ev.storyline || ev.plotline_id;
         if (!result[id]) continue;
         result[id].events++;
         const fn = ev.function || ev.plot_fn;
@@ -27,18 +28,37 @@
     return result;
   }
 
-  /** Find the narrative function with the highest total tension weight. */
-  function dominantFunction(functions) {
-    let best = '';
-    let bestScore = -1;
+  /** Build arc summary: dominant function + high-tension note. */
+  function arcSummary(functions) {
+    const total = Object.values(functions).reduce((a, b) => a + b, 0);
+    if (total === 0) return '';
+
+    // Find dominant function (most common by count)
+    let dominant = '';
+    let dominantCount = 0;
     for (const [fn, count] of Object.entries(functions)) {
-      const score = count * (FUNCTION_TENSION[fn] || 1);
-      if (score > bestScore) {
-        bestScore = score;
-        best = fn;
+      if (count > dominantCount) {
+        dominantCount = count;
+        dominant = fn;
       }
     }
-    return best.replace(/_/g, ' ');
+
+    const ratio = dominantCount / total;
+    let summary = dominant.replace(/_/g, ' ');
+    if (ratio > 0.4) {
+      summary += '-heavy';
+    }
+
+    // Find first high-tension function with count
+    const highTension = ['climax', 'crisis', 'turning_point'];
+    for (const fn of highTension) {
+      if (functions[fn]) {
+        summary += ` · ${functions[fn]}× ${fn.replace(/_/g, ' ')}`;
+        break;
+      }
+    }
+
+    return summary;
   }
 
   function rankStyle(rank) {
@@ -49,123 +69,121 @@
   }
 </script>
 
-<div class="scorecard">
-  {#if quote}
-    <blockquote class="engine-quote">{quote}</blockquote>
-  {/if}
+{#if storyEngine}
+  <div class="story-engine">{storyEngine}</div>
+{/if}
 
-  <table class="scorecard-table">
-    <thead>
+<table class="scorecard">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Plotline</th>
+      <th>Span</th>
+      <th>Events</th>
+      <th>Arc</th>
+    </tr>
+  </thead>
+  <tbody>
+    {#each plotlines as pl}
+      {@const s = stats[pl.id] || { events: 0, functions: {} }}
       <tr>
-        <th>Rank</th>
-        <th>Plotline</th>
-        <th>Span</th>
-        <th>Events</th>
-        <th>Arc</th>
+        <td>
+          <span class="rank-badge" style={rankStyle(pl.rank)}>
+            {pl.rank || '?'}
+          </span>
+        </td>
+        <td><span style="color: {colorMap[pl.id] || 'var(--text)'}">{pl.name}</span></td>
+        <td>
+          <div class="span-bar">
+            {#each episodes as epCode}
+              <span
+                class="span-dot"
+                class:active={(pl.span || []).includes(epCode)}
+                class:inactive={!(pl.span || []).includes(epCode)}
+                style={(pl.span || []).includes(epCode) ? `background: ${colorMap[pl.id] || 'var(--accent)'}` : ''}
+              ></span>
+            {/each}
+          </div>
+        </td>
+        <td>{s.events}</td>
+        <td><span class="arc-summary">{arcSummary(s.functions)}</span></td>
       </tr>
-    </thead>
-    <tbody>
-      {#each plotlines as pl}
-        {@const s = stats[pl.id] || { events: 0, functions: {} }}
-        <tr>
-          <td>
-            <span class="rank-badge" style={rankStyle(pl.rank)}>
-              {pl.rank || '?'}
-            </span>
-          </td>
-          <td class="plotline-name">{pl.name}</td>
-          <td class="span-cell">
-            <div class="span-dots">
-              {#each episodes as epCode}
-                <span
-                  class="span-dot"
-                  class:active={(pl.span || []).includes(epCode)}
-                  title={epCode}
-                ></span>
-              {/each}
-            </div>
-          </td>
-          <td class="events-count">{s.events}</td>
-          <td class="arc-summary">{dominantFunction(s.functions)}</td>
-        </tr>
-      {/each}
-    </tbody>
-  </table>
-</div>
+    {/each}
+  </tbody>
+</table>
 
 <style>
-  .scorecard { overflow-x: auto; }
-
-  .engine-quote {
-    margin: 0 0 1rem;
-    padding: 0.75rem 1rem;
+  .story-engine {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    padding: 8px 12px;
+    background: var(--bg-secondary, #313244);
+    border-radius: 6px;
     border-left: 3px solid var(--accent);
-    color: var(--text-muted);
-    font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.5;
   }
 
-  .scorecard-table {
+  .scorecard {
     width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
+    border-collapse: separate;
+    border-spacing: 0;
   }
 
-  th {
+  .scorecard th {
     text-align: left;
-    padding: 0.5rem 0.75rem;
-    border-bottom: 2px solid var(--border);
+    font-size: 0.75rem;
     color: var(--text-muted);
-    font-weight: 600;
-    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 6px 12px;
+    border-bottom: 1px solid var(--border);
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
   }
 
-  td {
-    padding: 0.5rem 0.75rem;
-    border-bottom: 1px solid var(--border);
+  .scorecard td {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 40%, transparent);
     color: var(--text);
-    vertical-align: middle;
+  }
+
+  .scorecard tr:last-child td {
+    border-bottom: none;
   }
 
   .rank-badge {
     display: inline-block;
-    padding: 0.15rem 0.5rem;
+    width: 22px;
+    height: 22px;
     border-radius: 4px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 0.7rem;
     font-weight: 700;
-    font-size: 0.8rem;
-    text-transform: uppercase;
   }
 
-  .plotline-name { font-weight: 500; }
-
-  .span-dots {
+  .span-bar {
     display: flex;
-    gap: 3px;
-    align-items: center;
+    gap: 2px;
   }
 
   .span-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--border);
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
   }
 
   .span-dot.active {
-    background: var(--accent);
+    opacity: 0.7;
   }
 
-  .events-count {
-    text-align: center;
-    font-variant-numeric: tabular-nums;
+  .span-dot.inactive {
+    background: var(--border);
+    opacity: 0.3;
   }
 
   .arc-summary {
     color: var(--text-muted);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 </style>

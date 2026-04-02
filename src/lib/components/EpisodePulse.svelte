@@ -1,5 +1,5 @@
 <script>
-  import { sortPlotlines, buildColorMap, isDarkColor } from '$lib/charts/helpers.js';
+  import { sortPlotlines, buildColorMap } from '$lib/charts/helpers.js';
 
   export let data;
 
@@ -17,11 +17,13 @@
       for (const id of plIds) counts[id] = 0;
 
       for (const ev of ep.events || []) {
-        const id = ev.plotline_id || ev.plotline || ev.storyline;
+        const id = ev.plotline || ev.storyline || ev.plotline_id;
         if (id in counts) counts[id]++;
       }
 
       const total = Object.values(counts).reduce((a, b) => a + b, 0);
+
+      // Sort segments by count descending
       const segments = plIds
         .filter(id => counts[id] > 0)
         .map(id => ({
@@ -29,7 +31,8 @@
           name: plNames[id],
           count: counts[id],
           color: colorMap[id] || 'var(--accent)'
-        }));
+        }))
+        .sort((a, b) => b.count - a.count);
 
       return {
         code: ep.episode,
@@ -41,113 +44,129 @@
   }
 
   $: maxTotal = Math.max(...rows.map(r => r.total), 1);
+
+  // Unique plotlines that appear in at least one episode (for legend)
+  $: legendItems = (() => {
+    const seen = new Set();
+    const items = [];
+    for (const row of rows) {
+      for (const seg of row.segments) {
+        if (!seen.has(seg.id)) {
+          seen.add(seg.id);
+          items.push({ id: seg.id, name: seg.name, color: seg.color });
+        }
+      }
+    }
+    return items;
+  })();
 </script>
 
 <div class="episode-pulse">
   {#each rows as row}
     <div class="pulse-row">
-      <div class="ep-label">{row.code.replace(/S\d+E/, 'E')}</div>
-      <div class="bar-container">
-        <div class="bar" style="width: {(row.total / maxTotal) * 100}%;">
+      <div class="pulse-ep">{row.code.replace(/S\d+E/, 'E')}</div>
+      <div class="pulse-bars-wrap">
+        <div class="pulse-bars" style="width: {(row.total / maxTotal) * 100}%;">
           {#each row.segments as seg}
-            <span
-              class="segment"
+            <div
+              class="pulse-bar"
               style="flex: {seg.count}; background: {seg.color};"
               title="{seg.name}: {seg.count}"
             >
-              {#if seg.count >= 2}
-                <span class="seg-count" class:light-text={isDarkColor(seg.color)}>
-                  {seg.count}
-                </span>
-              {/if}
-            </span>
+              {#if seg.count >= 2}{seg.count}{/if}
+            </div>
           {/each}
         </div>
       </div>
-      <div class="row-meta">
-        <span class="total-count">{row.total}</span>
-        {#if row.theme}
-          <span class="ep-theme"><em>{row.theme}</em></span>
-        {/if}
-      </div>
+      <div class="pulse-total">{row.total}</div>
+      <div class="pulse-theme">{row.theme}</div>
     </div>
   {/each}
+
+  <div class="pulse-legend">
+    {#each legendItems as item}
+      <div class="pulse-legend-item">
+        <span class="pulse-legend-dot" style="background: {item.color};"></span>
+        {item.name}
+      </div>
+    {/each}
+  </div>
 </div>
 
 <style>
-  .episode-pulse {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
   .pulse-row {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
+    margin-bottom: 4px;
   }
 
-  .ep-label {
-    flex-shrink: 0;
-    width: 36px;
+  .pulse-ep {
     font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-muted);
+    color: var(--text);
+    width: 35px;
     text-align: right;
+    flex-shrink: 0;
   }
 
-  .bar-container {
+  .pulse-bars-wrap {
     flex: 1;
-    min-width: 0;
   }
 
-  .bar {
+  .pulse-bars {
     display: flex;
-    min-height: 26px;
-    border-radius: 4px;
-    overflow: hidden;
+    gap: 2px;
+    height: 28px;
   }
 
-  .segment {
+  .pulse-bar {
+    border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 0;
-    transition: flex 0.2s;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.8);
+    min-width: 14px;
   }
 
-  .seg-count {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.7);
-    pointer-events: none;
-  }
-
-  .seg-count.light-text {
-    color: rgba(255, 255, 255, 0.85);
-  }
-
-  .row-meta {
+  .pulse-total {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    width: 30px;
+    text-align: right;
     flex-shrink: 0;
-    display: flex;
-    align-items: baseline;
-    gap: 0.4rem;
-    min-width: 0;
   }
 
-  .total-count {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--text);
-    font-variant-numeric: tabular-nums;
-  }
-
-  .ep-theme {
-    font-size: 0.75rem;
-    color: var(--text-faint);
+  .pulse-theme {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    width: 200px;
+    text-align: left;
+    flex-shrink: 0;
+    font-style: italic;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 200px;
+  }
+
+  .pulse-legend {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  .pulse-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+
+  .pulse-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
   }
 </style>

@@ -1,10 +1,8 @@
 <script>
   export let data;
 
-  $: episodes = buildTimeline(data);
-
-  /** Map plotline IDs to names for display. */
   $: plNameMap = buildPlotlineNameMap(data?.plotlines || []);
+  $: episodes = buildTimeline(data);
 
   function buildPlotlineNameMap(plotlines) {
     const map = {};
@@ -31,134 +29,114 @@
   };
 </script>
 
-<div class="convergence-moments">
+<div class="conv-timeline">
+  <div class="conv-line"></div>
+
   {#if episodes.length === 0}
-    <p class="empty">No interactions found.</p>
+    <p style="color: var(--text-faint); font-style: italic;">No interactions found.</p>
   {/if}
 
   {#each episodes as ep}
-    <div class="episode-group">
-      <div class="episode-header">
-        <span class="ep-code">{ep.code}</span>
-        {#if ep.theme}
-          <span class="ep-theme"><em>{ep.theme}</em></span>
-        {/if}
-      </div>
+    <div class="conv-ep-group">
+      <div class="conv-ep-label">{ep.code}</div>
 
-      <div class="interactions">
-        {#each ep.interactions as interaction}
-          <div class="interaction">
-            <span class="type-badge type-{interaction.type}">
-              {TYPE_LABELS[interaction.type] || interaction.type}
-            </span>
-            <span class="plotlines-involved">
-              {(interaction.lines || []).map(id => plNameMap[id] || id).join(' + ')}
-            </span>
-            <p class="interaction-desc">{interaction.description}</p>
-          </div>
-        {/each}
-      </div>
+      {#each ep.interactions as interaction}
+        <div class="conv-item">
+          <span class="conv-type {interaction.type}">
+            {TYPE_LABELS[interaction.type] || interaction.type}
+          </span>
+          <span class="conv-lines">
+            {(interaction.lines || []).map(id => plNameMap[id] || id).join(' + ')}
+          </span>
+          <span class="conv-desc">{interaction.description}</span>
+        </div>
+      {/each}
     </div>
   {/each}
 </div>
 
 <style>
-  .convergence-moments {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+  .conv-timeline {
+    position: relative;
+    padding-left: 40px;
   }
 
-  .empty {
-    color: var(--text-faint);
-    font-style: italic;
+  .conv-line {
+    position: absolute;
+    left: 17px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: var(--border);
   }
 
-  .episode-group {
-    border-left: 3px solid var(--border);
-    padding-left: 1rem;
+  .conv-ep-group {
+    margin-bottom: 16px;
   }
 
-  .episode-header {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .ep-code {
-    font-weight: 700;
-    font-size: 0.9rem;
+  .conv-ep-label {
+    font-size: 0.8rem;
     color: var(--text);
-  }
-
-  .ep-theme {
-    font-size: 0.82rem;
-    color: var(--text-faint);
-  }
-
-  .interactions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .interaction {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.4rem;
-  }
-
-  .type-badge {
-    display: inline-block;
-    padding: 0.1rem 0.45rem;
-    border-radius: 3px;
-    font-size: 0.72rem;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+    position: relative;
+  }
+
+  .conv-ep-label::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  .conv-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 4px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--bg-secondary, #313244);
+  }
+
+  .conv-type {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    font-weight: 600;
     white-space: nowrap;
   }
 
-  .type-convergence {
-    background: hsla(0, 65%, 55%, 0.18);
-    color: hsl(0, 60%, 42%);
-  }
-  :global(:root.dark) .type-convergence {
-    background: hsla(0, 55%, 40%, 0.3);
-    color: hsl(0, 60%, 72%);
+  .conv-type.convergence {
+    background: #f38ba820;
+    color: #f38ba8;
   }
 
-  .type-dramatic_irony {
-    background: hsla(270, 55%, 50%, 0.15);
-    color: hsl(270, 50%, 40%);
-  }
-  :global(:root.dark) .type-dramatic_irony {
-    background: hsla(270, 45%, 40%, 0.3);
-    color: hsl(270, 50%, 72%);
+  .conv-type.dramatic_irony {
+    background: #cba6f720;
+    color: #cba6f7;
   }
 
-  .type-thematic_rhyme {
-    background: hsla(175, 55%, 40%, 0.15);
-    color: hsl(175, 55%, 32%);
-  }
-  :global(:root.dark) .type-thematic_rhyme {
-    background: hsla(175, 45%, 35%, 0.3);
-    color: hsl(175, 50%, 65%);
+  .conv-type.thematic_rhyme {
+    background: #74c7ec20;
+    color: #74c7ec;
   }
 
-  .plotlines-involved {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--text);
+  .conv-lines {
+    font-size: 0.7rem;
+    color: #f9e2af;
+    flex-shrink: 0;
+    min-width: 100px;
   }
 
-  .interaction-desc {
-    width: 100%;
-    margin: 0.1rem 0 0;
-    font-size: 0.82rem;
+  .conv-desc {
+    font-size: 0.75rem;
     color: var(--text-muted);
-    line-height: 1.45;
   }
 </style>

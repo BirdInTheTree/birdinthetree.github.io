@@ -1,58 +1,91 @@
 <script>
-  import { buildCastMap, isDarkColor } from '$lib/charts/helpers.js';
+  import { sortPlotlines, buildColorMap, buildCastMap } from '$lib/charts/helpers.js';
 
   export let data;
 
   $: castMap = data ? buildCastMap(data) : {};
-  $: characters = buildCharacters(data, castMap);
+  $: plotlines = data?.plotlines ? sortPlotlines(data.plotlines) : [];
+  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines) : {};
+  $: characters = buildCharacters(data, castMap, colorMap);
 
-  function buildCharacters(data, castMap) {
+  /** Format guest:xxx IDs as title case without prefix. */
+  function formatName(id, castMap) {
+    const name = castMap[id];
+    if (name) return name;
+    if (id.startsWith('guest:')) {
+      return id.slice(6).replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+    return id;
+  }
+
+  function buildCharacters(data, castMap, colorMap) {
     if (!data?.episodes) return [];
 
-    // Count events and plotlines per character
-    const charEvents = {};
-    const charPlotlines = {};
+    // Count events per character per plotline
+    const charPlotlineCounts = {};
 
     for (const ep of data.episodes) {
       for (const ev of ep.events || []) {
-        const plId = ev.plotline_id || ev.plotline || ev.storyline;
+        const plId = ev.plotline || ev.storyline || ev.plotline_id;
         for (const charId of ev.characters || []) {
-          charEvents[charId] = (charEvents[charId] || 0) + 1;
-          if (!charPlotlines[charId]) charPlotlines[charId] = new Set();
-          if (plId) charPlotlines[charId].add(plId);
+          if (!charPlotlineCounts[charId]) charPlotlineCounts[charId] = {};
+          charPlotlineCounts[charId][plId] = (charPlotlineCounts[charId][plId] || 0) + 1;
         }
       }
     }
 
-    return Object.entries(charEvents)
-      .filter(([, count]) => count >= 2)
-      .map(([id, count]) => ({
-        id,
-        name: castMap[id] || id,
-        events: count,
-        plotlineCount: charPlotlines[id]?.size || 0
-      }))
+    return Object.entries(charPlotlineCounts)
+      .map(([id, plCounts]) => {
+        const total = Object.values(plCounts).reduce((a, b) => a + b, 0);
+        // Build gradient segments sorted by count descending
+        const segments = Object.entries(plCounts)
+          .map(([plId, count]) => ({ plId, count, color: colorMap[plId] || 'var(--accent)' }))
+          .sort((a, b) => b.count - a.count);
+        // Dot colors = unique plotline colors
+        const dotColors = segments.map(s => s.color);
+        return {
+          id,
+          name: formatName(id, castMap),
+          events: total,
+          segments,
+          dotColors
+        };
+      })
+      .filter(c => c.events >= 2)
       .sort((a, b) => b.events - a.events);
   }
 
   $: maxEvents = characters.length > 0 ? characters[0].events : 1;
+
+  /** Build CSS linear-gradient from plotline segments. */
+  function barGradient(segments, total) {
+    if (segments.length === 1) return segments[0].color;
+    const parts = [];
+    let pct = 0;
+    for (const seg of segments) {
+      const nextPct = pct + (seg.count / total) * 100;
+      parts.push(`${seg.color} ${pct.toFixed(1)}% ${nextPct.toFixed(1)}%`);
+      pct = nextPct;
+    }
+    return `linear-gradient(to right, ${parts.join(', ')})`;
+  }
 </script>
 
 <div class="character-weight">
   {#each characters as char}
     <div class="char-row">
       <div class="char-name">{char.name}</div>
-      <div class="bar-container">
+      <div class="char-bar-wrap">
         <div
-          class="bar"
-          style="width: {(char.events / maxEvents) * 100}%;"
+          class="char-bar"
+          style="width: {(char.events / maxEvents) * 100}%; background: {barGradient(char.segments, char.events)};"
         >
-          <span class="bar-count">{char.events}</span>
+          {char.events}
         </div>
       </div>
-      <div class="plotline-dots" title="{char.plotlineCount} plotlines">
-        {#each Array(char.plotlineCount) as _}
-          <span class="dot"></span>
+      <div class="char-dots">
+        {#each char.dotColors as color}
+          <span class="char-dot" style="background: {color};"></span>
         {/each}
       </div>
     </div>
@@ -60,68 +93,45 @@
 </div>
 
 <style>
-  .character-weight {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
   .char-row {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
+    margin-bottom: 6px;
   }
 
   .char-name {
-    flex-shrink: 0;
-    width: 130px;
-    font-size: 0.82rem;
-    font-weight: 500;
+    font-size: 0.8rem;
     color: var(--text);
+    width: 110px;
     text-align: right;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-shrink: 0;
   }
 
-  .bar-container {
+  .char-bar-wrap {
     flex: 1;
-    min-width: 0;
+    height: 22px;
+    position: relative;
   }
 
-  .bar {
+  .char-bar {
+    height: 100%;
+    border-radius: 3px;
     display: flex;
     align-items: center;
-    min-height: 22px;
-    background: var(--accent);
-    border-radius: 3px;
-    padding: 0 0.4rem;
-    transition: width 0.2s;
+    padding-left: 8px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.9);
   }
 
-  .bar-count {
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #fff;
-  }
-
-  :global(:root:not(.dark)) .bar-count {
-    color: #fff;
-  }
-
-  .plotline-dots {
-    flex-shrink: 0;
+  .char-dots {
     display: flex;
     gap: 3px;
-    align-items: center;
-    min-width: 40px;
   }
 
-  .dot {
-    display: inline-block;
-    width: 7px;
-    height: 7px;
+  .char-dot {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: var(--text-faint);
   }
 </style>
