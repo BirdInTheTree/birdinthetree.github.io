@@ -9,11 +9,11 @@
     theme
   } from '$lib/stores/app.js';
   import SeriesSelect from '$lib/components/SeriesSelect.svelte';
-  import ChartCanvas from '$lib/components/ChartCanvas.svelte';
-  import ConvergenceMap from '$lib/components/ConvergenceMap.svelte';
-
-  import { buildEpisodeBalance } from '$lib/charts/episodeBalance.js';
-  import { buildPlotlineTimeline } from '$lib/charts/plotlineTimeline.js';
+  import Scorecard from '$lib/components/Scorecard.svelte';
+  import ArcMap from '$lib/components/ArcMap.svelte';
+  import EpisodePulse from '$lib/components/EpisodePulse.svelte';
+  import ConvergenceMoments from '$lib/components/ConvergenceMoments.svelte';
+  import CharacterWeight from '$lib/components/CharacterWeight.svelte';
 
   $: if ($currentSeries) {
     loadCurrentSeries($currentSeries);
@@ -41,18 +41,6 @@
       }
     }
   });
-
-  $: balanceChart = $seriesData ? buildEpisodeBalance($seriesData) : null;
-  $: timelineChart = $seriesData ? buildPlotlineTimeline($seriesData) : null;
-
-  function bindCanvas(node, config) {
-    if (config?.render) config.render(node);
-    return {
-      update(newConfig) {
-        if (newConfig?.render) newConfig.render(node);
-      }
-    };
-  }
 </script>
 
 <svelte:head>
@@ -74,47 +62,53 @@
   {#if $isLoading}
     <p>Loading...</p>
   {:else if $seriesData}
-    <div class="charts-list">
-      <div class="chart-card">
+    <div class="analytics-sections">
+      <section class="chart-card">
         <div class="chart-card-header">
-          <h2 class="chart-title">Event count per plotline per episode</h2>
+          <h2 class="chart-title">Season Scorecard</h2>
         </div>
         <div class="chart-body">
-          {#if balanceChart}
-            <ChartCanvas
-              type="bar"
-              data={balanceChart.data}
-              options={balanceChart.options}
-              plugins={balanceChart.plugins}
-            />
-          {/if}
+          <Scorecard data={$seriesData} />
         </div>
-      </div>
+      </section>
 
-      <div class="charts-row">
-        <div class="chart-card">
+      <section class="chart-card">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Tension Arc Map</h2>
+        </div>
+        <div class="chart-body">
+          <ArcMap data={$seriesData} />
+        </div>
+      </section>
+
+      <section class="chart-card">
+        <div class="chart-card-header">
+          <h2 class="chart-title">Episode Pulse</h2>
+        </div>
+        <div class="chart-body">
+          <EpisodePulse data={$seriesData} />
+        </div>
+      </section>
+
+      <div class="two-col">
+        <section class="chart-card">
           <div class="chart-card-header">
-            <h2 class="chart-title">Span Timeline</h2>
+            <h2 class="chart-title">Convergence Moments</h2>
           </div>
           <div class="chart-body">
-            {#if timelineChart}
-              <div class="custom-canvas-wrapper">
-                <canvas use:bindCanvas={timelineChart}></canvas>
-              </div>
-            {/if}
+            <ConvergenceMoments data={$seriesData} />
           </div>
-        </div>
+        </section>
 
-        <div class="chart-card">
+        <section class="chart-card">
           <div class="chart-card-header">
-            <h2 class="chart-title">Convergence</h2>
+            <h2 class="chart-title">Character Weight</h2>
           </div>
           <div class="chart-body">
-            <ConvergenceMap data={$seriesData} />
+            <CharacterWeight data={$seriesData} />
           </div>
-        </div>
+        </section>
       </div>
-
     </div>
   {:else}
     <p>Select a series to view analytics.</p>
@@ -122,28 +116,21 @@
 </div>
 
 <style>
-  .charts-row {
+  .analytics-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
-  .custom-canvas-wrapper {
-    overflow-x: auto;
-  }
-  .custom-canvas-wrapper canvas {
-    display: block;
-  }
-  .small-multiples {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-  }
-  .small-multiple {
-    min-height: 200px;
-  }
-  .small-multiple h3 {
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+
+  @media (max-width: 768px) {
+    .two-col {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
