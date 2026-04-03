@@ -103,7 +103,7 @@
       <section class="chart-card" id="convergence">
         <div class="chart-card-header">
           <h2 class="chart-title">Convergence Moments</h2>
-          <p class="chart-description">Where do storylines collide? What are the key dramatic intersections?</p>
+          <p class="chart-description">Points where plotlines interact. <strong>Convergence</strong> — plotlines share a scene or event. <strong>Dramatic irony</strong> — the audience knows something characters don't across plotlines. <strong>Thematic rhyme</strong> — separate plotlines echo the same theme or motif.</p>
         </div>
         <div class="chart-body">
           <ConvergenceMoments data={$seriesData} />
