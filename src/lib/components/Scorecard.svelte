@@ -65,7 +65,7 @@
     const colors = RANK_COLORS[rank];
     if (!colors) return '';
     const isDark = $theme === 'dark';
-    return `background: ${isDark ? colors.darkBg : colors.bg}; color: ${isDark ? colors.darkFg : colors.fg};`;
+    return `color: ${isDark ? colors.darkFg : colors.fg};`;
   }
 </script>
 
