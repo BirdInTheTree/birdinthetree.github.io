@@ -23,7 +23,6 @@
 
       const total = Object.values(counts).reduce((a, b) => a + b, 0);
 
-      // Sort segments by count descending
       const segments = plIds
         .filter(id => counts[id] > 0)
         .map(id => ({
@@ -34,18 +33,13 @@
         }))
         .sort((a, b) => b.count - a.count);
 
-      return {
-        code: ep.episode,
-        theme: ep.theme || '',
-        total,
-        segments
-      };
+      return { code: ep.episode, total, segments };
     });
   }
 
   $: maxTotal = Math.max(...rows.map(r => r.total), 1);
 
-  // Unique plotlines that appear in at least one episode (for legend)
+  // Unique plotlines for legend
   $: legendItems = (() => {
     const seen = new Set();
     const items = [];
@@ -59,31 +53,74 @@
     }
     return items;
   })();
+
+  // Scale ticks
+  $: ticks = (() => {
+    const step = maxTotal <= 10 ? 2 : 5;
+    const result = [];
+    for (let i = 0; i <= maxTotal; i += step) result.push(i);
+    if (result[result.length - 1] < maxTotal) result.push(maxTotal);
+    return result;
+  })();
 </script>
 
 <div class="episode-pulse">
-  {#each rows as row}
-    <div class="pulse-row">
-      <div class="pulse-ep">{row.code.replace(/S\d+E/, 'E')}</div>
-      <div class="pulse-bars-wrap">
-        <div class="pulse-bars" style="width: {(row.total / maxTotal) * 100}%;">
-          {#each row.segments as seg}
-            <div
-              class="pulse-bar"
-              style="flex: {seg.count}; background: {seg.color}; color: {isDarkColor(seg.color) ? 'var(--card-bg)' : 'var(--text)'};"
-              title="{seg.name}: {seg.count}"
-            >
-              {#if seg.count >= 2}{seg.count}{/if}
+  <div class="pulse-body">
+    <div class="pulse-bars-area">
+      {#each rows as row}
+        <div class="pulse-row">
+          <div class="pulse-ep">{row.code.replace(/S\d+E/, 'E')}</div>
+          <div class="pulse-bars-wrap">
+            <div class="pulse-bars" style="width: {(row.total / maxTotal) * 100}%;">
+              {#each row.segments as seg}
+                <div
+                  class="pulse-bar"
+                  style="flex: {seg.count}; background: {seg.color}; color: {isDarkColor(seg.color) ? '#c0caf5' : '#1a1b26'};"
+                  title="{seg.name}: {seg.count}"
+                >
+                  {#if seg.count >= 2}{seg.count}{/if}
+                </div>
+              {/each}
+            </div>
+          </div>
+        </div>
+      {/each}
+
+      <!-- Scale at bottom -->
+      <div class="pulse-scale">
+        <div class="pulse-scale-label"></div>
+        <div class="pulse-scale-bar">
+          {#each ticks as tick}
+            <div class="pulse-tick" style="left: {(tick / maxTotal) * 100}%;">
+              <span>{tick}</span>
             </div>
           {/each}
         </div>
       </div>
-      <div class="pulse-total">{row.total}</div>
     </div>
-  {/each}
+
+    <!-- Legend on the right -->
+    <div class="pulse-legend">
+      {#each legendItems as item}
+        <div class="pulse-legend-item">
+          <span class="pulse-legend-dot" style="background: {item.color};"></span>
+          {item.name}
+        </div>
+      {/each}
+    </div>
+  </div>
 </div>
 
 <style>
+  .pulse-body {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .pulse-bars-area {
+    flex: 1;
+  }
+
   .pulse-row {
     display: flex;
     align-items: center;
@@ -118,11 +155,55 @@
     min-width: 14px;
   }
 
-  .pulse-total {
+  /* Scale */
+  .pulse-scale {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .pulse-scale-label {
+    width: 35px;
+    flex-shrink: 0;
+  }
+
+  .pulse-scale-bar {
+    flex: 1;
+    position: relative;
+    height: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .pulse-tick {
+    position: absolute;
+    top: 2px;
+    transform: translateX(-50%);
     font-size: 0.875rem;
+    color: var(--text-faint);
+  }
+
+  /* Legend */
+  .pulse-legend {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 2px;
+  }
+
+  .pulse-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1rem;
     color: var(--text-muted);
-    width: 30px;
-    text-align: right;
+    white-space: nowrap;
+  }
+
+  .pulse-legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
     flex-shrink: 0;
   }
 </style>
