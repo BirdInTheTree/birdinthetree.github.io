@@ -90,16 +90,19 @@
 <!-- Legend -->
 <div class="arc-legend">
   <span class="legend-label">low tension</span>
-  <span class="legend-box" style="background: {tensionBg(1.0)}"></span>
-  <span class="legend-box" style="background: {tensionBg(1.5)}"></span>
-  <span class="legend-box" style="background: {tensionBg(2.0)}"></span>
-  <span class="legend-box" style="background: {tensionBg(2.3)}"></span>
-  <span class="legend-box" style="background: {tensionBg(2.6)}"></span>
-  <span class="legend-box" style="background: {tensionBg(2.9)}"></span>
-  <span class="legend-box" style="background: {tensionBg(3.1)}"></span>
+  <span class="legend-circle" style="background: {tensionColor(1.0)};"></span>
+  <span class="legend-circle" style="background: {tensionColor(1.5)};"></span>
+  <span class="legend-circle" style="background: {tensionColor(2.0)};"></span>
+  <span class="legend-circle" style="background: {tensionColor(2.5)};"></span>
+  <span class="legend-circle" style="background: {tensionColor(2.8)};"></span>
+  <span class="legend-circle" style="background: {tensionColor(3.0)};"></span>
+  <span class="legend-circle" style="background: {tensionColor(3.5)};"></span>
   <span class="legend-label">high tension</span>
   <span class="legend-sep">|</span>
-  <span class="legend-label">circle size = event count</span>
+  <span class="legend-circle" style="background: var(--text-faint); width: 10px; height: 10px;"></span>
+  <span class="legend-label">fewer events</span>
+  <span class="legend-circle" style="background: var(--text-faint); width: 20px; height: 20px;"></span>
+  <span class="legend-label">more events</span>
 </div>
 
 <!-- Heatmap grid -->
@@ -159,11 +162,11 @@
     flex-wrap: wrap;
   }
 
-  .legend-box {
+  .legend-circle {
     display: inline-block;
-    width: 20px;
+    width: 14px;
     height: 14px;
-    border-radius: 3px;
+    border-radius: 50%;
   }
 
   .legend-label {
