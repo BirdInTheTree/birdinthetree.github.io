@@ -7,7 +7,8 @@
 
   $: storyEngine = data?.context?.story_engine || '';
   $: plotlines = data?.plotlines ? sortPlotlines(data.plotlines) : [];
-  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines) : {};
+  $: isDark = $theme === 'dark';
+  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines, isDark) : {};
   $: episodes = (data?.episodes || []).map(ep => ep.episode);
   $: stats = buildStats(plotlines, data?.episodes || []);
 

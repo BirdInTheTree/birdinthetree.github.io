@@ -1,10 +1,12 @@
 <script>
   import { sortPlotlines, buildColorMap, isDarkColor } from '$lib/charts/helpers.js';
+  import { theme } from '$lib/stores/app.js';
 
   export let data;
 
+  $: isDark = $theme === 'dark';
   $: plotlines = data?.plotlines ? sortPlotlines(data.plotlines) : [];
-  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines) : {};
+  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines, isDark) : {};
   $: rows = buildRows(data?.episodes || [], plotlines);
 
   function buildRows(episodes, plotlines) {
@@ -75,7 +77,7 @@
               {#each row.segments as seg}
                 <div
                   class="pulse-bar"
-                  style="flex: {seg.count}; background: {seg.color}; color: {isDarkColor(seg.color) ? '#c0caf5' : '#1a1b26'};"
+                  style="flex: {seg.count}; background: {seg.color}; color: {isDarkColor(seg.color) ? '#ffffff' : '#1a1b26'};"
                   title="{seg.name}: {seg.count}"
                 >
                   {#if seg.count >= 2}{seg.count}{/if}

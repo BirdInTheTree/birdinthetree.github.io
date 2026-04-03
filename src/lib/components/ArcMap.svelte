@@ -7,7 +7,7 @@
 
   $: isDark = $theme === 'dark';
   $: plotlines = data?.plotlines ? sortPlotlines(data.plotlines) : [];
-  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines) : {};
+  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines, isDark) : {};
   $: episodes = data?.episodes || [];
   // isDark dependency forces re-render of tension colors on theme change
   $: grid = (isDark, buildGrid(plotlines, episodes));
@@ -132,7 +132,7 @@
               width: {circleSize(cell.count, grid.maxEvents)}px;
               height: {circleSize(cell.count, grid.maxEvents)}px;
               background: {circleColor};
-              color: {isDarkColor(circleColor) ? '#c0caf5' : '#1a1b26'};
+              color: {isDarkColor(circleColor) ? '#ffffff' : '#1a1b26'};
             "
           >
             {cell.count}

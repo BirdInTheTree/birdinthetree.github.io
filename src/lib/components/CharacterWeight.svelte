@@ -1,11 +1,13 @@
 <script>
   import { sortPlotlines, buildColorMap, buildCastMap, isDarkColor } from '$lib/charts/helpers.js';
+  import { theme } from '$lib/stores/app.js';
 
   export let data;
 
+  $: isDark = $theme === 'dark';
   $: castMap = data ? buildCastMap(data) : {};
   $: plotlines = data?.plotlines ? sortPlotlines(data.plotlines) : [];
-  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines) : {};
+  $: colorMap = data?.plotlines ? buildColorMap(data.plotlines, isDark) : {};
   $: characters = buildCharacters(data, castMap, colorMap);
 
   /** Format guest:xxx IDs as title case without prefix. */
@@ -78,7 +80,7 @@
       <div class="char-bar-wrap">
         <div
           class="char-bar"
-          style="width: {(char.events / maxEvents) * 100}%; background: {barGradient(char.segments, char.events)}; color: {isDarkColor(char.segments[0]?.color || '#888') ? 'var(--card-bg)' : 'var(--text)'};"
+          style="width: {(char.events / maxEvents) * 100}%; background: {barGradient(char.segments, char.events)}; color: {isDarkColor(char.segments[0]?.color || '#888') ? '#ffffff' : '#1a1b26'};"
         >
           {char.events}
         </div>

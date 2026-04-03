@@ -1,4 +1,4 @@
-import { RANK_ORDER, STORYLINE_PALETTE } from './constants.js';
+import { RANK_ORDER, STORYLINE_PALETTE, STORYLINE_PALETTE_LIGHT } from './constants.js';
 
 /** Sort plotlines by rank: A < B < C < runner. */
 export function sortPlotlines(plotlines) {
@@ -7,11 +7,13 @@ export function sortPlotlines(plotlines) {
   );
 }
 
-/** Assign distinct palette colors to plotlines in rank order. */
-export function buildColorMap(plotlines) {
+/** Assign distinct palette colors to plotlines in rank order.
+ *  Pass isDark = false for light-theme colors with better contrast on white. */
+export function buildColorMap(plotlines, isDark = true) {
+  const palette = isDark ? STORYLINE_PALETTE : STORYLINE_PALETTE_LIGHT;
   const map = {};
   plotlines.forEach((pl, i) => {
-    map[pl.id] = STORYLINE_PALETTE[i % STORYLINE_PALETTE.length];
+    map[pl.id] = palette[i % palette.length];
   });
   return map;
 }

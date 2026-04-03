@@ -59,10 +59,9 @@
     if (n === 0) return;
 
     const plotlines = sortPlotlines(seriesData.plotlines || []);
-    const colors = buildColorMap(plotlines);
-    const plColors = plotlines.map(pl => colors[pl.id] || '#888');
-
     const isDark = document.documentElement.classList.contains('dark');
+    const colors = buildColorMap(plotlines, isDark);
+    const plColors = plotlines.map(pl => colors[pl.id] || '#888');
     const fg = isDark ? '#c6c6c6' : '#0e0e0e';
     const bg = isDark ? '#151515' : '#ffffff';
     const emptyBg = isDark ? '#1a1a1a' : '#f9fafb';

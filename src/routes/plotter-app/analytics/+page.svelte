@@ -75,7 +75,9 @@
           <h2 class="chart-title">Season Scorecard</h2>
           <p class="chart-description">What is this season about, and what are its building blocks?</p>
         </div>
-        <Scorecard data={$seriesData} />
+        <div class="chart-body">
+          <Scorecard data={$seriesData} />
+        </div>
       </section>
 
       <section class="chart-card" id="arc-map">
@@ -83,7 +85,9 @@
           <h2 class="chart-title">Arc Map</h2>
           <p class="chart-description">Where does tension rise and fall for each plotline across episodes?</p>
         </div>
-        <ArcMap data={$seriesData} />
+        <div class="chart-body">
+          <ArcMap data={$seriesData} />
+        </div>
       </section>
 
       <section class="chart-card" id="pulse">
@@ -91,7 +95,9 @@
           <h2 class="chart-title">Episode Pulse</h2>
           <p class="chart-description">How balanced is each episode? Which plotlines dominate?</p>
         </div>
-        <EpisodePulse data={$seriesData} />
+        <div class="chart-body">
+          <EpisodePulse data={$seriesData} />
+        </div>
       </section>
 
       <section class="chart-card" id="convergence">
@@ -99,7 +105,9 @@
           <h2 class="chart-title">Convergence Moments</h2>
           <p class="chart-description">Where do storylines collide? What are the key dramatic intersections?</p>
         </div>
-        <ConvergenceMoments data={$seriesData} />
+        <div class="chart-body">
+          <ConvergenceMoments data={$seriesData} />
+        </div>
       </section>
 
       <section class="chart-card" id="characters">
@@ -107,7 +115,9 @@
           <h2 class="chart-title">Character Weight</h2>
           <p class="chart-description">Who carries the story? How are characters distributed across plotlines?</p>
         </div>
-        <CharacterWeight data={$seriesData} />
+        <div class="chart-body">
+          <CharacterWeight data={$seriesData} />
+        </div>
       </section>
     </div>
   {:else}

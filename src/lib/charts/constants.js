@@ -16,8 +16,8 @@ export const ALL_FUNCTIONS = [
 ];
 
 /**
- * 12 visually distinct colors for plotlines — Tokyo Night rainbow.
- * Uses night-theme colors (brighter, work on both light and dark backgrounds).
+ * 12 visually distinct plotline colors — Tokyo Night Night (dark theme).
+ * Bright, saturated — designed for dark backgrounds.
  */
 export const STORYLINE_PALETTE = [
   '#7aa2f7', // blue
@@ -32,6 +32,26 @@ export const STORYLINE_PALETTE = [
   '#9d7cd8', // purple
   '#b4f9f8', // blue6
   '#db4b4b', // red1
+];
+
+/**
+ * 12 plotline colors — Tokyo Night Day (light theme).
+ * Darker, more saturated — readable on white backgrounds (WCAG AA).
+ * Same hue order as STORYLINE_PALETTE so plotline identity is preserved across themes.
+ */
+export const STORYLINE_PALETTE_LIGHT = [
+  '#2959a5', // blue
+  '#946b2d', // golden brown
+  '#4a742a', // forest green
+  '#006d94', // ocean cyan
+  '#7847bd', // violet
+  '#b35a16', // amber
+  '#c9364c', // crimson
+  '#107d8f', // teal-blue
+  '#2a7a66', // jade
+  '#6b4aab', // deep purple
+  '#0a7a78', // dark aqua
+  '#a83636', // brick red
 ];
 
 /**
