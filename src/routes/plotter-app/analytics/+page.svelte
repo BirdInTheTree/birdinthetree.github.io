@@ -73,7 +73,7 @@
       <section class="chart-card" id="scorecard">
         <div class="chart-card-header">
           <h2 class="chart-title">Season Scorecard</h2>
-          <p class="chart-description">What is this season about, and what are its building blocks?</p>
+          <p class="chart-description">Each plotline's rank, episode span, event count, and dominant arc pattern.</p>
         </div>
         <div class="chart-body">
           <Scorecard data={$seriesData} />
@@ -93,7 +93,7 @@
       <section class="chart-card" id="pulse">
         <div class="chart-card-header">
           <h2 class="chart-title">Episode Pulse</h2>
-          <p class="chart-description">How balanced is each episode? Which plotlines dominate?</p>
+          <p class="chart-description">Number of events per episode, split by plotline.</p>
         </div>
         <div class="chart-body">
           <EpisodePulse data={$seriesData} />
@@ -113,7 +113,7 @@
       <section class="chart-card" id="characters">
         <div class="chart-card-header">
           <h2 class="chart-title">Character Weight</h2>
-          <p class="chart-description">Who carries the story? How are characters distributed across plotlines?</p>
+          <p class="chart-description">How many events involve each character, broken down by plotline.</p>
         </div>
         <div class="chart-body">
           <CharacterWeight data={$seriesData} />
