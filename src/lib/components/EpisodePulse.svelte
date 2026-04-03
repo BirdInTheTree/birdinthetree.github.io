@@ -79,18 +79,8 @@
         </div>
       </div>
       <div class="pulse-total">{row.total}</div>
-      <div class="pulse-theme">{row.theme}</div>
     </div>
   {/each}
-
-  <div class="pulse-legend">
-    {#each legendItems as item}
-      <div class="pulse-legend-item">
-        <span class="pulse-legend-dot" style="background: {item.color};"></span>
-        {item.name}
-      </div>
-    {/each}
-  </div>
 </div>
 
 <style>
@@ -134,38 +124,5 @@
     width: 30px;
     text-align: right;
     flex-shrink: 0;
-  }
-
-  .pulse-theme {
-    font-size: 1rem;
-    color: var(--text-muted);
-    width: 200px;
-    text-align: left;
-    flex-shrink: 0;
-    font-style: italic;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .pulse-legend {
-    display: flex;
-    gap: 12px;
-    margin-top: 8px;
-    flex-wrap: wrap;
-  }
-
-  .pulse-legend-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 1rem;
-    color: var(--text-muted);
-  }
-
-  .pulse-legend-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 3px;
   }
 </style>
