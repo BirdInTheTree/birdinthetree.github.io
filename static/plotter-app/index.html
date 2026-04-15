@@ -3997,114 +3997,401 @@ function _computeSpan(plotlines, episodes) {
   }
 }
 
-function _computeRanks(plotlines, episodes, context) {
-  // Count events per plotline
-  const counts = {};
-  let total = 0;
+function _assignOrphanEvents(plotlines, episodes) {
+  // Mirror of postprocess.assign_orphan_events: redistribute events whose
+  // plotline_id is null using character co-occurrence with assigned events.
+  const charPlotlineCounts = new Map();
   for (const ep of episodes) {
     for (const ev of ep.events) {
-      if (ev.plotline_id) {
-        counts[ev.plotline_id] = (counts[ev.plotline_id] || 0) + 1;
-        total++;
+      if (!ev.plotline_id) continue;
+      for (const char of (ev.characters || [])) {
+        if (!charPlotlineCounts.has(char)) charPlotlineCounts.set(char, new Map());
+        const counter = charPlotlineCounts.get(char);
+        counter.set(ev.plotline_id, (counter.get(ev.plotline_id) || 0) + 1);
       }
     }
   }
 
-  // Assign A/B/C based on proportion of total events
-  for (const pl of plotlines) {
-    const count = counts[pl.id] || 0;
-    const share = total > 0 ? count / total : 0;
-    if (pl.type === 'runner') {
-      pl.computed_rank = null;
-    } else if (share >= 0.25) {
-      pl.computed_rank = 'A';
-    } else if (share >= 0.10) {
-      pl.computed_rank = 'B';
-    } else {
-      pl.computed_rank = 'C';
-    }
-    pl.rank = pl.computed_rank;
-  }
-}
+  const plotlineIds = new Set(plotlines.map(p => p.id));
 
-function _applyVerdicts(verdicts, plotlines, episodes) {
-  // Simplified verdict application for browser pipeline
-  for (const v of verdicts) {
-    if (v.action === 'MERGE') {
-      // Move all events from source to target
-      for (const ep of episodes) {
-        for (const ev of ep.events) {
-          if (ev.plotline_id === v.source) {
-            ev.plotline_id = v.target;
+  for (const ep of episodes) {
+    for (const ev of ep.events) {
+      if (ev.plotline_id) continue;
+      if (!ev.characters || ev.characters.length === 0) continue;
+
+      const votes = new Map();
+      for (const char of ev.characters) {
+        const counter = charPlotlineCounts.get(char);
+        if (!counter) continue;
+        for (const [pid, count] of counter) {
+          votes.set(pid, (votes.get(pid) || 0) + count);
+        }
+      }
+
+      // Fallback: most common plotline in this episode among already-assigned events
+      if (votes.size === 0) {
+        for (const other of ep.events) {
+          if (other.plotline_id) {
+            votes.set(other.plotline_id, (votes.get(other.plotline_id) || 0) + 1);
           }
         }
       }
-      // Remove source plotline
-      const idx = plotlines.findIndex(p => p.id === v.source);
+
+      if (votes.size === 0) continue;
+      let best = null;
+      let bestCount = -1;
+      for (const [pid, count] of votes) {
+        if (count > bestCount) { best = pid; bestCount = count; }
+      }
+      if (best && plotlineIds.has(best)) {
+        ev.plotline_id = best;
+      }
+    }
+  }
+}
+
+function _dedupeIncitingIncidents(plotlines, episodes) {
+  // Keep earliest-episode inciting_incident per plotline; downgrade rest to 'escalation'.
+  // Also warn when an A-plotline's inciting_incident is not at the start of its span.
+  const byPlotline = new Map();
+  for (const ep of episodes) {
+    for (const ev of ep.events) {
+      if (ev.plotline_id && ev.function === 'inciting_incident') {
+        if (!byPlotline.has(ev.plotline_id)) byPlotline.set(ev.plotline_id, []);
+        byPlotline.get(ev.plotline_id).push({ episode: ep.episode, event: ev });
+      }
+    }
+  }
+
+  for (const [plotlineId, items] of byPlotline) {
+    items.sort((a, b) => a.episode.localeCompare(b.episode));
+    for (let i = 1; i < items.length; i++) {
+      items[i].event.function = 'escalation';
+      console.info(
+        "Downgraded duplicate inciting_incident in plotline %s, episode %s → escalation",
+        plotlineId, items[i].episode,
+      );
+    }
+  }
+
+  for (const pl of plotlines) {
+    const rank = pl.reviewed_rank || pl.computed_rank;
+    if (rank !== 'A') continue;
+    const items = byPlotline.get(pl.id);
+    if (!items || items.length === 0) continue;
+    const iiEpisode = items[0].episode;
+    if (pl.span && pl.span.length > 0 && iiEpisode !== pl.span[0]) {
+      console.warn(
+        "A plotline %s: inciting_incident is in %s, not at the start of the season",
+        pl.id, iiEpisode,
+      );
+    }
+  }
+}
+
+function _computeRanks(plotlines, episodes, context) {
+  // Port of postprocess.compute_ranks. Rules:
+  //   1. Runners get no rank (null).
+  //   2. Procedural format: case_of_the_week → A.
+  //   3. Hybrid format: case_of_the_week → B.
+  //   4. Remaining plotlines sorted by descending event count:
+  //      first → A (if span ≥ 75% and A not taken),
+  //      first/second → B (if span ≥ 50%),
+  //      else → C. Primary + also_affects count equally.
+  const eventCounts = {};
+  for (const ep of episodes) {
+    for (const ev of ep.events) {
+      if (ev.plotline_id) {
+        eventCounts[ev.plotline_id] = (eventCounts[ev.plotline_id] || 0) + 1;
+      }
+      for (const aa of (ev.also_affects || [])) {
+        eventCounts[aa] = (eventCounts[aa] || 0) + 1;
+      }
+    }
+  }
+
+  const fixedIds = new Set();
+  let isATaken = false;
+
+  for (const pl of plotlines) {
+    if (pl.type === 'runner') {
+      pl.computed_rank = null;
+      fixedIds.add(pl.id);
+    } else if (pl.type === 'case_of_the_week') {
+      if (context && context.format === 'procedural') {
+        pl.computed_rank = 'A';
+        isATaken = true;
+      } else if (context && context.format === 'hybrid') {
+        pl.computed_rank = 'B';
+      }
+      fixedIds.add(pl.id);
+    }
+  }
+
+  const nEpisodes = episodes.length;
+  const remaining = plotlines.filter(p => !fixedIds.has(p.id));
+  remaining.sort((a, b) => {
+    const diff = (eventCounts[b.id] || 0) - (eventCounts[a.id] || 0);
+    if (diff !== 0) return diff;
+    return a.id.localeCompare(b.id);
+  });
+
+  for (let i = 0; i < remaining.length; i++) {
+    const pl = remaining[i];
+    const spanLen = Array.isArray(pl.span) ? pl.span.length : 0;
+    const spanFrac = nEpisodes > 0 ? spanLen / nEpisodes : 0;
+
+    if (i === 0 && !isATaken && spanFrac >= 0.75) {
+      pl.computed_rank = 'A';
+      isATaken = true;
+    } else if (i <= 1 && spanFrac >= 0.50) {
+      pl.computed_rank = isATaken ? 'B' : 'A';
+      if (pl.computed_rank === 'A') isATaken = true;
+    } else if (spanFrac >= 0.25) {
+      pl.computed_rank = 'C';
+    } else {
+      pl.computed_rank = 'C';
+    }
+  }
+
+  for (const pl of plotlines) {
+    pl.rank = pl.reviewed_rank || pl.computed_rank;
+  }
+}
+
+function _validateRanks(plotlines, episodes, options) {
+  // Port of postprocess.validate_ranks. Demotes A-rank lines with span < 25%
+  // to B, and flags dominant lines (>50% of events). Returns the flag list
+  // to feed into Pass 3 as diagnostics.
+  const minSpanFrac = (options && options.minSpanFrac) || 0.25;
+  const dominanceThreshold = (options && options.dominanceThreshold) || 0.50;
+  const nEpisodes = episodes.length;
+  if (nEpisodes === 0) return [];
+
+  let totalEvents = 0;
+  const counts = {};
+  for (const ep of episodes) {
+    for (const ev of ep.events) {
+      totalEvents++;
+      if (ev.plotline_id) {
+        counts[ev.plotline_id] = (counts[ev.plotline_id] || 0) + 1;
+      }
+    }
+  }
+
+  const flags = [];
+  const demotions = [];
+
+  for (const pl of plotlines) {
+    const spanLen = Array.isArray(pl.span) ? pl.span.length : 0;
+    const spanFrac = spanLen / nEpisodes;
+
+    if (pl.computed_rank === 'A' && spanFrac < minSpanFrac) {
+      demotions.push(pl);
+      flags.push({
+        plotline: pl.id,
+        flag: 'demoted',
+        reason: `computed_rank A but span ${spanLen}/${nEpisodes} (${Math.round(spanFrac * 100)}%)`,
+      });
+    }
+
+    if (totalEvents > 0) {
+      const share = (counts[pl.id] || 0) / totalEvents;
+      if (share > dominanceThreshold) {
+        flags.push({
+          plotline: pl.id,
+          flag: 'dominant',
+          reason: `${Math.round(share * 100)}% of events (${counts[pl.id]}/${totalEvents})`,
+        });
+      }
+    }
+  }
+
+  for (const pl of demotions) {
+    console.warn(
+      `[validateRanks] demoting ${pl.id} from A to B: span below ${Math.round(minSpanFrac * 100)}%`,
+    );
+    pl.computed_rank = 'B';
+  }
+
+  return flags;
+}
+
+function _dedupeArcIncitingIncidents(plotlines, episodes) {
+  // Narratology-only: the true "inciting_incident" lives in event.plot_fn
+  // (arc function from Pass 5), not event.function. Keep earliest per plotline,
+  // downgrade duplicates to 'escalation' on plot_fn.
+  const byPlotline = new Map();
+  for (const ep of episodes) {
+    for (const ev of ep.events) {
+      if (ev.plotline_id && ev.plot_fn === 'inciting_incident') {
+        if (!byPlotline.has(ev.plotline_id)) byPlotline.set(ev.plotline_id, []);
+        byPlotline.get(ev.plotline_id).push({ episode: ep.episode, event: ev });
+      }
+    }
+  }
+
+  for (const [plotlineId, items] of byPlotline) {
+    items.sort((a, b) => a.episode.localeCompare(b.episode));
+    for (let i = 1; i < items.length; i++) {
+      items[i].event.plot_fn = 'escalation';
+      console.info(
+        "Downgraded duplicate arc inciting_incident in plotline %s, episode %s → escalation",
+        plotlineId, items[i].episode,
+      );
+    }
+  }
+}
+
+function _validateVerdictTargets(action, v, validIds) {
+  // Port of verdicts._validate_targets. Return false to skip the verdict.
+  if (action === 'MERGE') {
+    if (!validIds.has(v.target)) {
+      console.warn(`Skipping MERGE: target ${v.target} not in plotlines`);
+      return false;
+    }
+    if (!validIds.has(v.source)) {
+      console.warn(`Skipping MERGE: source ${v.source} not in plotlines`);
+      return false;
+    }
+  } else if (action === 'REASSIGN') {
+    if (!validIds.has(v.to)) {
+      console.warn(`Skipping REASSIGN: target ${v.to} not in plotlines`);
+      return false;
+    }
+  } else if (action === 'DROP') {
+    if (!validIds.has(v.target)) {
+      console.warn(`Skipping DROP: target ${v.target} not in plotlines`);
+      return false;
+    }
+    for (const re of (v.redistribute || [])) {
+      if (!validIds.has(re.to)) {
+        console.warn(
+          `Skipping DROP ${v.target}: redistribute target ${re.to} not in plotlines`,
+        );
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+function _applyVerdicts(verdicts, plotlines, episodes) {
+  // Port of verdicts.apply_verdicts. CREATE ids are pre-collected so later
+  // REASSIGN/DROP verdicts can reference a plotline added earlier in the list.
+  const createIds = new Set();
+  for (const v of verdicts) {
+    if (v.action === 'CREATE' && v.plotline && v.plotline.id) {
+      createIds.add(v.plotline.id);
+    }
+  }
+
+  const validIds = () => {
+    const ids = new Set(plotlines.map(p => p.id));
+    for (const id of createIds) ids.add(id);
+    return ids;
+  };
+
+  for (const v of verdicts) {
+    if (!_validateVerdictTargets(v.action, v, validIds())) continue;
+
+    if (v.action === 'MERGE') {
+      const sourceId = v.source;
+      const targetId = v.target;
+      for (const ep of episodes) {
+        for (const ev of ep.events) {
+          if (ev.plotline_id === sourceId) ev.plotline_id = targetId;
+          if (ev.also_affects && ev.also_affects.length) {
+            const rewritten = [];
+            const seen = new Set();
+            for (const sid of ev.also_affects) {
+              const mapped = sid === sourceId ? targetId : sid;
+              if (!seen.has(mapped)) {
+                seen.add(mapped);
+                rewritten.push(mapped);
+              }
+            }
+            ev.also_affects = rewritten;
+          }
+        }
+      }
+      const idx = plotlines.findIndex(p => p.id === sourceId);
       if (idx >= 0) plotlines.splice(idx, 1);
 
     } else if (v.action === 'REASSIGN') {
       for (const ep of episodes) {
-        if (ep.episode === v.episode) {
-          for (const ev of ep.events) {
-            if (ev.event === v.event) {
-              ev.plotline_id = v.to;
-              break;
-            }
+        if (ep.episode !== v.episode) continue;
+        for (const ev of ep.events) {
+          if (ev.event === v.event) {
+            ev.plotline_id = v.to;
+            break;
           }
-          break;
         }
+        break;
       }
 
     } else if (v.action === 'CREATE') {
+      // Pass 3 assigns rank to created plotlines via reviewed_rank.
       const newPl = Object.assign({}, v.plotline, {
         computed_rank: null,
-        reviewed_rank: null,
+        reviewed_rank: v.plotline.rank || null,
         span: [],
+        confidence: v.plotline.confidence || 'inferred',
       });
       plotlines.push(newPl);
       for (const re of (v.reassign_events || [])) {
         for (const ep of episodes) {
-          if (ep.episode === re.episode) {
-            for (const ev of ep.events) {
-              if (ev.event === re.event) {
-                ev.plotline_id = v.plotline.id;
-                break;
-              }
-            }
-            break;
-          }
-        }
-      }
-
-    } else if (v.action === 'DROP') {
-      for (const re of (v.redistribute || [])) {
-        for (const ep of episodes) {
-          if (ep.episode === re.episode) {
-            for (const ev of ep.events) {
-              if (ev.event === re.event) {
-                ev.plotline_id = re.to;
-                break;
-              }
-            }
-            break;
-          }
-        }
-      }
-      const idx = plotlines.findIndex(p => p.id === v.target);
-      if (idx >= 0) plotlines.splice(idx, 1);
-
-    } else if (v.action === 'REFUNCTION') {
-      for (const ep of episodes) {
-        if (ep.episode === v.episode) {
+          if (ep.episode !== re.episode) continue;
           for (const ev of ep.events) {
-            if (ev.event === v.event) {
-              ev.function = v.new_function;
+            if (ev.event === re.event) {
+              ev.plotline_id = v.plotline.id;
               break;
             }
           }
           break;
         }
+      }
+
+    } else if (v.action === 'DROP') {
+      const targetId = v.target;
+      for (const re of (v.redistribute || [])) {
+        for (const ep of episodes) {
+          if (ep.episode !== re.episode) continue;
+          for (const ev of ep.events) {
+            if (ev.event === re.event) {
+              ev.plotline_id = re.to;
+              break;
+            }
+          }
+          break;
+        }
+      }
+      // Guard: abort DROP if any events still point at the target.
+      let remaining = 0;
+      for (const ep of episodes) {
+        for (const ev of ep.events) {
+          if (ev.plotline_id === targetId) remaining++;
+        }
+      }
+      if (remaining > 0) {
+        console.warn(
+          `DROP ${targetId} aborted: ${remaining} events not redistributed, keeping plotline`,
+        );
+        continue;
+      }
+      const idx = plotlines.findIndex(p => p.id === targetId);
+      if (idx >= 0) plotlines.splice(idx, 1);
+
+    } else if (v.action === 'REFUNCTION') {
+      for (const ep of episodes) {
+        if (ep.episode !== v.episode) continue;
+        for (const ev of ep.events) {
+          if (ev.event === v.event) {
+            ev.function = v.new_function;
+            break;
+          }
+        }
+        break;
       }
     }
   }
@@ -4184,7 +4471,34 @@ async function _runPass2Episode(synopsis, seriesName, season, context, cast, plo
   return _parseJSONResponse(text);
 }
 
-async function _runPass3(seriesName, season, context, cast, plotlines, episodes, provider, apiKey, onChunk) {
+function _computeWeightPerEpisode(plotlines, episodes) {
+  // Mirror of postprocess.compute_weight, aggregated across the season.
+  // Returns { episode_id: { plotline_id: 'primary'|'background'|'glimpse' } }.
+  const result = {};
+  for (const ep of episodes) {
+    const counts = {};
+    for (const ev of ep.events) {
+      if (ev.plotline_id) counts[ev.plotline_id] = (counts[ev.plotline_id] || 0) + 1;
+    }
+    const weights = {};
+    const values = Object.values(counts);
+    if (values.length === 0) {
+      result[ep.episode] = weights;
+      continue;
+    }
+    const maxCount = Math.max(...values);
+    for (const [pid, count] of Object.entries(counts)) {
+      if (count >= maxCount * 0.5) weights[pid] = 'primary';
+      else if (count >= 2) weights[pid] = 'background';
+      else weights[pid] = 'glimpse';
+    }
+    result[ep.episode] = weights;
+  }
+  return result;
+}
+
+async function _runPass3(seriesName, season, context, cast, plotlines, episodes, diagnostics, provider, apiKey, onChunk) {
+  const weightData = _computeWeightPerEpisode(plotlines, episodes);
   const payload = {
     show: seriesName,
     season: season,
@@ -4192,19 +4506,26 @@ async function _runPass3(seriesName, season, context, cast, plotlines, episodes,
     is_ensemble: context.format === 'ensemble',
     story_engine: context.story_engine,
     cast: cast.map(c => ({ id: c.id, name: c.name })),
-    plotlines: plotlines.map(p => ({
-      id: p.id,
-      name: p.name,
-      hero: p.hero,
-      goal: p.goal,
-      obstacle: p.obstacle,
-      stakes: p.stakes,
-      type: p.type,
-      computed_rank: p.computed_rank,
-      nature: p.nature,
-      confidence: p.confidence,
-      span: p.span,
-    })),
+    plotlines: plotlines.map(p => {
+      const weight_per_episode = {};
+      for (const epId of Object.keys(weightData)) {
+        weight_per_episode[epId] = weightData[epId][p.id] || 'absent';
+      }
+      return {
+        id: p.id,
+        name: p.name,
+        hero: p.hero,
+        goal: p.goal,
+        obstacle: p.obstacle,
+        stakes: p.stakes,
+        type: p.type,
+        computed_rank: p.computed_rank,
+        nature: p.nature,
+        confidence: p.confidence,
+        span: p.span,
+        weight_per_episode,
+      };
+    }),
     episodes: episodes.map(ep => ({
       episode: ep.episode,
       theme: ep.theme,
@@ -4217,6 +4538,9 @@ async function _runPass3(seriesName, season, context, cast, plotlines, episodes,
       })),
     })),
   };
+  if (diagnostics && diagnostics.length > 0) {
+    payload.diagnostics = diagnostics;
+  }
   const userMessage = JSON.stringify(payload);
   const text = await callLLM(_PROMPT_PASS3, userMessage, provider, apiKey, onChunk);
   return _parseJSONResponse(text);
@@ -4294,14 +4618,18 @@ async function runPipeline(synopses, seriesName, provider, apiKey, onProgress) {
     });
   }
 
-  // Post-processing: compute span and ranks
+  // Post-processing: redistribute orphans, dedupe inciting incidents,
+  // then compute span/ranks on the corrected data.
+  _assignOrphanEvents(plotlines, episodes);
+  _dedupeIncitingIncidents(plotlines, episodes);
   _computeSpan(plotlines, episodes);
   _computeRanks(plotlines, episodes, context);
+  const diagnostics = _validateRanks(plotlines, episodes);
 
   // Pass 3: structural review
   onProgress('Pass 4/5: reviewing structure...', 4, totalPasses);
   const pass3Result = await _runPass3(
-    seriesName, season, context, cast, plotlines, episodes, provider, apiKey,
+    seriesName, season, context, cast, plotlines, episodes, diagnostics, provider, apiKey,
   );
   const verdicts = pass3Result.verdicts || [];
   const llmRanks = pass3Result.ranks || {};
@@ -4734,6 +5062,97 @@ async function _resumeFromDraft() {
 
 // Preview & edit modal for the generated synopses. Returns the edited synopses
 // array or null if the user cancels.
+// Inline ZIP builder (STORED method, no compression). We ship a single-file
+// HTML viewer, so pulling in JSZip isn't an option. STORED is fine here —
+// synopses are small text files and Finder/unzip open them natively.
+// Spec reference: PKWARE APPNOTE.TXT sections 4.3.7 (Local File Header),
+// 4.3.12 (Central Directory) and 4.3.16 (End of Central Directory Record).
+
+let _CRC_TABLE = null;
+function _crc32(bytes) {
+  if (!_CRC_TABLE) {
+    _CRC_TABLE = new Uint32Array(256);
+    for (let i = 0; i < 256; i++) {
+      let c = i;
+      for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      _CRC_TABLE[i] = c >>> 0;
+    }
+  }
+  let crc = 0xFFFFFFFF;
+  for (let i = 0; i < bytes.length; i++) crc = _CRC_TABLE[(crc ^ bytes[i]) & 0xFF] ^ (crc >>> 8);
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+
+function _makeZip(entries) {
+  const enc = new TextEncoder();
+  const files = entries.map(e => ({ nameBytes: enc.encode(e.name), dataBytes: enc.encode(e.text), crc: 0, offset: 0 }));
+  for (const f of files) f.crc = _crc32(f.dataBytes);
+
+  // Size the output up front so we can write with a single Uint8Array.
+  let localSize = 0;
+  let centralSize = 0;
+  for (const f of files) {
+    localSize += 30 + f.nameBytes.length + f.dataBytes.length;  // LFH + name + payload
+    centralSize += 46 + f.nameBytes.length;                     // CDH + name
+  }
+  const total = localSize + centralSize + 22;                   // +EOCD
+  const out = new Uint8Array(total);
+  const view = new DataView(out.buffer);
+
+  let pos = 0;
+  for (const f of files) {
+    f.offset = pos;
+    // Local File Header: little-endian u32 signature PK\x03\x04 at offset 0.
+    view.setUint32(pos, 0x04034B50, true); pos += 4;
+    view.setUint16(pos, 20, true); pos += 2;                    // version needed
+    view.setUint16(pos, 0, true); pos += 2;                     // flags
+    view.setUint16(pos, 0, true); pos += 2;                     // method 0 = STORED
+    view.setUint16(pos, 0, true); pos += 2;                     // mod time
+    view.setUint16(pos, 0x21, true); pos += 2;                  // mod date (1980-01-01, valid minimum)
+    view.setUint32(pos, f.crc, true); pos += 4;
+    view.setUint32(pos, f.dataBytes.length, true); pos += 4;    // compressed size = uncompressed
+    view.setUint32(pos, f.dataBytes.length, true); pos += 4;
+    view.setUint16(pos, f.nameBytes.length, true); pos += 2;
+    view.setUint16(pos, 0, true); pos += 2;                     // extra length
+    out.set(f.nameBytes, pos); pos += f.nameBytes.length;
+    out.set(f.dataBytes, pos); pos += f.dataBytes.length;
+  }
+
+  const centralStart = pos;
+  for (const f of files) {
+    view.setUint32(pos, 0x02014B50, true); pos += 4;            // Central Directory Header signature
+    view.setUint16(pos, 20, true); pos += 2;                    // version made by
+    view.setUint16(pos, 20, true); pos += 2;                    // version needed
+    view.setUint16(pos, 0, true); pos += 2;                     // flags
+    view.setUint16(pos, 0, true); pos += 2;                     // method
+    view.setUint16(pos, 0, true); pos += 2;                     // mod time
+    view.setUint16(pos, 0x21, true); pos += 2;                  // mod date
+    view.setUint32(pos, f.crc, true); pos += 4;
+    view.setUint32(pos, f.dataBytes.length, true); pos += 4;
+    view.setUint32(pos, f.dataBytes.length, true); pos += 4;
+    view.setUint16(pos, f.nameBytes.length, true); pos += 2;
+    view.setUint16(pos, 0, true); pos += 2;                     // extra length
+    view.setUint16(pos, 0, true); pos += 2;                     // comment length
+    view.setUint16(pos, 0, true); pos += 2;                     // disk number
+    view.setUint16(pos, 0, true); pos += 2;                     // internal attrs
+    view.setUint32(pos, 0, true); pos += 4;                     // external attrs
+    view.setUint32(pos, f.offset, true); pos += 4;              // LFH offset
+    out.set(f.nameBytes, pos); pos += f.nameBytes.length;
+  }
+
+  // End of Central Directory Record.
+  view.setUint32(pos, 0x06054B50, true); pos += 4;
+  view.setUint16(pos, 0, true); pos += 2;                       // disk number
+  view.setUint16(pos, 0, true); pos += 2;                       // disk with CD
+  view.setUint16(pos, files.length, true); pos += 2;
+  view.setUint16(pos, files.length, true); pos += 2;
+  view.setUint32(pos, centralSize, true); pos += 4;
+  view.setUint32(pos, centralStart, true); pos += 4;
+  view.setUint16(pos, 0, true); pos += 2;                       // comment length
+
+  return out;
+}
+
 function _confirmSynopses(show, season, synopses) {
   return new Promise((resolve) => {
     const overlay = document.getElementById('modal-overlay');
@@ -4747,15 +5166,28 @@ function _confirmSynopses(show, season, synopses) {
       </details>
     `).join('');
 
+    const currentSystem = (typeof Store !== 'undefined' && Store.getSystem) ? Store.getSystem() : 'hollywood';
+    const analysisTitle = 'Hollywood: screenwriting (story DNA, Freytag). Narratology: structuralist (Bal, Todorov, Greimas, Bremond).';
+
     body.innerHTML = `
       <h3 style="margin-top:0">Review synopses — ${show} S${String(season).padStart(2, '0')}</h3>
       <p style="color:#666;font-size:0.85em;margin-bottom:12px">
         Generated ${synopses.length} synopses. Edit anything that looks wrong, then run the pipeline.
       </p>
       <div style="max-height:55vh;overflow-y:auto;padding-right:4px">${rows}</div>
-      <div style="margin-top:16px;display:flex;gap:8px;justify-content:flex-end">
-        <button id="analyze-cancel" style="padding:6px 14px;border-radius:4px;cursor:pointer">Cancel</button>
-        <button id="analyze-run" style="padding:6px 14px;border-radius:4px;cursor:pointer;background:#1a1a1a;color:#fff;border:none">Run pipeline →</button>
+      <div style="margin-top:16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:space-between">
+        <label style="display:flex;align-items:center;gap:6px;font-size:0.9em" title="${analysisTitle}">
+          Analysis:
+          <select id="analyze-system" style="padding:5px 8px;border-radius:4px;border:1px solid var(--border,#ccc);background:transparent;color:inherit;font:inherit">
+            <option value="hollywood" ${currentSystem === 'hollywood' ? 'selected' : ''}>Hollywood</option>
+            <option value="narratology" ${currentSystem === 'narratology' ? 'selected' : ''}>Narratology</option>
+          </select>
+        </label>
+        <div style="display:flex;gap:8px">
+          <button id="analyze-cancel" class="btn">Cancel</button>
+          <button id="analyze-save-zip" class="btn">Save .zip</button>
+          <button id="analyze-run" class="btn btn-save">Run pipeline →</button>
+        </div>
       </div>
     `;
     overlay.classList.remove('hidden');
@@ -4780,6 +5212,20 @@ function _confirmSynopses(show, season, synopses) {
           Store.saveSynopsesDraft(show, season, readEdited());
         }, 500);
       });
+    });
+
+    document.getElementById('analyze-system').addEventListener('change', (e) => {
+      Store.setSystem(e.target.value);
+    });
+
+    document.getElementById('analyze-save-zip').addEventListener('click', () => {
+      const edited = readEdited();
+      if (!edited.length) return;
+      const entries = edited.map(s => ({ name: `${show} ${s.episode}.txt`, text: s.text }));
+      const zipBytes = _makeZip(entries);
+      const blob = new Blob([zipBytes], { type: 'application/zip' });
+      const zipName = `${show.replace(/\s+/g, '_')}_S${String(season).padStart(2, '0')}_synopses.zip`;
+      _downloadBlob(blob, zipName);
     });
 
     document.getElementById('analyze-cancel').addEventListener('click', () => {
@@ -5036,8 +5482,11 @@ async function runPipelineNarratology(synopses, seriesName, provider, apiKey, on
     episodes.push({ episode: ep, theme: data.theme || '', events: eventsOut, interactions });
   }
 
+  _assignOrphanEvents(plotlines, episodes);
+  _dedupeIncitingIncidents(plotlines, episodes);
   _computeSpan(plotlines, episodes);
   _computeRanks(plotlines, episodes, context);
+  _validateRanks(plotlines, episodes);
 
   // Pass 5 — arc (parallel per plotline)
   onProgress('Pass 5/6: season-level arc functions…', 5, totalPasses);
@@ -5101,8 +5550,12 @@ async function runPipelineNarratology(synopses, seriesName, provider, apiKey, on
       pl.rank = r.rank;
     }
   }
+  _assignOrphanEvents(keptPlotlines, episodes);
+  _dedupeIncitingIncidents(keptPlotlines, episodes);
+  _dedupeArcIncitingIncidents(keptPlotlines, episodes);
   _computeSpan(keptPlotlines, episodes);
   _computeRanks(keptPlotlines, episodes, context);
+  _validateRanks(keptPlotlines, episodes);
   for (const p of keptPlotlines) p.rank = p.reviewed_rank || p.computed_rank;
 
   onProgress('Done!', totalPasses, totalPasses);
