@@ -741,7 +741,9 @@ html.dark .export-menu button:hover { background: #2a2a2a; }
 <!-- Analytics screen -->
 <section id="screen-analytics" class="screen">
   <nav class="toolbar">
-    <div class="toolbar-left"></div>
+    <div class="toolbar-left">
+      <span id="analytics-series-name" class="toolbar-title" style="font-weight:600"></span>
+    </div>
     <div class="toolbar-center">
       <button class="btn-nav" onclick="_setTab('grid')">Grid</button>
       <button class="btn-nav btn-nav-active">Analytics</button>
@@ -5722,6 +5724,13 @@ function _renderCurrentView() {
 
   // Dropdown already shows the series name — no need to duplicate it.
   if (gridTitle) gridTitle.textContent = '';
+
+  // Update analytics toolbar series name from the dropdown's visible text
+  const analyticsName = document.getElementById('analytics-series-name');
+  if (analyticsName) {
+    const sel = document.getElementById('series-select');
+    analyticsName.textContent = (sel && sel.selectedOptions.length) ? sel.selectedOptions[0].textContent : '';
+  }
 
   if (_activeTab === 'grid' && gridContainer) {
     renderGrid(_currentData, gridContainer);
