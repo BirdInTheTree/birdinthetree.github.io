@@ -8,11 +8,11 @@
   <div class="site-nav-links">
     <a href="/" class:active={$page.url.pathname === '/'}>Home</a>
     <a href="/blog" class:active={$page.url.pathname.startsWith('/blog')}>Endnotes</a>
-    <a href="/plotter-app" class:active={$page.url.pathname.startsWith('/plotter-app')}>tvplot app</a>
+    <a href="/tvplot-app" class:active={$page.url.pathname.startsWith('/tvplot-app')}>tvplot app</a>
   </div>
   <DarkToggle />
 </nav>
 
-<main class="site-content" class:site-content-wide={$page.url.pathname.startsWith('/plotter-app')}>
+<main class="site-content" class:site-content-wide={$page.url.pathname.startsWith('/tvplot-app')}>
   <slot />
 </main>

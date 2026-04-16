@@ -23,12 +23,12 @@ const config = {
         }),
     paths: { base: '' },
     prerender: {
-      // /plotter-app/ is a static asset (standalone HTML viewer bundled
+      // /tvplot-app/ is a static asset (standalone HTML viewer bundled
       // from the tvplot package), not a SvelteKit route. Links to it from
       // the layout and home page look like 404s to the prerender crawler
       // but resolve correctly at runtime on GitHub Pages.
       handleHttpError: ({ path, message }) => {
-        if (path === '/plotter-app' || path.startsWith('/plotter-app/')) return;
+        if (path === '/tvplot-app' || path.startsWith('/tvplot-app/')) return;
         throw new Error(message);
       }
     }

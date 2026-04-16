@@ -36,7 +36,7 @@
 
   <nav class="bio-links">
     <a href="https://github.com/BirdInTheTree" class="btn" target="_blank" rel="noopener">GitHub</a>
-    <a href="/plotter-app/" class="btn">tvplot app</a>
+    <a href="/tvplot-app/" class="btn">tvplot app</a>
     <a href="/blog/" class="btn">Blog</a>
   </nav>
 </div>
