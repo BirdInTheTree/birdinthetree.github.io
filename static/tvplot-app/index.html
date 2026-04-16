@@ -454,138 +454,80 @@ html.dark .export-menu button:hover { background: #2a2a2a; }
 :root.dark .rank-runner { background: #302040; color: #cba6f7; }
 
 /* ── Analytics ── */
-:root { --ana-tension-0: #f0f0f0; --ana-tension-1: #bae6d1; --ana-tension-2: #f0e68c; --ana-tension-3: #f5b87a; --ana-tension-4: #e87c7c; --ana-tension-5: #d44a7a; }
-
+#analytics-container { padding: 1.5rem; }
+.ana-stacked-total { text-align: center; font-size: 0.875rem; font-weight: 600; color: #333; margin-bottom: 2px; }
+:root.dark .ana-stacked-total { color: #cdd6f4; }
 .ana-series-header { margin-bottom: 1.5rem; max-width: 1200px; }
 .ana-series-name { font-size: 1.5rem; font-weight: 300; letter-spacing: 0.03em; margin-bottom: 0.5rem; }
-.ana-logline { font-size: 0.95rem; color: #555; line-height: 1.5; font-style: italic; }
+.ana-logline { font-size: 1rem; color: #555; line-height: 1.5; font-style: italic; }
 :root.dark .ana-series-name { color: #cba6f7; }
 :root.dark .ana-logline { color: #a6adc8; }
 
 .ana-section { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); max-width: 1200px; }
-.ana-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; }
-.ana-engine { font-size: 0.9rem; color: #666; margin-bottom: 1rem; padding: 0.5rem 0.75rem; background: #f8f8f8; border-radius: 6px; border-left: 3px solid #2563eb; }
+.ana-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; }
+.ana-empty-note { font-size: 1rem; color: #666; font-style: italic; }
 
-/* Scorecard */
-.ana-scorecard { width: 100%; border-collapse: separate; border-spacing: 0; }
-.ana-scorecard th { text-align: left; font-size: 0.75rem; color: #666; font-weight: 400; padding: 6px 12px; border-bottom: 1px solid #e5e5e5; text-transform: uppercase; letter-spacing: 0.05em; }
-.ana-scorecard td { padding: 8px 12px; font-size: 0.85rem; border-bottom: 1px solid #f0f0f0; }
-.ana-scorecard tr:last-child td { border-bottom: none; }
-.ana-plotline-name { font-weight: 500; }
-.ana-arc-summary { color: #666; font-size: 0.8rem; }
-.ana-scorecard-ep-row th { border-bottom: none; padding-top: 0; }
-.ana-span-labels { display: flex; gap: 2px; margin-bottom: 2px; }
-.ana-span-label { width: 14px; text-align: center; font-size: 0.55rem; color: #999; }
-:root.dark .ana-span-label { color: #6c7086; }
-.ana-span-bar { display: flex; gap: 2px; }
-.ana-span-dot { width: 14px; height: 14px; border-radius: 3px; }
-.ana-span-dot.active { background: #2563eb; opacity: 0.7; }
-.ana-span-dot.inactive { background: #e5e5e5; }
-
-/* Arc Map */
-.ana-legend { display: flex; align-items: center; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
-.ana-legend-label { font-size: 0.8rem; color: #666; }
-.ana-legend-hint { font-size: 0.75rem; color: #999; margin-left: 12px; }
-.ana-gradient { display: flex; gap: 2px; }
-.ana-grad-step { width: 28px; height: 14px; border-radius: 2px; }
-.ana-arcmap { display: grid; gap: 3px; }
-.ana-arcmap-header { font-size: 0.8rem; color: #666; text-align: center; padding: 4px; }
-.ana-arcmap-label { font-size: 0.85rem; text-align: right; padding-right: 10px; display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
-.ana-arcmap-cell { border-radius: 6px; min-height: 50px; display: flex; align-items: center; justify-content: center; }
-.ana-arcmap-cell.ana-tension-0 { background: var(--ana-tension-0); }
-.ana-arcmap-cell.ana-tension-1 { background: var(--ana-tension-1); }
-.ana-arcmap-cell.ana-tension-2 { background: var(--ana-tension-2); }
-.ana-arcmap-cell.ana-tension-3 { background: var(--ana-tension-3); }
-.ana-arcmap-cell.ana-tension-4 { background: var(--ana-tension-4); }
-.ana-arcmap-cell.ana-tension-5 { background: var(--ana-tension-5); }
-.ana-arc-circle { border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 600; color: #1a1a1a; background: rgba(255,255,255,0.35); }
-.ana-arc-empty { color: #ccc; font-size: 0.8rem; }
-.ana-arcmap-theme-label { font-size: 0.75rem; color: #999; text-align: right; padding-right: 10px; }
-.ana-arcmap-theme { font-size: 0.7rem; color: #999; text-align: center; font-style: italic; }
-
-/* Episode Pulse */
-.ana-pulse-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-.ana-pulse-ep { font-size: 0.85rem; font-weight: 500; width: 35px; text-align: right; flex-shrink: 0; }
-.ana-pulse-wrap { flex: 1; }
-.ana-pulse-bars { display: flex; gap: 2px; height: 28px; }
-.ana-pulse-bar { border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: rgba(0,0,0,0.7); min-width: 14px; background: #2563eb; }
-.ana-pulse-bar:nth-child(2) { background: #f59e0b; }
-.ana-pulse-bar:nth-child(3) { background: #ef4444; color: white; }
-.ana-pulse-bar:nth-child(4) { background: #6b7280; color: white; }
-.ana-pulse-bar:nth-child(5) { background: #8b5cf6; color: white; }
-.ana-pulse-bar:nth-child(6) { background: #10b981; }
-.ana-pulse-total { font-size: 0.8rem; color: #666; width: 30px; text-align: right; flex-shrink: 0; }
-.ana-pulse-theme { display: none; }
-.ana-pulse-legend { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.75rem; font-size: 0.8rem; }
-.ana-pulse-legend-item { display: flex; align-items: center; gap: 4px; }
-:root.dark .ana-pulse-legend-item { color: #cdd6f4; }
-
-/* Convergence */
-.ana-conv-timeline { position: relative; padding-left: 40px; }
-.ana-conv-line { position: absolute; left: 17px; top: 0; bottom: 0; width: 1px; background: #e5e5e5; }
-.ana-conv-group { margin-bottom: 1.25rem; }
-.ana-conv-ep { font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; position: relative; }
-.ana-conv-ep::before { content: ''; position: absolute; left: -28px; top: 50%; width: 10px; height: 10px; background: #2563eb; border-radius: 50%; transform: translateY(-50%); }
-.ana-conv-item { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 4px; padding: 6px 8px; border-radius: 6px; background: #f8f8f8; }
-.ana-conv-type { font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; flex-shrink: 0; font-weight: 600; white-space: nowrap; }
-.ana-conv-convergence { background: #fecdd3; color: #be123c; }
-.ana-conv-dramatic_irony { background: #e9d5ff; color: #7c3aed; }
-.ana-conv-thematic_rhyme { background: #cffafe; color: #0e7490; }
-.ana-conv-lines { font-size: 0.8rem; color: #b45309; flex-shrink: 0; min-width: 120px; }
-.ana-conv-desc { font-size: 0.8rem; color: #666; }
-
-/* Character Weight */
-.ana-char-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-.ana-char-name { font-size: 0.85rem; width: 130px; text-align: right; flex-shrink: 0; }
-.ana-char-bar-wrap { flex: 1; height: 24px; }
-.ana-char-bar { height: 100%; border-radius: 4px; background: #2563eb; display: flex; align-items: center; padding-left: 8px; font-size: 0.75rem; font-weight: 600; color: white; }
-.ana-char-dots { display: flex; gap: 3px; width: 50px; flex-shrink: 0; }
-.ana-char-dot { width: 8px; height: 8px; border-radius: 50%; background: #2563eb; }
-
-/* ── Dark analytics (Catppuccin Mocha) ── */
 :root.dark .ana-section { background: #181825; box-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 :root.dark .ana-title { color: #cba6f7; }
-:root.dark .ana-engine { color: #a6adc8; background: #313244; border-left-color: #89b4fa; }
+:root.dark .ana-empty-note { color: #a6adc8; }
 
-:root.dark .ana-scorecard th { color: #a6adc8; border-bottom-color: #45475a; }
-:root.dark .ana-scorecard td { border-bottom-color: #313244; color: #cdd6f4; }
-:root.dark .ana-arc-summary { color: #a6adc8; }
-:root.dark .ana-span-dot.active { background: #89b4fa; }
-:root.dark .ana-span-dot.inactive { background: #45475a; }
+/* Chart 1: Stacked bar — events per episode */
+.ana-stacked-chart { display: flex; gap: 4px; align-items: flex-end; }
+.ana-stacked-yaxis { display: flex; flex-direction: column; justify-content: space-between; height: 300px; flex-shrink: 0; padding-right: 4px; }
+.ana-stacked-ylabel { font-size: 1rem; color: #666; text-align: right; min-width: 2ch; }
+:root.dark .ana-stacked-ylabel { color: #a6adc8; }
+.ana-stacked-bars { display: flex; gap: 4px; flex: 1; align-items: flex-end; }
+.ana-stacked-col { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 0; }
+.ana-stacked-bar { width: 100%; display: flex; flex-direction: column; border-radius: 3px 3px 0 0; overflow: hidden; }
+.ana-stacked-seg { display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 600; color: rgba(0,0,0,0.8); min-height: 2px; }
+:root.dark .ana-stacked-seg { color: rgba(0,0,0,0.85); }
+.ana-stacked-xlabel { font-size: 1rem; color: #666; margin-top: 6px; }
+:root.dark .ana-stacked-xlabel { color: #a6adc8; }
 
-:root.dark { --ana-tension-0: #313244; --ana-tension-1: #1e3d2e; --ana-tension-2: #433a2a; --ana-tension-3: #3d2f24; --ana-tension-4: #3d2332; --ana-tension-5: #5c1d3e; }
-:root.dark .ana-arcmap-header { color: #a6adc8; }
-:root.dark .ana-arcmap-label { color: #cdd6f4; }
-:root.dark .ana-arc-circle { color: #cdd6f4; background: rgba(0,0,0,0.25); }
-:root.dark .ana-arc-empty { color: #6c7086; }
-:root.dark .ana-arcmap-theme-label { color: #6c7086; }
-:root.dark .ana-arcmap-theme { color: #6c7086; }
-:root.dark .ana-legend-label { color: #a6adc8; }
-:root.dark .ana-legend-hint { color: #6c7086; }
+.ana-legend-bar { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+.ana-legend-item { display: flex; align-items: center; gap: 6px; font-size: 1rem; }
+:root.dark .ana-legend-item { color: #cdd6f4; }
+.ana-legend-swatch { display: inline-block; width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
 
-:root.dark .ana-pulse-ep { color: #cdd6f4; }
-:root.dark .ana-pulse-bar { color: #1e1e2e; background: #89b4fa; }
-:root.dark .ana-pulse-bar:nth-child(2) { background: #f9e2af; color: #1e1e2e; }
-:root.dark .ana-pulse-bar:nth-child(3) { background: #f38ba8; color: #1e1e2e; }
-:root.dark .ana-pulse-bar:nth-child(4) { background: #a6adc8; color: #1e1e2e; }
-:root.dark .ana-pulse-bar:nth-child(5) { background: #cba6f7; color: #1e1e2e; }
-:root.dark .ana-pulse-bar:nth-child(6) { background: #a6e3a1; color: #1e1e2e; }
-:root.dark .ana-pulse-total { color: #a6adc8; }
-:root.dark .ana-pulse-theme { color: #6c7086; }
+/* Chart 2: Function distribution heatmap */
+.ana-heatmap { width: 100%; border-collapse: collapse; }
+.ana-heatmap th { font-size: 1rem; font-weight: 500; padding: 8px 10px; text-align: center; color: #666; border-bottom: 1px solid #e5e5e5; }
+.ana-heatmap th:first-child { text-align: left; }
+:root.dark .ana-heatmap th { color: #a6adc8; border-bottom-color: #45475a; }
+.ana-heatmap td { font-size: 1rem; padding: 8px 10px; text-align: center; }
+.ana-heatmap-label { text-align: left; font-weight: 500; white-space: nowrap; color: #1a1a1a; }
+:root.dark .ana-heatmap-label { color: #cdd6f4; }
+.ana-heatmap-cell { min-width: 40px; }
+.ana-heatmap-filled { background: rgba(37, 99, 235, var(--heat-opacity, 0.3)); font-weight: 600; }
+:root.dark .ana-heatmap-filled { background: rgba(137, 180, 250, var(--heat-opacity, 0.3)); color: #cdd6f4; }
 
-:root.dark .ana-conv-line { background: #45475a; }
-:root.dark .ana-conv-ep { color: #cdd6f4; }
-:root.dark .ana-conv-ep::before { background: #89b4fa; }
-:root.dark .ana-conv-item { background: #313244; }
-:root.dark .ana-conv-convergence { background: #3d2332; color: #f38ba8; }
-:root.dark .ana-conv-dramatic_irony { background: #302040; color: #cba6f7; }
-:root.dark .ana-conv-thematic_rhyme { background: #1e3d3d; color: #94e2d5; }
-:root.dark .ana-conv-lines { color: #f9e2af; }
-:root.dark .ana-conv-desc { color: #a6adc8; }
+/* Chart 3: Plotline intersection matrix */
+.ana-matrix { width: auto; border-collapse: collapse; }
+.ana-matrix th { font-size: 1rem; font-weight: 500; padding: 8px 12px; text-align: center; color: #666; border-bottom: 1px solid #e5e5e5; }
+:root.dark .ana-matrix th { color: #a6adc8; border-bottom-color: #45475a; }
+.ana-matrix td { font-size: 1rem; padding: 8px 12px; text-align: center; }
+.ana-matrix-label { text-align: left; font-weight: 500; white-space: nowrap; color: #1a1a1a; }
+:root.dark .ana-matrix-label { color: #cdd6f4; }
+.ana-matrix-cell { min-width: 48px; }
+.ana-matrix-diag { background: #e5e5e5; }
+:root.dark .ana-matrix-diag { background: #313244; }
+.ana-matrix-filled { background: rgba(139, 92, 246, var(--matrix-opacity, 0.3)); font-weight: 600; }
+:root.dark .ana-matrix-filled { background: rgba(203, 166, 247, var(--matrix-opacity, 0.3)); color: #cdd6f4; }
+.ana-matrix-total { font-size: 1rem; color: #666; font-weight: 400; }
+:root.dark .ana-matrix-total { color: #6c7086; }
+.ana-matrix-total-cell { font-size: 1rem; color: #888; font-weight: 400; white-space: nowrap; }
+:root.dark .ana-matrix-total-cell { color: #6c7086; }
 
-:root.dark .ana-char-name { color: #cdd6f4; }
-:root.dark .ana-char-bar { background: #89b4fa; color: #1e1e2e; }
-:root.dark .ana-char-dot { background: #89b4fa; }
+/* Chart 4: Character event load */
+.ana-charload { max-width: 800px; }
+.ana-charload-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.ana-charload-name { font-size: 1rem; width: 150px; text-align: right; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+:root.dark .ana-charload-name { color: #cdd6f4; }
+.ana-charload-barwrap { flex: 1; height: 26px; }
+.ana-charload-bar { height: 100%; border-radius: 4px; background: #6b7280; min-width: 4px; }
+:root.dark .ana-charload-bar { background: #a6adc8; }
+.ana-charload-count { font-size: 1rem; color: #666; width: 36px; text-align: right; flex-shrink: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+:root.dark .ana-charload-count { color: #a6adc8; }
 
 /* ── Onboarding subtitles ── */
 .onboarding-subtitle {
@@ -781,10 +723,7 @@ html.dark .export-menu button:hover { background: #2a2a2a; }
 <!-- Analytics screen -->
 <section id="screen-analytics" class="screen">
   <nav class="toolbar">
-    <div class="toolbar-left">
-      <select class="toolbar-select" disabled style="visibility:hidden"></select>
-      <span class="toolbar-title">Analytics</span>
-    </div>
+    <div class="toolbar-left"></div>
     <div class="toolbar-center">
       <button class="btn-nav" onclick="_setTab('grid')">Grid</button>
       <button class="btn-nav btn-nav-active">Analytics</button>
@@ -2720,223 +2659,55 @@ function renderGrid(data, container) {
 
 
 // --- analytics.js ---
-// Analytics — computation and rendering for 5 analytics sections.
-// Ported from tvplot-app analytics.py + analytics.html.
+// Analytics — 4 question-titled charts for the analytics view.
+// Each chart answers one question (Kaushik principle).
 
-const FUNCTION_TENSION = {
-  setup: 1, seed: 1, inciting_incident: 1.5,
-  escalation: 2, turning_point: 3, crisis: 3.5,
-  climax: 4, cliffhanger: 4, resolution: 0.5,
+// Plotline color palette — consistent identity across all charts.
+// 12 colors to cover up to 12 plotlines; wraps via modulo.
+const _PL_COLORS_LIGHT = [
+  '#2563eb', '#f59e0b', '#ef4444', '#6b7280', '#8b5cf6', '#10b981',
+  '#ec4899', '#06b6d4', '#84cc16', '#f97316', '#14b8a6', '#a855f7',
+];
+const _PL_COLORS_DARK = [
+  '#89b4fa', '#f9e2af', '#f38ba8', '#a6adc8', '#cba6f7', '#a6e3a1',
+  '#f5c2e7', '#89dceb', '#a6e3a1', '#fab387', '#94e2d5', '#b4befe',
+];
+
+// Dramatic arc order for chart 2 rows
+const _ARC_ORDER = [
+  'setup', 'inciting_incident', 'escalation',
+  'turning_point', 'climax', 'resolution',
+];
+
+const _ARC_LABELS = {
+  setup: 'Setup',
+  inciting_incident: 'Inciting Incident',
+  escalation: 'Escalation',
+  turning_point: 'Turning Point',
+  climax: 'Climax',
+  resolution: 'Resolution',
 };
 
-// RANK_ORDER is already defined in grid.js (loaded first)
+// --- Helpers ---
 
-// --- Computation ---
+function _plColor(index) {
+  const isDark = document.documentElement.classList.contains('dark');
+  const palette = isDark ? _PL_COLORS_DARK : _PL_COLORS_LIGHT;
+  return palette[index % palette.length];
+}
 
 function _epNum(code) {
   return code.split('E').pop();
 }
 
-function _arcSummary(funcCounts) {
-  const entries = Object.entries(funcCounts);
-  if (entries.length === 0) return '';
-
-  const total = entries.reduce((s, [, c]) => s + c, 0);
-  entries.sort((a, b) => b[1] - a[1]);
-  const dominant = entries[0];
-
-  const parts = [];
-  if (dominant[1] / total > 0.4) {
-    parts.push(dominant[0] + '-heavy');
-  }
-
-  const highTension = ['climax', 'crisis', 'turning_point'];
-  for (const fn of highTension) {
-    const count = funcCounts[fn] || 0;
-    if (count > 0) {
-      parts.push(fn + ' (' + count + ')');
-      break;
-    }
-  }
-
-  if (parts.length === 0) {
-    parts.push(dominant[0]);
-  }
-  return parts.join(', ');
-}
-
-function computeScorecard(data) {
-  const plotlines = _sortedPlotlines(data);
-  const episodes = data.episodes || [];
-  const epCodes = episodes.map(ep => ep.episode);
-
-  const result = [];
-  for (const pl of plotlines) {
-    const pid = pl.id;
-    const funcCounts = {};
-    for (const ep of episodes) {
-      for (const ev of ep.events || []) {
-        const evPl = ev.plotline_id || ev.storyline || ev.plotline;
-        if (evPl === pid) {
-          const fn = ev.function || 'unknown';
-          funcCounts[fn] = (funcCounts[fn] || 0) + 1;
-        }
-      }
-    }
-    const eventCount = Object.values(funcCounts).reduce((s, c) => s + c, 0);
-    result.push({
-      id: pid,
-      name: pl.name || pid,
-      rank: pl.rank || '',
-      span: pl.span || [],
-      event_count: eventCount,
-      arc_summary: _arcSummary(funcCounts),
-    });
-  }
-  return { plotlines: result, episode_codes: epCodes };
-}
-
-function computeArcMap(data) {
-  const plotlines = _sortedPlotlines(data);
-  const episodes = data.episodes || [];
-
-  const epLabels = episodes.map(ep => 'E' + _epNum(ep.episode));
-  const themes = episodes.map(ep => ep.theme || '');
-
-  const plRows = [];
-  for (const pl of plotlines) {
-    const pid = pl.id;
-    const cells = [];
-    for (const ep of episodes) {
-      const funcs = [];
-      for (const ev of ep.events || []) {
-        const evPl = ev.plotline_id || ev.storyline || ev.plotline;
-        if (evPl === pid) {
-          funcs.push(ev.function || 'escalation');
-        }
-      }
-      const eventCount = funcs.length;
-      let tension = 0;
-      if (eventCount > 0) {
-        tension = funcs.reduce((s, f) => s + (FUNCTION_TENSION[f] || 2), 0) / eventCount;
-      }
-      cells.push({ tension: Math.round(tension * 10) / 10, events: eventCount });
-    }
-    plRows.push({
-      id: pid,
-      name: pl.name || pid,
-      rank: pl.rank || '',
-      cells: cells,
-    });
-  }
-  return { episodes: epLabels, themes: themes, plotlines: plRows };
-}
-
-function computePulse(data) {
-  const plotlines = data.plotlines || [];
-  const episodes = data.episodes || [];
-  const plNames = {};
-  for (const p of plotlines) plNames[p.id] = p.name || p.id;
-
-  const result = [];
-  for (const ep of episodes) {
-    const epNum = _epNum(ep.episode);
-    const counts = {};
-    for (const ev of ep.events || []) {
-      const pid = ev.plotline_id || ev.storyline || ev.plotline;
-      if (pid) counts[pid] = (counts[pid] || 0) + 1;
-    }
-    const segments = Object.entries(counts)
-      .sort((a, b) => b[1] - a[1])
-      .map(([pid, c]) => ({
-        plotline_id: pid,
-        plotline_name: plNames[pid] || pid,
-        count: c,
-      }));
-    const total = segments.reduce((s, seg) => s + seg.count, 0);
-    result.push({
-      episode: 'E' + epNum,
-      theme: ep.theme || '',
-      total: total,
-      segments: segments,
-    });
-  }
-  return result;
-}
-
-function computeConvergence(data) {
-  const plotlineMap = {};
-  for (const p of data.plotlines || []) plotlineMap[p.id] = p;
-
-  const episodes = data.episodes || [];
-  const result = [];
-
-  for (const ep of episodes) {
-    const interactions = ep.interactions || [];
-    if (interactions.length === 0) continue;
-
-    const epNum = _epNum(ep.episode);
-    const items = [];
-    for (const inter of interactions) {
-      const lineIds = inter.lines || [];
-      const lineNames = lineIds.map(lid => {
-        const pl = plotlineMap[lid];
-        return pl ? (pl.name || lid) : lid;
-      });
-      items.push({
-        type: inter.type || '',
-        lines: lineNames,
-        description: inter.description || '',
-      });
-    }
-    result.push({
-      episode: 'E' + epNum,
-      theme: ep.theme || '',
-      interactions: items,
-    });
-  }
-  return result;
-}
-
-function computeCharacters(data) {
-  const episodes = data.episodes || [];
-  const castMap = {};
-  for (const c of data.cast || []) castMap[c.id] = c.name;
-
-  const charEvents = {};
-  const charPlotlines = {};
-
-  for (const ep of episodes) {
-    for (const ev of ep.events || []) {
-      const pid = ev.plotline_id || ev.storyline || ev.plotline || '';
-      for (const cid of ev.characters || []) {
-        charEvents[cid] = (charEvents[cid] || 0) + 1;
-        if (pid) {
-          if (!charPlotlines[cid]) charPlotlines[cid] = {};
-          charPlotlines[cid][pid] = (charPlotlines[cid][pid] || 0) + 1;
-        }
-      }
-    }
-  }
-
-  const result = [];
-  const sorted = Object.entries(charEvents).sort((a, b) => b[1] - a[1]);
-  for (const [cid, count] of sorted) {
-    if (count < 2) continue;
-    const name = castMap[cid] || cid.replace('guest:', '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-    const plCounts = charPlotlines[cid] || {};
-    const plSegments = Object.entries(plCounts)
-      .sort((a, b) => b[1] - a[1])
-      .map(([pid, c]) => ({ plotline_id: pid, plotline_name: pid, count: c }));
-    result.push({
-      id: cid,
-      name: name,
-      event_count: count,
-      plotline_count: Object.keys(plCounts).length,
-      plotline_segments: plSegments,
-    });
-  }
-  return result;
+function _section(title) {
+  const section = document.createElement('section');
+  section.className = 'ana-section';
+  const h2 = document.createElement('h2');
+  h2.className = 'ana-title';
+  h2.textContent = title;
+  section.appendChild(h2);
+  return section;
 }
 
 function _sortedPlotlines(data) {
@@ -2945,35 +2716,430 @@ function _sortedPlotlines(data) {
   );
 }
 
-// --- Rendering ---
-
-function _tensionLevel(t) {
-  if (t <= 1.2) return 1;
-  if (t <= 2.0) return 2;
-  if (t <= 2.8) return 3;
-  if (t <= 3.5) return 4;
-  return 5;
+/**
+ * Build a plotline-id → palette-index map, sorted by rank.
+ */
+function _plotlineColorMap(data) {
+  const sorted = _sortedPlotlines(data);
+  const map = {};
+  sorted.forEach((pl, i) => { map[pl.id] = i; });
+  return map;
 }
 
 /**
- * Render all 5 analytics sections into the given container.
+ * Build a plotline-id → name map.
+ */
+function _plotlineNameMap(data) {
+  const map = {};
+  for (const pl of data.plotlines || []) {
+    map[pl.id] = pl.name || pl.id;
+  }
+  return map;
+}
+
+// --- Chart 1: Events per episode (stacked bar) ---
+
+function _renderEventsPerEpisode(data, colorMap) {
+  const section = _section('How many events per episode?');
+  const episodes = data.episodes || [];
+  const plotlines = _sortedPlotlines(data);
+  const plNames = _plotlineNameMap(data);
+
+  if (episodes.length === 0) return section;
+
+  // Compute per-episode, per-plotline counts
+  const epData = [];
+  let maxTotal = 0;
+  for (const ep of episodes) {
+    const counts = {};
+    for (const ev of ep.events || []) {
+      const pid = ev.plotline_id || ev.storyline || ev.plotline;
+      if (pid) counts[pid] = (counts[pid] || 0) + 1;
+    }
+    const total = Object.values(counts).reduce((s, c) => s + c, 0);
+    if (total > maxTotal) maxTotal = total;
+    epData.push({ code: ep.episode, counts, total });
+  }
+
+  if (maxTotal === 0) return section;
+
+  const CHART_HEIGHT = 300;
+
+  // Chart container
+  const chart = document.createElement('div');
+  chart.className = 'ana-stacked-chart';
+
+  // Y-axis
+  const yAxis = document.createElement('div');
+  yAxis.className = 'ana-stacked-yaxis';
+  const steps = 4;
+  for (let i = steps; i >= 0; i--) {
+    const label = document.createElement('div');
+    label.className = 'ana-stacked-ylabel';
+    label.textContent = Math.round(maxTotal * i / steps);
+    yAxis.appendChild(label);
+  }
+  chart.appendChild(yAxis);
+
+  // Bars area
+  const barsWrap = document.createElement('div');
+  barsWrap.className = 'ana-stacked-bars';
+
+  for (const ep of epData) {
+    const col = document.createElement('div');
+    col.className = 'ana-stacked-col';
+
+    const bar = document.createElement('div');
+    bar.className = 'ana-stacked-bar';
+    bar.style.height = (ep.total / maxTotal * CHART_HEIGHT) + 'px';
+
+    // Stack segments bottom-to-top: A-plotline at bottom (first in sorted order)
+    // Flex column-reverse so first child renders at bottom
+    for (const pl of plotlines) {
+      const count = ep.counts[pl.id] || 0;
+      if (count === 0) continue;
+      const seg = document.createElement('div');
+      seg.className = 'ana-stacked-seg';
+      seg.style.flex = count;
+      seg.style.background = _plColor(colorMap[pl.id]);
+      seg.title = (plNames[pl.id] || pl.id) + ': ' + count;
+      // Show number if segment tall enough
+      const segHeight = count / ep.total * (ep.total / maxTotal * CHART_HEIGHT);
+      if (segHeight >= 20) {
+        seg.textContent = count;
+      }
+      bar.appendChild(seg);
+    }
+    // Total count above the bar
+    const totalLabel = document.createElement('div');
+    totalLabel.className = 'ana-stacked-total';
+    totalLabel.textContent = ep.total;
+    col.appendChild(totalLabel);
+
+    col.appendChild(bar);
+
+    const label = document.createElement('div');
+    label.className = 'ana-stacked-xlabel';
+    label.textContent = 'E' + _epNum(ep.code);
+    col.appendChild(label);
+
+    barsWrap.appendChild(col);
+  }
+  chart.appendChild(barsWrap);
+  section.appendChild(chart);
+
+  // Legend
+  const legend = document.createElement('div');
+  legend.className = 'ana-legend-bar';
+  for (const pl of plotlines) {
+    const item = document.createElement('span');
+    item.className = 'ana-legend-item';
+    const swatch = document.createElement('span');
+    swatch.className = 'ana-legend-swatch';
+    swatch.style.background = _plColor(colorMap[pl.id]);
+    item.appendChild(swatch);
+    item.appendChild(document.createTextNode(pl.name || pl.id));
+    legend.appendChild(item);
+  }
+  section.appendChild(legend);
+
+  return section;
+}
+
+// --- Chart 2: Function distribution heatmap ---
+
+function _renderFunctionDistribution(data) {
+  const section = _section('How are functions distributed across the season?');
+  const episodes = data.episodes || [];
+
+  if (episodes.length === 0) return section;
+
+  // Compute counts: function × episode
+  const grid = {};
+  let maxCount = 0;
+  for (const fn of _ARC_ORDER) grid[fn] = {};
+
+  for (const ep of episodes) {
+    for (const ev of ep.events || []) {
+      const fn = ev.function || ev.plot_fn;
+      if (!fn || !grid[fn]) continue;
+      grid[fn][ep.episode] = (grid[fn][ep.episode] || 0) + 1;
+      if (grid[fn][ep.episode] > maxCount) maxCount = grid[fn][ep.episode];
+    }
+  }
+
+  const table = document.createElement('table');
+  table.className = 'ana-heatmap';
+
+  // Header row
+  const thead = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+  const thCorner = document.createElement('th');
+  thCorner.textContent = 'Function';
+  headerRow.appendChild(thCorner);
+  for (const ep of episodes) {
+    const th = document.createElement('th');
+    th.textContent = 'E' + _epNum(ep.episode);
+    headerRow.appendChild(th);
+  }
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  // Body rows in arc order
+  const tbody = document.createElement('tbody');
+  for (const fn of _ARC_ORDER) {
+    const tr = document.createElement('tr');
+    const tdLabel = document.createElement('td');
+    tdLabel.className = 'ana-heatmap-label';
+    tdLabel.textContent = _ARC_LABELS[fn] || fn;
+    tr.appendChild(tdLabel);
+
+    for (const ep of episodes) {
+      const td = document.createElement('td');
+      td.className = 'ana-heatmap-cell';
+      const count = (grid[fn] && grid[fn][ep.episode]) || 0;
+      if (count > 0) {
+        // Opacity scales from 0.2 (count=1) to 1.0 (count=maxCount)
+        const intensity = maxCount > 1
+          ? 0.2 + 0.8 * ((count - 1) / (maxCount - 1))
+          : 0.5;
+        td.style.setProperty('--heat-opacity', intensity.toFixed(2));
+        td.classList.add('ana-heatmap-filled');
+        td.textContent = count;
+      }
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+  }
+  table.appendChild(tbody);
+  section.appendChild(table);
+
+  return section;
+}
+
+// --- Chart 3: Plotline intersection matrix ---
+
+function _renderIntersectionMatrix(data, colorMap) {
+  const section = _section('Where do plotlines intersect?');
+  const episodes = data.episodes || [];
+  const plotlines = _sortedPlotlines(data);
+  const plNames = _plotlineNameMap(data);
+  const plIds = plotlines.map(pl => pl.id);
+
+  // Build directed counts from also_affects
+  const matrix = {};
+  for (const src of plIds) {
+    matrix[src] = {};
+    for (const tgt of plIds) matrix[src][tgt] = 0;
+  }
+
+  let hasData = false;
+  for (const ep of episodes) {
+    for (const ev of ep.events || []) {
+      const src = ev.plotline_id || ev.storyline || ev.plotline;
+      const targets = ev.also_affects || [];
+      if (!src || targets.length === 0) continue;
+      for (const tgt of targets) {
+        if (matrix[src] && matrix[src][tgt] !== undefined) {
+          matrix[src][tgt]++;
+          hasData = true;
+        }
+      }
+    }
+  }
+
+  if (!hasData) {
+    const note = document.createElement('p');
+    note.className = 'ana-empty-note';
+    note.textContent = 'No cross-plotline interactions found in this analysis.';
+    section.appendChild(note);
+    return section;
+  }
+
+  // Find max for color scaling
+  let maxVal = 0;
+  for (const src of plIds) {
+    for (const tgt of plIds) {
+      if (src !== tgt && matrix[src][tgt] > maxVal) maxVal = matrix[src][tgt];
+    }
+  }
+
+  // Row totals (sends) and column totals (receives)
+  const rowTotals = {};
+  const colTotals = {};
+  for (const id of plIds) { rowTotals[id] = 0; colTotals[id] = 0; }
+  for (const src of plIds) {
+    for (const tgt of plIds) {
+      if (src === tgt) continue;
+      rowTotals[src] += matrix[src][tgt];
+      colTotals[tgt] += matrix[src][tgt];
+    }
+  }
+
+  // Short name helper: strip "Hero: " prefix
+  function shortName(id) {
+    const name = plNames[id] || id;
+    return name.includes(': ') ? name.split(': ').pop() : name;
+  }
+
+  const table = document.createElement('table');
+  table.className = 'ana-matrix';
+
+  // Header
+  const thead = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+  headerRow.appendChild(document.createElement('th')); // corner
+  for (const tgt of plIds) {
+    const th = document.createElement('th');
+    th.textContent = shortName(tgt);
+    headerRow.appendChild(th);
+  }
+  const thSends = document.createElement('th');
+  thSends.className = 'ana-matrix-total';
+  thSends.textContent = 'Sends';
+  headerRow.appendChild(thSends);
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  // Body
+  const tbody = document.createElement('tbody');
+  for (const src of plIds) {
+    const tr = document.createElement('tr');
+    const tdLabel = document.createElement('td');
+    tdLabel.className = 'ana-matrix-label';
+    tdLabel.textContent = shortName(src);
+    tr.appendChild(tdLabel);
+
+    for (const tgt of plIds) {
+      const td = document.createElement('td');
+      td.className = 'ana-matrix-cell';
+      if (src === tgt) {
+        td.classList.add('ana-matrix-diag');
+      } else {
+        const val = matrix[src][tgt];
+        if (val > 0) {
+          const intensity = maxVal > 1
+            ? 0.25 + 0.75 * ((val - 1) / (maxVal - 1))
+            : 0.5;
+          td.style.setProperty('--matrix-opacity', intensity.toFixed(2));
+          td.classList.add('ana-matrix-filled');
+          td.textContent = val;
+        }
+      }
+      tr.appendChild(td);
+    }
+
+    // Row total
+    const tdTotal = document.createElement('td');
+    tdTotal.className = 'ana-matrix-total-cell';
+    tdTotal.textContent = '\u2192 ' + rowTotals[src];
+    tr.appendChild(tdTotal);
+    tbody.appendChild(tr);
+  }
+  table.appendChild(tbody);
+
+  // Footer row: column totals
+  const tfoot = document.createElement('tfoot');
+  const footRow = document.createElement('tr');
+  const footCorner = document.createElement('td');
+  footCorner.className = 'ana-matrix-label';
+  footCorner.textContent = 'Receives';
+  footRow.appendChild(footCorner);
+  for (const tgt of plIds) {
+    const td = document.createElement('td');
+    td.className = 'ana-matrix-total-cell';
+    td.textContent = '\u2193 ' + colTotals[tgt];
+    footRow.appendChild(td);
+  }
+  footRow.appendChild(document.createElement('td')); // corner
+  tfoot.appendChild(footRow);
+  table.appendChild(tfoot);
+
+  section.appendChild(table);
+  return section;
+}
+
+// --- Chart 4: Character event load ---
+
+function _renderCharacterLoad(data) {
+  const section = _section('Who carries the story?');
+  const episodes = data.episodes || [];
+  const castMap = {};
+  for (const c of data.cast || []) castMap[c.id] = c.name;
+
+  // Count events per character
+  const charEvents = {};
+  for (const ep of episodes) {
+    for (const ev of ep.events || []) {
+      for (const cid of ev.characters || []) {
+        charEvents[cid] = (charEvents[cid] || 0) + 1;
+      }
+    }
+  }
+
+  // Filter >=2, sort descending
+  const sorted = Object.entries(charEvents)
+    .filter(([, count]) => count >= 2)
+    .sort((a, b) => b[1] - a[1]);
+
+  if (sorted.length === 0) return section;
+
+  const maxCount = sorted[0][1];
+  const container = document.createElement('div');
+  container.className = 'ana-charload';
+
+  for (const [cid, count] of sorted) {
+    const name = castMap[cid] || cid.replace('guest:', '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+    const row = document.createElement('div');
+    row.className = 'ana-charload-row';
+
+    const nameEl = document.createElement('div');
+    nameEl.className = 'ana-charload-name';
+    nameEl.textContent = name;
+    row.appendChild(nameEl);
+
+    const barWrap = document.createElement('div');
+    barWrap.className = 'ana-charload-barwrap';
+    const bar = document.createElement('div');
+    bar.className = 'ana-charload-bar';
+    bar.style.width = (count / maxCount * 100).toFixed(1) + '%';
+    barWrap.appendChild(bar);
+    row.appendChild(barWrap);
+
+    const countEl = document.createElement('div');
+    countEl.className = 'ana-charload-count';
+    countEl.textContent = count;
+    row.appendChild(countEl);
+
+    container.appendChild(row);
+  }
+
+  section.appendChild(container);
+  return section;
+}
+
+// --- Main entry point ---
+
+/**
+ * Render all 4 analytics charts into the given container.
  *
  * Args:
  *   data: tvplot result JSON object.
  *   container: DOM element to render into.
  */
 function renderAnalytics(data, container) {
-  const storyEngine = (data.context || {}).story_engine || '';
-  const scorecard = computeScorecard(data);
-  const arcMap = computeArcMap(data);
-  const pulse = computePulse(data);
-  const convergence = computeConvergence(data);
-  const characters = computeCharacters(data);
-
   container.innerHTML = '';
 
-  // Series header: name + story engine (logline) before all sections
-  const seriesName = (data.context || {}).show_name || (typeof _currentSeriesName !== 'undefined' ? _currentSeriesName : '') || '';
+  // Series header
+  const storyEngine = (data.context || {}).story_engine || '';
+  // Resolve display name: prefer data metadata, fall back to the dropdown's
+  // visible text (not the raw key, which may be __example__:bb_s01).
+  let seriesName = (data.context || {}).show_name || '';
+  if (!seriesName) {
+    const sel = document.getElementById('series-select');
+    if (sel && sel.selectedOptions.length) seriesName = sel.selectedOptions[0].textContent;
+  }
   if (seriesName || storyEngine) {
     const header = document.createElement('div');
     header.className = 'ana-series-header';
@@ -2992,371 +3158,12 @@ function renderAnalytics(data, container) {
     container.appendChild(header);
   }
 
-  container.appendChild(_renderScorecard(scorecard));
-  container.appendChild(_renderArcMap(arcMap));
-  container.appendChild(_renderPulse(pulse));
-  container.appendChild(_renderConvergence(convergence));
-  container.appendChild(_renderCharacters(characters));
-}
+  const colorMap = _plotlineColorMap(data);
 
-function _renderScorecard(scorecard) {
-  const section = _section('Season Scorecard');
-
-  const table = document.createElement('table');
-  table.className = 'ana-scorecard';
-
-  const thead = document.createElement('thead');
-  // Header row with episode numbers under Span
-  const headerRow = document.createElement('tr');
-  headerRow.innerHTML = '<th>Rank</th><th>Plotline</th><th>Span</th><th>Events</th><th>Arc</th>';
-  thead.appendChild(headerRow);
-
-  // Episode numbers row
-  const epRow = document.createElement('tr');
-  epRow.className = 'ana-scorecard-ep-row';
-  epRow.innerHTML = '<th></th><th></th><th></th><th></th><th></th>';
-  const epCell = epRow.children[2];
-  const epLabels = document.createElement('div');
-  epLabels.className = 'ana-span-labels';
-  for (const ep of scorecard.episode_codes) {
-    const lbl = document.createElement('span');
-    lbl.className = 'ana-span-label';
-    lbl.textContent = ep.split('E').pop();
-    epLabels.appendChild(lbl);
-  }
-  epCell.appendChild(epLabels);
-  thead.appendChild(epRow);
-
-  table.appendChild(thead);
-
-  const tbody = document.createElement('tbody');
-  for (const pl of scorecard.plotlines) {
-    const tr = document.createElement('tr');
-
-    // Rank
-    const tdRank = document.createElement('td');
-    const badge = document.createElement('span');
-    badge.className = 'rank-badge rank-' + (pl.rank || '').toLowerCase();
-    badge.textContent = pl.rank;
-    tdRank.appendChild(badge);
-    tr.appendChild(tdRank);
-
-    // Name
-    const tdName = document.createElement('td');
-    tdName.className = 'ana-plotline-name';
-    tdName.textContent = pl.name;
-    tr.appendChild(tdName);
-
-    // Span dots (labels are in thead)
-    const tdSpan = document.createElement('td');
-    const spanBar = document.createElement('div');
-    spanBar.className = 'ana-span-bar';
-    for (const ep of scorecard.episode_codes) {
-      const dot = document.createElement('div');
-      dot.className = 'ana-span-dot ' + (pl.span.includes(ep) ? 'active' : 'inactive');
-      dot.title = ep;
-      spanBar.appendChild(dot);
-    }
-    tdSpan.appendChild(spanBar);
-    tr.appendChild(tdSpan);
-
-    // Events
-    const tdEvents = document.createElement('td');
-    tdEvents.textContent = pl.event_count;
-    tr.appendChild(tdEvents);
-
-    // Arc
-    const tdArc = document.createElement('td');
-    tdArc.className = 'ana-arc-summary';
-    tdArc.textContent = pl.arc_summary;
-    tr.appendChild(tdArc);
-
-    tbody.appendChild(tr);
-  }
-  table.appendChild(tbody);
-  section.appendChild(table);
-  return section;
-}
-
-function _renderArcMap(arcMap) {
-  const section = _section('Arc Map');
-
-  // Find max events for circle sizing
-  let maxEvents = 1;
-  for (const pl of arcMap.plotlines) {
-    for (const cell of pl.cells) {
-      if (cell.events > maxEvents) maxEvents = cell.events;
-    }
-  }
-
-  // Legend
-  const legend = document.createElement('div');
-  legend.className = 'ana-legend';
-  legend.innerHTML =
-    '<span class="ana-legend-label">low tension</span>' +
-    '<div class="ana-gradient">' +
-      '<div class="ana-grad-step" style="background: var(--ana-tension-1);"></div>' +
-      '<div class="ana-grad-step" style="background: var(--ana-tension-2);"></div>' +
-      '<div class="ana-grad-step" style="background: var(--ana-tension-3);"></div>' +
-      '<div class="ana-grad-step" style="background: var(--ana-tension-4);"></div>' +
-      '<div class="ana-grad-step" style="background: var(--ana-tension-5);"></div>' +
-    '</div>' +
-    '<span class="ana-legend-label">high tension</span>' +
-    '<span class="ana-legend-hint">circle size = event count</span>';
-  section.appendChild(legend);
-
-  // Grid
-  const numEps = arcMap.episodes.length;
-  const grid = document.createElement('div');
-  grid.className = 'ana-arcmap';
-  grid.style.gridTemplateColumns = '140px repeat(' + numEps + ', 1fr)';
-
-  // Header row: empty corner + episode labels
-  grid.appendChild(document.createElement('div'));
-  for (const ep of arcMap.episodes) {
-    const header = document.createElement('div');
-    header.className = 'ana-arcmap-header';
-    header.textContent = ep;
-    grid.appendChild(header);
-  }
-
-  // Plotline rows
-  for (const pl of arcMap.plotlines) {
-    const label = document.createElement('div');
-    label.className = 'ana-arcmap-label';
-    const badgeSpan = document.createElement('span');
-    badgeSpan.className = 'rank-badge rank-' + (pl.rank || '').toLowerCase();
-    badgeSpan.textContent = pl.rank;
-    label.appendChild(badgeSpan);
-    // Trim prefix before ": " if present
-    const shortName = pl.name.includes(': ') ? pl.name.split(': ').pop() : pl.name;
-    label.appendChild(document.createTextNode(' ' + shortName));
-    grid.appendChild(label);
-
-    for (const cell of pl.cells) {
-      const cellDiv = document.createElement('div');
-      if (cell.events > 0) {
-        const level = _tensionLevel(cell.tension);
-        cellDiv.className = 'ana-arcmap-cell ana-tension-' + level;
-        const size = Math.floor(16 + (28 * cell.events / maxEvents));
-        const circle = document.createElement('div');
-        circle.className = 'ana-arc-circle';
-        circle.style.width = size + 'px';
-        circle.style.height = size + 'px';
-        circle.textContent = cell.events;
-        cellDiv.appendChild(circle);
-      } else {
-        cellDiv.className = 'ana-arcmap-cell ana-tension-0';
-        const empty = document.createElement('span');
-        empty.className = 'ana-arc-empty';
-        empty.innerHTML = '&mdash;';
-        cellDiv.appendChild(empty);
-      }
-      grid.appendChild(cellDiv);
-    }
-  }
-
-  // Theme row
-  const themeLabel = document.createElement('div');
-  themeLabel.className = 'ana-arcmap-theme-label';
-  themeLabel.textContent = 'theme';
-  grid.appendChild(themeLabel);
-  for (const theme of arcMap.themes) {
-    const themeDiv = document.createElement('div');
-    themeDiv.className = 'ana-arcmap-theme';
-    themeDiv.textContent = theme;
-    grid.appendChild(themeDiv);
-  }
-
-  section.appendChild(grid);
-  return section;
-}
-
-function _renderPulse(pulse) {
-  const section = _section('Episode Pulse');
-
-  let maxTotal = 1;
-  for (const ep of pulse) {
-    if (ep.total > maxTotal) maxTotal = ep.total;
-  }
-
-  for (const ep of pulse) {
-    const row = document.createElement('div');
-    row.className = 'ana-pulse-row';
-
-    const epLabel = document.createElement('div');
-    epLabel.className = 'ana-pulse-ep';
-    epLabel.textContent = ep.episode;
-    row.appendChild(epLabel);
-
-    const wrap = document.createElement('div');
-    wrap.className = 'ana-pulse-wrap';
-    const bars = document.createElement('div');
-    bars.className = 'ana-pulse-bars';
-    bars.style.width = (ep.total / maxTotal * 100).toFixed(1) + '%';
-
-    for (const seg of ep.segments) {
-      const bar = document.createElement('div');
-      bar.className = 'ana-pulse-bar';
-      bar.style.flex = seg.count;
-      bar.title = seg.plotline_name + ': ' + seg.count;
-      if (seg.count >= 2) bar.textContent = seg.count;
-      bars.appendChild(bar);
-    }
-    wrap.appendChild(bars);
-    row.appendChild(wrap);
-
-    const totalDiv = document.createElement('div');
-    totalDiv.className = 'ana-pulse-total';
-    totalDiv.textContent = ep.total;
-    row.appendChild(totalDiv);
-
-    section.appendChild(row);
-  }
-
-  // Legend: which color = which plotline
-  const legend = document.createElement('div');
-  legend.className = 'ana-pulse-legend';
-  const allPlotlines = [];
-  const seen = new Set();
-  for (const ep of pulse) {
-    for (const seg of ep.segments) {
-      if (!seen.has(seg.plotline_name)) {
-        seen.add(seg.plotline_name);
-        allPlotlines.push(seg.plotline_name);
-      }
-    }
-  }
-  for (let i = 0; i < allPlotlines.length; i++) {
-    const item = document.createElement('span');
-    item.className = 'ana-pulse-legend-item';
-    const swatch = document.createElement('span');
-    swatch.className = 'ana-pulse-bar';
-    swatch.style.display = 'inline-block';
-    swatch.style.width = '12px';
-    swatch.style.height = '12px';
-    swatch.style.borderRadius = '2px';
-    swatch.style.verticalAlign = 'middle';
-    swatch.style.marginRight = '4px';
-    // Use nth-child color by applying the index via a CSS variable
-    swatch.style.background = _pulseColor(i);
-    item.appendChild(swatch);
-    item.appendChild(document.createTextNode(allPlotlines[i]));
-    legend.appendChild(item);
-  }
-  section.appendChild(legend);
-
-  return section;
-}
-
-function _renderConvergence(convergence) {
-  const section = _section('Convergence Moments');
-
-  const timeline = document.createElement('div');
-  timeline.className = 'ana-conv-timeline';
-
-  const line = document.createElement('div');
-  line.className = 'ana-conv-line';
-  timeline.appendChild(line);
-
-  for (const ep of convergence) {
-    const group = document.createElement('div');
-    group.className = 'ana-conv-group';
-
-    const epDiv = document.createElement('div');
-    epDiv.className = 'ana-conv-ep';
-    epDiv.innerHTML = ep.episode + ' &mdash; ' + _escapeHtml(ep.theme);
-    group.appendChild(epDiv);
-
-    for (const inter of ep.interactions) {
-      const item = document.createElement('div');
-      item.className = 'ana-conv-item';
-
-      const typeSpan = document.createElement('span');
-      typeSpan.className = 'ana-conv-type ana-conv-' + inter.type;
-      typeSpan.textContent = inter.type.replace(/_/g, ' ');
-      item.appendChild(typeSpan);
-
-      const linesSpan = document.createElement('span');
-      linesSpan.className = 'ana-conv-lines';
-      linesSpan.textContent = inter.lines.join(' + ');
-      item.appendChild(linesSpan);
-
-      const descSpan = document.createElement('span');
-      descSpan.className = 'ana-conv-desc';
-      descSpan.textContent = inter.description;
-      item.appendChild(descSpan);
-
-      group.appendChild(item);
-    }
-    timeline.appendChild(group);
-  }
-
-  section.appendChild(timeline);
-  return section;
-}
-
-function _renderCharacters(characters) {
-  const section = _section('Character Weight');
-
-  const maxCount = characters.length > 0 ? characters[0].event_count : 1;
-
-  for (const ch of characters) {
-    const row = document.createElement('div');
-    row.className = 'ana-char-row';
-
-    const name = document.createElement('div');
-    name.className = 'ana-char-name';
-    name.textContent = ch.name;
-    row.appendChild(name);
-
-    const barWrap = document.createElement('div');
-    barWrap.className = 'ana-char-bar-wrap';
-    const bar = document.createElement('div');
-    bar.className = 'ana-char-bar';
-    bar.style.width = (ch.event_count / maxCount * 100).toFixed(1) + '%';
-    bar.textContent = ch.event_count;
-    barWrap.appendChild(bar);
-    row.appendChild(barWrap);
-
-    const dots = document.createElement('div');
-    dots.className = 'ana-char-dots';
-    for (let i = 0; i < ch.plotline_count; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'ana-char-dot';
-      dots.appendChild(dot);
-    }
-    row.appendChild(dots);
-
-    section.appendChild(row);
-  }
-  return section;
-}
-
-// --- Helpers ---
-
-const _PULSE_COLORS_LIGHT = ['#2563eb', '#f59e0b', '#ef4444', '#6b7280', '#8b5cf6', '#10b981'];
-const _PULSE_COLORS_DARK = ['#89b4fa', '#f9e2af', '#f38ba8', '#a6adc8', '#cba6f7', '#a6e3a1'];
-function _pulseColor(i) {
-  const isDark = document.documentElement.classList.contains('dark');
-  const palette = isDark ? _PULSE_COLORS_DARK : _PULSE_COLORS_LIGHT;
-  return palette[i % palette.length];
-}
-
-function _section(title) {
-  const section = document.createElement('section');
-  section.className = 'ana-section';
-  const h2 = document.createElement('h2');
-  h2.className = 'ana-title';
-  h2.textContent = title;
-  section.appendChild(h2);
-  return section;
-}
-
-function _escapeHtml(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
+  container.appendChild(_renderEventsPerEpisode(data, colorMap));
+  container.appendChild(_renderFunctionDistribution(data));
+  container.appendChild(_renderIntersectionMatrix(data, colorMap));
+  container.appendChild(_renderCharacterLoad(data));
 }
 
 
@@ -5823,16 +5630,8 @@ function _renderCurrentView() {
   const analyticsContainer = document.getElementById('analytics-container');
   const gridTitle = document.getElementById('grid-title');
 
-  let displayName;
-  if (_currentSeriesName === '__demo__') {
-    displayName = _seriesName(_currentData) || 'Demo';
-  } else if (_currentSeriesName && _currentSeriesName.startsWith(_EXAMPLE_PREFIX)) {
-    displayName = _seriesName(_currentData) || 'Example';
-  } else {
-    displayName = _currentSeriesName;
-  }
-
-  if (gridTitle) gridTitle.textContent = displayName;
+  // Dropdown already shows the series name — no need to duplicate it.
+  if (gridTitle) gridTitle.textContent = '';
 
   if (_activeTab === 'grid' && gridContainer) {
     renderGrid(_currentData, gridContainer);
