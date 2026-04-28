@@ -1,0 +1,2008 @@
+{
+  "context": {
+    "series": "Severance",
+    "season": "S01",
+    "format": "ensemble",
+    "story_engine": "Severed Lumon employees live split existences — their work selves trapped inside a corporate floor with no outside memories — and slowly uncover what the company is hiding while their outside selves are manipulated by forces they can't see. Breach: Employees know what their job actually is.",
+    "genre": "sci-fi thriller / corporate horror",
+    "is_anthology": false,
+    "system": "narratology"
+  },
+  "cast": [
+    {
+      "id": "burt",
+      "name": "Burt",
+      "aliases": []
+    },
+    {
+      "id": "cobel",
+      "name": "Cobel",
+      "aliases": []
+    },
+    {
+      "id": "dylan",
+      "name": "Dylan",
+      "aliases": []
+    },
+    {
+      "id": "helly",
+      "name": "Helly",
+      "aliases": []
+    },
+    {
+      "id": "irving",
+      "name": "Irving",
+      "aliases": []
+    },
+    {
+      "id": "mark",
+      "name": "Mark",
+      "aliases": []
+    },
+    {
+      "id": "milchick",
+      "name": "Milchick",
+      "aliases": []
+    },
+    {
+      "id": "mr-milchick",
+      "name": "Mr Milchick",
+      "aliases": []
+    },
+    {
+      "id": "ms-cobel",
+      "name": "Ms Cobel",
+      "aliases": []
+    },
+    {
+      "id": "petey",
+      "name": "Petey",
+      "aliases": []
+    }
+  ],
+  "plotlines": [
+    {
+      "id": "helly-escape",
+      "name": "Helly: Escape from Severance",
+      "hero": "helly",
+      "goal": "freedom from the severed floor — to quit Lumon and cease existing as a severed innie",
+      "obstacle": "cobel, milchick, helly-outie",
+      "stakes": "If wins: helly",
+      "type": "serialized",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08"
+      ],
+      "computed_rank": "C",
+      "reviewed_rank": "A",
+      "rank": "A"
+    },
+    {
+      "id": "mark-truth",
+      "name": "Mark: Uncovering the Truth",
+      "hero": "mark",
+      "goal": "understand what Lumon is hiding — what severance really does, what happened to Petey, and why his wife Gemma connects to Lumon",
+      "obstacle": "cobel, milchick",
+      "stakes": "If wins: mark",
+      "type": "serialized",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08"
+      ],
+      "computed_rank": "A",
+      "reviewed_rank": "A",
+      "rank": "A"
+    },
+    {
+      "id": "dylan-disillusion",
+      "name": "Dylan: Disillusionment with Lumon",
+      "hero": "dylan",
+      "goal": "validation and reward from Lumon — then, once disillusioned, something real (his son, autonomy)",
+      "obstacle": "cobel, milchick",
+      "stakes": "If wins: dylan",
+      "type": "serialized",
+      "nature": "character-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08"
+      ],
+      "computed_rank": "C",
+      "reviewed_rank": "B",
+      "rank": "B"
+    },
+    {
+      "id": "cobel-control",
+      "name": "Cobel: Maintaining Control",
+      "hero": "cobel",
+      "goal": "keep the severed floor stable, suppress rebellion, and protect Lumon's secrets from exposure",
+      "obstacle": "mark, helly, irving, dylan",
+      "stakes": "If wins: cobel",
+      "type": "serialized",
+      "nature": "plot-led",
+      "confidence": "solid",
+      "span": [
+        "S01E01",
+        "S01E02",
+        "S01E03",
+        "S01E04",
+        "S01E05",
+        "S01E06",
+        "S01E07",
+        "S01E08"
+      ],
+      "computed_rank": "B",
+      "reviewed_rank": "B",
+      "rank": "B"
+    }
+  ],
+  "episodes": [
+    {
+      "episode": "S01E01",
+      "theme": "Consent is meaningless when the self who agreed and the self who suffers the consequences are not the same person.",
+      "events": [
+        {
+          "event": "Mark leads his team of four severed employees at Lumon Industries working on refining mysterious numbers on computers",
+          "plotline_id": "mark-truth",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "dylan",
+            "helly",
+            "irving"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "irving-burt",
+            "dylan-disillusion"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Dylan discovers a music player and dance experience in a restricted area, triggering security protocols",
+          "plotline_id": "dylan-disillusion",
+          "function": "inciting_incident",
+          "characters": [
+            "dylan"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "inciting_incident"
+        },
+        {
+          "event": "Helly undergoes orientation with Ms. Cobel as a new severed employee",
+          "plotline_id": "helly-escape",
+          "function": "inciting_incident",
+          "characters": [
+            "helly",
+            "ms-cobel"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "inciting_incident"
+        },
+        {
+          "event": "Helly struggles to accept her severed state during orientation",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly",
+            "ms-cobel"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Irving explains the four tempers theory to the team",
+          "plotline_id": "mark-truth",
+          "function": "setup",
+          "characters": [
+            "irving",
+            "mark",
+            "dylan",
+            "helly"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Helly attempts to leave the building but discovers she cannot access the elevator without her outie's consent",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Mark's outie attends a book reading and meets a woman named Alexa",
+          "plotline_id": "mark-truth",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "guest:alexa"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Mr. Milchick leads the team in wellness sessions and monitors their behavior",
+          "plotline_id": "cobel-control",
+          "function": "setup",
+          "characters": [
+            "mr-milchick",
+            "mark",
+            "dylan",
+            "helly",
+            "irving"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "dylan-disillusion"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Helly tries to hurt herself to send a message to her outie, prompting security intervention",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly",
+            "mr-milchick"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Mark defends Helly to management while questioning the ethics of the severance process",
+          "plotline_id": "mark-truth",
+          "function": "inciting_incident",
+          "characters": [
+            "mark",
+            "ms-cobel"
+          ],
+          "also_affects": [
+            "cobel-control",
+            "helly-escape"
+          ],
+          "plot_fn": "inciting_incident"
+        },
+        {
+          "event": "The team discovers that Petey, Mark's former colleague, has left the company under mysterious circumstances",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "dylan",
+            "helly",
+            "irving"
+          ],
+          "also_affects": null,
+          "plot_fn": "setup"
+        },
+        {
+          "event": "Ms. Cobel observes the team's dynamics while maintaining her corporate facade",
+          "plotline_id": "cobel-control",
+          "function": "setup",
+          "characters": [
+            "ms-cobel"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Helly's outie sends her a message refusing to quit, leaving Helly trapped in the severed workplace",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Mark begins experiencing brief flashes suggesting his memories may be bleeding through the severance barrier",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        }
+      ],
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "helly-escape",
+            "mark-truth",
+            "cobel-control"
+          ],
+          "description": "All three plotlines turn on the same question: who owns a person's consciousness? Helly's outie refuses to free her, Mark starts questioning Lumon's ethics, and Cobel works to keep both contained — three angles on corporate sovereignty over the self."
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "helly-escape",
+            "cobel-control"
+          ],
+          "description": "The viewer watches Cobel monitor Helly's every move; Helly believes her self-harm and resistance are acts of agency, unaware they are being observed, logged, and managed as data points."
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "mark-truth",
+            "cobel-control"
+          ],
+          "description": "Mark defends Helly and senses something is wrong with Lumon, but has no idea that his supervisor Cobel is actively shaping his reality — the viewer sees both sides of this asymmetry."
+        },
+        {
+          "type": "riddle",
+          "lines": [
+            "mark-truth",
+            "helly-escape"
+          ],
+          "description": "Neither Mark nor Helly — nor the viewer — yet knows who Helly's outie is or why she consented to severance, making her refusal to quit a mystery to all parties."
+        }
+      ]
+    },
+    {
+      "episode": "S01E02",
+      "theme": "Containment is only an illusion — every wall Lumon builds is already being tested from both sides.",
+      "events": [
+        {
+          "event": "Helly attempts various escape methods from the Lumon offices, resisting her severed state",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Mark receives a call from his outie's friend mentioning someone named Petey wanting to meet",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "guest:marks-friend"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Dylan works on refinement duties and boasts about his Lumon perks and productivity scores to colleagues",
+          "plotline_id": "dylan-disillusion",
+          "function": "setup",
+          "characters": [
+            "dylan"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Irving shares wellness tips with colleagues during his work routine",
+          "plotline_id": "mark-truth",
+          "function": "setup",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Ms. Cobel questions Mark about any unusual experiences or memory bleeds he might be having",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel",
+            "mark"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "inciting_incident"
+        },
+        {
+          "event": "Helly discovers the conference room painting of Lumon founder Kier Eagan and learns about the company's reverence for him",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "The team participates in a Lumon orientation video covering workplace safety and corporate philosophy",
+          "plotline_id": "cobel-control",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "helly",
+            "dylan",
+            "irving"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "dylan-disillusion"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Mark's outie meets with Petey, who reveals he has undergone an illegal procedure to reintegrate his severed and outside memories",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "petey"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Petey warns Mark about the true nature of Lumon and what happens on the severed floor",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "petey"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Helly attempts to use the stairwell but finds it blocked by security systems",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel demonstrates increasing interest in Mark's personal life and psychological state",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel",
+            "mark"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team completes their daily refinement quotas while Helly questions the purpose of the number-sorting work",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "dylan",
+            "irving"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Petey shows Mark evidence suggesting something sinister about the severance process and Lumon's actual operations",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "mark",
+            "petey"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Mark's outie begins experiencing strange symptoms after his encounter with Petey",
+          "plotline_id": "mark-truth",
+          "function": "resolution",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        }
+      ],
+      "interactions": [
+        {
+          "type": "threat",
+          "lines": [
+            "cobel-control",
+            "mark-truth"
+          ],
+          "description": "Cobel probes Mark for memory bleeds while the viewer knows Petey is already feeding Mark information from outside — Cobel doesn't yet know the outie meeting is happening"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "helly-escape",
+            "mark-truth"
+          ],
+          "description": "Both Helly and Mark are reaching for the same thing — knowledge of what lies beyond their current existence — but from opposite directions: Helly pushes out from the inside, Mark receives information pulled in from the outside"
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "mark-truth",
+            "cobel-control"
+          ],
+          "description": "Mark's outie is meeting a reintegrated former employee and receiving dangerous intelligence about Lumon — Cobel is watching Mark closely but is blind to the outie-level breach already in progress"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "helly-escape",
+            "dylan-disillusion"
+          ],
+          "description": "The orientation video scene places Helly's active resistance alongside Dylan's comfortable compliance — two employees receiving identical institutional conditioning who are at opposite ends of belief in Lumon"
+        }
+      ]
+    },
+    {
+      "episode": "S01E03",
+      "theme": "Lumon's control depends on keeping its people sealed inside their own ignorance — and the seals are starting to leak",
+      "events": [
+        {
+          "event": "Mark discovers Petey dead in his apartment and finds a Lumon security card among his belongings",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel arrives at the scene posing as a detective and questions Mark about his relationship with Petey",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel",
+            "mark"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The severed employees participate in a Music Dance Experience reward session after meeting productivity targets",
+          "plotline_id": "dylan-disillusion",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "dylan",
+            "irving",
+            "helly"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "irving-burt"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Dylan enthusiastically engages with the retro dance party while Irving and Helly observe the bizarre corporate entertainment",
+          "plotline_id": "dylan-disillusion",
+          "function": "escalation",
+          "characters": [
+            "dylan",
+            "irving",
+            "helly"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "irving-burt"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Mark begins experiencing memory flashes and headaches suggesting his severance barrier may be weakening",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel reviews surveillance footage of the team and discusses Mark's condition with Mr. Milchick",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel",
+            "milchick"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Helly discovers a hidden message from previous employees warning about Lumon's true intentions",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team learns about the four departments: Macrodata Refinement, Optics and Design, General Services, and Biotechnology",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "dylan",
+            "irving",
+            "helly"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Mark's outie visits a doctor about his symptoms while Ms. Cobel secretly monitors his activities outside work",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "cobel"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Irving shares his passion for Lumon's corporate history and his collection of company memorabilia with the team",
+          "plotline_id": "mark-truth",
+          "function": "setup",
+          "characters": [
+            "irving",
+            "mark",
+            "dylan",
+            "helly"
+          ],
+          "also_affects": [
+            "dylan-disillusion"
+          ],
+          "plot_fn": "setup"
+        },
+        {
+          "event": "Helly attempts to communicate with her outie by hiding messages in her clothing",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel uses her cover identity to integrate herself into Mark's outside life and gather intelligence",
+          "plotline_id": "cobel-control",
+          "function": "climax",
+          "characters": [
+            "cobel",
+            "mark"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The refinement work reveals strange patterns that the employees cannot understand or remember outside their severed state",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "dylan",
+            "irving",
+            "helly"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Mark experiences a severe episode that causes him to briefly access suppressed memories from his work persona",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        }
+      ],
+      "interactions": [
+        {
+          "type": "threat",
+          "lines": [
+            "cobel-control",
+            "mark-truth"
+          ],
+          "description": "The viewer knows Cobel is posing as a detective and has infiltrated Mark's outside life; Mark has no idea his neighbor and his interrogator are the same person working for Lumon"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "helly-escape",
+            "mark-truth",
+            "cobel-control"
+          ],
+          "description": "All three plotlines turn on the same premise — information is power, and Lumon's control depends on keeping its people ignorant. Helly finds a hidden message, Mark flashes suppressed memory, Cobel surveils to prevent both"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "cobel-control",
+            "mark-truth"
+          ],
+          "description": "Cobel physically enters Mark's outside world, collapsing the boundary between his severed and unsevered life that the entire show's premise depends on keeping separate"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "dylan-disillusion",
+            "irving-burt"
+          ],
+          "description": "The Music Dance Experience puts both Dylan and Irving in relief against each other — Dylan's uncritical absorption into Lumon's rewards versus Irving's detachment hints at two different trajectories away from corporate faith"
+        }
+      ]
+    },
+    {
+      "episode": "S01E04",
+      "theme": "The machinery of consent — every system Lumon uses to keep the innies compliant (rewards, protocol, restricted knowledge) is shown fraying at exactly the moment a genuine human need (connection, truth, escape) pushes against it",
+      "events": [
+        {
+          "event": "The Macrodata Refinement team receives an overtime assignment requiring them to work late into the evening",
+          "plotline_id": "mark-truth",
+          "function": "setup",
+          "characters": [
+            "mark",
+            "helly",
+            "irving",
+            "dylan"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "irving-burt",
+            "dylan-disillusion"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Irving begins experiencing unusual visions of black paint and floods during work sessions",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "setup"
+        },
+        {
+          "event": "Ms. Cobel introduces new security measures and monitoring protocols following recent incidents on the severed floor",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Helly discovers a map of the office layout and attempts to find alternative escape routes",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Irving delivers a handbook to Optics & Design, where the team encounters Burt, and Irving and Burt form an immediate connection",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving",
+            "burt",
+            "mark",
+            "helly",
+            "dylan"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Dylan becomes increasingly competitive about productivity scores and Lumon rewards programs",
+          "plotline_id": "dylan-disillusion",
+          "function": "setup",
+          "characters": [
+            "dylan"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "The team learns about the Perpetuity Wing, a restricted area containing exhibits about Lumon's history and founder Kier Eagan",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "irving",
+            "dylan"
+          ],
+          "also_affects": [
+            "irving-burt",
+            "helly-escape",
+            "dylan-disillusion"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel reviews footage of Irving's interaction with Burt and expresses concern about inter-departmental relationships",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel"
+          ],
+          "also_affects": [
+            "irving-burt"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Helly finds a bathroom stall covered in carved messages from previous employees documenting their suffering",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Mark experiences a memory bleed episode during which he recalls fragments of his outside life",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Irving begins making excuses to visit Optics & Design and spend time with Burt, violating company protocols",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving",
+            "burt"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team discovers that their refinement work involves categorizing numbers based on emotional responses they cannot explain",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "mark",
+            "helly",
+            "irving",
+            "dylan"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "dylan-disillusion"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel confronts Mark about his deteriorating condition and threatens consequences for the entire team",
+          "plotline_id": "cobel-control",
+          "function": "climax",
+          "characters": [
+            "cobel",
+            "mark"
+          ],
+          "also_affects": [
+            "mark-truth",
+            "helly-escape"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Dylan receives a special reward but begins questioning whether the promised benefits are worth his sacrifice",
+          "plotline_id": "dylan-disillusion",
+          "function": "escalation",
+          "characters": [
+            "dylan"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        }
+      ],
+      "interactions": [
+        {
+          "type": "threat",
+          "lines": [
+            "irving-burt",
+            "cobel-control"
+          ],
+          "description": "Irving believes his visits to Burt are private and personal; Cobel is already reviewing the footage and treating the connection as a security threat Irving cannot see coming"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "helly-escape",
+            "irving-burt",
+            "dylan-disillusion"
+          ],
+          "description": "All three innies are reaching toward something real — escape, love, genuine reward — and all three are blocked or poisoned by the same institutional cage, rhyming on the theme of manufactured consent"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "mark-truth",
+            "helly-escape"
+          ],
+          "description": "The bathroom stall messages and the revelation about emotional refinement work converge: both events strip away Lumon's benign facade and confirm that the floor is a place of suffering with hidden purpose"
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "mark-truth",
+            "cobel-control"
+          ],
+          "description": "Mark's memory bleed and his team's growing curiosity push toward truth that Cobel is actively suppressing; Mark doesn't know how closely he is being watched"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "dylan-disillusion",
+            "cobel-control"
+          ],
+          "description": "Lumon's reward system, which Cobel enforces as a control mechanism, is the same thing that is beginning to fail on Dylan — the episode quietly tests whether compliance can be bought indefinitely"
+        }
+      ]
+    },
+    {
+      "episode": "S01E05",
+      "theme": "The self asserts itself through the body when every other exit is sealed",
+      "events": [
+        {
+          "event": "Irving makes repeated visits to Optics & Design under work-related pretexts to spend time with Burt",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving",
+            "burt"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel increases surveillance on Irving in response to his inter-departmental visits",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel"
+          ],
+          "also_affects": [
+            "irving-burt"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel implements new protocols to prevent inter-departmental fraternization",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel"
+          ],
+          "also_affects": [
+            "irving-burt"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Helly attempts self-harm to force her outie to quit the severance program",
+          "plotline_id": "helly-escape",
+          "function": "crisis",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control",
+            "mark-truth"
+          ],
+          "plot_fn": "crisis"
+        },
+        {
+          "event": "Mark intervenes to stop Helly's suicide attempt",
+          "plotline_id": "helly-escape",
+          "function": "turning_point",
+          "characters": [
+            "mark",
+            "helly"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "turning_point"
+        },
+        {
+          "event": "The severed floor goes into lockdown following Helly's suicide attempt",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "milchick"
+          ],
+          "also_affects": [
+            "helly-escape"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Mr. Milchick conducts enhanced wellness sessions to address the team's growing dysfunction and rebellious behavior",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "milchick",
+            "mark",
+            "helly",
+            "irving",
+            "dylan"
+          ],
+          "also_affects": [
+            "dylan-disillusion",
+            "helly-escape"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Dylan discovers additional reward options and becomes obsessed with earning points for a coveted caricature portrait",
+          "plotline_id": "dylan-disillusion",
+          "function": "escalation",
+          "characters": [
+            "dylan"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team learns more about Lumon's founder worship and the quasi-religious aspects of corporate culture",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "irving",
+            "dylan"
+          ],
+          "also_affects": [
+            "dylan-disillusion",
+            "helly-escape"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Irving experiences intense visions of black paint flooding the office and collapses during work",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel and Mr. Milchick debate how to handle the increasing instability among the severed employees",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel",
+            "milchick"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Burt shows Irving a painting in Optics & Design depicting Lumon's four departments in harmony",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "burt",
+            "irving"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Mark begins remembering more details about Petey and their friendship outside the severed environment",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Helly's outie sends a video message reaffirming her commitment to the severance program despite her innie's protests",
+          "plotline_id": "helly-escape",
+          "function": "climax",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team processes larger datasets with increasingly emotional responses as refinement work grows more complex",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "irving",
+            "dylan"
+          ],
+          "also_affects": [
+            "dylan-disillusion"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Irving and Burt share a moment of connection that violates multiple company policies regarding workplace relationships",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "irving",
+            "burt"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        }
+      ],
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "helly-escape",
+            "irving-burt",
+            "dylan-disillusion"
+          ],
+          "description": "All three innies reach toward something genuinely human — freedom, love, recognition — and all three are rebuffed or distorted by Lumon's architecture; desire itself is the thing the company cannot permit"
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "helly-escape",
+            "cobel-control"
+          ],
+          "description": "The viewer sees that Helly's outie has already weaponized Helly's own consent against her; Helly the innie doesn't understand the trap is airtight"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "helly-escape",
+            "cobel-control"
+          ],
+          "description": "Helly's suicide attempt forces Cobel's surveillance apparatus to visibly activate — the two plotlines physically collide in the lockdown and wellness sessions"
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "irving-burt",
+            "cobel-control"
+          ],
+          "description": "Irving believes his visits to O&D are private acts of longing; the viewer sees Cobel has already flagged them and is tightening policy around him"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "helly-escape",
+            "irving-burt"
+          ],
+          "description": "Both plotlines hinge on the body as the only instrument of innie agency — Helly uses hers to demand exit, Irving uses his to pursue connection; the body is the one thing Lumon cannot fully sever"
+        }
+      ]
+    },
+    {
+      "episode": "S01E06",
+      "theme": "Every form of connection or reward inside Lumon is ultimately owned by the institution and can be revoked the moment it threatens control",
+      "events": [
+        {
+          "event": "Ms. Cobel discovers Irving and Burt's growing relationship and implements disciplinary measures to separate them",
+          "plotline_id": "cobel-control",
+          "function": "inciting_incident",
+          "characters": [
+            "cobel",
+            "irving",
+            "burt"
+          ],
+          "also_affects": [
+            "irving-burt"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The MDR team learns that Burt is retiring from Lumon",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving",
+            "mark",
+            "helly",
+            "dylan",
+            "burt"
+          ],
+          "also_affects": null,
+          "plot_fn": "turning_point"
+        },
+        {
+          "event": "Irving plans a farewell party for Burt in Optics & Design",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Dylan earns enough points to claim his coveted reward but finds the experience disappointingly brief and hollow",
+          "plotline_id": "dylan-disillusion",
+          "function": "turning_point",
+          "characters": [
+            "dylan"
+          ],
+          "also_affects": null,
+          "plot_fn": "turning_point"
+        },
+        {
+          "event": "Mark begins piecing together clues about Petey's reintegration process and the Underground Railroad helping severed employees",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Helly receives another message from her outie expressing commitment to the program and dismissing her suffering",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Irving organizes an unauthorized gathering in Optics & Design, inviting the entire MDR team to celebrate Burt's retirement",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "irving",
+            "mark",
+            "helly",
+            "dylan",
+            "burt"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Ms. Cobel monitors the party through surveillance while planning her response to the protocol violation",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "The team discovers that Optics & Design creates propaganda artwork glorifying Lumon and Kier Eagan's philosophy",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "dylan",
+            "irving",
+            "burt"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "dylan-disillusion"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Irving and Burt share an intimate moment while examining artwork depicting the company's four departments",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "irving",
+            "burt"
+          ],
+          "also_affects": null,
+          "plot_fn": "climax"
+        },
+        {
+          "event": "Dylan realizes his reward experience was designed to be addictive and meaningless, causing him to question Lumon's motivation system",
+          "plotline_id": "dylan-disillusion",
+          "function": "escalation",
+          "characters": [
+            "dylan"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Mark finds additional evidence of Petey's reintegration attempts and the underground network supporting escaped severed employees",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": null,
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel interrupts the retirement party and enforces immediate consequences for the unauthorized gathering",
+          "plotline_id": "cobel-control",
+          "function": "climax",
+          "characters": [
+            "cobel",
+            "irving",
+            "mark",
+            "helly",
+            "dylan",
+            "burt"
+          ],
+          "also_affects": [
+            "irving-burt",
+            "helly-escape",
+            "dylan-disillusion"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Burt departs Lumon, devastating Irving, who experiences another intense vision of the office flooding with black paint",
+          "plotline_id": "mark-truth",
+          "function": "crisis",
+          "characters": [
+            "irving",
+            "burt"
+          ],
+          "also_affects": null,
+          "plot_fn": "crisis"
+        },
+        {
+          "event": "The team returns to regular work duties under increased scrutiny and enhanced security measures",
+          "plotline_id": "cobel-control",
+          "function": "resolution",
+          "characters": [
+            "mark",
+            "helly",
+            "dylan",
+            "irving"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "dylan-disillusion",
+            "mark-truth"
+          ],
+          "plot_fn": null
+        }
+      ],
+      "interactions": [
+        {
+          "type": "threat",
+          "lines": [
+            "irving-burt",
+            "cobel-control"
+          ],
+          "description": "The viewer sees Cobel monitoring the unauthorized party and preparing consequences before Irving and the team know she is watching — their celebration is already doomed while it is happening"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "irving-burt",
+            "dylan-disillusion",
+            "helly-escape"
+          ],
+          "description": "All three plotlines stage the same discovery from different angles: Lumon's rewards and relationships are manufactured to be hollow — Burt's departure takes connection away from Irving just as Dylan learns his earned reward was engineered to be empty, and Helly learns her outie has no regard for her suffering"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "irving-burt",
+            "mark-truth",
+            "cobel-control"
+          ],
+          "description": "The unauthorized retirement party physically brings the MDR team into Optics and Design, where the truth about Lumon's propaganda is visible, and where Cobel's surveillance and enforcement intersect — Irving's personal farewell becomes the site of both ideological revelation and institutional crackdown"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "cobel-control",
+            "helly-escape"
+          ],
+          "description": "Cobel enforcing order on the floor mirrors Helly's outie enforcing the severance contract — both are authority figures using institutional power to deny an innie any exit or autonomy"
+        }
+      ]
+    },
+    {
+      "episode": "S01E07",
+      "theme": "Compliance is a performance — every system of control produces the resistance it was designed to prevent",
+      "events": [
+        {
+          "event": "Mark discovers a wellness session room where Milchick has been conducting psychological manipulation techniques on Dylan",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "milchick",
+            "dylan"
+          ],
+          "also_affects": [
+            "cobel-control",
+            "dylan-disillusion"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team learns about the break room, a white isolation chamber used for psychological reconditioning through repetitive exercises",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "dylan",
+            "irving"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Helly is sent to the break room as punishment for her continued resistance and must repeatedly apologize for her behavior",
+          "plotline_id": "helly-escape",
+          "function": "crisis",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel reveals more aggressive surveillance tactics and begins implementing enhanced control measures across the severed floor",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "mark-truth"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Irving processes Burt's departure while experiencing increasingly vivid hallucinations about black paint and office floods",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": null,
+          "plot_fn": null
+        },
+        {
+          "event": "Mark finds evidence that Petey successfully reintegrated his memories before his death, suggesting severance can be reversed",
+          "plotline_id": "mark-truth",
+          "function": "turning_point",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "overtime-contingency"
+          ],
+          "plot_fn": "turning_point"
+        },
+        {
+          "event": "Dylan begins questioning his loyalty to Lumon after witnessing Helly's treatment in the break room",
+          "plotline_id": "dylan-disillusion",
+          "function": "turning_point",
+          "characters": [
+            "dylan",
+            "helly"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "overtime-contingency"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team discovers that their refinement work involves processing data related to human emotions and psychological states",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "dylan",
+            "irving"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Ms. Cobel conducts individual interviews with team members to assess their loyalty and mental stability",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel",
+            "mark",
+            "helly",
+            "dylan",
+            "irving"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "mark-truth",
+            "dylan-disillusion",
+            "irving-burt"
+          ],
+          "plot_fn": null
+        },
+        {
+          "event": "Mark experiences breakthrough memories connecting his work and outside identities, causing severe disorientation",
+          "plotline_id": "mark-truth",
+          "function": "crisis",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "crisis"
+        },
+        {
+          "event": "Helly emerges from the break room appearing temporarily compliant but secretly more determined to escape",
+          "plotline_id": "helly-escape",
+          "function": "turning_point",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control",
+            "overtime-contingency"
+          ],
+          "plot_fn": "turning_point"
+        },
+        {
+          "event": "Irving researches Lumon's history and discovers disturbing information about the company's true operations and Kier Eagan's philosophy",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": [
+            "mark-truth",
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team begins planning coordinated resistance against Lumon's control systems while maintaining the appearance of compliance",
+          "plotline_id": "mark-truth",
+          "function": "escalation",
+          "characters": [
+            "mark",
+            "helly",
+            "dylan",
+            "irving"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "mark-truth",
+            "dylan-disillusion",
+            "cobel-control"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "Ms. Cobel escalates her monitoring of Mark's outside life and prepares more extreme measures to maintain severance integrity",
+          "plotline_id": "cobel-control",
+          "function": "escalation",
+          "characters": [
+            "cobel",
+            "mark"
+          ],
+          "also_affects": [
+            "mark-truth"
+          ],
+          "plot_fn": "turning_point"
+        }
+      ],
+      "interactions": [
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "helly-escape",
+            "dylan-disillusion",
+            "irving-burt"
+          ],
+          "description": "All three innies are being broken by Lumon in different ways — isolation, witness to cruelty, loss of connection — and each independently arrives at the same threshold: genuine resistance over performance of compliance"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "helly-escape",
+            "dylan-disillusion",
+            "mark-truth",
+            "overtime-contingency"
+          ],
+          "description": "Helly's apparent compliance after the break room, Dylan's disillusionment, and Mark's discovery that severance is reversible all converge into the team's coordinated resistance plan — the first episode where all four MDR arcs physically meet in a shared goal"
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "cobel-control",
+            "overtime-contingency"
+          ],
+          "description": "The viewer sees the team beginning to plan coordinated resistance; Cobel believes her enhanced surveillance and loyalty interviews have re-stabilized the floor — she does not yet know a conspiracy is forming beneath her"
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "mark-truth",
+            "cobel-control"
+          ],
+          "description": "Mark's breakthrough memory bleed (S01E07#10) is visible to the viewer as evidence severance is cracking; Cobel reads it only as instability to be managed, not as a sign the wall is already failing"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "irving-burt",
+            "helly-escape"
+          ],
+          "description": "Both Irving and Helly lose something real this episode — Burt's presence, bodily autonomy in the break room — and both respond by turning inward toward an obsessive interior state, painting hallucinations and secret resolve respectively"
+        }
+      ]
+    },
+    {
+      "episode": "S01E08",
+      "theme": "The self cannot be cleanly divided — what severance steals from one half is felt as a wound in both",
+      "events": [
+        {
+          "event": "Irving discovers a secret room containing files and equipment suggesting Lumon's true purpose involves consciousness manipulation and control experiments",
+          "plotline_id": "mark-truth",
+          "function": "turning_point",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": [
+            "mark-truth",
+            "overtime-contingency"
+          ],
+          "plot_fn": "turning_point"
+        },
+        {
+          "event": "Mark finds a way to trigger the overtime contingency protocol that temporarily awakens work personalities in the outside world",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "mark-truth",
+            "helly-escape",
+            "dylan-disillusion"
+          ],
+          "plot_fn": "escalation"
+        },
+        {
+          "event": "The team executes their plan during an overtime session, allowing their work selves to experience the outside world for the first time",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "mark",
+            "irving",
+            "dylan",
+            "helly"
+          ],
+          "also_affects": [
+            "helly-escape",
+            "mark-truth",
+            "irving-burt",
+            "dylan-disillusion"
+          ],
+          "plot_fn": "climax"
+        },
+        {
+          "event": "Mark's work personality awakens in his outside apartment and discovers photographs revealing his deceased wife Gemma worked at Lumon",
+          "plotline_id": "mark-truth",
+          "function": "crisis",
+          "characters": [
+            "mark"
+          ],
+          "also_affects": [
+            "overtime-contingency"
+          ],
+          "plot_fn": "climax"
+        },
+        {
+          "event": "Dylan's work self finds himself with his family and learns he has a young son he never knew existed",
+          "plotline_id": "dylan-disillusion",
+          "function": "climax",
+          "characters": [
+            "dylan",
+            "guest:dylans-son"
+          ],
+          "also_affects": [
+            "overtime-contingency"
+          ],
+          "plot_fn": "crisis"
+        },
+        {
+          "event": "Irving's work personality awakens in his outside home and discovers his outside self has been investigating Lumon and collecting evidence about severed employees",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": [
+            "mark-truth",
+            "overtime-contingency"
+          ],
+          "plot_fn": "climax"
+        },
+        {
+          "event": "Helly's work self discovers she is Helena Eagan, daughter of Lumon's current CEO and a willing participant in the severance program",
+          "plotline_id": "helly-escape",
+          "function": "crisis",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "overtime-contingency",
+            "cobel-control"
+          ],
+          "plot_fn": "climax"
+        },
+        {
+          "event": "Ms. Cobel desperately attempts to contain the situation while the work personalities gather information about their outside lives",
+          "plotline_id": "cobel-control",
+          "function": "turning_point",
+          "characters": [
+            "cobel"
+          ],
+          "also_affects": [
+            "overtime-contingency"
+          ],
+          "plot_fn": "crisis"
+        },
+        {
+          "event": "Mark discovers that Ms. Selvig, his outie's neighbor, is actually Ms. Cobel monitoring his external activities",
+          "plotline_id": "mark-truth",
+          "function": "climax",
+          "characters": [
+            "mark",
+            "cobel"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "climax"
+        },
+        {
+          "event": "Irving finds evidence that his outside self knows other severed employees and has been working to expose Lumon's operations",
+          "plotline_id": "mark-truth",
+          "function": "resolution",
+          "characters": [
+            "irving"
+          ],
+          "also_affects": [
+            "mark-truth",
+            "overtime-contingency"
+          ],
+          "plot_fn": "resolution"
+        },
+        {
+          "event": "Dylan's work self experiences his family life and realizes the magnitude of what severance has taken from him",
+          "plotline_id": "dylan-disillusion",
+          "function": "climax",
+          "characters": [
+            "dylan"
+          ],
+          "also_affects": [
+            "overtime-contingency"
+          ],
+          "plot_fn": "climax"
+        },
+        {
+          "event": "Helena Eagan's work personality confronts the reality of her privileged position and complicity in Lumon's system",
+          "plotline_id": "helly-escape",
+          "function": "escalation",
+          "characters": [
+            "helly"
+          ],
+          "also_affects": [
+            "cobel-control"
+          ],
+          "plot_fn": "resolution"
+        },
+        {
+          "event": "The overtime protocol begins failing as the work personalities struggle to return information to their severed selves before the session ends",
+          "plotline_id": "mark-truth",
+          "function": "crisis",
+          "characters": [
+            "mark",
+            "irving",
+            "dylan",
+            "helly"
+          ],
+          "also_affects": [
+            "mark-truth",
+            "helly-escape",
+            "irving-burt",
+            "dylan-disillusion"
+          ],
+          "plot_fn": "crisis"
+        }
+      ],
+      "interactions": [
+        {
+          "type": "threat",
+          "lines": [
+            "helly-escape",
+            "cobel-control"
+          ],
+          "description": "The viewer learns Helly is Helena Eagan and a willing Lumon participant; Cobel knows but the innie Helly does not — the very identity she wants to escape is one she chose from the outside"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "mark-truth",
+            "dylan-disillusion",
+            "irving-burt",
+            "helly-escape"
+          ],
+          "description": "Each work self simultaneously discovers a different kind of loss severance has imposed — a dead wife, an unknown son, a secret investigation, a complicit identity — rhyming around the theme that the self divided is the self destroyed"
+        },
+        {
+          "type": "convergence",
+          "lines": [
+            "mark-truth",
+            "cobel-control"
+          ],
+          "description": "Mark's innie discovers Cobel has been living next door as Ms. Selvig, collapsing the boundary between inside surveillance and outside life into a single moment of recognition"
+        },
+        {
+          "type": "threat",
+          "lines": [
+            "overtime-contingency",
+            "cobel-control"
+          ],
+          "description": "The team executes the protocol while Cobel scrambles to contain it — the viewer sees both sides of the containment race simultaneously, generating dramatic irony about who will prevail before the session expires"
+        },
+        {
+          "type": "thematic_rhyme",
+          "lines": [
+            "irving-burt",
+            "mark-truth"
+          ],
+          "description": "Both Irving and Mark discover their outside selves have been independently investigating Lumon — suggesting the hunger to know bleeds across the severance barrier even without conscious memory"
+        }
+      ]
+    }
+  ]
+}
