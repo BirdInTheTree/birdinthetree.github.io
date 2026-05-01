@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"My%2520Brilliant%2520Friend%2520uses%252010%25E2%2580%259315%2520long%2520scenes%2520per%2520episode%2520instead%2520of%2520one%2520scene%2520per%2520page","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"sGK4VMgUoxiqF9eF6g6q0"}

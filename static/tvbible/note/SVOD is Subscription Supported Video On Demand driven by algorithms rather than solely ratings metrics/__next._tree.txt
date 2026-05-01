@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"SVOD%2520is%2520Subscription%2520Supported%2520Video%2520On%2520Demand%2520driven%2520by%2520algorithms%2520rather%2520than%2520solely%2520ratings%2520metrics","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"sGK4VMgUoxiqF9eF6g6q0"}

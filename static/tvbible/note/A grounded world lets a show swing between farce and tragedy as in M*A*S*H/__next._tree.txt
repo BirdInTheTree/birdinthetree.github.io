@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"A%2520grounded%2520world%2520lets%2520a%2520show%2520swing%2520between%2520farce%2520and%2520tragedy%252C%2520as%2520in%2520M*A*S*H","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"sGK4VMgUoxiqF9eF6g6q0"}

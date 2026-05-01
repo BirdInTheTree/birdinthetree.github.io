@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Voice-over%2520becomes%2520a%2520narrative%2520crutch%2520unless%2520used%2520sparingly%252C%2520artfully%252C%2520ironically%252C%2520or%2520humorously","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"sGK4VMgUoxiqF9eF6g6q0"}
