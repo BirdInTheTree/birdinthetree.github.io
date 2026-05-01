@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Casual%2520'What's%2520it%2520about%253F'%2520calls%2520for%2520a%2520brief%252C%2520non-sales%2520response%252C%2520not%2520a%2520full%2520sales%2520pitch","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"foCVuKnuRUbptuuKpb_jZ"}

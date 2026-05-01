@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Shrek's%2520arc%2520moves%2520from%2520isolated%2520swamp%2520existence%2520to%2520risking%2520rejection%2520by%2520declaring%2520love%2520for%2520Fiona","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"foCVuKnuRUbptuuKpb_jZ"}
