@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0w81u.vs4xgjj.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"ru","param":null,"prefetchHints":0,"slots":{"children":{"name":"tag","param":null,"prefetchHints":0,"slots":{"children":{"name":"tag","param":{"type":"d","key":"%25D0%25BB%25D0%25BE%25D0%25B2%25D1%2583%25D1%2588%25D0%25BA%25D0%25B0","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"4FdKTBgMiPJmFbjLpUFF9"}

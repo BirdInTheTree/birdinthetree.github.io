@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0w81u.vs4xgjj.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Better%2520Call%2520Saul%2520pilot%2520uses%2520Jimmy%2520ripping%2520up%2520his%2520brother's%2520check%2520to%2520establish%2520his%2520broken%2520compass","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"4FdKTBgMiPJmFbjLpUFF9"}

@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0w81u.vs4xgjj.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Show%2520design%2520iterates%2520non-linearly%2520across%2520character%252C%2520world%252C%2520theme%252C%2520and%2520franchise","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"4FdKTBgMiPJmFbjLpUFF9"}
