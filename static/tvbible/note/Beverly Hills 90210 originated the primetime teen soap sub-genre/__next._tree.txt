@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Beverly%2520Hills%252090210%2520originated%2520the%2520primetime%2520teen%2520soap%2520sub-genre","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"3hqRyTT6Egqu_KYYlhOMW"}

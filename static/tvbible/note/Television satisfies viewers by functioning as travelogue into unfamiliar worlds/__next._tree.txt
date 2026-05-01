@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Television%2520satisfies%2520viewers%2520by%2520functioning%2520as%2520travelogue%2520into%2520unfamiliar%2520worlds","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"3hqRyTT6Egqu_KYYlhOMW"}

@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Falling%2520in%2520love%2520with%2520the%2520characters%2520is%2520what%2520hooks%2520viewers%2520and%2520buyers%2520into%2520a%2520TV%2520series","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"3hqRyTT6Egqu_KYYlhOMW"}

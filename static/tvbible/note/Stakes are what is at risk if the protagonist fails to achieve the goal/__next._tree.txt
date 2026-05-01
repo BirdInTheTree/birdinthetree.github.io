@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Stakes%2520are%2520what%2520is%2520at%2520risk%2520if%2520the%2520protagonist%2520fails%2520to%2520achieve%2520the%2520goal","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"3hqRyTT6Egqu_KYYlhOMW"}
