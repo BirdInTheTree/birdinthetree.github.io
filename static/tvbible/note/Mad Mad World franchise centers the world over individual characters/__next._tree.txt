@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Mad%252C%2520Mad%2520World%2520franchise%2520centers%2520the%2520world%2520over%2520individual%2520characters","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"yvKYWQu61H0P-NuKyaW3N"}

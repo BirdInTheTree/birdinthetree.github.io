@@ -1,2 +1,2 @@
-:HL["/tvbible/_next/static/chunks/0z.sjc.2pzkrl.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"concept","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"series-bible","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"DrFdQg9Zsr-W8XfJo1q2C"}
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"concept","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"series-bible","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"yvKYWQu61H0P-NuKyaW3N"}
