@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0n7a9pruwgf22.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"A%2520single%2520A-Story%2520can%2520be%2520split%2520across%2520different%2520characters%2520all%2520trying%2520to%2520resolve%2520the%2520same%2520problem","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"OG3GWH2bcJ4kWzGOHQMvV"}
