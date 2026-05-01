@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0z.sjc.2pzkrl.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Target%252024%25E2%2580%259328%2520cards%2520for%2520hour-long%2520pilots%2520and%252012%25E2%2580%259316%2520cards%2520for%2520half-hour%2520pilots","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"DrFdQg9Zsr-W8XfJo1q2C"}

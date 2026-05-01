@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0z.sjc.2pzkrl.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Barry's%2520opening%2520image%2520shows%2520him%2520standing%2520over%2520a%2520hit%2520victim%2520with%2520mundane%2520tone","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"DrFdQg9Zsr-W8XfJo1q2C"}

@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0z.sjc.2pzkrl.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Fool%2520Triumphant%2520genre%2520features%2520an%2520underestimated%2520eccentric%2520hero%2520who%2520wins%2520without%2520changing%2520who%2520they%2520are","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"DrFdQg9Zsr-W8XfJo1q2C"}

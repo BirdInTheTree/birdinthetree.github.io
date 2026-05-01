@@ -1,2 +1,0 @@
-:HL["/tvbible/_next/static/chunks/0z.sjc.2pzkrl.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Midpoint%2520is%2520the%2520beat%2520for%2520rug-pull%2520twists%252C%2520public%2520victories%2520gone%2520bad%252C%2520and%2520shit-just-got-real%2520moments","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"U7lPh0GLva1QnEUCZOuQy"}
