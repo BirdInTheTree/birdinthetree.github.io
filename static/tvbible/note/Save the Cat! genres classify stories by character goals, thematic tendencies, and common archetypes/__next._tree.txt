@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0z.sjc.2pzkrl.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Save%2520the%2520Cat!%2520genres%2520classify%2520stories%2520by%2520character%2520goals%252C%2520thematic%2520tendencies%252C%2520and%2520common%2520archetypes","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"U7lPh0GLva1QnEUCZOuQy"}

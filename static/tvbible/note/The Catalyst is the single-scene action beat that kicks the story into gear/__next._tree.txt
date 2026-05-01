@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/0z.sjc.2pzkrl.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"The%2520Catalyst%2520is%2520the%2520single-scene%2520action%2520beat%2520that%2520kicks%2520the%2520story%2520into%2520gear","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"U7lPh0GLva1QnEUCZOuQy"}
