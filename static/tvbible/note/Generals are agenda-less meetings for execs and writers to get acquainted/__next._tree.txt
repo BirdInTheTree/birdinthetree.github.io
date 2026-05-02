@@ -1,2 +1,0 @@
-:HL["/tvbible/_next/static/chunks/11l0urq0kd3j9.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Generals%20are%20agenda-less%20meetings%20for%20execs%20and%20writers%20to%20get%20acquainted","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"q1eIpwI3430zc33miXlm4"}

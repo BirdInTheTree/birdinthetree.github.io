@@ -1,2 +1,0 @@
-:HL["/tvbible/_next/static/chunks/11l0urq0kd3j9.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"A%20bake-off%20is%20the%20competitive%20filling%20of%20an%20open%20writing%20assignment%20by%20multiple%20writers%20pitching%20their%20takes","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"q1eIpwI3430zc33miXlm4"}

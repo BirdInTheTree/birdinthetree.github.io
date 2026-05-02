@@ -1,2 +1,0 @@
-:HL["/tvbible/_next/static/chunks/11l0urq0kd3j9.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Ally%20McBeal%20pioneered%20the%20one-hour%20dramedy%20format%20in%201997","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"q1eIpwI3430zc33miXlm4"}

@@ -1,2 +1,0 @@
-:HL["/tvbible/_next/static/chunks/11l0urq0kd3j9.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Satire%20denies%20characters%20inner%20change%20because%20their%20fixed%20flaws%20are%20the%20source%20of%20the%20comedy","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"q1eIpwI3430zc33miXlm4"}

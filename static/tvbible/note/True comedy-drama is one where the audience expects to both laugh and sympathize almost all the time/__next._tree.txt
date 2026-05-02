@@ -1,2 +1,0 @@
-:HL["/tvbible/_next/static/chunks/11l0urq0kd3j9.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"True%20comedy-drama%20is%20one%20where%20the%20audience%20expects%20to%20both%20laugh%20and%20sympathize%20almost%20all%20the%20time","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"q1eIpwI3430zc33miXlm4"}
