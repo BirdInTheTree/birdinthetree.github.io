@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/11l0urq0kd3j9.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Use%20'What%20if%3F'%20as%20a%20segue%20from%20your%20idea%20origin%20story%20to%20the%20key%20elements%20of%20your%20story","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"q1eIpwI3430zc33miXlm4"}

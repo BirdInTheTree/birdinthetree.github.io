@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/11l0urq0kd3j9.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Action%2Fadventure%2Fthriller%20franchises%20use%20a%20unifying%20goal%20to%20shape%20one%20or%20more%20seasons","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"q1eIpwI3430zc33miXlm4"}

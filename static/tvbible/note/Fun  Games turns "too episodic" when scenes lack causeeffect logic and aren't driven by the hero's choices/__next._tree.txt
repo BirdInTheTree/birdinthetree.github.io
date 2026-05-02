@@ -1,0 +1,2 @@
+:HL["/tvbible/_next/static/chunks/11l0urq0kd3j9.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"note","param":null,"prefetchHints":0,"slots":{"children":{"name":"title","param":{"type":"d","key":"Fun%20%26%20Games%20turns%20%22too%20episodic%22%20when%20scenes%20lack%20cause%2Feffect%20logic%20and%20aren't%20driven%20by%20the%20hero's%20choices","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"q1eIpwI3430zc33miXlm4"}
