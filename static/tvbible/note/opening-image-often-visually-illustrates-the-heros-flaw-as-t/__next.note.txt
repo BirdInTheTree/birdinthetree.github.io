@@ -2,4 +2,4 @@
 2:I[39756,["/tvbible/_next/static/chunks/0sbbb.wghsd.4.js","/tvbible/_next/static/chunks/0cn2~muf13n1x.js"],"default"]
 3:I[37457,["/tvbible/_next/static/chunks/0sbbb.wghsd.4.js","/tvbible/_next/static/chunks/0cn2~muf13n1x.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"UYj1n3J0hxkqPCKNwqWiP"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"bS9MFnxWJk6iGYAa3rMge"}
