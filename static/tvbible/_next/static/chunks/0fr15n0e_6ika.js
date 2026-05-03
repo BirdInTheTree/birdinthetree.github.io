@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,95219,t=>{"use strict";let e="tvbible:progress:";t.s(["get_progress",0,function(t){try{return window.localStorage.getItem(e+t)}catch{return null}},"set_progress",0,function(t,o){try{window.localStorage.setItem(e+t,o)}catch{}}])}]);
